@@ -1,4 +1,4 @@
-package model;
+package model.evento;
 
 public class CraftterException extends Exception{
 

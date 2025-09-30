@@ -1,11 +1,11 @@
-package repository;
+package repository.libreria;
 
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-import model.LibreriaException;
-import model.Libros;
+import model.libreria.LibreriaException;
+import model.libreria.Libros;
 
 public class LibrosRepository {
 

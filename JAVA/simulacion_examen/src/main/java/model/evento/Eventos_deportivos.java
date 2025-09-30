@@ -1,14 +1,14 @@
-package model;
+package model.evento;
 
 import java.time.LocalDate;
 
 public class Eventos_deportivos extends Evento{
 	
-	private float alquilerEstadio;
-	private float televisivo;
+	private double alquilerEstadio;
+	private boolean televisivo;
 
 	public Eventos_deportivos(int id, String nombre, LocalDate fecha, int num_entradasVendidas,
-			int capacidad_maxima_asistentes, EstadoEven estado, float alquilerEstadio, float televisivo) {
+			int capacidad_maxima_asistentes, EstadoEven estado, double alquilerEstadio, boolean televisivo) {
 		super(id, nombre, fecha, num_entradasVendidas, capacidad_maxima_asistentes, estado);
 		this.alquilerEstadio = alquilerEstadio;
 		this.televisivo = televisivo;
@@ -20,34 +20,36 @@ public class Eventos_deportivos extends Evento{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public float getAlquilerEstadio() {
+	public double getAlquilerEstadio() {
 		return alquilerEstadio;
 	}
 
-	public void setAlquilerEstadio(float alquilerEstadio) {
+	public void setAlquilerEstadio(double alquilerEstadio) {
 		this.alquilerEstadio = alquilerEstadio;
 	}
 
-	public float getTelevisivo() {
+	public boolean getTelevisivo() {
 		return televisivo;
 	}
 
-	public void setTelevisivo(float televisivo) {
+	public void setTelevisivo(boolean televisivo) {
 		this.televisivo = televisivo;
 	}
 
 	@Override
 	public double calcularCosteBase() {
-		// TODO Auto-generated method stub
-		return 0;
+		double costeBase = 0;
+		boolean esTelevisado = false;
+		if(this.getCapacidad_maxima_asistentes() > 3000) {
+			alquilerEstadio = 150000;
+			costeBase = alquilerEstadio - 10000;
+		} else if(this.getCapacidad_maxima_asistentes() < 3000) {
+			alquilerEstadio = 75000;
+			costeBase = alquilerEstadio - 10000;
+		}else {
+			esTelevisado = true;
+		}
+		return costeBase;
 	}
 	
-	/*
-	public void alquilerEstadio() {
-		if(alquilerEstadio ) {
-			
-		}
-		
-	}
-*/
 }

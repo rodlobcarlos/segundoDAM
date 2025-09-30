@@ -1,22 +1,22 @@
-package repository;
+package repository.libreria;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import model.Editorial;
-import model.LibreriaException;
+import model.libreria.Editorial;
+import model.libreria.LibreriaException;
 
 public class EditorialRepository {
 
 	private List<Editorial> editoriales;
 
-	public List<Editorial> getEditorial() {
+	public List<Editorial> getEditoriales() {
 		return editoriales;
 	}
 
-	public void setEditorial(List) {
-		this.editoriales = editorial;
+	public void setEditoriales(List<Editorial> editoriales) {
+		this.editoriales = editoriales;
 	}
 
 	public EditorialRepository() {
@@ -70,7 +70,7 @@ public class EditorialRepository {
 		}
 	}
 	
-	public Editorial leerEditorial(String cif) {
+	public Editorial leerEditorial(Editorial cif) {
 		Editorial editorial1 = null;
 		boolean encontrado = false;
 		Iterator<Editorial> l = editoriales.iterator();

@@ -1,4 +1,4 @@
-package model;
+package model.libreria;
 
 import java.time.LocalDate;
 import java.util.Comparator;
@@ -11,7 +11,7 @@ public class Libros {
 	private String autor;
 	private LocalDate año_publicacion;
 	private GeneroLibro genero;
-	private Editorial editorial;
+	private String editorial;
 	private int ejemplares_disponibles;
 	
 	public String getISBN() {
@@ -44,10 +44,10 @@ public class Libros {
 	public void setGenero(GeneroLibro genero) {
 		this.genero = genero;
 	}
-	public Editorial getEditorial() {
+	public String getEditorial() {
 		return editorial;
 	}
-	public void setEditorial(Editorial editorial) {
+	public void setEditorial(String editorial) {
 		this.editorial = editorial;
 	}
 	public int getEjemplares_disponibles() {
@@ -56,7 +56,7 @@ public class Libros {
 	public void setEjemplares_disponibles(int ejemplares_disponibles) {
 		this.ejemplares_disponibles = ejemplares_disponibles;
 	}
-	public Libros(String ISBN, String titulo, String autor, LocalDate año_publicacion, GeneroLibro genero, Editorial editorial,
+	public Libros(String ISBN, String titulo, String autor, LocalDate año_publicacion, GeneroLibro genero, String editorial,
 			int ejemplares_disponibles) {
 		super();
 		this.ISBN = ISBN;
@@ -88,12 +88,9 @@ public class Libros {
 				+ ", genero=" + genero + ", editorial=" + editorial + ", ejemplares_disponibles="
 				+ ejemplares_disponibles + "]";
 	}
-	@Override
+	
 	public int compare(Libros o1, Libros o2) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
-	
-	
 }

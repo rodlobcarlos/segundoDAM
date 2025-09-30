@@ -1,11 +1,11 @@
-package service;
+package service.libreria;
 
 import java.util.Comparator;
 import java.util.List;
 
-import model.Editorial;
-import model.LibreriaException;
-import repository.EditorialRepository;
+import model.libreria.Editorial;
+import model.libreria.LibreriaException;
+import repository.libreria.EditorialRepository;
 
 public class EditorialServicio {
 
@@ -56,9 +56,10 @@ public class EditorialServicio {
 	            editorialRep.leerEditorial(CIF);
 	    }
 	    
+	    // POR TERMINAR
 	    public List<Editorial> ordenarEditorialEmail() {
-	    	//Comparator c = new Comparator();
-	    	this.editorialRep.getEditorial().sort(null);
+	    	Comparator c = new Comparator();
+	    	this.editorialRep.getEditoriales().sort(null);
 			return null;
 	    }
 
