@@ -1,6 +1,7 @@
 package model;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.Objects;
 
 public class Libros {
@@ -86,6 +87,11 @@ public class Libros {
 		return "Libros [id=" + ISBN + ", titulo=" + titulo + ", autor=" + autor + ", año_publicacion=" + año_publicacion
 				+ ", genero=" + genero + ", editorial=" + editorial + ", ejemplares_disponibles="
 				+ ejemplares_disponibles + "]";
+	}
+	@Override
+	public int compare(Libros o1, Libros o2) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 	

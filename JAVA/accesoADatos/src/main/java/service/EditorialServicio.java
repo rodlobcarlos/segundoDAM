@@ -1,6 +1,7 @@
 package service;
 
-import java.util.Set;
+import java.util.Comparator;
+import java.util.List;
 
 import model.Editorial;
 import model.LibreriaException;
@@ -54,5 +55,12 @@ public class EditorialServicio {
 	    public void leerEditorial(String CIF) {
 	            editorialRep.leerEditorial(CIF);
 	    }
+	    
+	    public List<Editorial> ordenarEditorialEmail() {
+	    	//Comparator c = new Comparator();
+	    	this.editorialRep.getEditorial().sort(null);
+			return null;
+	    }
+
 }
 

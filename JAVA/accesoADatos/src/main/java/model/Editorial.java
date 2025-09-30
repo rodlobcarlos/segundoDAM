@@ -72,7 +72,11 @@ public class Editorial implements Comparable<Editorial>{
 	}
 	@Override
 	public int compareTo(Editorial o) {
-		return this.nombre.compareTo(o.nombre);
+		int comparado = this.nombre.compareTo(o.nombre);
+		if(comparado == 0) {
+			comparado = this.cif.compareTo(o.cif);
+		}
+		return comparado;
 	}
 	
 }

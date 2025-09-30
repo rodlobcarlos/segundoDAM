@@ -1,21 +1,27 @@
 package repository;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import model.Editorial;
+import model.LibreriaException;
 
 public class EditorialRepository {
 
-	private Set<Editorial> editoriales;
+	private List<Editorial> editoriales;
 
-	public Set<Editorial> getEditorial() {
+	public List<Editorial> getEditorial() {
 		return editoriales;
 	}
 
-	public void setEditorial(Set<Editorial> editorial) {
+	public void setEditorial(List) {
 		this.editoriales = editorial;
 	}
 
 	public EditorialRepository() {
 		super();
-		this.editoriales = new HashSet<Editorial>();
+		this.editoriales = new ArrayList<Editorial>();
 	}
 
 	public boolean añadirEditorial(Editorial editorial) {
