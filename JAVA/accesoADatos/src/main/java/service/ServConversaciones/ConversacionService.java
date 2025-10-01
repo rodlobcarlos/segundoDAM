@@ -1,7 +1,13 @@
 package service.ServConversaciones;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import controller.ServConversaciones.GestionaPeticionesAChat;
 import enu.ServConversaciones.TipoAgente;
 import exception.ServConversaciones.ConversacionException;
 import inter.ServConversaciones.ISerConversaciones;
@@ -11,6 +17,8 @@ import repository.ServConversaciones.ConversacionRepository;
 public class ConversacionService implements ISerConversaciones{
 
 	private ConversacionRepository repo;
+	private static final Logger logger =  LogManager.getLogger(GestionaPeticionesAChat.class);
+
 	
 	public ConversacionRepository getRepo() {
 		return repo;
@@ -40,8 +48,7 @@ public class ConversacionService implements ISerConversaciones{
 		try {
 			repo.modificarConversacion(c);
 		} catch (ConversacionException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error(e.getMessage());
 		}
 		return false;
 	}
@@ -52,7 +59,7 @@ public class ConversacionService implements ISerConversaciones{
 			repo.leerConversacion(pregunta, tipo, fecha);
 		} catch (ConversacionException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error(e.getMessage());
 		}
 		return null;
 	}
@@ -62,15 +69,30 @@ public class ConversacionService implements ISerConversaciones{
 		try {
 			repo.incrementarValoracion(fecha, tipo, pregunta);
 		} catch (ConversacionException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error(e.getMessage());
 		}
 		return null;
 	}
 
 	public double getValoracionMediaHumanos(TipoAgente tipo) {
-		// TERMINAR
-		return 0;
-		
+		Set<Conversacion> conversaciones = new HashSet<Conversacion>();
+		for(Conversacion c : conversaciones) {
+			double valoracionTotal = c.getValoracion() + c.getValoracion();
+			if(c.getAgente().equals(tipo.HUMANO)) {
+				double valoracionMediaHumanos = valoracionTotal / c.getValoracion();
+			}
+		}
+		return valoracionMediaHumanos;
+	}
+	
+	public double getValoracionMediaBots(TipoAgente tipo) {
+		Set<Conversacion> conversaciones = new HashSet<Conversacion>();
+		for(Conversacion c : conversaciones) {
+			double valoracionTotal = c.getValoracion() + c.getValoracion();
+			if(c.getAgente().equals(tipo.IA)) {
+				double valoracionMediaHumanos = valoracionTotal / c.getValoracion();
+			}
+		}
+		return valoracionMediaHumanos;		
 	}
 }

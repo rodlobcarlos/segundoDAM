@@ -5,6 +5,10 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import controller.ServConversaciones.GestionaPeticionesAChat;
 import enu.ServConversaciones.TipoAgente;
 import exception.ServConversaciones.ConversacionException;
 import inter.RepoConversaciones.IRepoConversaciones;
@@ -13,6 +17,9 @@ import model.ServConversaciones.Conversacion;
 public class ConversacionRepository implements IRepoConversaciones{
 
 	private Set<Conversacion> conversaciones;
+	
+	private static final Logger logger =  LogManager.getLogger(GestionaPeticionesAChat.class);
+
 
 	public Set<Conversacion> getConversaciones() {
 		return conversaciones;
@@ -34,6 +41,7 @@ public class ConversacionRepository implements IRepoConversaciones{
 	
 	public void agregarConversacion(Conversacion c) {
 		conversaciones.add(c);
+		logger.debug(conversaciones);
 	}
 	
 	public void eliminarConversacion(Conversacion c) {
@@ -75,6 +83,5 @@ public class ConversacionRepository implements IRepoConversaciones{
 		c.setValoracion(incrementar);
 		return c;
 	}
-	
 	
 }

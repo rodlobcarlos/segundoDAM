@@ -1,1 +1,40 @@
 2025-10-01 10:11:29.646 [main] DEBUG controller.libreria.ProbandoLog - Esto es una prueba
+2025-10-01 18:52:19.144 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - class org.apache.logging.log4j.core.Logger
+2025-10-01 18:52:35.615 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - controller.ServConversaciones.GestionaPeticionesAChat
+2025-10-01 18:55:27.514 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - afdfa
+2025-10-01 18:55:43.760 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - agregarConversacion()
+2025-10-01 19:08:26.585 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-01 19:10:11.248 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-01 19:10:11.253 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Resultado: 
+2025-10-01 19:10:28.207 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-01 19:10:28.212 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Resultado: 
+2025-10-01 19:12:04.702 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-01 19:12:04.706 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.0
+2025-10-01 19:14:51.055 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-01 19:14:51.059 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - service.ServConversaciones.ConversacionService@548d708a
+2025-10-01 19:17:46.406 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-01 19:18:25.139 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-01 19:18:25.150 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - service.ServConversaciones.ConversacionService@5afa3c9
+2025-10-01 19:20:33.920 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-01 19:20:33.931 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - service.ServConversaciones.ConversacionService@5afa3c9
+2025-10-01 19:21:25.455 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-01 19:21:25.466 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Conversacion [id=1, fechaRegistro=2025-10-01, numAleatorio=java.util.Random@5f049ea1, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10]
+2025-10-01 19:21:25.466 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - service.ServConversaciones.ConversacionService@72cc7e6f
+2025-10-01 19:21:52.002 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-01 19:21:52.012 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - ¿Miércoles?
+2025-10-01 19:21:52.012 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - service.ServConversaciones.ConversacionService@5f049ea1
+2025-10-01 19:24:00.384 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-01 19:24:00.395 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Conversacion [id=1, fechaRegistro=2025-10-01, numAleatorio=java.util.Random@5f049ea1, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10]
+2025-10-01 19:26:07.413 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-01 19:26:07.423 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Conversacion [id=1, fechaRegistro=2025-10-01, numAleatorio=java.util.Random@5f049ea1, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10]
+2025-10-01 19:26:22.233 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-01 19:26:22.243 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Conversacion [id=1, fechaRegistro=2025-10-01, numAleatorio=java.util.Random@5f049ea1, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10]
+2025-10-01 19:26:22.243 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - ConversacionRepository [conversaciones=[]]
+2025-10-01 19:26:42.487 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-01 19:26:42.497 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Conversacion [id=1, fechaRegistro=2025-10-01, numAleatorio=java.util.Random@5f049ea1, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10]
+2025-10-01 19:26:42.497 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - ConversacionRepository [conversaciones=[]]
+2025-10-01 19:26:42.497 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - service.ServConversaciones.ConversacionService@72cc7e6f
+2025-10-01 19:28:02.940 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-01 19:28:02.951 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Conversacion [id=1, fechaRegistro=2025-10-01, numAleatorio=java.util.Random@5f049ea1, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10]
+2025-10-01 19:28:02.951 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - ConversacionRepository [conversaciones=[]]
+2025-10-01 19:28:02.951 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - service.ServConversaciones.ConversacionService@72cc7e6f
