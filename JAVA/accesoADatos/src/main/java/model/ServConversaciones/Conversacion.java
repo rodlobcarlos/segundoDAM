@@ -10,14 +10,14 @@ public class Conversacion {
 
 	private int id;
 	private LocalDate fechaRegistro;
-	private Random numAleatorio;
+	private int numAleatorio;
 	private TipoAgente agente;
 	private String pregunta;
 	private String respuesta;
-	private int valoracion;
+	private double valoracion;
 	
-	public Conversacion(int id, LocalDate fechaRegistro, Random numAleatorio, TipoAgente agente, String pregunta,
-			String respuesta, int valoracion) {
+	public Conversacion(int id, LocalDate fechaRegistro, int numAleatorio, TipoAgente agente, String pregunta,
+			String respuesta, double valoracion) {
 		super();
 		this.id = id;
 		this.fechaRegistro = fechaRegistro;
@@ -44,11 +44,11 @@ public class Conversacion {
 		this.fechaRegistro = fechaRegistro;
 	}
 
-	public Random getNumAleatorio() {
+	public int getNumAleatorio() {
 		return numAleatorio;
 	}
 
-	public void setNumAleatorio(Random numAleatorio) {
+	public void setNumAleatorio(int numAleatorio) {
 		this.numAleatorio = numAleatorio;
 	}
 
@@ -76,11 +76,11 @@ public class Conversacion {
 		this.respuesta = respuesta;
 	}
 
-	public int getValoracion() {
+	public double getValoracion() {
 		return valoracion;
 	}
 
-	public void setValoracion(int valoracion) {
+	public void setValoracion(double valoracion) {
 		this.valoracion = valoracion;
 	}
 

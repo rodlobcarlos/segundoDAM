@@ -18,15 +18,32 @@ public class GestionaPeticionesAChat {
 	private static final Logger logger =  LogManager.getLogger(GestionaPeticionesAChat.class);
 
 	public static void main(String[] args) {
+		logger.info("Iniciando ejecución del logger: ");
+
+		Random numero = new Random();
 		
-		Random numero = new Random(6);
-		logger.debug("Iniciando ejecución del logger: ");
 		Set<Conversacion> conversacion = new HashSet<Conversacion>();
 		ConversacionRepository cr = new ConversacionRepository(conversacion);
 		ConversacionService cs = new ConversacionService(cr);
-		Conversacion c = new Conversacion(1, LocalDate.now(), Random.from(numero), TipoAgente.HUMANO, "¿Qué día es hoy?", "¿Miércoles?", 10);
+		Conversacion c1 = new Conversacion(1, LocalDate.now(), numero.nextInt(100), TipoAgente.HUMANO, "¿Qué día es hoy?", "¿Miércoles?", 10.0);
+		Conversacion c3 = new Conversacion(1, LocalDate.now(), numero.nextInt(100), TipoAgente.HUMANO, "¿Qué día es hoy?", "¿Martes?", 5.0);
+		Conversacion c2 = new Conversacion(2, LocalDate.now(), numero.nextInt(100), TipoAgente.IA, "¿Qué día es hoy?", "¿Jueves?", 7.0);
+
 		
-		logger.debug(cs.agregarConversacion(c));
+		logger.info("Conversacion añadida: " + conversacion.add(c1));
+		logger.info("Conversacion añadida: " + conversacion.add(c1)); // Repetido no se añade
+		logger.info("Conversacion añadida: " + conversacion.add(c2));
+		logger.info("Conversacion añadida: " + conversacion.add(c3));
+
+		// Código que comprobar
+		logger.info("Conversacion agregada: " + cs.agregarConversacion(c1));
+		logger.info("Conversacion agregada: " + cs.agregarConversacion(c2));
+		// --
+		
+		logger.debug(cs.getValoracionMediaHumanos(TipoAgente.HUMANO));
+		
+		//logger.debug(cs.incrementarValoracion(LocalDate.now(), TipoAgente.IA, "¿Qué día es hoy?"));
+		logger.debug(conversacion);
 
 	}
 }

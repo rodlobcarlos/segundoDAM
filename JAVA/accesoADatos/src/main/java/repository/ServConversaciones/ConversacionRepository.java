@@ -39,16 +39,17 @@ public class ConversacionRepository implements IRepoConversaciones{
 		return "ConversacionRepository [conversaciones=" + conversaciones + "]";
 	}
 	
-	public void agregarConversacion(Conversacion c) {
+	public Conversacion agregarConversacion(Conversacion c) {
 		conversaciones.add(c);
-		logger.debug(conversaciones);
+		return c;
 	}
 	
-	public void eliminarConversacion(Conversacion c) {
-		conversaciones.remove(c);
+	public Conversacion eliminarConversacion(Conversacion c) {
+		 conversaciones.remove(c);
+		return c;
 	}
 	
-	public boolean modificarConversacion(Conversacion c) throws ConversacionException {
+	public Conversacion modificarConversacion(Conversacion c) throws ConversacionException {
 		boolean esModificado = false;
 		if(conversaciones.contains(c)) {
 			Conversacion conversacion = leerConversacion(c.getPregunta(),c.getAgente(),c.getFechaRegistro());
@@ -58,7 +59,7 @@ public class ConversacionRepository implements IRepoConversaciones{
 		}else {
 			throw new ConversacionException("Esta conversación no existe.");
 		}
-		return esModificado;
+		return c;
 	}
 	
 	public Conversacion leerConversacion(String pregunta, TipoAgente tipo, LocalDate fecha) throws ConversacionException {
@@ -79,9 +80,8 @@ public class ConversacionRepository implements IRepoConversaciones{
 
 	public Conversacion incrementarValoracion(LocalDate fecha, TipoAgente tipo, String pregunta) throws ConversacionException {
 		Conversacion c = leerConversacion(pregunta, tipo, fecha);
-		int incrementar = c.getValoracion() + 1;
+		double incrementar = c.getValoracion() + 1;
 		c.setValoracion(incrementar);
 		return c;
 	}
-	
 }

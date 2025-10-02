@@ -18,8 +18,12 @@ public class ConversacionService implements ISerConversaciones{
 
 	private ConversacionRepository repo;
 	private static final Logger logger =  LogManager.getLogger(GestionaPeticionesAChat.class);
-
 	
+	public ConversacionService(ConversacionRepository repo) {
+		super();
+		this.repo = repo;
+	}
+
 	public ConversacionRepository getRepo() {
 		return repo;
 	}
@@ -28,29 +32,26 @@ public class ConversacionService implements ISerConversaciones{
 		this.repo = repo;
 	}
 
-	public ConversacionService(ConversacionRepository repo) {
-		super();
-		this.repo = repo;
-	}
-
 	@Override
-	public void agregarConversacion(Conversacion c) {
+	public Conversacion agregarConversacion(Conversacion c) {
 		repo.agregarConversacion(c);
+		return c;
 	}
 
 	@Override
-	public void eliminarConversacion(Conversacion c) {
+	public Conversacion eliminarConversacion(Conversacion c) {
 		repo.eliminarConversacion(c);
+		return c;
 	}
 
 	@Override
-	public boolean modificarConversacion(Conversacion c)  {
+	public Conversacion modificarConversacion(Conversacion c)  {
 		try {
 			repo.modificarConversacion(c);
 		} catch (ConversacionException e) {
-			logger.error(e.getMessage());
+			logger.error("Error al modificar la conversacion: ", e);
 		}
-		return false;
+		return c;
 	}
 
 	@Override
@@ -59,7 +60,7 @@ public class ConversacionService implements ISerConversaciones{
 			repo.leerConversacion(pregunta, tipo, fecha);
 		} catch (ConversacionException e) {
 			// TODO Auto-generated catch block
-			logger.error(e.getMessage());
+			logger.error("Error al leer la conversacion: ", e);
 		}
 		return null;
 	}
@@ -69,30 +70,38 @@ public class ConversacionService implements ISerConversaciones{
 		try {
 			repo.incrementarValoracion(fecha, tipo, pregunta);
 		} catch (ConversacionException e) {
-			logger.error(e.getMessage());
+			logger.error("Error al incrementar la valoracion: ", e);
 		}
 		return null;
 	}
 
 	public double getValoracionMediaHumanos(TipoAgente tipo) {
+		double suma = 0;
+		double contador = 0;
+		double media = 0;
 		Set<Conversacion> conversaciones = new HashSet<Conversacion>();
 		for(Conversacion c : conversaciones) {
-			double valoracionTotal = c.getValoracion() + c.getValoracion();
+			contador = contador +1;
 			if(c.getAgente().equals(tipo.HUMANO)) {
-				double valoracionMediaHumanos = valoracionTotal / c.getValoracion();
+				suma = suma + 1;
 			}
 		}
-		return valoracionMediaHumanos;
+		media = suma / contador;
+		return media;
 	}
 	
 	public double getValoracionMediaBots(TipoAgente tipo) {
+		double suma = 0;
+		double contador = 0;
+		double media = 0;
 		Set<Conversacion> conversaciones = new HashSet<Conversacion>();
 		for(Conversacion c : conversaciones) {
-			double valoracionTotal = c.getValoracion() + c.getValoracion();
+			contador = contador + 1;
 			if(c.getAgente().equals(tipo.IA)) {
-				double valoracionMediaHumanos = valoracionTotal / c.getValoracion();
+				suma = suma + 1;
 			}
 		}
-		return valoracionMediaHumanos;		
+		media = suma / contador;
+		return media;
 	}
 }

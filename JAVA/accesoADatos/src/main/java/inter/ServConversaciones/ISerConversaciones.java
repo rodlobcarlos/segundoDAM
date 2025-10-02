@@ -7,15 +7,12 @@ import exception.ServConversaciones.ConversacionException;
 import model.ServConversaciones.Conversacion;
 
 public interface ISerConversaciones {
-
-	public static final double valoracionMediaHumanos = 0;
-	public static final double valoracionMediaBots = 0;
 	
-	public void agregarConversacion(Conversacion c);
+	public Conversacion agregarConversacion(Conversacion c);
 	
-	public void eliminarConversacion(Conversacion c);
+	public Conversacion eliminarConversacion(Conversacion c);
 	
-	public boolean modificarConversacion(Conversacion c) throws ConversacionException;
+	public Conversacion modificarConversacion(Conversacion c) throws ConversacionException;
 	
 	public Conversacion leerConversacion(String pregunta, TipoAgente tipo, LocalDate fecha) throws ConversacionException;
 	
