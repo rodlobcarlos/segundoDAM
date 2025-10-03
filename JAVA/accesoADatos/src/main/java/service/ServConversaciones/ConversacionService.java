@@ -4,9 +4,6 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import controller.ServConversaciones.GestionaPeticionesAChat;
 import enu.ServConversaciones.TipoAgente;
 import exception.ServConversaciones.ConversacionException;
