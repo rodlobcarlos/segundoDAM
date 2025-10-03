@@ -1,8 +1,12 @@
 package service.ServConversaciones;
 
 import java.time.LocalDate;
+
 import java.util.HashSet;
 import java.util.Set;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import controller.ServConversaciones.GestionaPeticionesAChat;
 import enu.ServConversaciones.TipoAgente;
@@ -15,7 +19,7 @@ public class ConversacionService implements ISerConversaciones{
 
 	private ConversacionRepository repo;
 	private static final Logger logger =  LogManager.getLogger(GestionaPeticionesAChat.class);
-	
+
 	public ConversacionService(ConversacionRepository repo) {
 		super();
 		this.repo = repo;
