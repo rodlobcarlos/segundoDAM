@@ -1,6 +1,7 @@
 package repository.ServConversaciones;
 
 import java.time.LocalDate;
+
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -18,7 +19,7 @@ public class ConversacionRepository implements IRepoConversaciones{
 
 	private Set<Conversacion> conversaciones;
 	
-	private static final Logger logger =  LogManager.getLogger(GestionaPeticionesAChat.class);
+	private static final Logger logger =  LogManager.getLogger(ConversacionRepository.class);
 
 
 	public Set<Conversacion> getConversaciones() {
