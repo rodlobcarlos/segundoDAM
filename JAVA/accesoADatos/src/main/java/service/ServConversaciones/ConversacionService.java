@@ -75,34 +75,30 @@ public class ConversacionService implements ISerConversaciones{
 		}
 		return null;
 	}
-
-	public double getValoracionMediaHumanos(TipoAgente tipo) {
-		double suma = 0;
+		
+	public double getValoracionMediaParaHumanos() {
+		double valor_humano = 0;
 		double contador = 0;
-		double media = 0;
-		Set<Conversacion> conversaciones = new HashSet<Conversacion>();
-		for(Conversacion c : conversaciones) {
-			contador = contador +1;
-			if(c.getAgente().equals(tipo.HUMANO)) {
-				suma = suma + 1;
+		for (Conversacion c : repo.getConversaciones()) {
+			contador++;
+			if (c.getAgente().equals(TipoAgente.HUMANO)) {
+				valor_humano++;
 			}
 		}
-		media = suma / contador;
-		return media;
+		double valor_media = valor_humano/contador;
+		return valor_media;
 	}
-	
-	public double getValoracionMediaBots(TipoAgente tipo) {
-		double suma = 0;
+
+	public double getValoracionMedidaParaBots() {
+		double valor_bot = 0;
 		double contador = 0;
-		double media = 0;
-		Set<Conversacion> conversaciones = new HashSet<Conversacion>();
-		for(Conversacion c : conversaciones) {
-			contador = contador + 1;
-			if(c.getAgente().equals(tipo.IA)) {
-				suma = suma + 1;
+		for (Conversacion c : repo.getConversaciones()) {
+			contador++;
+			if (c.getAgente().equals(TipoAgente.IA)) {
+				valor_bot++;
 			}
 		}
-		media = suma / contador;
-		return media;
+		double valor_media = valor_bot/contador;
+		return valor_media;
 	}
 }

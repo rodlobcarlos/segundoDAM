@@ -1,0 +1,107 @@
+2025-10-06 09:10:09.658 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-06 09:10:09.667 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:10:09.668 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-06 09:10:09.668 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:10:09.668 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:10:09.668 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=24, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0]
+2025-10-06 09:10:09.668 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=65, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]
+2025-10-06 09:10:09.669 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - NaN
+2025-10-06 09:10:09.669 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=52, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Martes?, valoracion=5.0], Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=65, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0], Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=24, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0]]
+2025-10-06 09:14:30.047 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-06 09:14:30.056 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:14:30.056 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-06 09:14:30.056 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:14:30.056 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:14:30.056 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=74, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0]
+2025-10-06 09:14:30.057 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=92, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]
+2025-10-06 09:14:30.057 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - NaN
+2025-10-06 09:14:30.057 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=74, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0], Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=28, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Martes?, valoracion=5.0], Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=92, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]]
+2025-10-06 09:16:35.946 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-06 09:16:35.954 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:16:35.954 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-06 09:16:35.954 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:16:35.954 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:16:35.955 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=87, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0]
+2025-10-06 09:16:35.955 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=81, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]
+2025-10-06 09:16:35.956 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:16:35.956 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=81, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0], Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=60, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Martes?, valoracion=5.0], Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=87, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0]]
+2025-10-06 09:16:49.842 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-06 09:16:49.853 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:16:49.853 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-06 09:16:49.853 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:16:49.853 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:16:49.853 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=53, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0]
+2025-10-06 09:16:49.854 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=14, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]
+2025-10-06 09:16:49.855 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:16:49.855 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:16:49.855 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=77, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Martes?, valoracion=5.0], Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=53, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0], Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=14, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]]
+2025-10-06 09:17:23.600 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-06 09:17:23.609 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:17:23.609 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-06 09:17:23.609 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:17:23.609 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:17:23.610 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=90, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0]
+2025-10-06 09:17:23.610 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=20, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]
+2025-10-06 09:17:23.610 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:17:23.610 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:17:23.611 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=90, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0], Conversacion [id=3, fechaRegistro=2025-10-06, numAleatorio=47, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Martes?, valoracion=5.0], Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=20, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]]
+2025-10-06 09:18:04.379 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-06 09:18:04.388 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:18:04.388 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-06 09:18:04.388 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:18:04.389 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:18:04.389 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=88, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0]
+2025-10-06 09:18:04.389 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=37, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]
+2025-10-06 09:18:04.390 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:18:04.390 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:18:04.390 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=3, fechaRegistro=2025-10-06, numAleatorio=0, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Martes?, valoracion=5.0], Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=88, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0], Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=37, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]]
+2025-10-06 09:18:45.230 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-06 09:18:45.238 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:18:45.238 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-06 09:18:45.239 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:18:45.239 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:18:45.239 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=88, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0]
+2025-10-06 09:18:45.239 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=20, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]
+2025-10-06 09:18:45.240 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:18:45.240 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:18:45.240 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=20, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0], Conversacion [id=3, fechaRegistro=2025-10-06, numAleatorio=48, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Martes?, valoracion=5.0], Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=88, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0]]
+2025-10-06 09:18:51.445 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-06 09:18:51.454 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:18:51.454 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-06 09:18:51.454 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:18:51.454 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:18:51.454 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=70, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0]
+2025-10-06 09:18:51.455 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=11, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]
+2025-10-06 09:18:51.455 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:18:51.455 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:18:51.456 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=11, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0], Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=70, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0], Conversacion [id=3, fechaRegistro=2025-10-06, numAleatorio=95, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Martes?, valoracion=5.0]]
+2025-10-06 09:18:55.411 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-06 09:18:55.420 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:18:55.420 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-06 09:18:55.420 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:18:55.420 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:18:55.420 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=32, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0]
+2025-10-06 09:18:55.421 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=51, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]
+2025-10-06 09:18:55.421 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:18:55.421 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:18:55.421 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=51, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0], Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=32, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0], Conversacion [id=3, fechaRegistro=2025-10-06, numAleatorio=68, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Martes?, valoracion=5.0]]
+2025-10-06 09:19:00.586 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-06 09:19:00.595 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:19:00.595 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-06 09:19:00.595 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:19:00.595 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:19:00.595 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=26, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0]
+2025-10-06 09:19:00.596 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=1, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]
+2025-10-06 09:19:00.596 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:19:00.596 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:19:00.596 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=1, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0], Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=26, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0], Conversacion [id=3, fechaRegistro=2025-10-06, numAleatorio=7, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Martes?, valoracion=5.0]]
+2025-10-06 09:19:50.191 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-06 09:19:50.200 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:19:50.200 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-06 09:19:50.200 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:19:50.200 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-06 09:19:50.200 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=35, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0]
+2025-10-06 09:19:50.200 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=96, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]
+2025-10-06 09:19:50.201 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:19:50.201 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.5
+2025-10-06 09:19:50.202 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=1, fechaRegistro=2025-10-06, numAleatorio=35, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Miércoles?, valoracion=10.0], Conversacion [id=3, fechaRegistro=2025-10-06, numAleatorio=56, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=¿Martes?, valoracion=5.0], Conversacion [id=2, fechaRegistro=2025-10-06, numAleatorio=96, agente=IA, pregunta=¿Qué día es hoy?, respuesta=¿Jueves?, valoracion=7.0]]

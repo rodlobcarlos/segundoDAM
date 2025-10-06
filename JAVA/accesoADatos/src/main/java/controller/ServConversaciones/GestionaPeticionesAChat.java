@@ -26,7 +26,9 @@ public class GestionaPeticionesAChat {
 		ConversacionRepository cr = new ConversacionRepository(conversacion);
 		ConversacionService cs = new ConversacionService(cr);
 		Conversacion c1 = new Conversacion(1, LocalDate.now(), numero.nextInt(100), TipoAgente.HUMANO, "¿Qué día es hoy?", "¿Miércoles?", 10.0);
-		Conversacion c3 = new Conversacion(1, LocalDate.now(), numero.nextInt(100), TipoAgente.HUMANO, "¿Qué día es hoy?", "¿Martes?", 5.0);
+		Conversacion c3 = new Conversacion(3, LocalDate.now(), numero.nextInt(100), TipoAgente.HUMANO, "¿Qué día es hoy?", "¿Martes?", 5.0);
+		Conversacion c4 = new Conversacion(4, LocalDate.now(), numero.nextInt(100), TipoAgente.HUMANO, "¿Qué día es hoy?", "¿Lunes?", 3.0);
+		Conversacion c5 = new Conversacion(5, LocalDate.now(), numero.nextInt(100), TipoAgente.HUMANO, "¿Qué día es hoy?", "¿Viernes?", 9.0);
 		Conversacion c2 = new Conversacion(2, LocalDate.now(), numero.nextInt(100), TipoAgente.IA, "¿Qué día es hoy?", "¿Jueves?", 7.0);
 
 		
@@ -40,7 +42,9 @@ public class GestionaPeticionesAChat {
 		logger.info("Conversacion agregada: " + cs.agregarConversacion(c2));
 		// --
 		
-		logger.debug(cs.getValoracionMediaHumanos(TipoAgente.HUMANO));
+		logger.debug(cs.getValoracionMediaParaHumanos());
+		logger.debug(cs.getValoracionMedidaParaBots());
+
 		
 		//logger.debug(cs.incrementarValoracion(LocalDate.now(), TipoAgente.IA, "¿Qué día es hoy?"));
 		logger.debug(conversacion);
