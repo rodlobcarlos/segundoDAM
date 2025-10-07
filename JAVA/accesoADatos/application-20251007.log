@@ -209,3 +209,23 @@ exception.ServConversaciones.ConversacionException: Esta conversación no existe
 	at controller.ServConversaciones.GestionaPeticionesAChat.main(GestionaPeticionesAChat.java:58) [classes/:?]
 2025-10-07 10:32:18.392 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Conversacion [id=5, fechaRegistro=2025-10-07, numAleatorio=97, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Viernes, valoracion=9.0]
 2025-10-07 10:32:18.392 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=54, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0], Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=71, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0], Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=28, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0], Conversacion [id=3, fechaRegistro=2025-10-07, numAleatorio=88, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Martes, valoracion=5.0], Conversacion [id=5, fechaRegistro=2025-10-07, numAleatorio=97, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Viernes, valoracion=9.0]]
+2025-10-07 10:57:20.310 [main] ERROR tema1.Ficheros - Error al crear fichero:El sistema no puede encontrar la ruta especificada
+2025-10-07 10:57:35.487 [main] ERROR tema1.Ficheros - Error al crear fichero:El sistema no puede encontrar la ruta especificada
+2025-10-07 11:50:53.383 [main] DEBUG tema1.Ficheros - desktop.ini
+2025-10-07 11:50:53.385 [main] DEBUG tema1.Ficheros - directorio
+2025-10-07 11:50:53.385 [main] DEBUG tema1.Ficheros - fichero.txt
+2025-10-07 11:50:53.385 [main] DEBUG tema1.Ficheros - GitHub Desktop.lnk
+2025-10-07 11:50:53.385 [main] DEBUG tema1.Ficheros - segundoDAM
+2025-10-07 11:50:53.385 [main] DEBUG tema1.Ficheros - segundo_DAM
+2025-10-07 11:52:50.608 [main] DEBUG tema1.Ficheros - desktop.ini
+2025-10-07 11:52:50.611 [main] DEBUG tema1.Ficheros - directorio
+2025-10-07 11:52:50.611 [main] DEBUG tema1.Ficheros - fichero.txt
+2025-10-07 11:52:50.611 [main] DEBUG tema1.Ficheros - GitHub Desktop.lnk
+2025-10-07 11:52:50.611 [main] DEBUG tema1.Ficheros - segundoDAM
+2025-10-07 11:52:50.611 [main] DEBUG tema1.Ficheros - segundo_DAM
+2025-10-07 11:53:02.107 [main] INFO  tema1.Ficheros - desktop.ini
+2025-10-07 11:53:02.110 [main] INFO  tema1.Ficheros - directorio
+2025-10-07 11:53:02.110 [main] INFO  tema1.Ficheros - fichero.txt
+2025-10-07 11:53:02.110 [main] INFO  tema1.Ficheros - GitHub Desktop.lnk
+2025-10-07 11:53:02.110 [main] INFO  tema1.Ficheros - segundoDAM
+2025-10-07 11:53:02.111 [main] INFO  tema1.Ficheros - segundo_DAM
