@@ -46,15 +46,18 @@ public class GestionaPeticionesAChat {
 
 		// --
 		
+		// Valoraciones 
 		logger.debug(cs.getValoracionMediaParaHumanos());
 		logger.debug(cs.getValoracionMedidaParaBots());
+
+		// Comprobar código
+		logger.debug(cs.incrementarValoracion(LocalDate.of(2025, 01, 30), TipoAgente.HUMANO, "¿Qué día es mañana?"));
 		
-		//logger.debug(cs.incrementarValoracion(LocalDate.now(), TipoAgente.HUMANO, "¿Qué día es mañana?"));
+		logger.debug(cs.leerConversacion("¿Qué día es mañana?", TipoAgente.HUMANO,  LocalDate.of(2025, 01, 30)));
 		
-		//logger.debug(cs.leerConversacion("¿Qué día es mañana?", TipoAgente.HUMANO,  LocalDate.of(2025, 01, 30)));
+		logger.debug(cs.modificarConversacion(c5));
 		
-		//logger.debug(cs.modificarConversacion(c5));
-		
+		// Listado
 		logger.debug(conversacion);
 
 	}

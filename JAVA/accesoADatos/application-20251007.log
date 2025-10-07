@@ -1,0 +1,211 @@
+2025-10-07 10:05:55.487 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-07 10:05:55.497 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:05:55.497 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-07 10:05:55.497 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:05:55.497 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:05:55.498 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:05:55.498 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:05:55.498 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=11, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0]
+2025-10-07 10:05:55.498 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=1, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0]
+2025-10-07 10:05:55.498 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=88, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]
+2025-10-07 10:05:55.500 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.6666666666666666
+2025-10-07 10:05:55.500 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.3333333333333333
+2025-10-07 10:05:55.500 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=11, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0], Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=1, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0], Conversacion [id=5, fechaRegistro=2025-10-07, numAleatorio=42, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Viernes, valoracion=9.0], Conversacion [id=3, fechaRegistro=2025-10-07, numAleatorio=4, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Martes, valoracion=5.0], Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=88, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]]
+2025-10-07 10:21:14.342 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-07 10:21:14.361 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:21:14.362 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-07 10:21:14.362 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:21:14.362 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:21:14.362 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:21:14.362 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:21:14.362 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=98, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0]
+2025-10-07 10:21:14.362 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=45, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0]
+2025-10-07 10:21:14.362 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=56, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]
+2025-10-07 10:21:14.364 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.6666666666666666
+2025-10-07 10:21:14.364 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.3333333333333333
+2025-10-07 10:21:14.364 [main] ERROR service.ServConversaciones.ConversacionService - Error al incrementar la valoracion: 
+exception.ServConversaciones.ConversacionException: Esta conversación no existe.
+	at repository.ServConversaciones.ConversacionRepository.leerConversacion(ConversacionRepository.java:77) ~[classes/:?]
+	at repository.ServConversaciones.ConversacionRepository.incrementarValoracion(ConversacionRepository.java:83) ~[classes/:?]
+	at service.ServConversaciones.ConversacionService.incrementarValoracion(ConversacionService.java:69) [classes/:?]
+	at controller.ServConversaciones.GestionaPeticionesAChat.main(GestionaPeticionesAChat.java:53) [classes/:?]
+2025-10-07 10:21:14.375 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - null
+2025-10-07 10:21:14.376 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=45, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0], Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=98, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0], Conversacion [id=3, fechaRegistro=2025-10-07, numAleatorio=47, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Martes, valoracion=5.0], Conversacion [id=5, fechaRegistro=2025-10-07, numAleatorio=87, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Viernes, valoracion=9.0], Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=56, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]]
+2025-10-07 10:22:41.689 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-07 10:22:41.707 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:22:41.708 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-07 10:22:41.708 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:22:41.708 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:22:41.708 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:22:41.708 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:22:41.709 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=68, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0]
+2025-10-07 10:22:41.709 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=73, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0]
+2025-10-07 10:22:41.710 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=8, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]
+2025-10-07 10:22:41.710 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.6666666666666666
+2025-10-07 10:22:41.710 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.3333333333333333
+2025-10-07 10:24:34.511 [main] ERROR service.ServConversaciones.ConversacionService - Error al incrementar la valoracion: 
+exception.ServConversaciones.ConversacionException: Esta conversación no existe.
+	at repository.ServConversaciones.ConversacionRepository.leerConversacion(ConversacionRepository.java:77) ~[classes/:?]
+	at repository.ServConversaciones.ConversacionRepository.incrementarValoracion(ConversacionRepository.java:83) ~[classes/:?]
+	at service.ServConversaciones.ConversacionService.incrementarValoracion(ConversacionService.java:69) [classes/:?]
+	at controller.ServConversaciones.GestionaPeticionesAChat.main(GestionaPeticionesAChat.java:53) [classes/:?]
+2025-10-07 10:24:34.519 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - null
+2025-10-07 10:24:34.520 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=73, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0], Conversacion [id=5, fechaRegistro=2025-10-07, numAleatorio=33, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Viernes, valoracion=9.0], Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=68, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0], Conversacion [id=3, fechaRegistro=2025-10-07, numAleatorio=26, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Martes, valoracion=5.0], Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=8, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]]
+2025-10-07 10:25:37.519 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-07 10:25:37.535 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:25:37.535 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-07 10:25:37.536 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:25:37.536 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:25:37.536 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:25:37.536 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:25:37.538 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=80, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0]
+2025-10-07 10:25:37.538 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=94, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0]
+2025-10-07 10:25:37.538 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=63, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]
+2025-10-07 10:25:37.539 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.6666666666666666
+2025-10-07 10:25:37.539 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.3333333333333333
+2025-10-07 10:25:37.539 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=94, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0], Conversacion [id=5, fechaRegistro=2025-10-07, numAleatorio=12, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Viernes, valoracion=9.0], Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=63, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0], Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=80, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0], Conversacion [id=3, fechaRegistro=2025-10-07, numAleatorio=98, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Martes, valoracion=5.0]]
+2025-10-07 10:25:54.762 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-07 10:25:54.780 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:25:54.780 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-07 10:25:54.780 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:25:54.781 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:25:54.781 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:25:54.781 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:25:54.781 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=46, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0]
+2025-10-07 10:25:54.782 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=19, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0]
+2025-10-07 10:25:54.782 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=13, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]
+2025-10-07 10:25:54.783 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.6666666666666666
+2025-10-07 10:25:54.783 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.3333333333333333
+2025-10-07 10:27:23.354 [main] ERROR service.ServConversaciones.ConversacionService - Error al incrementar la valoracion: 
+exception.ServConversaciones.ConversacionException: Esta conversación no existe.
+	at repository.ServConversaciones.ConversacionRepository.leerConversacion(ConversacionRepository.java:77) ~[classes/:?]
+	at repository.ServConversaciones.ConversacionRepository.incrementarValoracion(ConversacionRepository.java:83) ~[classes/:?]
+	at service.ServConversaciones.ConversacionService.incrementarValoracion(ConversacionService.java:69) [classes/:?]
+	at controller.ServConversaciones.GestionaPeticionesAChat.main(GestionaPeticionesAChat.java:53) [classes/:?]
+2025-10-07 10:27:23.363 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - null
+2025-10-07 10:27:23.363 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=46, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0], Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=13, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0], Conversacion [id=5, fechaRegistro=2025-10-07, numAleatorio=39, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Viernes, valoracion=9.0], Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=19, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0], Conversacion [id=3, fechaRegistro=2025-10-07, numAleatorio=75, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Martes, valoracion=5.0]]
+2025-10-07 10:27:33.733 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-07 10:27:33.748 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:27:33.749 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-07 10:27:33.749 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:27:33.749 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:27:33.749 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:27:33.749 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:27:33.750 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=49, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0]
+2025-10-07 10:27:33.750 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=67, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0]
+2025-10-07 10:27:33.750 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=11, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]
+2025-10-07 10:27:33.752 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.6666666666666666
+2025-10-07 10:27:33.753 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.3333333333333333
+2025-10-07 10:28:13.779 [main] ERROR service.ServConversaciones.ConversacionService - Error al incrementar la valoracion: 
+exception.ServConversaciones.ConversacionException: Esta conversación no existe.
+	at repository.ServConversaciones.ConversacionRepository.leerConversacion(ConversacionRepository.java:77) ~[classes/:?]
+	at repository.ServConversaciones.ConversacionRepository.incrementarValoracion(ConversacionRepository.java:83) ~[classes/:?]
+	at service.ServConversaciones.ConversacionService.incrementarValoracion(ConversacionService.java:69) [classes/:?]
+	at controller.ServConversaciones.GestionaPeticionesAChat.main(GestionaPeticionesAChat.java:53) [classes/:?]
+2025-10-07 10:28:13.788 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - null
+2025-10-07 10:28:13.788 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=3, fechaRegistro=2025-10-07, numAleatorio=93, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Martes, valoracion=5.0], Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=67, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0], Conversacion [id=5, fechaRegistro=2025-10-07, numAleatorio=40, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Viernes, valoracion=9.0], Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=49, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0], Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=11, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]]
+2025-10-07 10:29:13.182 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-07 10:29:13.190 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:29:13.191 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-07 10:29:13.191 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:29:13.191 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:29:13.191 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:29:13.191 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:29:13.191 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=69, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0]
+2025-10-07 10:29:13.191 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=40, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0]
+2025-10-07 10:29:13.191 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=60, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]
+2025-10-07 10:29:13.192 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.6666666666666666
+2025-10-07 10:29:13.192 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.3333333333333333
+2025-10-07 10:29:13.192 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=5, fechaRegistro=2025-10-07, numAleatorio=37, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Viernes, valoracion=9.0], Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=69, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0], Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=40, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0], Conversacion [id=3, fechaRegistro=2025-10-07, numAleatorio=57, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Martes, valoracion=5.0], Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=60, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]]
+2025-10-07 10:29:22.012 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-07 10:29:22.020 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:29:22.021 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-07 10:29:22.021 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:29:22.021 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:29:22.021 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:29:22.021 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:29:22.021 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=47, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0]
+2025-10-07 10:29:22.022 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=18, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0]
+2025-10-07 10:29:22.022 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=47, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]
+2025-10-07 10:29:22.023 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.6666666666666666
+2025-10-07 10:29:22.023 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.3333333333333333
+2025-10-07 10:29:22.023 [main] ERROR service.ServConversaciones.ConversacionService - Error al incrementar la valoracion: 
+exception.ServConversaciones.ConversacionException: Esta conversación no existe.
+	at repository.ServConversaciones.ConversacionRepository.leerConversacion(ConversacionRepository.java:77) ~[classes/:?]
+	at repository.ServConversaciones.ConversacionRepository.incrementarValoracion(ConversacionRepository.java:84) ~[classes/:?]
+	at service.ServConversaciones.ConversacionService.incrementarValoracion(ConversacionService.java:69) [classes/:?]
+	at controller.ServConversaciones.GestionaPeticionesAChat.main(GestionaPeticionesAChat.java:53) [classes/:?]
+2025-10-07 10:29:22.035 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - null
+2025-10-07 10:29:22.035 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=47, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0], Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=18, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0], Conversacion [id=5, fechaRegistro=2025-10-07, numAleatorio=39, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Viernes, valoracion=9.0], Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=47, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0], Conversacion [id=3, fechaRegistro=2025-10-07, numAleatorio=35, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Martes, valoracion=5.0]]
+2025-10-07 10:30:03.325 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-07 10:30:03.333 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:30:03.333 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-07 10:30:03.333 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:30:03.334 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:30:03.334 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:30:03.334 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:30:03.334 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=61, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0]
+2025-10-07 10:30:03.334 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=44, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0]
+2025-10-07 10:30:03.334 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=60, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]
+2025-10-07 10:30:03.335 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.6666666666666666
+2025-10-07 10:30:03.335 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.3333333333333333
+2025-10-07 10:30:03.336 [main] ERROR service.ServConversaciones.ConversacionService - Error al incrementar la valoracion: 
+exception.ServConversaciones.ConversacionException: Esta conversación no existe.
+	at repository.ServConversaciones.ConversacionRepository.leerConversacion(ConversacionRepository.java:77) ~[classes/:?]
+	at repository.ServConversaciones.ConversacionRepository.incrementarValoracion(ConversacionRepository.java:84) ~[classes/:?]
+	at service.ServConversaciones.ConversacionService.incrementarValoracion(ConversacionService.java:69) [classes/:?]
+	at controller.ServConversaciones.GestionaPeticionesAChat.main(GestionaPeticionesAChat.java:53) [classes/:?]
+2025-10-07 10:30:03.346 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - null
+2025-10-07 10:30:03.347 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=3, fechaRegistro=2025-10-07, numAleatorio=95, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Martes, valoracion=5.0], Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=61, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0], Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=44, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0], Conversacion [id=5, fechaRegistro=2025-10-07, numAleatorio=45, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Viernes, valoracion=9.0], Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=60, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]]
+2025-10-07 10:31:07.723 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-07 10:31:07.731 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:31:07.732 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-07 10:31:07.732 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:31:07.732 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:31:07.732 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:31:07.732 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:31:07.732 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=0, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0]
+2025-10-07 10:31:07.732 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=23, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0]
+2025-10-07 10:31:07.732 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=1, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]
+2025-10-07 10:31:07.733 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.6666666666666666
+2025-10-07 10:31:07.733 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.3333333333333333
+2025-10-07 10:31:07.733 [main] ERROR service.ServConversaciones.ConversacionService - Error al incrementar la valoracion: 
+exception.ServConversaciones.ConversacionException: Esta conversación no existe.
+	at repository.ServConversaciones.ConversacionRepository.leerConversacion(ConversacionRepository.java:77) ~[classes/:?]
+	at repository.ServConversaciones.ConversacionRepository.incrementarValoracion(ConversacionRepository.java:84) ~[classes/:?]
+	at service.ServConversaciones.ConversacionService.incrementarValoracion(ConversacionService.java:69) [classes/:?]
+	at controller.ServConversaciones.GestionaPeticionesAChat.main(GestionaPeticionesAChat.java:53) [classes/:?]
+2025-10-07 10:31:07.745 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - null
+2025-10-07 10:31:07.745 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=0, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0], Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=23, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0], Conversacion [id=3, fechaRegistro=2025-10-07, numAleatorio=98, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Martes, valoracion=5.0], Conversacion [id=5, fechaRegistro=2025-10-07, numAleatorio=99, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Viernes, valoracion=9.0], Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=1, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]]
+2025-10-07 10:32:18.369 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Iniciando ejecución del logger: 
+2025-10-07 10:32:18.378 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:32:18.378 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: false
+2025-10-07 10:32:18.378 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:32:18.378 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:32:18.378 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:32:18.378 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion añadida: true
+2025-10-07 10:32:18.379 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=54, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0]
+2025-10-07 10:32:18.379 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=28, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0]
+2025-10-07 10:32:18.379 [main] INFO  controller.ServConversaciones.GestionaPeticionesAChat - Conversacion agregada: Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=71, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0]
+2025-10-07 10:32:18.380 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.6666666666666666
+2025-10-07 10:32:18.380 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - 0.3333333333333333
+2025-10-07 10:32:18.380 [main] ERROR service.ServConversaciones.ConversacionService - Error al incrementar la valoracion: 
+exception.ServConversaciones.ConversacionException: Esta conversación no existe.
+	at repository.ServConversaciones.ConversacionRepository.leerConversacion(ConversacionRepository.java:77) ~[classes/:?]
+	at repository.ServConversaciones.ConversacionRepository.incrementarValoracion(ConversacionRepository.java:84) ~[classes/:?]
+	at service.ServConversaciones.ConversacionService.incrementarValoracion(ConversacionService.java:69) [classes/:?]
+	at controller.ServConversaciones.GestionaPeticionesAChat.main(GestionaPeticionesAChat.java:54) [classes/:?]
+2025-10-07 10:32:18.391 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - null
+2025-10-07 10:32:18.391 [main] ERROR service.ServConversaciones.ConversacionService - Error al leer la conversacion: 
+exception.ServConversaciones.ConversacionException: Esta conversación no existe.
+	at repository.ServConversaciones.ConversacionRepository.leerConversacion(ConversacionRepository.java:77) ~[classes/:?]
+	at service.ServConversaciones.ConversacionService.leerConversacion(ConversacionService.java:58) [classes/:?]
+	at controller.ServConversaciones.GestionaPeticionesAChat.main(GestionaPeticionesAChat.java:56) [classes/:?]
+2025-10-07 10:32:18.391 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - null
+2025-10-07 10:32:18.391 [main] ERROR service.ServConversaciones.ConversacionService - Error al modificar la conversacion: 
+exception.ServConversaciones.ConversacionException: Esta conversación no existe.
+	at repository.ServConversaciones.ConversacionRepository.modificarConversacion(ConversacionRepository.java:61) ~[classes/:?]
+	at service.ServConversaciones.ConversacionService.modificarConversacion(ConversacionService.java:48) [classes/:?]
+	at controller.ServConversaciones.GestionaPeticionesAChat.main(GestionaPeticionesAChat.java:58) [classes/:?]
+2025-10-07 10:32:18.392 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - Conversacion [id=5, fechaRegistro=2025-10-07, numAleatorio=97, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Viernes, valoracion=9.0]
+2025-10-07 10:32:18.392 [main] DEBUG controller.ServConversaciones.GestionaPeticionesAChat - [Conversacion [id=1, fechaRegistro=2025-10-07, numAleatorio=54, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Miércoles, valoracion=10.0], Conversacion [id=4, fechaRegistro=2025-01-30, numAleatorio=71, agente=HUMANO, pregunta=¿Qué día es mañana?, respuesta=Lunes, valoracion=3.0], Conversacion [id=2, fechaRegistro=2025-10-07, numAleatorio=28, agente=IA, pregunta=¿Qué día es hoy?, respuesta=Jueves, valoracion=7.0], Conversacion [id=3, fechaRegistro=2025-10-07, numAleatorio=88, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Martes, valoracion=5.0], Conversacion [id=5, fechaRegistro=2025-10-07, numAleatorio=97, agente=HUMANO, pregunta=¿Qué día es hoy?, respuesta=Viernes, valoracion=9.0]]

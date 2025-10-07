@@ -73,8 +73,9 @@ public class ConversacionRepository implements IRepoConversaciones{
 					&& conv2.getFechaRegistro().equals(fecha)) {
 				conv1 = conv2;
 				esEncontrado = true;
+			}else {
+				throw new ConversacionException("Esta conversación no existe.");
 			}
-			throw new ConversacionException("Esta conversación no existe.");
 		}
 		return conv1;
 	}
