@@ -1,3 +1,8 @@
+function $(selector) {
+    return document.querySelector(selector);
+}
+
+/*
 console.log("Hola buenos dias!");
 
 var table = "Normal Table";
@@ -127,8 +132,29 @@ console.log(div2);
 var div3 = document.querySelector("#my_second_div");
 console.log(my_second_div);
 
-function $(selector) {
-    return document.querySelectorAll(selector);
-}
 console.log($("#my_third_div"));
 console.log($("#my_third_div".classList));
+
+console.log($(".pruebas"));
+
+var numbers = [1,2,3,4];
+var n_Elevator_2 = numbers.map(n => n*n);
+console.log(n_Elevator_2);
+
+*/
+
+console.log($("#btn"));
+
+$("#btn").addEventListener("click", function(){
+    var input = document.createElement("input");
+    console.log("input");
+});
+
+$("#btn").addEventListener("click", function(){
+    var input = document.createElement("input");
+    input.setAttribute("type", "email");
+    input.setAttribute("placeholder", "E-email");
+    input.setAttribute("name", "emails[]");
+    $("#form").appendChild(input);
+    myAlert("Add new email input");
+});
