@@ -1,6 +1,7 @@
 package tema1;
 
 import java.io.File;
+
 import java.io.IOException;
 
 import org.apache.logging.log4j.LogManager;
@@ -40,6 +41,7 @@ public class Ficheros {
 				logger.error("La ruta no existe.");
 			}
 		}
+		
 		
 	}
 }
