@@ -1,0 +1,34 @@
+2025-10-09 20:51:01.328 [main] DEBUG tema1.Ejercicio1 - desktop.ini
+2025-10-09 20:51:01.331 [main] DEBUG tema1.Ejercicio1 - C:\Users\rodlo\Desktop\desktop.ini
+2025-10-09 20:51:01.331 [main] DEBUG tema1.Ejercicio1 - ficherito.txt
+2025-10-09 20:51:01.331 [main] DEBUG tema1.Ejercicio1 - C:\Users\rodlo\Desktop\ficherito.txt
+2025-10-09 20:51:01.331 [main] DEBUG tema1.Ejercicio1 - fichero2
+2025-10-09 20:51:01.331 [main] DEBUG tema1.Ejercicio1 - C:\Users\rodlo\Desktop\miDirectorio\fichero2
+2025-10-09 20:51:01.332 [main] DEBUG tema1.Ejercicio1 - fichero3
+2025-10-09 20:51:01.332 [main] DEBUG tema1.Ejercicio1 - C:\Users\rodlo\Desktop\miDirectorio\fichero3
+2025-10-09 20:51:01.332 [main] DEBUG tema1.Ejercicio1 - fichero.txt
+2025-10-09 20:51:01.332 [main] DEBUG tema1.Ejercicio1 - C:\Users\rodlo\Desktop\miDirectorio\miDirectorio2\fichero.txt
+2025-10-09 20:51:01.332 [main] DEBUG tema1.Ejercicio1 - miDirectorio2
+2025-10-09 20:51:01.333 [main] DEBUG tema1.Ejercicio1 - miDirectorio
+2025-10-09 20:51:07.205 [main] DEBUG tema1.Ejercicio1 - desktop.ini
+2025-10-09 20:51:07.207 [main] DEBUG tema1.Ejercicio1 - C:\Users\rodlo\Desktop\desktop.ini
+2025-10-09 20:51:07.208 [main] DEBUG tema1.Ejercicio1 - ficherito.txt
+2025-10-09 20:51:07.208 [main] DEBUG tema1.Ejercicio1 - C:\Users\rodlo\Desktop\ficherito.txt
+2025-10-09 20:51:07.208 [main] DEBUG tema1.Ejercicio1 - fichero2
+2025-10-09 20:51:07.208 [main] DEBUG tema1.Ejercicio1 - C:\Users\rodlo\Desktop\miDirectorio\fichero2
+2025-10-09 20:51:07.208 [main] DEBUG tema1.Ejercicio1 - fichero3
+2025-10-09 20:51:07.208 [main] DEBUG tema1.Ejercicio1 - C:\Users\rodlo\Desktop\miDirectorio\fichero3
+2025-10-09 20:51:07.208 [main] DEBUG tema1.Ejercicio1 - fichero.txt
+2025-10-09 20:51:07.209 [main] DEBUG tema1.Ejercicio1 - C:\Users\rodlo\Desktop\miDirectorio\miDirectorio2\fichero.txt
+2025-10-09 20:51:07.209 [main] DEBUG tema1.Ejercicio1 - miDirectorio2
+2025-10-09 20:51:07.209 [main] DEBUG tema1.Ejercicio1 - miDirectorio
+2025-10-09 21:04:25.357 [main] DEBUG tema1.Ejercicio1 - []
+2025-10-09 21:04:29.155 [main] DEBUG tema1.Ejercicio1 - []
+2025-10-09 21:04:29.535 [main] DEBUG tema1.Ejercicio1 - []
+2025-10-09 21:04:48.740 [main] DEBUG tema1.Ejercicio1 - []
+2025-10-09 21:04:58.344 [main] DEBUG tema1.Ejercicio1 - []
+2025-10-09 21:09:39.616 [main] INFO  tema1.Ejercicio1 - [ResultadoComparacion [nombreArchivo=Archivo2, valor=null, fechaModificacion=2025-05-23], ResultadoComparacion [nombreArchivo=Archivo1, valor=null, fechaModificacion=2025-10-05]]
+2025-10-09 21:09:39.618 [main] DEBUG tema1.Ejercicio1 - []
+2025-10-09 21:10:06.950 [main] INFO  tema1.Ejercicio1 - [ResultadoComparacion [nombreArchivo=Archivo2, valor=null, fechaModificacion=2025-05-23], ResultadoComparacion [nombreArchivo=Archivo1, valor=null, fechaModificacion=2025-10-05]]
+2025-10-09 21:10:21.979 [main] INFO  tema1.Ejercicio1 - [ResultadoComparacion [nombreArchivo=Archivo2, valor=null, fechaModificacion=2025-05-23], ResultadoComparacion [nombreArchivo=Archivo1, valor=null, fechaModificacion=2025-10-05]]
+2025-10-09 21:10:21.982 [main] DEBUG tema1.Ejercicio1 - []
