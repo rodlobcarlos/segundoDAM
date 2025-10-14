@@ -13,7 +13,7 @@ public class DiffFolder {
 	private File folder1;
 	private File folder2;
 	private Set<ResultadoComparacion> resultados;
-	
+
 	private static final Logger logger = LogManager.getLogger(Ejercicio1.class);
 
 	public File getFolder1() {
@@ -56,29 +56,50 @@ public class DiffFolder {
 		this.resultados = new HashSet<ResultadoComparacion>();
 	}
 
-	public void setFolders(File folder1, File folder2) throws GestionficherosException {
-		if ((folder1.exists() && folder2.exists()) 
-				&& (folder1.isDirectory() && folder2.isDirectory())) {
+	public boolean setFolders(File folder1, File folder2) throws GestionficherosException {
+		if ((folder1.exists() && folder2.exists()) && (folder1.isDirectory() && folder2.isDirectory())) {
 			boolean esValido1 = folder1.isDirectory();
 			boolean esValido2 = folder2.isDirectory();
 			logger.info("Folder1 es valido: " + esValido1);
 			logger.info("Folder1 es valido: " + esValido2);
-		} else if (!folder1.isDirectory() 
-				|| !folder2.isDirectory()) {
+		} else if (!folder1.isDirectory() || !folder2.isDirectory()) {
 			throw new GestionficherosException("No son directorios.");
 		}
+		return false;
 	}
 
 	// Terminar
-	public Set<ResultadoComparacion> compare() {
-		int contador = 0;
-		boolean encontrado = false;
-		Iterator<ResultadoComparacion> r = resultados.iterator();
-		while(!encontrado && r.hasNext()) {
-			ResultadoComparacion resultado = r.next();
-			contador++;
-			resultados.add(resultado);
-		}
-		return resultados;
+	// Método mira quien tiene más ficheros de folder 1 y folder 2
+	//Llamar al método que es comparaListaFicheros y recibe File1[], File 2[]
+	// Devuelve un set de resultados, se lo añado a variable(addAll) comparacion
+	//Llamo a comparaListaFicheros, lo del segundo pero al reves
+	//log comparacion
+	public void compare() {
+		
 	}
+	
+	private Set<ResultadoComparacion> comparaListaFicheros(File[] fichero1, File[] fichero2) {
+		// Recorro fichero1, para cada fichero1 busco el fichero2
+		//Si está llamo método comparaFicheros que recibe fichero1, fichero2
+		/*
+		 * si no está:
+		 * Si isPrimero
+		 * Añado creo objerto resultado(nombre fichero, FALTA_EN_1)
+		 * otras
+		 * Añado creo objerto resultado(nombre fichero, FALTA_EN_2)
+		 */		
+		return resultados;
+		
+	}
+	
+	public ResultadoComparacion comparaFichero(File fichero1, File fichero2) {
+		/*
+		 * Si la fecha de fichero1 es antes que la fichero2: 
+		 * 
+		 * otras
+		 */
+		return null;
+		
+	}
+	
 }

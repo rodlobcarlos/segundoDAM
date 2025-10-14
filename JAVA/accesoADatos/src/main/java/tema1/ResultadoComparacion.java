@@ -1,6 +1,7 @@
 package tema1;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class ResultadoComparacion {
 
@@ -36,4 +37,21 @@ public class ResultadoComparacion {
 		return "ResultadoComparacion [nombreArchivo=" + nombreArchivo + ", valor=" + valor + ", fechaModificacion="
 				+ fechaModificacion + "]";
 	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(fechaModificacion);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ResultadoComparacion other = (ResultadoComparacion) obj;
+		return Objects.equals(fechaModificacion, other.fechaModificacion);
+	}
+	
+	
 }

@@ -28,7 +28,12 @@ public class GestionaFolder {
 		logger.info(resultados);
 		DiffFolder d1 = new DiffFolder(f1, f2, resultados);
 		
-//		logger.debug(d1.compare());
+		try {
+			logger.debug(d1.setFolders(f1, f2));
+		} catch (GestionficherosException e) {
+			// TODO Auto-generated catch block
+			logger.info(e.getMessage());
+		}
 	}
 
 }
