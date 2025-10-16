@@ -16,3 +16,4 @@ print("Tienes", edad1, "años.")
 edad2 = int(input("Dime tu edad: "))
 es_mayor = edad2 >= 18
 print("Es mayor de edad: ", es_mayor)
+
