@@ -7,26 +7,36 @@
     <link rel="stylesheet" href="style.css"
 </head>
 <body>
-    <section class="form">
-        <h4>Formulario registro</h4>
-        <input class="data" type="text" name= "nombre" placeholder=Nombre>
-        <input class="data" type="text" name="Apellido" placeholder="Apellidos">
-        <input class="data" type="text" name="correo" placeholder="Correo">
-        <input class="data" type="text" name="telefono" placeholder="Teléfono">
-        <input class="data" type="date" name="año" placeholder="Año de nacimiento">
-        <select name="genero" id="genero" required>
+  <section class="form">
+    <h4>Formulario registro</h4>
+
+    <form id="registroForm">
+      <input class="data" type="text" name="nombre" placeholder="Nombre" required>
+      <input class="data" type="text" name="apellido" placeholder="Apellidos" required>
+      <input class="data" type="email" name="correo" placeholder="Correo" required>
+      <input class="data" type="tel" name="telefono" placeholder="Teléfono" required>
+      <input class="data" type="date" name="fecha" placeholder="Fecha de nacimiento" required>
+      <input class="data" type="text" name="dni" placeholder="DNI" required>
+      <input class="data" type="password" name="password" placeholder="Contraseña" required>
+      <input class="data" type="password" name="password2" placeholder="Repite la contraseña" required>
+
+      <select name="genero" id="genero" required>
         <option value="">Seleccione su género</option>
         <option value="masculino">Masculino</option>
         <option value="femenino">Femenino</option>
-        </select>
-        <input class="data" type="text" name="dni" placeholder="DNI">
-        <input class="data" type="password" name="contraseña" placeholder="Contraseña">
-        <input class="data" type="password" name="contraseña" placeholder="Repite la contraseña">
-        <label id="terminos"> <p class="textotermino">Acepto las condiciones y términos</p><input class="data" type="checkbox" name="contraseña"></label>
-        <input class="botton" type="submit" value="Confirmar">
-        <input class="botton" type="submit" value="Cancelar">
-        <br><br>
-        <input class="botton" type="submit" value="Validar formulario">
-    </section>
+      </select>
+
+      <div class="terminos">
+        <label for="condiciones">Acepto las condiciones y términos</label>
+        <input type="checkbox" id="condiciones" name="condiciones">
+      </div>
+
+      <input class="botton" type="submit" value="Confirmar">
+      <input class="botton" type="reset" value="Cancelar">
+    </form>
+  </section>
+
+      <script src="myFormulario.js"></script>
+
 </body>
 </html>
