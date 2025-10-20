@@ -27,3 +27,11 @@
     margin-bottom: 10px;
     border: 1px solid color(srgb red green blue);
 }
+
+#terminos {
+    display: flex;
+}
+
+.textotermino {
+    width: 200px;
+}

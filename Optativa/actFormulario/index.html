@@ -9,12 +9,24 @@
 <body>
     <section class="form">
         <h4>Formulario registro</h4>
-        <input class="data" type="name" name="nombre" placeholder="Escribe un nombre">
-        <input class="data" type="surname" name="Apellido" placeholder="Escribe tus apellidos">
-        <input class="data" type="phone" name="telefono" placeholder="Escribe un teléfono">
-        <input class="data" type="email" name="correo" placeholder="Escribe un correo">
-        <br>
+        <input class="data" type="text" name= "nombre" placeholder=Nombre>
+        <input class="data" type="text" name="Apellido" placeholder="Apellidos">
+        <input class="data" type="text" name="correo" placeholder="Correo">
+        <input class="data" type="text" name="telefono" placeholder="Teléfono">
+        <input class="data" type="date" name="año" placeholder="Año de nacimiento">
+        <select name="genero" id="genero" required>
+        <option value="">Seleccione su género</option>
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        </select>
+        <input class="data" type="text" name="dni" placeholder="DNI">
+        <input class="data" type="password" name="contraseña" placeholder="Contraseña">
+        <input class="data" type="password" name="contraseña" placeholder="Repite la contraseña">
+        <label id="terminos"> <p class="textotermino">Acepto las condiciones y términos</p><input class="data" type="checkbox" name="contraseña"></label>
         <input class="botton" type="submit" value="Confirmar">
+        <input class="botton" type="submit" value="Cancelar">
+        <br><br>
+        <input class="botton" type="submit" value="Validar formulario">
     </section>
 </body>
 </html>
