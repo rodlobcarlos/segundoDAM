@@ -5,24 +5,20 @@ import java.io.IOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Lanzador {
+public class LanzadorCalculaSuma {
 
-	private static final String diractorioGenerarClasses = "target\\boletin1";
-	private static final String rutaFicherosJava = "src\\main\\java\\boletin1\\Gestiona.java";
-
-	private static final Logger logger = LogManager.getLogger(Lanzador.class);
+	private static final Logger logger = LogManager.getLogger(LanzadorCalculaSuma.class);
 
 	public static void main(String[] args) {
 
-		Lanzador l = new Lanzador();
-		l.proceso();
+		LanzadorCalculaSuma l = new LanzadorCalculaSuma();
 		l.ejecutaProcesoJava();
+		l.ejecutaSubprocesoProcesoJava();
 	}
 
 	public void proceso() {
 		try {
-			String[] comando = { "javac", "-d", diractorioGenerarClasses,
-					rutaFicherosJava + "Gestiona.java" };
+			String[] comando = { "javac", "-d", "src/main/java/boletin1", "CalculaSuma.java" };
 			ProcessBuilder pb = new ProcessBuilder(comando);
 			Process p = pb.start();
 			pb.inheritIO();
@@ -37,18 +33,27 @@ public class Lanzador {
 
 	}
 
-	
 	public void ejecutaProcesoJava() {
-		String[] comando = { "java", "-cp", diractorioGenerarClasses,
-				rutaFicherosJava, "Hola2", "Adios2"};
+		String[] comando = { "java", "-cp", "target/classes", "boletin1.CalculaSuma", "par", "10" };
 		ProcessBuilder pb = new ProcessBuilder(comando);
+		pb.inheritIO();
 
 		try {
-			pb.inheritIO();
 			Process proceso = pb.start();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-	
+
+	public void ejecutaSubprocesoProcesoJava() {
+		String[] comando = { "java", "-cp", "target/classes", "boletin1.CalculaSuma", "impar", "11" };
+		ProcessBuilder pb = new ProcessBuilder(comando);
+		pb.inheritIO();
+
+		try {
+			Process proceso = pb.start();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }
