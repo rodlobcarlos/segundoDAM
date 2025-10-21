@@ -1,4 +1,4 @@
-package boletin1;
+package jar;
 
 import java.io.IOException;
 
@@ -19,7 +19,7 @@ public class LanzadorCalculaSuma {
 	public void proceso() {
 		try {
 			String[] comando = { "javac", "-d", "src/main/java/boletin1", "CalculaSuma.java" };
-			Runtime pb = new Runtime(comando);
+			ProcessBuilder pb = new ProcessBuilder(comando);
 			Process p = pb.start();
 			pb.inheritIO();
 			Process proceso = pb.start();
@@ -35,8 +35,8 @@ public class LanzadorCalculaSuma {
 
 	public void ejecutaProcesoJava() {
 		String[] comando = { "java", "-cp", "target/classes", "boletin1.CalculaSuma", "par", "10" };
-		Runtime pb = new Runtime(comando);
-		pb.
+		ProcessBuilder pb = new ProcessBuilder(comando);
+		pb.inheritIO();
 
 		try {
 			Process proceso = pb.start();
@@ -47,7 +47,7 @@ public class LanzadorCalculaSuma {
 
 	public void ejecutaSubprocesoProcesoJava() {
 		String[] comando = { "java", "-cp", "target/classes", "boletin1.CalculaSuma", "impar", "11" };
-		Runtime pb = new Runtime(comando);
+		ProcessBuilder pb = new ProcessBuilder(comando);
 		pb.inheritIO();
 
 		try {
