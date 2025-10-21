@@ -1,6 +1,8 @@
 package tema1;
 
 import java.io.File;
+
+
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -8,13 +10,14 @@ import java.util.Set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+
 public class DiffFolder {
 
 	private File folder1;
 	private File folder2;
 	private Set<ResultadoComparacion> resultados;
-
-	private static final Logger logger = LogManager.getLogger(Ejercicio1.class);
+	
+	private static final Logger logger = LogManager.getLogger(DiffFolder.class);
 
 	public File getFolder1() {
 		return folder1;
@@ -94,7 +97,7 @@ public class DiffFolder {
 	
 	public ResultadoComparacion comparaFichero(File fichero1, File fichero2) {
 		/*
-		 * Si la fecha de fichero1 es antes que la fichero2: 
+		 * Si la fecha de fichero1 es antes que la fichero2:
 		 * 
 		 * otras
 		 */
