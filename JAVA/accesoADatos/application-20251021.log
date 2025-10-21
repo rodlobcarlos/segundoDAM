@@ -5,3 +5,79 @@
 2025-10-21 19:20:06.308 [main] INFO  tema1.DiffFolder - Folder1 es valido: true
 2025-10-21 19:20:06.309 [main] DEBUG tema1.DiffFolder - 10
 2025-10-21 19:20:06.309 [main] DEBUG tema1.DiffFolder - 10
+2025-10-21 20:54:56.140 [main] DEBUG tema1.DiffFolder - Pokemon leído: Pokemon [id=1, nombre=Bulbasaur, tipo=Planta, altura=0.0, peso=0.0, habilidadPrincipal=Clorofila, evoluciona_a=Ivysaur]
+2025-10-21 20:59:37.392 [main] DEBUG tema1.DiffFolder - Pokemon leído: Pokemon [id=1, nombre=Bulbasaur, tipo=Planta, altura=0.7, peso=6.9, habilidadPrincipal=Clorofila, evoluciona_a=Ivysaur]
+2025-10-21 21:12:53.055 [main] DEBUG tema1.DiffFolder - Pokemon leído: Pokemon [id=1, nombre=Bulbasaur, tipo=Planta, altura=0.7, peso=6.9, habilidadPrincipal=Clorofila, evoluciona_a=Ivysaur]
+2025-10-21 21:13:22.437 [main] ERROR tema1.DiffFolder - Error al leer el archivo JSON
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:397) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1227) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1137) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1075) ~[gson-2.10.1.jar:?]
+	at json.UtilidadesJsonPokemons.leePokemon(UtilidadesJsonPokemons.java:18) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:7) [classes/:?]
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:393) ~[gson-2.10.1.jar:?]
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:386) ~[gson-2.10.1.jar:?]
+	... 5 more
+2025-10-21 21:13:28.276 [main] ERROR tema1.DiffFolder - Error al leer el archivo JSON
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:397) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1227) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1137) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1075) ~[gson-2.10.1.jar:?]
+	at json.UtilidadesJsonPokemons.leePokemon(UtilidadesJsonPokemons.java:18) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:7) [classes/:?]
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:393) ~[gson-2.10.1.jar:?]
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:386) ~[gson-2.10.1.jar:?]
+	... 5 more
+2025-10-21 21:13:52.711 [main] ERROR tema1.DiffFolder - Error al leer el archivo JSON
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:397) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1227) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1137) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1075) ~[gson-2.10.1.jar:?]
+	at json.UtilidadesJsonPokemons.leePokemon(UtilidadesJsonPokemons.java:18) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:7) [classes/:?]
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:393) ~[gson-2.10.1.jar:?]
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:386) ~[gson-2.10.1.jar:?]
+	... 5 more
+2025-10-21 21:13:58.765 [main] ERROR tema1.DiffFolder - Error al leer el archivo JSON
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:397) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1227) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1137) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1075) ~[gson-2.10.1.jar:?]
+	at json.UtilidadesJsonPokemons.leePokemon(UtilidadesJsonPokemons.java:18) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:7) [classes/:?]
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:393) ~[gson-2.10.1.jar:?]
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:386) ~[gson-2.10.1.jar:?]
+	... 5 more
+2025-10-21 21:14:52.872 [main] ERROR tema1.DiffFolder - Error al leer el archivo JSON
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:397) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1227) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1137) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1075) ~[gson-2.10.1.jar:?]
+	at json.UtilidadesJsonPokemons.leePokemon(UtilidadesJsonPokemons.java:18) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:7) [classes/:?]
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:393) ~[gson-2.10.1.jar:?]
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:386) ~[gson-2.10.1.jar:?]
+	... 5 more
+2025-10-21 21:16:07.315 [main] DEBUG tema1.DiffFolder - Pokemon leído: Pokemon [id=1, nombre=Bulbasaur, tipo=Planta, altura=0.7, peso=6.9, habilidadPrincipal=Clorofila, evoluciona_a=Ivysaur]
+2025-10-21 21:16:13.359 [main] ERROR tema1.DiffFolder - Error al leer el archivo JSON
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:397) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1227) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1137) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1075) ~[gson-2.10.1.jar:?]
+	at json.UtilidadesJsonPokemons.leePokemon(UtilidadesJsonPokemons.java:18) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:7) [classes/:?]
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:393) ~[gson-2.10.1.jar:?]
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:386) ~[gson-2.10.1.jar:?]
+	... 5 more
