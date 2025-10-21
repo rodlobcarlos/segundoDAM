@@ -1,50 +1,54 @@
 package tema1;
 
 import java.io.File;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import java.util.Scanner;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class ContadorPalabras {
 
-	private static String rutaFichero = "C:\\Users\\alumno\\Desktop\\segundoDAM\\JAVA\\accesoADatos\\src\\main\\resources\\Fichero.txt";
-
-	private static final Logger logger = LogManager.getLogger(ContadorPalabras.class);
-
-	public int cuentaPalabras(String palabra, String rutaFichero) throws FileNotFoundException {
-		File archivo = new File(rutaFichero, "Fichero.txt");
+	public int cuentaPalabras(String palabra, File rutaFichero) throws FileNotFoundException {
 		int contador = 0;
-		FileReader fichero = new FileReader(rutaFichero);
-		Scanner in = new Scanner(fichero);
-
-		while (in.hasNextLine()) {
-			String linea = in.nextLine();
-			String[] palabras = linea.split(" ");
-			
-			for (String p : palabras) {
-				if (p.equalsIgnoreCase(palabra));
-				contador++;
+		Scanner in = null;
+		try {
+			FileReader fichero = new FileReader(rutaFichero);
+			in = new Scanner(fichero);
+			while (in.hasNext()) {
+				String linea = in.nextLine();
+				String[] palabras = linea.split(" ");
+				for (String p : palabras) {
+					String palabraEs = palabra.substring(0, 1).toUpperCase() + palabra.substring(1).toLowerCase();
+					if (p.equalsIgnoreCase(palabra))
+						;
+					contador += 1;
+				}
+			}
+		} finally {
+			if (in != null) {
+				in.close();
 			}
 		}
 		return contador;
 	}
-	
-	public void escribeNumero(int numero, String rutaFichero) {
+
+	public void escribeNumero(int numero, File rutaFichero) {
 		PrintWriter out = null;
 		try {
-			FileWriter ficheroSalida = new FileWriter(rutaFichero);
+			FileWriter ficheroSalida;
+			ficheroSalida = new FileWriter(rutaFichero);
 			out = new PrintWriter(ficheroSalida);
-			out.printf(rutaFichero, numero);
+			out.printf("El número de veces que aparece dicha palabra es: %d %n", numero);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			if(out != null) {
+				out.close();
+			}
 		}
 	}
 }
