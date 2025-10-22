@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class ContadorPalabras2 {
 	
-	private final static String rutaResources = "src\\main\\resources\\";
+	private final static String rutaResources = "src\\main\\resources\\Fichero.txt";
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		String ruta = rutaResources + args[0];
