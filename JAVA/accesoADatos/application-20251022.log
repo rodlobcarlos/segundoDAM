@@ -1,0 +1,159 @@
+2025-10-22 12:28:25.784 [main] INFO  tema1.GestionaContadorPalabras - Número de veces: 145
+2025-10-22 12:28:29.004 [main] INFO  tema1.GestionaContadorPalabras - Número de veces: 145
+2025-10-22 12:28:31.053 [main] INFO  tema1.GestionaContadorPalabras - Número de veces: 145
+2025-10-22 12:28:34.095 [main] INFO  tema1.GestionaContadorPalabras - Número de veces: 145
+2025-10-22 12:29:06.869 [main] INFO  tema1.GestionaContadorPalabras - Número de veces: 145
+2025-10-22 12:29:24.873 [main] DEBUG json.UtilidadesJsonPokemons - Pokemon leído: Pokemon [id=1, nombre=Bulbasaur, tipo=Planta, altura=0.7, peso=6.9, habilidadPrincipal=Clorofila, evoluciona_a=Ivysaur]
+2025-10-22 12:29:24.876 [main] ERROR json.UtilidadesJsonPokemons - Error al leer el archivo JSON
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:397) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1227) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1137) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1075) ~[gson-2.10.1.jar:?]
+	at json.UtilidadesPokemonCsv.leeCsv(UtilidadesPokemonCsv.java:40) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:10) [classes/:?]
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:393) ~[gson-2.10.1.jar:?]
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:386) ~[gson-2.10.1.jar:?]
+	... 5 more
+2025-10-22 12:30:51.385 [main] ERROR json.UtilidadesJsonPokemons - Error al leer el archivo JSON
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:397) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1227) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1137) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1075) ~[gson-2.10.1.jar:?]
+	at json.UtilidadesJsonPokemons.leePokemon(UtilidadesJsonPokemons.java:18) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:7) [classes/:?]
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:393) ~[gson-2.10.1.jar:?]
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:386) ~[gson-2.10.1.jar:?]
+	... 5 more
+2025-10-22 12:30:51.396 [main] ERROR json.UtilidadesJsonPokemons - Error al leer el archivo JSON
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+	at com.google.gson.Gson.fromJson(Gson.java:1238) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1137) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1075) ~[gson-2.10.1.jar:?]
+	at json.UtilidadesPokemonCsv.leeCsv(UtilidadesPokemonCsv.java:40) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:10) [classes/:?]
+Caused by: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginArray(JsonReader.java:358) ~[gson-2.10.1.jar:?]
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:70) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1227) ~[gson-2.10.1.jar:?]
+	... 4 more
+2025-10-22 12:31:03.971 [main] ERROR json.UtilidadesJsonPokemons - Error al leer el archivo JSON
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+	at com.google.gson.Gson.fromJson(Gson.java:1238) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1137) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1075) ~[gson-2.10.1.jar:?]
+	at json.UtilidadesPokemonCsv.leeCsv(UtilidadesPokemonCsv.java:40) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:10) [classes/:?]
+Caused by: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginArray(JsonReader.java:358) ~[gson-2.10.1.jar:?]
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:70) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1227) ~[gson-2.10.1.jar:?]
+	... 4 more
+2025-10-22 12:31:13.496 [main] ERROR json.UtilidadesJsonPokemons - Error al leer el archivo JSON
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+	at com.google.gson.Gson.fromJson(Gson.java:1238) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1137) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1075) ~[gson-2.10.1.jar:?]
+	at json.UtilidadesPokemonCsv.leeCsv(UtilidadesPokemonCsv.java:40) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:10) [classes/:?]
+Caused by: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginArray(JsonReader.java:358) ~[gson-2.10.1.jar:?]
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:70) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1227) ~[gson-2.10.1.jar:?]
+	... 4 more
+2025-10-22 12:31:35.607 [main] ERROR json.UtilidadesJsonPokemons - Error al leer el archivo CSV
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+	at com.google.gson.Gson.fromJson(Gson.java:1238) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1137) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1075) ~[gson-2.10.1.jar:?]
+	at json.UtilidadesPokemonCsv.leeCsv(UtilidadesPokemonCsv.java:40) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:10) [classes/:?]
+Caused by: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginArray(JsonReader.java:358) ~[gson-2.10.1.jar:?]
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:70) ~[gson-2.10.1.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1227) ~[gson-2.10.1.jar:?]
+	... 4 more
+2025-10-22 12:32:52.107 [main] ERROR json.UtilidadesJsonPokemons - Error al leer el archivo CSV
+java.io.FileNotFoundException: fichero.csv (El sistema no puede encontrar el archivo especificado)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:213) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:152) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:106) ~[?:?]
+	at java.io.FileReader.<init>(FileReader.java:60) ~[?:?]
+	at json.UtilidadesPokemonCsv.leeCsv(UtilidadesPokemonCsv.java:40) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:10) [classes/:?]
+2025-10-22 12:33:09.273 [main] ERROR json.UtilidadesJsonPokemons - Error al leer el archivo CSV
+java.io.FileNotFoundException: pokemon.csv (El sistema no puede encontrar el archivo especificado)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:213) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:152) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:106) ~[?:?]
+	at java.io.FileReader.<init>(FileReader.java:60) ~[?:?]
+	at json.UtilidadesPokemonCsv.leeCsv(UtilidadesPokemonCsv.java:40) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:10) [classes/:?]
+2025-10-22 12:33:09.783 [main] ERROR json.UtilidadesJsonPokemons - Error al leer el archivo CSV
+java.io.FileNotFoundException: pokemon.csv (El sistema no puede encontrar el archivo especificado)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:213) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:152) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:106) ~[?:?]
+	at java.io.FileReader.<init>(FileReader.java:60) ~[?:?]
+	at json.UtilidadesPokemonCsv.leeCsv(UtilidadesPokemonCsv.java:40) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:10) [classes/:?]
+2025-10-22 12:33:11.035 [main] ERROR json.UtilidadesJsonPokemons - Error al leer el archivo CSV
+java.io.FileNotFoundException: pokemon.csv (El sistema no puede encontrar el archivo especificado)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:213) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:152) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:106) ~[?:?]
+	at java.io.FileReader.<init>(FileReader.java:60) ~[?:?]
+	at json.UtilidadesPokemonCsv.leeCsv(UtilidadesPokemonCsv.java:40) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:10) [classes/:?]
+2025-10-22 12:36:13.055 [main] ERROR json.UtilidadesJsonPokemons - Error al leer el archivo CSV
+java.io.FileNotFoundException: pokemon.csv (El sistema no puede encontrar el archivo especificado)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:213) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:152) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:106) ~[?:?]
+	at java.io.FileReader.<init>(FileReader.java:60) ~[?:?]
+	at json.UtilidadesPokemonCsv.leeCsv(UtilidadesPokemonCsv.java:41) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:10) [classes/:?]
+2025-10-22 12:45:21.632 [main] ERROR json.UtilidadesJsonPokemons - Error al leer el archivo CSV
+java.io.FileNotFoundException: pokemon.csv (El sistema no puede encontrar el archivo especificado)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:213) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:152) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:106) ~[?:?]
+	at java.io.FileReader.<init>(FileReader.java:60) ~[?:?]
+	at json.UtilidadesPokemonCsv.leeCsv(UtilidadesPokemonCsv.java:44) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:10) [classes/:?]
+2025-10-22 12:45:54.304 [main] ERROR json.UtilidadesJsonPokemons - Error al leer el archivo CSV
+java.io.FileNotFoundException: pokemon.csv (El sistema no puede encontrar el archivo especificado)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:213) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:152) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:106) ~[?:?]
+	at java.io.FileReader.<init>(FileReader.java:60) ~[?:?]
+	at json.UtilidadesPokemonCsv.leeCsv(UtilidadesPokemonCsv.java:44) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:10) [classes/:?]
+2025-10-22 12:46:30.742 [main] ERROR json.UtilidadesJsonPokemons - Error al leer el archivo CSV
+java.io.FileNotFoundException: pokemon.csv (El sistema no puede encontrar el archivo especificado)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:213) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:152) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:106) ~[?:?]
+	at java.io.FileReader.<init>(FileReader.java:60) ~[?:?]
+	at json.UtilidadesPokemonCsv.leeCsv(UtilidadesPokemonCsv.java:44) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:10) [classes/:?]
+2025-10-22 12:53:26.726 [main] ERROR json.UtilidadesJsonPokemons - Error al leer el archivo CSV
+java.io.FileNotFoundException: pokemon.csv (El sistema no puede encontrar el archivo especificado)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:213) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:152) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:106) ~[?:?]
+	at java.io.FileReader.<init>(FileReader.java:60) ~[?:?]
+	at json.UtilidadesPokemonCsv.leeCsv(UtilidadesPokemonCsv.java:44) [classes/:?]
+	at json.GestionaPokemonCsv.main(GestionaPokemonCsv.java:10) [classes/:?]

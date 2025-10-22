@@ -1,9 +1,2 @@
-  {
-    "id": 1,
-    "nombre": "Bulbasaur",
-    "tipo": "Planta",
-    "altura_m": 0.7,
-    "peso_kg": 6.9,
-    "habilidadPrincipal": "Clorofila",
-    "evoluciona_a": "Ivysaur"
-  }
+id,nombre,tipo,altura_m,peso_kg,habilidades,evoluciona_a
+1,Bulbasaur,"Planta;Veneno",0.7,6.9,"Espesura;Clorofila",Ivysaur

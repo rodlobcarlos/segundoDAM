@@ -7,11 +7,11 @@ public class Pokemon {
 	private String tipo;
 	private float altura_m;
 	private float peso_kg;
-	private String habilidadPrincipal;
-	private String evoluciona_a;
+	private String[] habilidadPrincipal;
+	private String[] evoluciona_a;
 	
-	public Pokemon(int id, String nombre, String tipo, float altura_m, float peso_kg, String habilidadPrincipal,
-			String evoluciona_a) {
+	public Pokemon(int id, String nombre, String tipo, float altura_m, float peso_kg, String[] habilidadPrincipal,
+			String[] evoluciona_a) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -68,19 +68,19 @@ public class Pokemon {
 		this.peso_kg = peso_kg;
 	}
 
-	public String getHabilidadPrincipal() {
+	public String[] getHabilidadPrincipal() {
 		return habilidadPrincipal;
 	}
 
-	public void setHabilidadPrincipal(String habilidadPrincipal) {
+	public void setHabilidadPrincipal(String[] habilidadPrincipal) {
 		this.habilidadPrincipal = habilidadPrincipal;
 	}
 
-	public String getEvoluciona_a() {
+	public String[] getEvoluciona_a() {
 		return evoluciona_a;
 	}
 
-	public void setEvoluciona_a(String evoluciona_a) {
+	public void setEvoluciona_a(String[] evoluciona_a) {
 		this.evoluciona_a = evoluciona_a;
 	}
 }
