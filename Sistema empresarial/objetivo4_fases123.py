@@ -1,5 +1,11 @@
 # Carlos Rodríguez Lobato / Grupo 2ºDAM
 
+'''
+Esta actividad pide que demos un número de alumnos,
+luego la nota de cada alumno, hacer una media de esa nota de manera individual y
+luego calcular la media de todos lo alumnos. Siempre validando cada nota y media.
+Por último, decir cuantos aprobados, suspensos y por mejorar hay.
+'''
 alumno = int(input("¿Cuantos alumnos hay?: "))
 suma_media = 0
 contador1 = 0
