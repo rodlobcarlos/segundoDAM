@@ -1,7 +1,10 @@
 # Carlos Rodríguez Lobato / Grupo 2ºDAM
 
 '''
-
+En esta actividad se usa la herencia multiple,
+se piden tres clases (video, audio, media) y se tienen
+que hacer varios métodos para sacar por pantalla, como 
+iniciar y detener un video y lo mismo para el audio
 '''
 
 class Video:
