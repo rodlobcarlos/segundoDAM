@@ -1,6 +1,7 @@
 package towerGPT_repository;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
@@ -11,8 +12,8 @@ import towerGPT_model.InteraccionAgente;
 import towerGPT_model.TipoAgente;
 
 public class RepositorioInteracciones {
-
-	private static final Logger logger =  LogManager.getLogger(InteraccionAgente.class);
+	
+    private static final Logger logger = LogManager.getLogger(RepositorioInteracciones.class);
 
 	private Set<InteraccionAgente> registro;
 
@@ -22,10 +23,6 @@ public class RepositorioInteracciones {
 
 	public void setRegistro(Set<InteraccionAgente> registro) {
 		this.registro = registro;
-	}
-
-	public static Logger getLogger() {
-		return logger;
 	}
 
 	@Override
@@ -53,73 +50,23 @@ public class RepositorioInteracciones {
 		return esActualizado;
 	}
 	
-	// REVISAR
-	public double incrementarNumeroValoraciones(InteraccionAgente interaccionAgente, double valoracionNueva) throws InteraccionException {
-		if(interaccionAgente.getValoracion() != valoracionNueva) {
-			valoracionNueva +=1;
-		}else {
-			throw new InteraccionException("No es posible incrementar la valoración.");
-		}
-		return valoracionNueva;
+	public void borrarInteracciones(InteraccionAgente interaccionAgente) {
+		registro.remove(interaccionAgente);
 	}
 	
-	// REVISAR
-	public InteraccionAgente obtenerInteraccionConMayorValoracion() {
-		// contador = 0;
-		double mayor = 0;
-		for(InteraccionAgente i: registro) {
-			if(i.getValoracion() > mayor) {
-				mayor = i.getValoracion();
-				// contador++;
-				logger.info("La mayor valoración es: ",mayor);
-			}
-		}
-		return null;
-	}
-	
-	public int calcularTiempoMedioPorTipo(TipoAgente agente) {
-		int sumaDelTipo = 0;
-		int contador = 0;
-		for(InteraccionAgente i: registro) {
-			if(i.getTipo().equals(agente.HUMANO) || i.getTipo().equals(agente.IA)) {
-				sumaDelTipo += i.getTimepoEjecucion();
-				contador++;
-			}
-		}
-		int mediaTiempo = sumaDelTipo / contador;
-		return mediaTiempo;
-		
-	}
-	
-	public int calcularPorcentajeMedioPorTipos(TipoAgente agente) {
-		int sumaDelTipo = 0;
-		int contador = 0;
-		for(InteraccionAgente i: registro) {
-			if(i.getTipo().equals(agente.HUMANO) || i.getTipo().equals(agente.IA)) {
-				sumaDelTipo += i.getPorcentajeAcierto();
-				contador++;
-			}
-		}
-		int mediaTiempo = sumaDelTipo / contador;
-		return mediaTiempo;
-		
-	}
-	
-	//obtenerInteraccionesAciertoMayorQueOrdenadas
-	
-	public void agruparInteraccionesPorTipo(TipoAgente agente) {
-		Set<InteraccionAgente> tipoHumano = new HashSet<InteraccionAgente>();
-		Set<InteraccionAgente> tipoIA = new HashSet<InteraccionAgente>();
-		for(InteraccionAgente i: registro) {
-			if(i.getTipo().equals(agente.HUMANO)) {
-				tipoHumano.add(i);
-				logger.info(tipoHumano);
+	public InteraccionAgente leerInteracciones(String id) throws InteraccionException {
+		InteraccionAgente agente = null;
+		boolean esEncontrado = false;
+		Iterator<InteraccionAgente> i = registro.iterator();
+		while(!esEncontrado && i.hasNext()) {
+			InteraccionAgente agente2 = i.next();
+			if(agente2.getId().equals(id)) {
+				esEncontrado = true;
+				agente = agente2;
 			}else {
-				tipoIA.add(i);
-				logger.info(tipoIA);
+				throw new InteraccionException("Esta interacción no existe.");
 			}
 		}
-	}
-	
-	
+		return agente;
+	}	
 }
