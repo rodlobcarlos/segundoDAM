@@ -1,6 +1,5 @@
 package towerGPT_repository;
 
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -9,7 +8,6 @@ import org.apache.logging.log4j.Logger;
 
 import towerGPT_Exception.InteraccionException;
 import towerGPT_model.InteraccionAgente;
-import towerGPT_model.TipoAgente;
 
 public class RepositorioInteracciones {
 	

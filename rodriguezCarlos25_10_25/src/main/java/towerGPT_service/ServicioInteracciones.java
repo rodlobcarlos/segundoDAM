@@ -90,13 +90,11 @@ public class ServicioInteracciones {
 
 	// REVISAR
 	public InteraccionAgente obtenerInteraccionConMayorValoracion() {
-		// contador = 0;
 		double mayor = 0;
 		for (InteraccionAgente i : repo.getRegistro()) {
 			if (i.getValoracion() > mayor) {
 				mayor = i.getValoracion();
-				// contador++;
-				logger.info("La mayor valoración es: ", mayor);
+				return i;
 			}
 		}
 		return null;
@@ -140,21 +138,22 @@ public class ServicioInteracciones {
 		return resultado;
 	}
 
-	public void agruparInteraccionesPorTipo(TipoAgente agente) {
+	public Set<InteraccionAgente> agruparInteraccionesPorTipo(TipoAgente agente) {
 		Set<InteraccionAgente> tipoHumano = new HashSet<InteraccionAgente>();
 		Set<InteraccionAgente> tipoIA = new HashSet<InteraccionAgente>();
 		for (InteraccionAgente i : repo.getRegistro()) {
 			if (i.getTipo().equals(agente.HUMANO)) {
 				tipoHumano.add(i);
-				logger.info(tipoHumano);
-			} else {
+				logger.info("Humano: " + tipoHumano);
+			} else if(i.getTipo().equals(agente.IA)) {
 				tipoIA.add(i);
-				logger.info(tipoIA);
+				logger.info("IA: " + tipoIA);
 			}
 		}
+		return null;
 	}
 
-	public void escribeRegistro(List<InteraccionAgente> registro, String ruta) { // Convertir el objeto a JSON
+	public void escribeRegistro(Set<InteraccionAgente> registro, String ruta) { // Convertir el objeto a JSON
 		Gson gson = new Gson();
 		String json = gson.toJson(registro);
 		// Escribir el JSON en un archivo
@@ -196,7 +195,8 @@ public class ServicioInteracciones {
 			FileWriter ficheroSalida;
 			ficheroSalida = new FileWriter(fichero);
 			out = new PrintWriter(ficheroSalida);
-			out.printf("id,nombre,tipo,altura_m,peso_kg,habilidades,evoluciona_a\r\n");
+			out.printf("id,tipo,peticion,respuesta,timepoEjecucion,valoracion,porcentajeAcierto\r\n"
+					+ "1, IA, peticion1, repuesta recibida, 60, 5.0, 7.0");
 		} catch (IOException e) {
 			System.out.println("IOException");
 		} finally {
@@ -213,7 +213,15 @@ public class ServicioInteracciones {
 			in = new Scanner(fichero);
 			in.hasNextLine();
 			while (in.hasNextLine()) {
-				
+				String linea = in.nextLine();
+				String[] p = linea.split(",");
+				String id = p[0];
+				String tipo = p[1];
+				String peticion = p[2];
+				String respuesta = p[3];
+				String timepoEjecucion = p[4];
+				String valoracion =p[5];
+				String porcentajeAcierto = p[6];
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
