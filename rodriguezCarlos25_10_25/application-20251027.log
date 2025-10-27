@@ -1,0 +1,52 @@
+2025-10-27 09:11:42.577 [main] INFO  towerGPT_repository.RepositorioInteracciones - 82
+2025-10-27 09:11:42.579 [main] INFO  towerGPT_repository.RepositorioInteracciones - 40
+2025-10-27 09:11:42.580 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:11:42.580 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:11:46.737 [main] INFO  towerGPT_repository.RepositorioInteracciones - 82
+2025-10-27 09:11:46.739 [main] INFO  towerGPT_repository.RepositorioInteracciones - 40
+2025-10-27 09:11:46.739 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:11:46.739 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:12:12.696 [main] INFO  towerGPT_repository.RepositorioInteracciones - 82
+2025-10-27 09:12:12.698 [main] INFO  towerGPT_repository.RepositorioInteracciones - 40
+2025-10-27 09:12:12.698 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:12:12.698 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:13:15.531 [main] DEBUG towerGPT_repository.RepositorioInteracciones - InteraccionAgente [id=1, tipo=HUMANO, peticion=peticion1, respuesta=peticion recibida, timepoEjecucion=70, valoracion=10.0, porcentajeAcierto=9.0]
+2025-10-27 09:13:15.534 [main] INFO  towerGPT_repository.RepositorioInteracciones - 82
+2025-10-27 09:13:15.534 [main] INFO  towerGPT_repository.RepositorioInteracciones - 40
+2025-10-27 09:13:15.534 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:13:15.534 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:13:34.597 [main] INFO  towerGPT_repository.RepositorioInteracciones - 82
+2025-10-27 09:13:34.599 [main] INFO  towerGPT_repository.RepositorioInteracciones - 40
+2025-10-27 09:13:34.599 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:13:34.599 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:15:45.169 [main] INFO  towerGPT_repository.RepositorioInteracciones - 82
+2025-10-27 09:15:45.171 [main] INFO  towerGPT_repository.RepositorioInteracciones - 40
+2025-10-27 09:15:45.172 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:15:45.172 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:15:49.678 [main] INFO  towerGPT_repository.RepositorioInteracciones - 82
+2025-10-27 09:15:49.680 [main] INFO  towerGPT_repository.RepositorioInteracciones - 40
+2025-10-27 09:15:49.680 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:15:49.680 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:16:31.883 [main] INFO  towerGPT_repository.RepositorioInteracciones - 82
+2025-10-27 09:16:31.885 [main] INFO  towerGPT_repository.RepositorioInteracciones - 40
+2025-10-27 09:16:31.885 [main] INFO  towerGPT_repository.RepositorioInteracciones - 7
+2025-10-27 09:16:31.886 [main] INFO  towerGPT_repository.RepositorioInteracciones - 5
+2025-10-27 09:17:09.667 [main] INFO  towerGPT_repository.RepositorioInteracciones - 82
+2025-10-27 09:17:09.669 [main] INFO  towerGPT_repository.RepositorioInteracciones - 40
+2025-10-27 09:17:09.669 [main] INFO  towerGPT_repository.RepositorioInteracciones - 7
+2025-10-27 09:17:09.669 [main] INFO  towerGPT_repository.RepositorioInteracciones - 5
+2025-10-27 09:18:33.967 [main] INFO  towerGPT_repository.RepositorioInteracciones - [InteraccionAgente [id=2, tipo=IA, peticion=peticion2, respuesta=peticion recibida, timepoEjecucion=60, valoracion=5.0, porcentajeAcierto=7.0], InteraccionAgente [id=3, tipo=HUMANO, peticion=peticion3, respuesta=peticion recibida, timepoEjecucion=94, valoracion=8.0, porcentajeAcierto=4.0], InteraccionAgente [id=1, tipo=HUMANO, peticion=peticion1, respuesta=peticion recibida, timepoEjecucion=70, valoracion=10.0, porcentajeAcierto=10.0], InteraccionAgente [id=4, tipo=IA, peticion=peticion4, respuesta=peticion recibida, timepoEjecucion=20, valoracion=6.0, porcentajeAcierto=3.0]]
+2025-10-27 09:18:33.970 [main] INFO  towerGPT_repository.RepositorioInteracciones - 82
+2025-10-27 09:18:33.970 [main] INFO  towerGPT_repository.RepositorioInteracciones - 40
+2025-10-27 09:18:33.970 [main] INFO  towerGPT_repository.RepositorioInteracciones - 7
+2025-10-27 09:18:33.970 [main] INFO  towerGPT_repository.RepositorioInteracciones - 5
+2025-10-27 09:19:18.648 [main] INFO  towerGPT_repository.RepositorioInteracciones - [InteraccionAgente [id=2, tipo=IA, peticion=peticion2, respuesta=peticion recibida, timepoEjecucion=60, valoracion=5.0, porcentajeAcierto=7.0], InteraccionAgente [id=3, tipo=HUMANO, peticion=peticion3, respuesta=peticion recibida, timepoEjecucion=94, valoracion=8.0, porcentajeAcierto=4.0], InteraccionAgente [id=1, tipo=HUMANO, peticion=peticion1, respuesta=peticion recibida, timepoEjecucion=70, valoracion=10.0, porcentajeAcierto=10.0], InteraccionAgente [id=4, tipo=IA, peticion=peticion4, respuesta=peticion recibida, timepoEjecucion=20, valoracion=6.0, porcentajeAcierto=3.0]]
+2025-10-27 09:19:18.651 [main] INFO  towerGPT_repository.RepositorioInteracciones - 82
+2025-10-27 09:19:18.651 [main] INFO  towerGPT_repository.RepositorioInteracciones - 40
+2025-10-27 09:19:18.651 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:19:18.651 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:20:53.896 [main] INFO  towerGPT_repository.RepositorioInteracciones - [InteraccionAgente [id=2, tipo=IA, peticion=peticion2, respuesta=peticion recibida, timepoEjecucion=60, valoracion=5.0, porcentajeAcierto=7.0], InteraccionAgente [id=3, tipo=HUMANO, peticion=peticion3, respuesta=peticion recibida, timepoEjecucion=94, valoracion=8.0, porcentajeAcierto=4.0], InteraccionAgente [id=1, tipo=HUMANO, peticion=peticion1, respuesta=peticion recibida, timepoEjecucion=70, valoracion=10.0, porcentajeAcierto=10.0], InteraccionAgente [id=4, tipo=IA, peticion=peticion4, respuesta=peticion recibida, timepoEjecucion=20, valoracion=6.0, porcentajeAcierto=3.0]]
+2025-10-27 09:20:53.899 [main] INFO  towerGPT_repository.RepositorioInteracciones - 82
+2025-10-27 09:20:53.899 [main] INFO  towerGPT_repository.RepositorioInteracciones - 40
+2025-10-27 09:20:53.899 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6
+2025-10-27 09:20:53.899 [main] INFO  towerGPT_repository.RepositorioInteracciones - 6

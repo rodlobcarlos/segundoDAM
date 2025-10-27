@@ -104,7 +104,7 @@ public class ServicioInteracciones {
 		int sumaDelTipo = 0;
 		int contador = 0;
 		for (InteraccionAgente i : repo.getRegistro()) {
-			if (i.getTipo().equals(agente.HUMANO) || i.getTipo().equals(agente.IA)) {
+			if (i.getTipo().equals(agente)) {
 				sumaDelTipo += i.getTimepoEjecucion();
 				contador++;
 			}
@@ -118,7 +118,7 @@ public class ServicioInteracciones {
 		int sumaDelTipo = 0;
 		int contador = 0;
 		for (InteraccionAgente i : repo.getRegistro()) {
-			if (i.getTipo().equals(agente.HUMANO) || i.getTipo().equals(agente.IA)) {
+			if (i.getTipo().equals(agente)) {
 				sumaDelTipo += i.getPorcentajeAcierto();
 				contador++;
 			}
@@ -142,13 +142,13 @@ public class ServicioInteracciones {
 		Set<InteraccionAgente> tipoHumano = new HashSet<InteraccionAgente>();
 		Set<InteraccionAgente> tipoIA = new HashSet<InteraccionAgente>();
 		for (InteraccionAgente i : repo.getRegistro()) {
-			if (i.getTipo().equals(agente.HUMANO)) {
+			if (i.getTipo().equals(agente)) {
 				tipoHumano.add(i);
-				logger.info("Humano: " + tipoHumano);
-			} else if(i.getTipo().equals(agente.IA)) {
 				tipoIA.add(i);
+				logger.info("Humano: " + tipoHumano);
 				logger.info("IA: " + tipoIA);
-			}
+
+			} 
 		}
 		return null;
 	}

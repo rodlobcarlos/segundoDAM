@@ -31,18 +31,14 @@ public class MainApp {
 		repo.agregarInteraccionARegistro(i3);
 		repo.agregarInteraccionARegistro(i4);
 		
+		logger.info(serv.getRepo().getRegistro());
+		
 		//FUNCIONA
 //		repo.borrarInteracciones(i3);
 		
 		
-		// FUNCIONA
-		try {
-			repo.actualizaPorcentajeInteraccion(i1, 9);
-			repo.actualizaPorcentajeInteraccion(i4, 6.7);
-		} catch (InteraccionException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		serv.actualizaPorcentajeInteraccion(i1, 9);
+		serv.actualizaPorcentajeInteraccion(i4, 6.7);
 
 		//FUNCIONA
 		try {
@@ -54,7 +50,7 @@ public class MainApp {
 		
 		
 		//REVISAR
-		logger.info(serv.obtenerInteraccionConMayorValoracion());
+//		logger.info(serv.obtenerInteraccionConMayorValoracion());
 		
 		//REVISAR
 		logger.info(serv.calcularTiempoMedioPorTipo(TipoAgente.HUMANO));
@@ -64,22 +60,22 @@ public class MainApp {
 		logger.info(serv.calcularPorcentajeMedioPorTipos(TipoAgente.HUMANO));
 		logger.info(serv.calcularPorcentajeMedioPorTipos(TipoAgente.IA));
 
-		//REVISAR
-		logger.info(serv.agruparInteraccionesPorTipo(TipoAgente.HUMANO));	
-		logger.info(serv.agruparInteraccionesPorTipo(TipoAgente.IA));	
-		
-		// FUNCIONA
-		serv.escribeRegistro(registro, "src\\main\\resources\\agente.json");
-
-		//REVISAR
-		serv.leeRegistro("src\\main\\resources\\agente.json");
-		
-		//FUNCIONA
-		serv.escrituraCsv("src\\main\\resources\\agente.csv");
-		
-		//REVISASR
-		serv.leeCsv("src\\main\\resources\\agente.csv");
-		logger.debug(registro);
+//		//REVISAR
+//		logger.info(serv.agruparInteraccionesPorTipo(TipoAgente.HUMANO));	
+//		logger.info(serv.agruparInteraccionesPorTipo(TipoAgente.IA));	
+//		
+//		// FUNCIONA
+//		serv.escribeRegistro(registro, "src\\main\\resources\\agente.json");
+//
+//		//REVISAR
+//		serv.leeRegistro("src\\main\\resources\\agente.json");
+//		
+//		//FUNCIONA
+//		serv.escrituraCsv("src\\main\\resources\\agente.csv");
+//		
+//		//REVISASR
+//		serv.leeCsv("src\\main\\resources\\agente.csv");
+//		logger.debug(registro);
 		
 	}
 }
