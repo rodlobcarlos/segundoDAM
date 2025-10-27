@@ -4,18 +4,19 @@ import java.util.Objects;
 
 public class InteraccionAgente {
 
-	private String id;
+	private int id;
 	private TipoAgente tipo;
 	private String peticion;
 	private String respuesta;
 	private int timepoEjecucion;
 	private double valoracion;
 	private double porcentajeAcierto;
+	private static int contador;
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public TipoAgente getTipo() {
@@ -54,16 +55,17 @@ public class InteraccionAgente {
 	public void setTimepoEjecucion(int timepoEjecucion) {
 		this.timepoEjecucion = timepoEjecucion;
 	}
-	public InteraccionAgente(String id, TipoAgente tipo, String peticion, String respuesta, int timepoEjecucion,
+	public InteraccionAgente(TipoAgente tipo, String peticion, String respuesta, int timepoEjecucion,
 			double valoracion, double porcentajeAcierto) {
 		super();
-		this.id = id;
+		this.id = contador;
 		this.tipo = tipo;
 		this.peticion = peticion;
 		this.respuesta = respuesta;
 		this.timepoEjecucion = timepoEjecucion;
 		this.valoracion = valoracion;
 		this.porcentajeAcierto = porcentajeAcierto;
+		contador = contador +1;
 	}
 	@Override
 	public String toString() {

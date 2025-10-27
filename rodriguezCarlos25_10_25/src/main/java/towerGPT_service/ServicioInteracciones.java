@@ -67,7 +67,7 @@ public class ServicioInteracciones {
 		repo.borrarInteracciones(interaccionAgente);
 	}
 
-	public InteraccionAgente leerInteracciones(String id) {
+	public InteraccionAgente leerInteracciones(int id) {
 		try {
 			repo.leerInteracciones(id);
 		} catch (InteraccionException e) {
@@ -77,7 +77,6 @@ public class ServicioInteracciones {
 		return null;
 	}
 
-	// REVISAR
 	public double incrementarNumeroValoraciones(InteraccionAgente interaccionAgente, double valoracionNueva)
 			throws InteraccionException {
 		if (interaccionAgente.getValoracion() != valoracionNueva) {
@@ -88,16 +87,16 @@ public class ServicioInteracciones {
 		return valoracionNueva;
 	}
 
-	// REVISAR
 	public InteraccionAgente obtenerInteraccionConMayorValoracion() {
 		double mayor = 0;
+		InteraccionAgente agente = null;
 		for (InteraccionAgente i : repo.getRegistro()) {
 			if (i.getValoracion() > mayor) {
 				mayor = i.getValoracion();
-				return i;
+				agente = i;
 			}
 		}
-		return null;
+		return agente;
 	}
 
 	public int calcularTiempoMedioPorTipo(TipoAgente agente) {
@@ -114,16 +113,16 @@ public class ServicioInteracciones {
 
 	}
 
-	public int calcularPorcentajeMedioPorTipos(TipoAgente agente) {
-		int sumaDelTipo = 0;
-		int contador = 0;
+	public double calcularPorcentajeMedioPorTipos(TipoAgente agente) {
+		double sumaDelTipo = 0;
+		double contador = 0;
 		for (InteraccionAgente i : repo.getRegistro()) {
 			if (i.getTipo().equals(agente)) {
 				sumaDelTipo += i.getPorcentajeAcierto();
 				contador++;
 			}
 		}
-		int mediaTiempo = sumaDelTipo / contador;
+		double mediaTiempo = sumaDelTipo / contador;
 		return mediaTiempo;
 
 	}
@@ -139,18 +138,14 @@ public class ServicioInteracciones {
 	}
 
 	public Set<InteraccionAgente> agruparInteraccionesPorTipo(TipoAgente agente) {
-		Set<InteraccionAgente> tipoHumano = new HashSet<InteraccionAgente>();
-		Set<InteraccionAgente> tipoIA = new HashSet<InteraccionAgente>();
-		for (InteraccionAgente i : repo.getRegistro()) {
-			if (i.getTipo().equals(agente)) {
-				tipoHumano.add(i);
-				tipoIA.add(i);
-				logger.info("Humano: " + tipoHumano);
-				logger.info("IA: " + tipoIA);
-
-			} 
+	    Set<InteraccionAgente> tipo = new HashSet<>();
+	    
+	    for (InteraccionAgente i : repo.getRegistro()) {
+	        if (i.getTipo().equals(agente)) {
+	        	tipo.add(i);
+	        }
 		}
-		return null;
+		return tipo;
 	}
 
 	public void escribeRegistro(Set<InteraccionAgente> registro, String ruta) { // Convertir el objeto a JSON
@@ -162,13 +157,13 @@ public class ServicioInteracciones {
 			writer = new FileWriter(ruta);
 			writer.write(json);
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.info(e.getMessage());
 		} finally {
 			if (writer != null) {
 				try {
 					writer.close();
 				} catch (IOException e) {
-					e.printStackTrace();
+					logger.info(e.getMessage());
 				}
 			}
 		}
@@ -184,7 +179,7 @@ public class ServicioInteracciones {
 			return registro;
 
 		} catch (Exception e) {
-			logger.error("Error al leer el archivo JSON", e);
+			logger.error("Error al leer el archivo JSON", e.getMessage());
 			return null;
 		}
 	}
@@ -225,7 +220,7 @@ public class ServicioInteracciones {
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.info(e.getMessage());
 		} finally {
 			if (in != null) {
 				in.close();

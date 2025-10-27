@@ -10,8 +10,8 @@ import towerGPT_Exception.InteraccionException;
 import towerGPT_model.InteraccionAgente;
 
 public class RepositorioInteracciones {
-	
-    private static final Logger logger = LogManager.getLogger(RepositorioInteracciones.class);
+
+	private static final Logger logger = LogManager.getLogger(RepositorioInteracciones.class);
 
 	private Set<InteraccionAgente> registro;
 
@@ -32,39 +32,42 @@ public class RepositorioInteracciones {
 		super();
 		this.registro = registro;
 	}
-	
+
 	public void agregarInteraccionARegistro(InteraccionAgente interaccionAgente) {
 		registro.add(interaccionAgente);
 	}
-	
-	public boolean actualizaPorcentajeInteraccion(InteraccionAgente interaccionAgente, double porcentajeNuevo) throws InteraccionException {
+
+	public boolean actualizaPorcentajeInteraccion(InteraccionAgente interaccionAgente, double porcentajeNuevo)
+			throws InteraccionException {
 		boolean esActualizado;
-		if(interaccionAgente.getPorcentajeAcierto() != porcentajeNuevo) {
+		if (interaccionAgente.getPorcentajeAcierto() != porcentajeNuevo) {
 			esActualizado = true;
 			interaccionAgente.setPorcentajeAcierto(porcentajeNuevo);
-		}else {
+		} else {
 			throw new InteraccionException("Este porcentaje de acierto no es distinto al que ya teniamos.");
 		}
 		return esActualizado;
 	}
-	
+
 	public void borrarInteracciones(InteraccionAgente interaccionAgente) {
 		registro.remove(interaccionAgente);
 	}
-	
-	public InteraccionAgente leerInteracciones(String id) throws InteraccionException {
+
+	public InteraccionAgente leerInteracciones(int id) throws InteraccionException {
 		InteraccionAgente agente = null;
 		boolean esEncontrado = false;
 		Iterator<InteraccionAgente> i = registro.iterator();
-		while(!esEncontrado && i.hasNext()) {
+		while (!esEncontrado && i.hasNext()) {
 			InteraccionAgente agente2 = i.next();
-			if(agente2.getId().equals(id)) {
-				esEncontrado = true;
-				agente = agente2;
-			}else {
-				throw new InteraccionException("Esta interacción no existe.");
+			for (InteraccionAgente a : registro) {
+				if (a.getId() == id) {
+					esEncontrado = true;
+					agente = agente2;
+				}else {
+					throw new InteraccionException("Esta interacción no existe.");
+				}
 			}
 		}
 		return agente;
-	}	
+	}
 }
