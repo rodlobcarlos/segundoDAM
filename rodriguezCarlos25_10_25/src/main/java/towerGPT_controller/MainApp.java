@@ -59,5 +59,7 @@ public class MainApp {
 		
 		serv.leeCsv("src\\main\\resources\\agente.csv");
 		
+		serv.grabarResumenEstadistica("src\\main\\resources\\resumenEstadistica.txt", registro);
+		
 	}
 }

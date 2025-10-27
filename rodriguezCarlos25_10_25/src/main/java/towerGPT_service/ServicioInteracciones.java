@@ -229,4 +229,105 @@ public class ServicioInteracciones {
 		return registro;
 	}
 
+	public void grabarResumenEstadistica(String rutaFichero, Set<InteraccionAgente> registro) {
+		PrintWriter out = null;
+		try {
+			FileWriter ficheroSalida;
+			ficheroSalida = new FileWriter(rutaFichero);
+			// abre el fichero de texto
+			out = new PrintWriter(ficheroSalida);
+			// escribe el listado persona a persona
+			int numeroTotalInt = numeroTotalInteracciones();
+			String mayorTiempoInt = mayorTiempoInteraccionMedia();
+			int interaccionesHumano = interaccionesPorTipo(TipoAgente.HUMANO);
+			int interaccionesIA = interaccionesPorTipo(TipoAgente.IA);
+			int calcularValoracionHumano = valoracionMediaPorTipo(TipoAgente.HUMANO);
+			int calcularValoracionIA = valoracionMediaPorTipo(TipoAgente.IA);
+			double calcularPorcentajeAciertoHumano = calcularPorcentajeMedioPorTipos(TipoAgente.HUMANO);
+			double calcularPorcentajeAciertoIA = calcularPorcentajeMedioPorTipos(TipoAgente.IA);
+			int tiempoMedio = tiempoMedioEstadistica();
+			
+			out.printf("RESUMEN DE INTERACCIONES :\n" +
+				    "---------------------------------------\n" +
+				    "Se han efectuado un total de %d interacciones\n" +
+				    "Las interacciones que han tomado más tiempo han sido las efectuadas por %s con un tiempo medio de %d segundos\n" +
+				    "De todas las interacciones:\n" +
+				    "- %d han sido efectuadas por Humanos con una valoración media de %d y una tasa de aciertos del %.2f\n" +
+				    "- %d han sido efectuadas por IAs con una valoración media de %d y una tasa de acierto del %.2f\n",
+					numeroTotalInt,
+					mayorTiempoInt,	
+					tiempoMedio,
++					interaccionesHumano,
+					calcularValoracionHumano,
+					calcularPorcentajeAciertoHumano,
+					interaccionesIA,
+					calcularValoracionIA,
+					calcularPorcentajeAciertoIA
+					);
+		} catch (IOException e) {
+			System.out.println("IOException");
+		} finally {
+			if (out != null)
+				out.close();
+		}
+	}
+	
+	public int numeroTotalInteracciones() {
+		int contador = 0;
+		for(InteraccionAgente agente: repo.getRegistro()) {
+			contador++;
+		}
+		return contador;
+	}
+
+	public String mayorTiempoInteraccionMedia() {
+		String tipo = null;
+		int media = 0;
+		int tiempoMedioHumano = calcularTiempoMedioPorTipo(TipoAgente.HUMANO);
+		int tiempoMedioIA = calcularTiempoMedioPorTipo(TipoAgente.IA);
+		if(tiempoMedioHumano > tiempoMedioIA) {
+			media = tiempoMedioHumano;
+			tipo = "Humano";
+		}else {
+			media = tiempoMedioIA;
+			tipo = "IA";
+		}
+		return tipo;
+	}
+	
+	public int interaccionesPorTipo(TipoAgente agente) {
+		int contador = 0;
+		for(InteraccionAgente a: repo.getRegistro()) {
+			if(a.getTipo().equals(agente)) {
+				contador++;
+			}
+		}
+		return contador;
+	}
+	
+	public int valoracionMediaPorTipo(TipoAgente agente) {
+		int sumaDelTipo = 0;
+		int contador = 0;
+		for (InteraccionAgente i : repo.getRegistro()) {
+			if (i.getTipo().equals(agente)) {
+				sumaDelTipo += i.getValoracion();
+				contador++;
+			}
+		}
+		int ValoracionMedia = sumaDelTipo / contador;
+		return ValoracionMedia;				
+	}
+	
+	public int tiempoMedioEstadistica() {
+		int media = 0;
+		int tiempoMediaHumano = calcularTiempoMedioPorTipo(TipoAgente.HUMANO);
+		int tiempoMediaIA = calcularTiempoMedioPorTipo(TipoAgente.IA);
+		if (tiempoMediaHumano > tiempoMediaIA) {
+			media = tiempoMediaHumano;
+		}
+		else {
+			media = tiempoMediaIA;
+		}
+		return media;
+		}
 }
