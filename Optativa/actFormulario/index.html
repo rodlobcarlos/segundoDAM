@@ -4,39 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario registro</title>
-    <link rel="stylesheet" href="style.css"
+    <link rel="stylesheet" href="css/style.css"
 </head>
 <body>
   <section class="form">
     <h4>Formulario registro</h4>
 
     <form id="registroForm">
-      <input class="data" type="text" name="nombre" placeholder="Nombre" required>
-      <input class="data" type="text" name="apellido" placeholder="Apellidos" required>
-      <input class="data" type="email" name="correo" placeholder="Correo" required>
-      <input class="data" type="tel" name="telefono" placeholder="Teléfono" required>
-      <input class="data" type="date" name="fecha" placeholder="Fecha de nacimiento" required>
-      <input class="data" type="text" name="dni" placeholder="DNI" required>
-      <input class="data" type="password" name="password" placeholder="Contraseña" required>
-      <input class="data" type="password" name="password2" placeholder="Repite la contraseña" required>
+  <input class="data" type="text" name="nombre" placeholder="Nombre" required>
+  <span class="error-msg"></span>
 
-      <select name="genero" id="genero" required>
-        <option value="">Seleccione su género</option>
-        <option value="masculino">Masculino</option>
-        <option value="femenino">Femenino</option>
-      </select>
+  <input class="data" type="text" name="apellido" placeholder="Apellidos" required>
+  <span class="error-msg"></span>
 
-      <div class="terminos">
-        <label for="condiciones">Acepto las condiciones y términos</label>
-        <input type="checkbox" id="condiciones" name="condiciones">
-      </div>
+  <input class="data" type="email" name="correo" placeholder="Correo electrónico" required>
+  <span class="error-msg"></span>
 
-      <input class="botton" type="submit" value="Confirmar">
-      <input class="botton" type="reset" value="Cancelar">
-    </form>
+  <input class="data" type="tel" name="telefono" placeholder="Teléfono" required>
+  <span class="error-msg"></span>
+
+  <input class="data" type="date" name="fecha" required>
+  <span class="error-msg"></span>
+
+  <input class="data" type="text" name="dni" placeholder="DNI" required>
+  <span class="error-msg"></span>
+
+  <input class="data" type="password" name="password" placeholder="Contraseña" required>
+  <span class="error-msg"></span>
+
+  <input class="data" type="password" name="password2" placeholder="Confirme la contraseña" required>
+  <span class="error-msg"></span>
+
+  <select name="genero" id="genero" required>
+    <option value="">Seleccione su género</option>
+    <option value="masculino">Masculino</option>
+    <option value="femenino">Femenino</option>
+  </select>
+  <span class="error-msg"></span>
+
+  <div class="terminos">
+    <label for="condiciones">Acepto las condiciones y términos</label>
+    <input type="checkbox" id="condiciones" name="condiciones">
+    <span class="error-msg"></span>
+  </div>
+
+  <div class="botones">
+    <button class="confirmar" type="submit">Confirmar</button>
+    <button class="cancelar" type="reset">Cancelar</button>
+  </div>
+</form>
+
   </section>
 
-      <script src="myFormulario.js"></script>
+      <script src="js/myFormulario.js"></script>
 
 </body>
 </html>

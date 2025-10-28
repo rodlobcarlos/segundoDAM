@@ -1,0 +1,121 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(#07101b, #36364e);
+    position: relative;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: inherit;  
+    filter: blur(50px);  
+    z-index: -1;         
+}
+
+.form {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(25px);           
+    border-radius: 20px;
+    padding: 40px;
+    width: 350px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    color: #e0e0e0; 
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.15); 
+}
+
+
+.form h4 {
+    font-size: 25px;
+    margin-bottom: 23px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.data , select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(239, 232, 232, 0.15); 
+    color: #000000; 
+    font-size: 14px;
+}
+
+.data::placeholder {
+    color: #000000; 
+}
+
+
+.terminos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; 
+    margin: 10px 0;
+    font-size: 13px;
+    color: #ffffff; 
+}
+
+.terminos label {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    font-size: 14px;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button.confirmar {
+    flex: 1;
+    padding: 10px 0;
+    background: rgba(23, 155, 6, 0);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+button.cancelar {
+    flex: 1;
+    padding: 10px 0;
+    background: rgba(255, 50, 50, 0);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.error-msg {
+    height: 40px; 
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 3px;     
+    display: none; 
+}
