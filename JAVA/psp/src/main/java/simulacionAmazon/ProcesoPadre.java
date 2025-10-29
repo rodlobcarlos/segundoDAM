@@ -34,7 +34,6 @@ public class ProcesoPadre {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	public Process ejecutaProcesoJava(String provincia) {
