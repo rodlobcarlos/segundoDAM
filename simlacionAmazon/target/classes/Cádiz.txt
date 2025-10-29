@@ -1,0 +1,50 @@
+Artículo Estantería	 
+,	#NumUnidades 4	 
+,	#Importe 120	 
+,	#NumReferencia 0000009	 
+, #Dirección c/Calle Cádiz, 6	 
+,	#Provincia Cádiz	 
+, #FechaPedido 04/03/2021 
+,Artículo Silla de oficina	 
+,	#NumUnidades 2	 
+,	#Importe 180	 
+,	#NumReferencia 0000015	 
+, #Dirección c/Calle Cádiz, 15	 
+,	#Provincia Cádiz	 
+, #FechaPedido 10/03/2021 
+,Artículo Lámpara LED	 
+,	#NumUnidades 3	 
+,	#Importe 120	 
+,	#NumReferencia 0000023	 
+, #Dirección c/Calle Cádiz, 28	 
+,	#Provincia Cádiz	 
+, #FechaPedido 18/03/2021 
+,Artículo Silla de cocina	 
+,	#NumUnidades 2	 
+,	#Importe 70	 
+,	#NumReferencia 0000031	 
+, #Dirección c/Calle Cádiz, 36	 
+,	#Provincia Cádiz	 
+, #FechaPedido 26/03/2021 
+,Artículo Cojines grandes	 
+,	#NumUnidades 4	 
+,	#Importe 160	 
+,	#NumReferencia 0000039	 
+, #Dirección c/Calle Cádiz, 44	 
+,	#Provincia Cádiz	 
+, #FechaPedido 03/04/2021 
+,Artículo Lámpara techo LED	 
+,	#NumUnidades 1	 
+,	#Importe 120	 
+,	#NumReferencia 0000047	 
+, #Dirección c/Calle Cádiz, 52	 
+,	#Provincia Cádiz	 
+, #FechaPedido 11/04/2021 
+,Artículo Cojines cama	 
+,	#NumUnidades 4	 
+,	#Importe 100	 
+,	#NumReferencia 0000055	 
+, #Dirección c/Calle Cádiz, 60	 
+,	#Provincia Cádiz	 
+, #FechaPedido 19/04/2021 
+,

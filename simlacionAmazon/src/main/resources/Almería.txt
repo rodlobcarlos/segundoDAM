@@ -1,0 +1,50 @@
+Artículo Lámpara de techo	 
+,	#NumUnidades 2	 
+,	#Importe 200	 
+,	#NumReferencia 0000012	 
+, #Dirección c/Calle Almería, 8	 
+,	#Provincia Almería	 
+, #FechaPedido 07/03/2021 
+,Artículo Lámpara de mesa	 
+,	#NumUnidades 3	 
+,	#Importe 90	 
+,	#NumReferencia 0000018	 
+, #Dirección c/Calle Almería, 21	 
+,	#Provincia Almería	 
+, #FechaPedido 13/03/2021 
+,Artículo Mesa auxiliar	 
+,	#NumUnidades 1	 
+,	#Importe 90	 
+,	#NumReferencia 0000026	 
+, #Dirección c/Calle Almería, 31	 
+,	#Provincia Almería	 
+, #FechaPedido 21/03/2021 
+,Artículo Cama doble	 
+,	#NumUnidades 1	 
+,	#Importe 550	 
+,	#NumReferencia 0000034	 
+, #Dirección c/Calle Almería, 39	 
+,	#Provincia Almería	 
+, #FechaPedido 29/03/2021 
+,Artículo Mesa de noche	 
+,	#NumUnidades 2	 
+,	#Importe 120	 
+,	#NumReferencia 0000042	 
+, #Dirección c/Calle Almería, 47	 
+,	#Provincia Almería	 
+, #FechaPedido 06/04/2021 
+,Artículo Armario pequeño	 
+,	#NumUnidades 2	 
+,	#Importe 220	 
+,	#NumReferencia 0000050	 
+, #Dirección c/Calle Almería, 55	 
+,	#Provincia Almería	 
+, #FechaPedido 14/04/2021 
+,Artículo Mesa auxiliar	 
+,	#NumUnidades 2	 
+,	#Importe 90	 
+,	#NumReferencia 0000058	 
+, #Dirección c/Calle Almería, 63	 
+,	#Provincia Almería	 
+, #FechaPedido 22/04/2021 
+,
