@@ -9,8 +9,15 @@ public class LanzadorAnalisisTemperatura {
 	private static final String rutaFicherosJava = "src\\main\\java\\ejemplo\\ClaseHija.java";
 
 	public static void main(String[] args) {
-
-	}
+		int[] umbrales = {10, 20, 25, 30, 35};
+		LanzadorAnalisisTemperatura l = new LanzadorAnalisisTemperatura();
+		for(int i: umbrales) {
+			String string = Integer.toString(i);
+			String[] comando = {"java", "-d", diractorioGenerarClasses, rutaFicherosJava, string};
+			ProcessBuilder pb = new ProcessBuilder(comando);
+			l.ejecutaProcesoJava(pb);
+		}
+	} 
 
 	public void compilaClaseJava() {
 		try {
@@ -29,9 +36,7 @@ public class LanzadorAnalisisTemperatura {
 
 	}
 
-	public void ejecutaProcesoJava(int umbral, String rutaFichero) {
-		String[] comando = { "java", "-cp",diractorioGenerarClasses, "ejemplo.ClaseHija", rutaFichero };
-		ProcessBuilder pb = new ProcessBuilder(comando);
+	public void ejecutaProcesoJava(ProcessBuilder pb) {
 		try {
 //			 pb.redirectErrorStream(true);
 			 pb.inheritIO(); // flujo de errores

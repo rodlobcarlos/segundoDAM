@@ -8,6 +8,19 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class AnalizadorTemperatura {
+	
+	public static void main(String[] args) {
+		String ruta = args[0] + "temperatura.txt";
+		int temperatura = Integer.parseInt(args[1]);
+		String rutaFuchero = args[0] + args[1] + ".txt";
+		AnalizadorTemperatura a = new AnalizadorTemperatura();
+		try {
+			a.calculaDias(temperatura, ruta);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 	public int calculaDias(int umbral, String rutaFichero) throws FileNotFoundException {
 		int contador = 0;
@@ -30,7 +43,7 @@ public class AnalizadorTemperatura {
 		return contador;
 	}
 	
-	public void escrituraFichero(String rutaFichero) {
+	public void escrituraFichero(int umbral, String rutaFichero) {
 		PrintWriter out = null;
 		try {
 			FileWriter ficheroSalida;
@@ -38,7 +51,10 @@ public class AnalizadorTemperatura {
 			// abre el fichero de texto
 			out = new PrintWriter(ficheroSalida);
 			// escribe el listado persona a persona
-			out.printf("El número de veces que aparece dicha palabra es: %d %n");
+			int dias = calculaDias(umbral, rutaFichero);
+			out.printf("El número de veces que aparece dicha palabra es: %d %n",
+					dias
+					);
 		} catch (IOException e) {
 			System.out.println("IOException");
 		} finally {
