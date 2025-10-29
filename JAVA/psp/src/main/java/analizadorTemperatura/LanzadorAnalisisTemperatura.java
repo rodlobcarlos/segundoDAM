@@ -5,15 +5,17 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class LanzadorAnalisisTemperatura {
-	private static final String diractorioGenerarClasses = "target\\ejemplo";
-	private static final String rutaFicherosJava = "src\\main\\java\\ejemplo\\ClaseHija.java";
+	
+	private static final String rutaResource = "src\\main\\resources";
+	private static final String diractorioGenerarClasses = "target\\analizadorTemperatura";
+	private static final String rutaFicherosJava = "src\\main\\java\\analizadorTemperatura\\AnalizadorTemperatura.java";
 
 	public static void main(String[] args) {
 		int[] umbrales = {10, 20, 25, 30, 35};
 		LanzadorAnalisisTemperatura l = new LanzadorAnalisisTemperatura();
 		for(int i: umbrales) {
 			String string = Integer.toString(i);
-			String[] comando = {"java", "-d", diractorioGenerarClasses, rutaFicherosJava, string};
+			String[] comando = {"java", "-d", diractorioGenerarClasses, rutaFicherosJava, rutaResource, string};
 			ProcessBuilder pb = new ProcessBuilder(comando);
 			l.ejecutaProcesoJava(pb);
 		}
