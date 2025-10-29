@@ -1,0 +1,9 @@
+Artículo: Mesa exterior	, #NumUnidades: 1	, #Importe: 500	, #NumReferencia: 0000001	, #Dirección: c/Calle Jamaica, 1	, #Provincia: Sevilla	, #FechaPedido: 01/03/2021 
+Artículo: Silla	, #NumUnidades: 2	, #Importe: 60	, #NumReferencia: 0000002	, #Dirección: c/Calle Ebro, 2	, #Provincia: Sevilla	, #FechaPedido: 01/03/2021 
+Artículo: Nintendo	, #NumUnidades: 1	, #Importe: 400	, #NumReferencia: 0000003	, #Dirección: c/Calle Sebastián, 4	, #Provincia: Sevilla	, #FechaPedido: 02/03/2021 
+Artículo: Sofá cama	, #NumUnidades: 1	, #Importe: 600	, #NumReferencia: 0000019	, #Dirección: c/Calle Sevilla, 22	, #Provincia: Sevilla	, #FechaPedido: 14/03/2021 
+Artículo: Silla plegable	, #NumUnidades: 3	, #Importe: 135	, #NumReferencia: 0000027	, #Dirección: c/Calle Sevilla, 32	, #Provincia: Sevilla	, #FechaPedido: 22/03/2021 
+Artículo: Mesa centro	, #NumUnidades: 1	, #Importe: 200	, #NumReferencia: 0000035	, #Dirección: c/Calle Sevilla, 40	, #Provincia: Sevilla	, #FechaPedido: 30/03/2021 
+Artículo: Sofá pequeño	, #NumUnidades: 1	, #Importe: 400	, #NumReferencia: 0000043	, #Dirección: c/Calle Sevilla, 48	, #Provincia: Sevilla	, #FechaPedido: 07/04/2021 
+Artículo: Mesa redonda	, #NumUnidades: 1	, #Importe: 300	, #NumReferencia: 0000051	, #Dirección: c/Calle Sevilla, 56	, #Provincia: Sevilla	, #FechaPedido: 15/04/2021 
+Artículo: Silla comedor	, #NumUnidades: 3	, #Importe: 120	, #NumReferencia: 0000059	, #Dirección: c/Calle Sevilla, 64	, #Provincia: Sevilla	, #FechaPedido: 23/04/2021 

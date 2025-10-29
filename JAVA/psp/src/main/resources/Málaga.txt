@@ -1,0 +1,7 @@
+Artículo: Sofá	, #NumUnidades: 1	, #Importe: 700	, #NumReferencia: 0000008	, #Dirección: c/Avenida Andalucía, 3	, #Provincia: Málaga	, #FechaPedido: 03/03/2021 
+Artículo: Reloj de pared	, #NumUnidades: 3	, #Importe: 75	, #NumReferencia: 0000014	, #Dirección: c/Calle Málaga, 12	, #Provincia: Málaga	, #FechaPedido: 09/03/2021 
+Artículo: Cojines decorativos	, #NumUnidades: 5	, #Importe: 100	, #NumReferencia: 0000022	, #Dirección: c/Calle Málaga, 27	, #Provincia: Málaga	, #FechaPedido: 17/03/2021 
+Artículo: Mueble recibidor	, #NumUnidades: 1	, #Importe: 320	, #NumReferencia: 0000030	, #Dirección: c/Calle Málaga, 35	, #Provincia: Málaga	, #FechaPedido: 25/03/2021 
+Artículo: Estantería alta	, #NumUnidades: 1	, #Importe: 250	, #NumReferencia: 0000038	, #Dirección: c/Calle Málaga, 43	, #Provincia: Málaga	, #FechaPedido: 02/04/2021 
+Artículo: Cojines sofá	, #NumUnidades: 5	, #Importe: 90	, #NumReferencia: 0000046	, #Dirección: c/Calle Málaga, 51	, #Provincia: Málaga	, #FechaPedido: 10/04/2021 
+Artículo: Estantería madera	, #NumUnidades: 1	, #Importe: 200	, #NumReferencia: 0000054	, #Dirección: c/Calle Málaga, 59	, #Provincia: Málaga	, #FechaPedido: 18/04/2021 

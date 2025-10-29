@@ -1,0 +1,7 @@
+Artículo: Cojines	, #NumUnidades: 6	, #Importe: 90	, #NumReferencia: 0000010	, #Dirección: c/Calle Córdoba, 7	, #Provincia: Córdoba	, #FechaPedido: 05/03/2021 
+Artículo: Armario	, #NumUnidades: 1	, #Importe: 450	, #NumReferencia: 0000016	, #Dirección: c/Calle Córdoba, 18	, #Provincia: Córdoba	, #FechaPedido: 11/03/2021 
+Artículo: Ropa de cama	, #NumUnidades: 4	, #Importe: 200	, #NumReferencia: 0000024	, #Dirección: c/Calle Córdoba, 29	, #Provincia: Córdoba	, #FechaPedido: 19/03/2021 
+Artículo: Espejo grande	, #NumUnidades: 1	, #Importe: 150	, #NumReferencia: 0000032	, #Dirección: c/Calle Córdoba, 37	, #Provincia: Córdoba	, #FechaPedido: 27/03/2021 
+Artículo: Ropa de cama	, #NumUnidades: 3	, #Importe: 150	, #NumReferencia: 0000040	, #Dirección: c/Calle Córdoba, 45	, #Provincia: Córdoba	, #FechaPedido: 04/04/2021 
+Artículo: Silla infantil	, #NumUnidades: 2	, #Importe: 80	, #NumReferencia: 0000048	, #Dirección: c/Calle Córdoba, 53	, #Provincia: Córdoba	, #FechaPedido: 12/04/2021 
+Artículo: Ropa de hogar	, #NumUnidades: 2	, #Importe: 80	, #NumReferencia: 0000056	, #Dirección: c/Calle Córdoba, 61	, #Provincia: Córdoba	, #FechaPedido: 20/04/2021 

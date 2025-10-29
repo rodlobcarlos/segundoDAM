@@ -1,0 +1,8 @@
+Artículo: Cortina	, #NumUnidades: 3	, #Importe: 300	, #NumReferencia: 0000005	, #Dirección: c/Calle Granada, 5	, #Provincia: Granada	, #FechaPedido: 02/03/2021 
+Artículo: Alexa	, #NumUnidades: 2	, #Importe: 50	, #NumReferencia: 0000006	, #Dirección: c/Calle 4	, #Provincia: Granada	, #FechaPedido: 02/03/2021 
+Artículo: Toallas	, #NumUnidades: 2	, #Importe: 40	, #NumReferencia: 0000007	, #Dirección: c/Calle 5	, #Provincia: Granada	, #FechaPedido: 07/03/2021 
+Artículo: Mesa de comedor	, #NumUnidades: 1	, #Importe: 500	, #NumReferencia: 0000020	, #Dirección: c/Calle Granada, 25	, #Provincia: Granada	, #FechaPedido: 15/03/2021 
+Artículo: Lamparita	, #NumUnidades: 2	, #Importe: 60	, #NumReferencia: 0000028	, #Dirección: c/Calle Granada, 33	, #Provincia: Granada	, #FechaPedido: 23/03/2021 
+Artículo: Silla escritorio	, #NumUnidades: 2	, #Importe: 120	, #NumReferencia: 0000036	, #Dirección: c/Calle Granada, 41	, #Provincia: Granada	, #FechaPedido: 31/03/2021 
+Artículo: Mesa plegable	, #NumUnidades: 2	, #Importe: 100	, #NumReferencia: 0000044	, #Dirección: c/Calle Granada, 49	, #Provincia: Granada	, #FechaPedido: 08/04/2021 
+Artículo: Silla moderna	, #NumUnidades: 2	, #Importe: 140	, #NumReferencia: 0000052	, #Dirección: c/Calle Granada, 57	, #Provincia: Granada	, #FechaPedido: 16/04/2021 
