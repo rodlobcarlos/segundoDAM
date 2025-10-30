@@ -6,7 +6,7 @@ Este código personaliza QMainWindow()
 from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
 
 class MainWindow(QMainWindow):
-    def __init__(self): # Constructor de la clase
+    def __init__(self): # Constructor de la super clase
         super().__init__() # Inicializa la clase base
         self.setWindowTitle("My firts app!") 
         button = QPushButton("Press me")
