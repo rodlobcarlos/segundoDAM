@@ -1,3 +1,4 @@
+'''Carlos Rodríguez lobato'''
 from PySide6.QtCore import QSize
 from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
 
