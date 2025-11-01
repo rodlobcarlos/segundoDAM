@@ -4,7 +4,7 @@ con más funciones que una simple.
 '''
 
 '''Importe de clases'''
-from PySide6 import QApplication, QMainWindow
+from PySide6.QtWidgets import QApplication, QMainWindow
 
 app = QApplication([])
 
