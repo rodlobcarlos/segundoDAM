@@ -1,21 +1,20 @@
-package compilaEjecutaProceso;
+package pyhton;
 
 import java.io.IOException;
 
-public class LanzaComandos {
-
-	private final static String directorioGeneraClasses = "target\\classes";
-	private final static String rutFicheroaJava = "src\\main\\java\\hijos\\Hijo.java";
+public class LanzadorPython {
 
 	public static void main(String[] args) {
-		LanzaComandos lc = new LanzaComandos();
-		lc.lanzaCompilador(rutFicheroaJava, directorioGeneraClasses);
-		lc.ejecutaProcesoJava();
+
+		LanzadorPython lp = new LanzadorPython();
+		lp.lanzaCompilador("python", "fichero.py");
+		lp.ejecutaProcesoJava();
+		
 	}
 
 	public void lanzaCompilador(String rutaFichero, String rutaGeneraClass) {
 		ProcessBuilder pb;
-		String[] comando = { "javac", "-d", directorioGeneraClasses, rutFicheroaJava };
+		String[] comando = { "javac", "-d", "python", "fichero.py" };
 		pb = new ProcessBuilder(comando);
 		Process proceso;
 
@@ -30,7 +29,7 @@ public class LanzaComandos {
 
 	// Método necesario para ejecutar el hijo
 	public void ejecutaProcesoJava() {
-		String[] comando = { "java", "-cp", directorioGeneraClasses, rutFicheroaJava};
+		String[] comando = { "java", "-cp", "python", "fichero.py"};
 		ProcessBuilder pb;
 		Process proceso;
 
