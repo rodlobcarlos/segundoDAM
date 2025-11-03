@@ -45,7 +45,7 @@ public class Ficheros {
 		try {
 			FileReader fichero = new FileReader(rutaFichero); // Se abre fichero
 			in = new Scanner(fichero); // Se crea el flujo
-			while (in.hasNextLine()) { // Lee el fichero por palabra
+			while (in.hasNext()) { // Lee el fichero por palabra
 				System.out.println(in.nextLine());  // Se hace la lectura completa
 			}
 		} finally {
