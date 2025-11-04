@@ -4,7 +4,7 @@ public class CalculaSuma {
 
 	public static void main(String[] args) {
 		CalculaSuma c = new CalculaSuma();
-		System.out.println(c.suma(args[0], 10));
+		System.out.println(c.suma(args[1], 10));
 	}
 
 	public int suma(String tipo, int num) {
