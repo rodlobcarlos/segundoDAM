@@ -6,7 +6,7 @@ public class ControladorEmpleado {
 
 		XmlDom x = new XmlDom();
 		try {
-			x.leerEmpleadoDesdeXML(null);
+			x.leerEmpleadosDesdeXML("empleado.xml");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -1,9 +1,27 @@
 package xml;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+
 
 public class XmlDom {
+	
+//	private static final Logger logger = LogManager.getLogger(Ejercicio1.class);
+	
+	private static final String rutaResources = "src\\main\\resources\\empleado.xml";
 
 	private Empleado getEmpleadoFromElement(Element elemento) {
 		Empleado e = new Empleado();
@@ -18,16 +36,36 @@ public class XmlDom {
 		return e;
 	}
 	
-	public Empleado leerEmpleadoDesdeXML(String rutaFichero) throws Exception {
-	       Document doc = getDocumentFromXML(rutaFichero);
-	       // Obtener el elemento raíz (el único <empleado>)
-	       Element elementoEmpleado = doc.getDocumentElement();
-	       // Usar tu método
-	       return getEmpleadoFromElement(elementoEmpleado);
-	   }
-
-	private Document getDocumentFromXML(String rutaFichero) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Empleado> leerEmpleadosDesdeXML(String rutaFichero) throws Exception {
+		List<Empleado> empleados = new ArrayList<Empleado>();
+		// 1. Calcula el dom
+		Document doc = getDocumentFromXML(rutaFichero);
+		// 2. Obtener todos los nodos con etiqueta empleados
+		NodeList nodosEmpleados = doc.getElementsByTagName("empleado");
+ // 3. Recorro la lista de los nodos empleado
+		for (int j = 0; j < nodosEmpleados.getLength(); j++) {
+			Node modeloNodo = nodosEmpleados.item(j);
+			if (modeloNodo.getNodeType() == Node.ELEMENT_NODE) {
+				Empleado e = this.getEmpleadoFromElement((Element) modeloNodo);
+				empleados.add(e);
+			}
+		}
+		return empleados;
 	}
+
+
+	private Document getDocumentFromXML(String nombrefichero) {
+		File file = new File(rutaResources + nombrefichero);
+		Document documento = null;
+		try {
+			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+			documento = dBuilder.parse(file);
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		return documento;
+	} 
+
 }
