@@ -12,9 +12,9 @@ import java.util.Scanner;
 public class AmazonHijo {
 	
 	public static void main(String[] args) {
-		String rutaLectura = args[0] + "provincias.txt";
+		String rutaLectura = args[0] + "provincias.txt"; // busca en args[0] el fichero de provincias
 		String prov = args[1];
-		String rutaEscritura = args[0] + args[1] + ".txt";
+		String rutaEscritura = args[0] + args[1] + ".txt"; // src\\main\\resources\\"provincia".txt
 		AmazonHijo a = new AmazonHijo();
 		try {
 			a.leerFicheroAmazon(prov, rutaLectura);
