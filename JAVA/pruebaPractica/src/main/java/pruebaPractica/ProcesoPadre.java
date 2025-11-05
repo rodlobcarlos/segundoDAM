@@ -1,32 +1,25 @@
-package simlacionAmazon;
+package pruebaPractica;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
 
-public class AmazonPadre {
 
+public class ProcesoPadre {
+	
 	private static final String rutaResource = "src\\main\\resources\\";
 	private static final String diractorioGenerarClasses = "target\\classes";
-	private static final String rutaFicherosJava = "src\\main\\java\\simlacionAmazon\\AmazonHijo.java";
+	private static final String rutaFicherosJava = "src\\main\\java\\pruebaPractica\\ProcesoHijo.java";
 	
 	public static void main(String[] args) {
-		AmazonPadre a = new AmazonPadre();
+		String[] sensor = {"TEMPERATURA","PRESION","HUMEDAD"};
+		ProcesoPadre a = new ProcesoPadre();
 		a.compilaClaseJava();
-		String[] provincias = {"Sevilla", "Huelva", "Cádiz", "Málaga", "Jaén", "Córdoba", "Almería", "Granada"};
-		for(String p: provincias) {
-			a.ejecutaProcesoJava(p);
-		}
-		try {
-			a.totalPedidos();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		for(String s: sensor) {
+			a.ejecutaProcesoJava(s);
 		}
 	}
+	
 	public void compilaClaseJava() {
 		try {
 			String[] comando = { "javac", "-d", diractorioGenerarClasses,
@@ -45,9 +38,9 @@ public class AmazonPadre {
 
 	}
 	
-	public void ejecutaProcesoJava(String provincia) {
+	public void ejecutaProcesoJava(String nombreSensor) {
 		String[] comando = { "java", "-cp", diractorioGenerarClasses,
-				rutaFicherosJava, rutaResource, provincia};
+				rutaFicherosJava, nombreSensor, "fichero.txt" };
 		ProcessBuilder pb = new ProcessBuilder(comando);
 		try {
 			pb.redirectErrorStream(true);
@@ -62,19 +55,5 @@ public class AmazonPadre {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
-	
-	public void totalPedidos() throws FileNotFoundException {
-		int contador = 0;
-		AmazonHijo a = new AmazonHijo();
-		String[] provincias = {"Sevilla", "Huelva", "Cádiz", "Málaga", "Jaén", "Córdoba", "Almería", "Granada"};
-		String ruta = rutaResource + "provincias.txt";
-		List<String> lista = new ArrayList<String>();
-		for(String p: provincias) {
-			lista = a.leerFicheroAmazon(p, ruta);
-			System.out.println(p +  ":" + lista.size());
-			contador+= lista.size();
-		}
-		System.out.println("Total pedidos: " + contador);
 	}
 }

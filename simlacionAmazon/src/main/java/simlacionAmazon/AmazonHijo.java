@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class AmazonHijo {
 	
 	public static void main(String[] args) {
-		String rutaLectura = args[0] + "provincias.txt"; // busca en args[0] el fichero de provincias
+		String rutaLectura = args[0] + "provincias.txt"; // busca en args[0] el fichero de provincias y lee
 		String prov = args[1];
 		String rutaEscritura = args[0] + args[1] + ".txt"; // src\\main\\resources\\"provincia".txt
 		AmazonHijo a = new AmazonHijo();
@@ -31,16 +31,13 @@ public class AmazonHijo {
 	}
 
 	public List<String> leerFicheroAmazon(String provincia, String ruta) throws FileNotFoundException {
-		int contadorTotal = 0;
 		List<String> prov = new ArrayList<String>();
 		Scanner in = null;
 		try {
 			FileReader fichero = new FileReader(ruta);
 			in = new Scanner(fichero);
-			in.nextLine();
 			while (in.hasNext()) {
 				String linea = in.nextLine();
-				contadorTotal +=1;
 				String[] linea_split = linea.split("#");
 				if (provincia.equalsIgnoreCase(linea_split[5].trim())) {
 					prov.add(linea);
@@ -51,12 +48,10 @@ public class AmazonHijo {
 				in.close();
 			}
 		}
-		System.out.println("Total pedidos: " + contadorTotal);
 		return prov;
 	}
 
 	public void CreaFicheroProvincia(String provincia, String rutaFichero, String rutaNueva) throws IOException {
-		int contador = 0;
 		PrintWriter out = null;
 		try {
 			FileWriter ficheroSalida;
@@ -76,9 +71,7 @@ public class AmazonHijo {
 						separacion[5],
 						separacion[6]
 						);
-				contador +=1;
 			}
-			System.out.println(provincia + contador);
 			
 			
 		} catch (IOException e) {
