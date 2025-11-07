@@ -5,77 +5,59 @@
     android:background="#ffffff">
 
 
-    <FrameLayout
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:background="#ffffff">
+        android:id="@+id/padre">
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#e6eedd"
+            android:useDefaultMargins="true">
 
-        <FrameLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="#ff0000"
-            android:layout_gravity="left|top">
-        </FrameLayout>
+            <TableRow>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:layout_margin="2dp"
+                    android:background="#0000ff" />
 
-        <FrameLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="#ff0000"
-            android:layout_gravity="right|top">
-        </FrameLayout>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="#0000ff" />
 
-        <FrameLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="#ff0000"
-            android:layout_gravity="right|bottom">
-        </FrameLayout>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="#0000ff" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="#0000ff" />
+            </TableRow>
 
-        <FrameLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="#ff0000"
-            android:layout_gravity="left|bottom">
-        </FrameLayout>
+            <TableRow>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:background="#0000ff" />
 
-        <FrameLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="#ff0000"
-            android:layout_gravity="center|bottom">
-        </FrameLayout>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#0000ff" />
+            </TableRow>
 
-        <FrameLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="#ff0000"
-            android:layout_gravity="center|top">
-        </FrameLayout>
 
-        <FrameLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="#ff0000"
-            android:layout_marginTop="435dp">
-        </FrameLayout>
 
-        <FrameLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="#ff0000"
-            android:layout_marginTop="435dp"
-            android:layout_marginLeft="150dp">
-        </FrameLayout>
+        </TableLayout>
 
-        <FrameLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="#ff0000"
-            android:layout_marginTop="435dp"
-            android:layout_marginLeft="315dp">
-        </FrameLayout>
-
-    </FrameLayout>
-
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
