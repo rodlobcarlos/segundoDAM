@@ -1,0 +1,18 @@
+2025-11-06 21:23:02.653 [main] ERROR metodos.CrearFicheros_Directorios - Error al crear fichero:El sistema no puede encontrar la ruta especificada
+2025-11-06 21:23:36.856 [main] ERROR metodos.CrearFicheros_Directorios - Error al crear fichero:El sistema no puede encontrar la ruta especificada
+2025-11-06 21:24:54.952 [main] INFO  metodos.CrearFicheros_Directorios - true
+2025-11-06 21:38:52.148 [main] INFO  metodos.CrearFicheros_Directorios - false
+2025-11-06 21:40:31.251 [main] INFO  metodos.CrearFicheros_Directorios - false
+2025-11-06 21:40:31.255 [main] INFO  metodos.CrearFicheros_Directorios - El fichero ya existe
+2025-11-06 21:42:48.784 [main] INFO  metodos.CrearFicheros_Directorios - false
+2025-11-06 21:42:48.787 [main] INFO  metodos.CrearFicheros_Directorios - El fichero ya existe
+2025-11-06 21:42:58.739 [main] INFO  metodos.CrearFicheros_Directorios - false
+2025-11-06 21:42:58.743 [main] INFO  metodos.CrearFicheros_Directorios - El fichero ya existe
+2025-11-06 21:43:28.520 [main] INFO  metodos.CrearFicheros_Directorios - false
+2025-11-06 21:43:28.523 [main] INFO  metodos.CrearFicheros_Directorios - El fichero ya existe
+2025-11-06 21:44:23.748 [main] INFO  metodos.CrearFicheros_Directorios - false
+2025-11-06 21:44:23.751 [main] INFO  metodos.CrearFicheros_Directorios - El fichero ya existe
+2025-11-06 22:24:17.642 [main] INFO  metodos.CrearFicheros_Directorios - false
+2025-11-06 22:24:17.645 [main] INFO  metodos.CrearFicheros_Directorios - El fichero ya existe
+2025-11-06 22:31:38.050 [main] INFO  metodos.CrearFicheros_Directorios - false
+2025-11-06 22:31:38.055 [main] INFO  metodos.CrearFicheros_Directorios - El fichero ya existe
