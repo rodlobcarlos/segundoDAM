@@ -1,0 +1,19 @@
+[ {
+   "name":"Thor",
+   "publisher":"Marvel Comics",
+   "alter_ego":"Thor Odinson",
+   "first_appearance":"Journey into Myster #83",
+   "characters":"Thor Odinson"
+ }, {
+   "name":"Wonder Woman",
+   "publisher":"DC Comics",
+   "alter_ego":"Princess Diana",
+   "first_appearance":"All Star Comics #8",
+   "characters":"Princess Diana"
+ }, {
+   "name":"Daredevil",
+   "publisher":"Marvel Comics",
+   "alter_ego":"Matthew Michael Murdock",
+   "first_appearance":"Daredevil #1",
+   "characters":"Matthew Michael Murdock"
+ }]
