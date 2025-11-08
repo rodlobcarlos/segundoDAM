@@ -1,0 +1,5 @@
+ AUTOR: nombreAutor AUTOR1, apellidos Pérez, LIBRO: isbn as23asd, titulo LIBRO1, nombre animales, nombreEditorial cogeLibros
+ AUTOR: nombreAutor AUTOR3, apellidos García, LIBRO: isbn gj345, titulo LIBRO3, nombre oscuro, nombreEditorial vendeLibros
+ AUTOR: nombreAutor AUTOR2, apellidos Carmona, LIBRO: isbn 324asf, titulo LIBRO2, nombre fantasia, nombreEditorial compraLibros
+ AUTOR: nombreAutor AUTOR4, apellidos Gutierrez, LIBRO: isbn mbcxw43534, titulo LIBRO4, nombre magia, nombreEditorial holaLibros
+ AUTOR: nombreAutor AUTOR5, apellidos Rodríguez, LIBRO: isbn 987dfgd, titulo LIBRO5, nombre misterio, nombreEditorial tuLibros
