@@ -1,6 +1,7 @@
 package ficheros;
 
 import java.io.File;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +15,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import xml.Empleado;
 
 public class LecturaDOM {
 
@@ -25,8 +25,8 @@ public class LecturaDOM {
 		 // Ruta del fichero XML
         String ruta = "empleados.xml";  // puedes cambiarla según tu entorno
         try {
-			Empleado empleado = leerEmpleadosDesdeXML(ruta);
-			logger.info(empleado);
+//			Empleado empleado = leerEmpleadosDesdeXML(ruta);
+//			logger.info(empleado);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
