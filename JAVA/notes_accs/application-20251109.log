@@ -1,0 +1,3 @@
+2025-11-09 20:27:14.885 [main] ERROR ficheros.LecturaDOM - C:\Users\rodlo\Documents\GitHub\segundoDAM\JAVA\notes_accs\src\main\resources\empleados.xmlsrc\main\resources\empleados.xml (El sistema no puede encontrar la ruta especificada)
+2025-11-09 20:27:38.136 [main] ERROR ficheros.LecturaDOM - C:\Users\rodlo\Documents\GitHub\segundoDAM\JAVA\notes_accs\src\main\resources\empleados.xmlempleados.xml (El sistema no puede encontrar el archivo especificado)
+2025-11-09 20:27:50.318 [main] ERROR ficheros.LecturaDOM - C:\Users\rodlo\Documents\GitHub\segundoDAM\JAVA\notes_accs\src\main\resources\empleados.xml\empleados.xml (El sistema no puede encontrar la ruta especificada)
