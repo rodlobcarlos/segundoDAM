@@ -1,6 +1,7 @@
 package repositoryAct2DOM;
 
 import javax.xml.parsers.DocumentBuilder;
+
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
@@ -9,36 +10,48 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
 
+import java.io.File;
+import java.util.List;
+
 import ModelAct2DOM.Producto;
+import utiles.ManejaFicheroPersona;
 
 public class RepositoryActDOM {
 	private static final String rutaResources = "src\\main\\resources";
+	private static final Logger logger = LogManager.getLogger(ManejaFicheroPersona.class);
 
-	private RepositoryActDOM repo;
 
-	public RepositoryActDOM getRepo() {
-		return repo;
+	private List<Producto> listaProducto;
+	
+	public List<Producto> getListaProducto() {
+		return listaProducto;
 	}
 
-	public void setRepo(RepositoryActDOM repo) {
-		this.repo = repo;
+	public void setListaProducto(List<Producto> listaProducto) {
+		this.listaProducto = listaProducto;
 	}
 
-	@Override
-	public String toString() {
-		return "RepositoryActDOM [repo=" + repo + "]";
-	}
-
-	public RepositoryActDOM(RepositoryActDOM repo) {
-		super();
-		this.repo = repo;
+	public static String getRutaresources() {
+		return rutaResources;
 	}
 	
+	@Override
+	public String toString() {
+		return "RepositoryActDOM [listaProducto=" + listaProducto + "]";
+	}
+
+	public RepositoryActDOM(List<Producto> listaProducto) {
+		super();
+		this.listaProducto = listaProducto;
+	}
+
 	public void escribeProductoEnXML(String nombreFichero, Producto producto) {
 		try {
 			Document documento = this.construyoObjetoDocumento("Productos.xml");
@@ -92,5 +105,19 @@ public class RepositoryActDOM {
 		padre.setAttribute("id", producto.getId());
 	}
 	
-
+	public void escribeProcuctosXML(List<Producto> productos, String rutaFichero) {
+		try {
+			Document documento = this.construyoObjetoDocumento("empleados");
+			for(Producto e : productos)
+			{
+				Element elemento = this.creaElemento("empleado", null, documento.getDocumentElement(), documento);
+				agregaProductoADocumento(documento, elemento, e);
+			}
+			escribeDocumentoEnFichero(documento, rutaFichero);
+		} catch (ParserConfigurationException e1) {
+			logger.error(e1.getMessage());
+		} catch (TransformerException e1) {
+			logger.error(e1.getMessage());
+		}
+	}
 }
