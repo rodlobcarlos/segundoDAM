@@ -1,0 +1,14 @@
+[
+	{
+		"nombre": "Producto 1",
+		"precio": 10.0,
+		"stock": 3,
+		"enVenta": false
+	},
+	{
+		"nombre": "Producto 3",
+		"precio": 25.0,
+		"stock": 0,
+		"enVenta": false
+	}
+]

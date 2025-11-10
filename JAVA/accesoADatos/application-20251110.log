@@ -1,0 +1,105 @@
+2025-11-10 18:37:30.699 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 18:50:46.145 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 18:50:55.603 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 18:50:59.943 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 18:51:40.864 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 18:51:44.968 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 19:14:16.186 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 19:23:22.717 [main] ERROR utiles.ManejaFicheroPersona - C:\Users\rodlo\Documents\GitHub\segundoDAM\JAVA\accesoADatos\src\main\resourcessrc\main\resources\Productos.xml (El sistema no puede encontrar la ruta especificada)
+2025-11-10 19:26:07.107 [main] ERROR utiles.ManejaFicheroPersona - C:\Users\rodlo\Documents\GitHub\segundoDAM\JAVA\accesoADatos\src\main\resourcesProductos.xml (El sistema no puede encontrar el archivo especificado)
+2025-11-10 19:27:01.315 [main] ERROR utiles.ManejaFicheroPersona - C:\Users\rodlo\Documents\GitHub\segundoDAM\JAVA\accesoADatos\src\main\resourcessrc\main\resources\Productos.xml (El sistema no puede encontrar la ruta especificada)
+2025-11-10 19:28:18.972 [main] ERROR utiles.ManejaFicheroPersona - C:\Users\rodlo\Documents\GitHub\segundoDAM\JAVA\accesoADatos\src\main\resourcesC:\Users\rodlo\Documents\GitHub\segundoDAM\JAVA\accesoADatos\src\main\resources\Productos.xml (El nombre de archivo, el nombre de directorio o la sintaxis de la etiqueta del volumen no son correctos)
+2025-11-10 19:28:35.314 [main] ERROR utiles.ManejaFicheroPersona - C:\Users\rodlo\Documents\GitHub\segundoDAM\JAVA\accesoADatos\src\main\resourcessrc\main\resources\Productos.xml (El sistema no puede encontrar la ruta especificada)
+2025-11-10 19:30:37.685 [main] ERROR utiles.ManejaFicheroPersona - C:\Users\rodlo\Documents\GitHub\segundoDAM\JAVA\accesoADatos\src\main\resourcesProductos.xml (El sistema no puede encontrar el archivo especificado)
+2025-11-10 19:31:54.971 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 19:33:30.476 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 19:33:42.007 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 19:33:53.415 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 19:34:43.188 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 19:35:13.484 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 19:36:13.053 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 19:37:00.884 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 19:37:00.888 [main] ERROR utiles.ManejaFicheroPersona - C:\Users\rodlo\Documents\GitHub\segundoDAM\JAVA\accesoADatos\src\main\resources\src\main\resources\Productos.xml (El sistema no puede encontrar la ruta especificada)
+2025-11-10 19:37:19.609 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 19:37:22.314 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 19:38:42.248 [main] DEBUG utiles.ManejaFicheroPersona - []
+2025-11-10 19:38:52.058 [main] DEBUG controllerActDOM.GestionaAct2DOM - []
+2025-11-10 19:42:21.806 [main] DEBUG controllerActDOM.GestionaAct2DOM - []
+2025-11-10 19:56:19.133 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 19:56:19.135 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 19:56:19.136 [main] DEBUG controllerActDOM.GestionaAct2DOM - [Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false], Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]]
+2025-11-10 19:56:19.138 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 19:56:19.138 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 19:56:19.138 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false]
+2025-11-10 19:56:19.138 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]
+2025-11-10 20:02:51.044 [main] ERROR utiles.ManejaFicheroPersona - C:\Users\rodlo\Documents\GitHub\segundoDAM\JAVA\accesoADatos\src\main\resources\productosNoenVenta (El sistema no puede encontrar el archivo especificado)
+2025-11-10 20:02:51.050 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:02:51.051 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:02:51.051 [main] DEBUG controllerActDOM.GestionaAct2DOM - [Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false], Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]]
+2025-11-10 20:02:51.054 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:02:51.054 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:02:51.054 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false]
+2025-11-10 20:02:51.054 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]
+2025-11-10 20:03:00.073 [main] ERROR utiles.ManejaFicheroPersona - C:\Users\rodlo\Documents\GitHub\segundoDAM\JAVA\accesoADatos\src\main\resources\productosNoenVenta.json (El sistema no puede encontrar el archivo especificado)
+2025-11-10 20:03:00.078 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:03:00.078 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:03:00.080 [main] DEBUG controllerActDOM.GestionaAct2DOM - [Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false], Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]]
+2025-11-10 20:03:00.081 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:03:00.081 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:03:00.081 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false]
+2025-11-10 20:03:00.082 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]
+2025-11-10 20:05:42.180 [main] ERROR utiles.ManejaFicheroPersona - C:\Users\rodlo\Documents\GitHub\segundoDAM\JAVA\accesoADatos\src\main\resources\productosNoenVenta.json (El sistema no puede encontrar el archivo especificado)
+2025-11-10 20:05:42.186 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:05:42.186 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:05:42.187 [main] DEBUG controllerActDOM.GestionaAct2DOM - [Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false], Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]]
+2025-11-10 20:05:42.189 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:05:42.189 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:05:42.189 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false]
+2025-11-10 20:05:42.189 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]
+2025-11-10 20:06:56.846 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:06:56.848 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:06:56.849 [main] INFO  controllerActDOM.GestionaAct2DOM - [Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false], Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]]
+2025-11-10 20:06:56.850 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:06:56.851 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:06:56.851 [main] DEBUG controllerActDOM.GestionaAct2DOM - [Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false], Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]]
+2025-11-10 20:06:56.852 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:06:56.852 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:06:56.852 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false]
+2025-11-10 20:06:56.853 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]
+2025-11-10 20:08:52.833 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:08:52.835 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:08:52.836 [main] DEBUG controllerActDOM.GestionaAct2DOM - [Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false], Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]]
+2025-11-10 20:08:52.838 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:08:52.838 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:08:52.839 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false]
+2025-11-10 20:08:52.839 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]
+2025-11-10 20:08:52.841 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:08:52.841 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:08:52.869 [main] INFO  controllerActDOM.GestionaAct2DOM - [Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false], Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]]
+2025-11-10 20:09:33.520 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:09:33.523 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:09:33.524 [main] DEBUG controllerActDOM.GestionaAct2DOM - [Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false], Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]]
+2025-11-10 20:09:33.525 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:09:33.526 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:09:33.526 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false]
+2025-11-10 20:09:33.526 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]
+2025-11-10 20:09:33.528 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:09:33.528 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:10:04.751 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:10:04.754 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:10:04.755 [main] DEBUG controllerActDOM.GestionaAct2DOM - [Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false], Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]]
+2025-11-10 20:10:04.757 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:10:04.757 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:10:04.757 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false]
+2025-11-10 20:10:04.757 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]
+2025-11-10 20:10:04.759 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:10:04.759 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:11:05.564 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:11:05.566 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:11:05.567 [main] DEBUG controllerActDOM.GestionaAct2DOM - [Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false], Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]]
+2025-11-10 20:11:05.569 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:11:05.569 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:11:05.569 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 1, precio=10.0, stock=3, enVenta=false]
+2025-11-10 20:11:05.570 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - Producto [id=null, nombre=Producto 3, precio=25.0, stock=0, enVenta=false]
+2025-11-10 20:11:05.572 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
+2025-11-10 20:11:05.572 [main] INFO  repositoryAct2DOM.MetodosdomActDOM - El stock no es menor a las unidades
