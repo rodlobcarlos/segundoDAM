@@ -11,19 +11,19 @@ import org.apache.logging.log4j.Logger;
 import com.google.gson.Gson;
 
 import ModelAct2DOM.Producto;
-import repositoryAct2DOM.RepositoryActDOM;
+import repositoryAct2DOM.MetodosdomActDOM;
 import utiles.ManejaFicheroPersona;
 
 public class ServiceActDOM {
 
-	private RepositoryActDOM repo;
-	private static final Logger logger = LogManager.getLogger(ManejaFicheroPersona.class);
+	private MetodosdomActDOM repo;
+	private static final Logger logger = LogManager.getLogger(MetodosdomActDOM.class);
 
-	public RepositoryActDOM getRepo() {
+	public MetodosdomActDOM getRepo() {
 		return repo;
 	}
 
-	public void setRepo(RepositoryActDOM repo) {
+	public void setRepo(MetodosdomActDOM repo) {
 		this.repo = repo;
 	}
 
@@ -32,16 +32,17 @@ public class ServiceActDOM {
 		return "ServiceActDOM [repo=" + repo + "]";
 	}
 
-	public ServiceActDOM(RepositoryActDOM repo) {
+	public ServiceActDOM() {
 		super();
-		this.repo = repo;
+		this.repo = new MetodosdomActDOM(null);
 	}
 
 	// Recorre lista y muestra productos menores a una unidad dada
-	public List<Producto> productosInferiorNumero(int unidades) {
+	public List<Producto> productosInferiorNumero(int unidades, String rutaFichero) throws Exception {
 		List<Producto> productos = new ArrayList<Producto>();
+		List<Producto> todosLosProductos = this.repo.leerProductoDesdeXML(rutaFichero);
 
-		for (Producto p : productos) {
+		for (Producto p : todosLosProductos) {
 			if (p.getStock() < unidades) {
 				productos.add(p);
 			} else {
@@ -52,8 +53,8 @@ public class ServiceActDOM {
 	}
 
 	// Recorre lista y cambia estado a false, para stock menor a 5
-	public void retiraDeVenteProductos() {
-		List<Producto> lista = productosInferiorNumero(5);
+	public void retiraDeVenteProductos() throws Exception {
+		List<Producto> lista = productosInferiorNumero(5, "Productos.xml");
 		for (Producto p : lista) {
 			if (lista != null) {
 				p.setEnVenta(false);
@@ -63,7 +64,7 @@ public class ServiceActDOM {
 	}
 
 	// Escritura de fichero Objeto(lista) a JSON
-	public void escribeProductos(List<Producto> productos, String ruta) {
+	public void escribeProductos(List<Producto> productos, String ruta) throws Exception {
 		Gson gson = new Gson();
 		String json = gson.toJson(productos); // Escribir el JSON en un archivo
 

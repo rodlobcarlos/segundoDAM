@@ -39,7 +39,7 @@ public class Producto {
 	public void setEnVenta(boolean enVenta) {
 		this.enVenta = enVenta;
 	}
-	public Producto(String id, String nombre, double precio, int stock, boolean enVenta) {
+	public Producto() {
 		super();
 		this.id = id;
 		this.nombre = nombre;
