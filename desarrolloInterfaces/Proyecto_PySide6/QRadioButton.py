@@ -6,12 +6,14 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("QRadioBotton window")
 
         button = QRadioButton("Activate the function")
-        button.setCheckable(True)
+        button.setCheckable(True) # Permite que el botón pueda activarse/desactivarse
 
+        # Conectar la señal 'toggled' a un método
         button.toggled.connect(self.the_button_was_toggled)
 
         self.setCentralWidget(button)
 
+    # Método que se ejecuta cuando se activa/desactiva el botón
     def the_button_was_toggled(self, checked):
         if checked:
             self.setWindowTitle("Function activated")
