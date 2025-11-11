@@ -7,9 +7,9 @@ public class Piloto {
 	private String pais;
 	private int puntos;
 	private int identificadorPiloto;
-	private Equipo identificadorEquipo;
+	private int identificadorEquipo;
 	
-	public Piloto(String nombre, String pais, int puntos, int identificadorPiloto, Equipo identificadorEquipo) {
+	public Piloto() {
 		super();
 		this.nombre = nombre;
 		this.pais = pais;
@@ -58,11 +58,11 @@ public class Piloto {
 		this.identificadorPiloto = identificadorPiloto;
 	}
 
-	public Equipo getIdentificadorEquipo() {
+	public int getIdentificadorEquipo() {
 		return identificadorEquipo;
 	}
 
-	public void setIdentificadorEquipo(Equipo identificadorEquipo) {
+	public void setIdentificadorEquipo(int identificadorEquipo) {
 		this.identificadorEquipo = identificadorEquipo;
 	}
 

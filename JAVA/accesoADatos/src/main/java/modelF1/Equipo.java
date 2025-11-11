@@ -1,6 +1,7 @@
 package modelF1;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Equipo {
 
@@ -10,7 +11,7 @@ public class Equipo {
 	private int identificadorEquipo;
 	private List<Piloto> listaPilotos;
 	
-	public Equipo(String nombre, int puntuacion, int identificadorEquipo, List<Piloto> listaPilotos) {
+	public Equipo() {
 		super();
 		this.nombre = nombre;
 		this.puntuacion = puntuacion;
@@ -63,6 +64,23 @@ public class Equipo {
 	public String toString() {
 		return "Equipo [nombre=" + nombre + ", puntuacion=" + puntuacion + ", identificadorEquipo="
 				+ identificadorEquipo + ", listaPilotos=" + listaPilotos + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(identificadorEquipo);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Equipo other = (Equipo) obj;
+		return identificadorEquipo == other.identificadorEquipo;
 	}
 	
 	
