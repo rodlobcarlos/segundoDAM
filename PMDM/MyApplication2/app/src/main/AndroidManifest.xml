@@ -32,6 +32,10 @@
             android:name=".MainActivity2">
 
         </activity>
+        <activity
+            android:name=".MainActivityPruebaFont">
+
+        </activity>
     </application>
 
 </manifest>

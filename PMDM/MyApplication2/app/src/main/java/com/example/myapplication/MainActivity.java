@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
      */
+    /*
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         ejemplo2.setData(Uri.parse("https://blogsaverroes.juntadeandalucia.es/iestorrredelosguzmanes/"));
         startActivity(ejemplo2);
     }
+
+     */
 
     /*
     private static final int REQUEST_CAMERA_PERMISSION = 1;
@@ -109,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
     public void onStart() {
 
         super.onStart();
-        Intent ejemplo = new Intent(this, MainActivity2.class);
+        Intent ejemplo = new Intent(this, MainActivityPruebaFont.class);
         ejemplo.putExtra("Surname", "Rodríguez");
         startActivity(ejemplo);
     }
