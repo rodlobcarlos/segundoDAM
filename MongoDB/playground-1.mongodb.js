@@ -1,2 +1,2 @@
-use("boletin1");
-db.createCollection("empleados")
+use("peliculas");
+db.createCollection("estudiantes")
