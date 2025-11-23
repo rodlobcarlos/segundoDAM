@@ -8,11 +8,11 @@ class Window (QMainWindow):
 
         # Central button
         self.centralButton = QPushButton("Pulsar")
-        self.centralButton.setCheckable(True) # Si es False, no imprime los métodos por consola
+        self.centralButton.setCheckable(True) # Permite al botón quedarse marcado
         self.setCentralWidget(self.centralButton)
 
         #--- Signals ---
-        self.centralButton.clicked.connect(self.clicked)
+        self.centralButton.clicked.connect(self.clicked) # ""Funcion importante""
         self.centralButton.pressed.connect(self.pressed)
         self.centralButton.released.connect(self.released)
 
