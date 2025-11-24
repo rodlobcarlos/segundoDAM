@@ -9,9 +9,12 @@
 
     <TextView
         android:id="@+id/texto"
-        android:layout_width="81dp"
-        android:layout_height="18dp"
-        android:text="Hola k ase1 !"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Este es el texto de arriba"
+        android:fontFamily="@font/playwritte"
+        android:textColor="#2196F3"
+        android:textSize="50sp"
         tools:layout_editor_absoluteX="21dp"
         tools:layout_editor_absoluteY="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -23,8 +26,10 @@
         android:id="@+id/texto2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/karla"
-        android:text="Hola k ase!2 "
+        android:fontFamily="@font/gothic"
+        android:text="Este es el texto de abajo"
+        android:textColor="#009688"
+        android:textSize="12sp"
         app:layout_constraintTop_toBottomOf="@+id/texto"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />

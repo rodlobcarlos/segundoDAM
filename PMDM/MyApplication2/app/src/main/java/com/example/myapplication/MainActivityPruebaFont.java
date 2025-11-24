@@ -16,12 +16,11 @@ public class MainActivityPruebaFont extends AppCompatActivity {
         setContentView(R.layout.activity_prueba_font);
         Bundle b = new Bundle(getIntent().getExtras());
         Log.i("Datos", b.getString("Surname"));
-        TextView miTexto = (TextView) findViewById(R.id.texto2);
-        miTexto.setText(("Nuevo texto para mostrar"));
-        miTexto.setTextColor(getResources().getColor(R.color.principal));
+        TextView miTexto1 = (TextView) findViewById(R.id.texto2);
+        miTexto1.setText(("Texto de la primera captura"));
         Animation miAnimacion = AnimationUtils.loadAnimation(this,R.anim.animacion);
         miAnimacion.setRepeatMode(Animation.RESTART);
         miAnimacion.setRepeatCount(20);
-        miTexto.startAnimation(miAnimacion);
+        miTexto1.startAnimation(miAnimacion);
      }
 }
