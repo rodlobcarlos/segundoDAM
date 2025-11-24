@@ -6,8 +6,21 @@ const port = 3000
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
 
+// llamadas a las rutas
+app.use("/", require("./router/rutas"))
+
+
+app.use((req, res) => {
+    res.status(404).render("404", {
+        titulo: "Error 404",
+        descripcion: "Page Not Found"
+    })
+})
+app.use("/", require("./router/rutas"));
+//app.use("/pokemon", require("./router/pokemon"));
+
+/*
 app.get('/', (req, res) => {
     res.send('Ya somos unos cracks en NodeExpress')
 })
@@ -27,7 +40,7 @@ app.get('/aboutUs.html', (req, res) => {
 app.use((req, res) => {
   res.status(404).sendFile(__dirname + "/public/html/404.html")
 })
-
+*/
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
