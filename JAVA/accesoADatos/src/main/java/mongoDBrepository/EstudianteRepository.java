@@ -1,0 +1,43 @@
+package mongoDBrepository;
+
+import java.util.ArrayList;
+import java.util.List;
+import org.bson.Document;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import mongoDBmodel.Estudiante;
+
+public class EstudianteRepository {
+
+	private static final String NOMBRE_COLECCION = "estudiantes";
+	private final MongoCollection<Document> coleccion;
+
+	public EstudianteRepository(MongoDatabase db) {
+		this.coleccion = db.getCollection(NOMBRE_COLECCION);
+
+	}
+
+	public void save(Estudiante e) {
+		Document doc = new Document("id", e.getId())
+				.append("name", e.getName())
+				.append("notaMedia", e.getNotaMedia())
+				.append("aficiones", e.getAficiones());
+		coleccion.insertOne(doc);
+	}
+
+	public List<Estudiante> read() {
+		List<Estudiante> estudiantes = new ArrayList<>();
+		FindIterable<Document> documentos = coleccion.find();
+		for (Document doc : documentos) {
+			Estudiante e = new Estudiante(0, null, 0, null);
+			e.setId(doc.getInteger("id", 0));
+			e.setName(doc.getString("name"));
+			e.setNotaMedia(doc.getDouble("notaMedia"));
+			List<String> aficiones = doc.getList("aficiones", String.class);
+			e.setAficiones(aficiones != null ? aficiones : new ArrayList<>());
+			estudiantes.add(e);
+		}
+		return estudiantes;
+	}
+}

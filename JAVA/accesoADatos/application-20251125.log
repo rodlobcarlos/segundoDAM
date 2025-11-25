@@ -1,0 +1,5 @@
+2025-11-25 10:33:18.426 [main] INFO  tema1.GestionaContadorPalabras - Número de veces: 145
+2025-11-25 10:33:25.973 [main] DEBUG mongoDBconfig.MongoDBConexion - Conectado a la BD: carlos
+2025-11-25 10:42:27.498 [main] DEBUG mongoDBconfig.MongoDBConexion - Conectado a la BD: peliculas
+2025-11-25 10:42:28.399 [main] DEBUG mongoDBconfig.MongoDBConexion - Conectado a la BD: peliculas
+2025-11-25 11:01:38.949 [main] DEBUG mongoDBconfig.MongoDBConexion - Conectado a la BD: peliculas
