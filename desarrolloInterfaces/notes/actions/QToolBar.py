@@ -12,7 +12,7 @@ class VentanaPrincipal(QMainWindow):
         menu = barra_menus.addMenu("&Menú")
 
         # Ruta del icono
-        ruta_icono = os.path.join(os.path.dirname(__file__), "usuario.png")
+        ruta_icono = os.path.join(os.path.dirname(__file__))
 
         # Acción con icono, texto y descripción
         accion = QAction(QIcon(ruta_icono), "Imprimir por consola", self)

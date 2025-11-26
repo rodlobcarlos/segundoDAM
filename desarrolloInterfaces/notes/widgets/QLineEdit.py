@@ -8,7 +8,6 @@ class MainWindow(QMainWindow):
 
         texto = QLineEdit()
         texto.setMaxLength(10)
-        texto.setPlaceholderText("Introduce your name")
         texto.setMaxLength(20)                   # Número máximo de caracteres
         texto.setPlaceholderText("Escribe aquí") # Texto de ayuda inicial
 
