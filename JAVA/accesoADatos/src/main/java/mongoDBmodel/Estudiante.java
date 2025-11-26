@@ -8,6 +8,23 @@ public class Estudiante {
 	private String name;
 	private double notaMedia;
 	private List<String> aficiones;
+	private List<Score> scores;
+	private List<Address> addresses;
+	
+	public List<Score> getScores() {
+		return scores;
+	}
+
+	public void setScores(List<Score> scores) {
+		this.scores = scores;
+	}
+	public List<Address> getAddresses() {
+		return addresses;
+	}
+
+	public void setAddresses(List<Address> addresses) {
+		this.addresses = addresses;
+	}
 
 	public int getId() {
 		return id;
@@ -43,15 +60,24 @@ public class Estudiante {
 
 	@Override
 	public String toString() {
-		return "Estudiante [id=" + id + ", name=" + name + ", notaMedia=" + notaMedia + ", curso=" + aficiones + "]";
+		return "Estudiante [id=" + id + ", name=" + name + ", notaMedia=" + notaMedia + ", aficiones=" + aficiones
+				+ ", scores=" + scores + ", addresses=" + addresses + "]";
 	}
 
-	public Estudiante(int id, String name, double notaMedia, List<String> aficiones) {
+	public Estudiante(int id, String name, double notaMedia, List<String> aficiones, List<String> scores,
+			List<String> addresses) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.notaMedia = notaMedia;
 		this.aficiones = aficiones;
+		this.scores = scores;
+		this.addresses = addresses;
 	}
+
 	// TODO
+
+	public Estudiante() {
+		// TODO Auto-generated constructor stub
+	}
 }
