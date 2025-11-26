@@ -9,7 +9,5 @@ class Window(QMainWindow):
         font = label.font()
         font.setPointSize(24)
         label.setFont(font)
-
+        
         self.setCentralWidget(label)
-
-    
