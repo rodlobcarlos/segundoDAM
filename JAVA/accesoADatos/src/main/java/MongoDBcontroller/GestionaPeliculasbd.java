@@ -23,5 +23,4 @@ public class GestionaPeliculasbd {
 		}
 //TODO Aquí creamos los diferentes servicios a partir del objeto db	
 	}
-
 }
