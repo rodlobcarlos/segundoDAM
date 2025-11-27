@@ -7,7 +7,7 @@ from PySide6.QtWidgets import (
 class OtraVentana(QLabel):
     def __init__(self):
         super().__init__()
-        self.setText("La otra ventana")
+        self.setText("Inicia sesión")
 
 class VentanaPrincipal(QMainWindow):
     def __init__(self):
