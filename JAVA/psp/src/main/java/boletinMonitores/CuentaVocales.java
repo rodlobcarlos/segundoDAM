@@ -1,29 +1,17 @@
 package boletinMonitores;
 
-import java.util.List;
-
 public class CuentaVocales {
 
-	private List<String> texto;
 	private int numVocales;
 
-	public CuentaVocales(List<String> texto, int numVocales) {
+	public CuentaVocales(int numVocales) {
 		super();
-		this.texto = texto;
 		this.numVocales = numVocales;
 	}
 
 	@Override
 	public String toString() {
-		return "CuentaVocales [texto=" + texto + ", numVocales=" + numVocales + "]";
-	}
-
-	public List<String> getTexto() {
-		return texto;
-	}
-
-	public void setTexto(List<String> texto) {
-		this.texto = texto;
+		return "CuentaVocales [numVocales=" + numVocales + "]";
 	}
 
 	public int getNumVocales() {
@@ -34,5 +22,7 @@ public class CuentaVocales {
 		this.numVocales = numVocales;
 	}
 	
-	
+	synchronized void incrementar(int numvocales) {
+		this.numVocales = this.numVocales + numvocales;
+	}
 }

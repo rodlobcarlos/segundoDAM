@@ -24,6 +24,15 @@ public class HiloVocales extends Thread{
 
 	@Override
 	public void run() {
-		
+		try {
+			sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public int contar() {
+		return 0;
 	}
 }
