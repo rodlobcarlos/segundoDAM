@@ -20,6 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ActividadCliente">
+        </activity>
+        <activity android:name=".ActividadPeluqueria">
+
+        </activity>
     </application>
 
 </manifest>
