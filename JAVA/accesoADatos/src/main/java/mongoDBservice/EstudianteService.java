@@ -2,13 +2,22 @@ package mongoDBservice;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.mongodb.client.MongoDatabase;
+
+import mongoDBconfig.MongoDBConexion;
 import mongoDBmodel.Estudiante;
+import mongoDBmodel.Scores;
 import mongoDBrepository.EstudianteRepository;
 
 public class EstudianteService {
 
 	private final EstudianteRepository repo;
+	private static final Logger logger = LogManager.getLogger(MongoDBConexion.class);
+
 
 	// El servicio recibe MongoDatabase y construye el repositorio
 	public EstudianteService(MongoDatabase db) {
@@ -26,18 +35,45 @@ public class EstudianteService {
 		return repo.read();
 	}
 	// TODO Agregar resto de operaciones del CRUD
-	public List<Estudiante> notaInferiorAcinco(List<Estudiante> estudiantes2) {
-		for(Estudiante e: repo.getEstudiantes()) {
-			List<Estudiante> estudiantes = new ArrayList<Estudiante>();
-			if(e.getNotaMedia() < 5) {
-				estudiantes.add(e);
-				return estudiantes;
-			}
-		}
-		return null;
-	}
 	
 	public void delete(Estudiante estudiante) {
 		repo.delete(estudiante);
+	}
+	
+	public void update(Estudiante estudiante) {
+		repo.update(estudiante);
+	}
+	
+	public List<Estudiante> notaMediaInferiorACinco(List<Estudiante> e) {
+		List<Estudiante> estudiantes = new ArrayList<Estudiante>();
+		for(Estudiante estudiante: e) {
+			if(estudiante.getNotaMedia() < 5) {
+				estudiantes.add(estudiante);
+			}
+		}
+		return estudiantes;
+	}
+	
+	public List<Estudiante> ciudad(String ciudad) {
+		List<Estudiante> e = new ArrayList<Estudiante>();
+		for(Estudiante document: repo.getEstudiantes()) {
+			if (document.getAddresses().getCity().equals(ciudad)) {
+				e.add(document);
+			}
+		}
+		return e;		
+	}
+	
+	public void mediaScores(List<Estudiante> e) {
+		double media = 0;
+		for(Estudiante a: e) {
+			List<Scores> scores = a.getScores();
+			int contador = 0;
+			for(Scores scores2: scores) {
+				contador += scores2.getScore();
+				 media = contador / scores.size();
+			}
+			 logger.info(a.getName() + " media" + media);
+		}
 	}
 }

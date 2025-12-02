@@ -8,21 +8,21 @@ public class Estudiante {
 	private String name;
 	private double notaMedia;
 	private List<String> aficiones;
-	private List<Score> scores;
-	private List<Address> addresses;
+	private List<Scores> scores;
+	private Address addresses;
 	
-	public List<Score> getScores() {
+	public List<Scores> getScores() {
 		return scores;
 	}
 
-	public void setScores(List<Score> scores) {
+	public void setScores(List<Scores> scores) {
 		this.scores = scores;
 	}
-	public List<Address> getAddresses() {
+	public Address getAddresses() {
 		return addresses;
 	}
 
-	public void setAddresses(List<Address> addresses) {
+	public void setAddresses(Address addresses) {
 		this.addresses = addresses;
 	}
 
@@ -64,8 +64,8 @@ public class Estudiante {
 				+ ", scores=" + scores + ", addresses=" + addresses + "]";
 	}
 
-	public Estudiante(int id, String name, double notaMedia, List<String> aficiones, List<String> scores,
-			List<String> addresses) {
+	public Estudiante(int id, String name, double notaMedia, List<String> aficiones, List<Scores> scores,
+			Address addresses) {
 		super();
 		this.id = id;
 		this.name = name;

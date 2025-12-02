@@ -1,23 +1,23 @@
 package mongoDBmodel;
 
-public class Score {
+public class Scores {
 
-	private String score;
+	private double score;
 	private String type;
 	
 	@Override
 	public String toString() {
 		return "Score [score=" + score + ", type=" + type + "]";
 	}
-	public Score() {
+	public Scores() {
 		super();
 		this.score = score;
 		this.type = type;
 	}
-	public String getScore() {
+	public double getScore() {
 		return score;
 	}
-	public void setScore(String score) {
+	public void setScore(double score) {
 		this.score = score;
 	}
 	public String getType() {

@@ -14,7 +14,7 @@ import com.mongodb.client.MongoDatabase;
 import mongoDBconfig.MongoDBConexion;
 import mongoDBmodel.Address;
 import mongoDBmodel.Estudiante;
-import mongoDBmodel.Score;
+import mongoDBmodel.Scores;
 
 public class EstudianteRepository {
 
@@ -22,7 +22,6 @@ public class EstudianteRepository {
 	private final MongoCollection<Document> coleccion;
 	private List<Estudiante> estudiantes;
 	private static final Logger logger = LogManager.getLogger(MongoDBConexion.class);
-
 
 	public List<Estudiante> getEstudiantes() {
 		return estudiantes;
@@ -46,23 +45,19 @@ public class EstudianteRepository {
 	}
 
 	public void save(Estudiante e) {
-		Score s = new Score();
+		Scores s = new Scores();
 		Address a = new Address();
-		Document docScores = new Document("scores", e.getScores())
-				.append("type", s.getType());
-		coleccion.insertOne(docScores);
-		
-		Document docAddress = new Document("adress", a.getCity())
-				.append("city", a.getCity())
-				.append("zip", a.getZip())
-				.append("street", a.getStreet())
-				.append("number", a.getNumber());
-		coleccion.insertOne(docAddress);
-		
-		Document doc = new Document("id", e.getId())
-				.append("name", e.getName())
-				.append("notaMedia", e.getNotaMedia())
-				.append("aficiones", e.getAficiones());
+		List<Document> scores = new ArrayList<Document>();
+		for (Scores score : e.getScores()) {
+			Document docScores = new Document("scores", e.getScores()).append("type", s.getType());
+			scores.add(docScores);
+		}
+
+		Document docAddress = new Document("adress", a.getCity()).append("city", a.getCity()).append("zip", a.getZip())
+				.append("street", a.getStreet()).append("number", a.getNumber());
+
+		Document doc = new Document("id", e.getId()).append("name", e.getName()).append("notaMedia", e.getNotaMedia())
+				.append("aficiones", e.getAficiones()).append("address", docAddress).append("scores", e.getScores());
 		coleccion.insertOne(doc);
 	}
 
@@ -74,24 +69,48 @@ public class EstudianteRepository {
 			e.setId(doc.getInteger("id", 0));
 			e.setName(doc.getString("name"));
 			e.setNotaMedia(doc.getDouble("notaMedia"));
-			List<String> scores = doc.getList("scores", .class);
-			List<String> address = doc.getList("address", String.class);
 			List<String> aficiones = doc.getList("aficiones", String.class);
-			e.setScores(scores != null ? scores : new ArrayList<>());
-			e.setAddresses(address != null ? address : new ArrayList<>());
 			e.setAficiones(aficiones != null ? aficiones : new ArrayList<>());
+
+			Document docAddress = (Document) doc.get("address");
+			Address address = new Address();
+			address.setCity(docAddress.getString("city"));
+			address.setZip(docAddress.getInteger("zip", 0));
+			address.setStreet(docAddress.getString("street"));
+			address.setNumber(docAddress.getInteger("number", 0));
+			e.setAddresses(address);
+			
+			List<Document> docScores = (List<Document>) doc.get("scores");
+			List<Scores> scores = new ArrayList<Scores>();
+			for(Document document: docScores) {
+				Scores score = new Scores();
+				score.setScore(document.getDouble("score"));
+				score.setType(document.getString("type"));
+				scores.add(score);
+			}			
+			e.setScores(scores);
 			estudiantes.add(e);
 		}
 		return estudiantes;
 	}
-	
+
 	public Estudiante delete(Estudiante e) {
-		if(estudiantes.contains(e)) {
+		if (estudiantes.contains(e)) {
 			estudiantes.remove(e);
 			logger.info("Borrado" + e);
-		}else {
+		} else {
 			logger.info("No existe este estudiante.");
 		}
 		return e;
+	}
+	
+	public void update(Estudiante e) {
+		Estudiante estudiante = new Estudiante();
+		if(estudiantes.contains(e)) {
+			estudiantes.remove(e);
+			estudiantes.add(estudiante);
+		}else {
+			logger.info("El estudiante no existe.");
+		}
 	}
 }
