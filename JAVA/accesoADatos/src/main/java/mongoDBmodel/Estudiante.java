@@ -31,7 +31,7 @@ public class Estudiante {
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.id = id;	
 	}
 
 	public String getName() {
