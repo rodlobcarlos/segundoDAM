@@ -1,0 +1,169 @@
+QWidget {
+    background-color: #202020;  /* Fondo muy oscuro */
+    font-family: 'Segoe UI', sans-serif;
+    color: #e0e0e0;             /* Texto base claro */
+}
+
+/* Línea separadora */
+QFrame#separador {
+    color: #444444;
+}
+
+/* Título Principal (ID específico) */
+QLabel#encabezado_principal {
+    color: #00e5ff;             /* Color cian neón */
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/* Etiquetas de sección (Clase específica) */
+QLabel#etiqueta_seccion {
+    color: #aaaaaa;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+QLineEdit {
+    background-color: #333333;
+    border: 2px solid #555555;
+    border-radius: 8px;         /* Esquinas redondeadas */
+    padding: 12px;              /* Padding interno generoso */
+    font-size: 14px;
+    color: white;
+    selection-background-color: #00e5ff;
+    selection-color: black;
+}
+
+/* Pseudo-estado :focus (al escribir) */
+QLineEdit:focus {
+    border: 2px solid #00e5ff;  /* Cambio de color de borde */
+    background-color: #383838;
+}
+
+QCheckBox {
+    spacing: 12px;
+    font-size: 15px;
+    padding: 5px;               /* Padding alrededor del widget */
+}
+
+/* Indicador (La cajita) */
+QCheckBox::indicator {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #666666;
+    border-radius: 6px;         /* Borde redondeado */
+    background-color: transparent;
+}
+
+/* Pseudo-estado :hover (Pasar ratón) */
+QCheckBox::indicator:hover {
+    border: 2px solid #00e5ff;
+}
+
+/* Pseudo-estado :checked (Marcado) */
+QCheckBox::indicator:checked {
+    background-color: #00e5ff;
+    border: 2px solid #00e5ff;
+}
+
+QRadioButton {
+    spacing: 12px;
+    font-size: 15px;
+    padding: 5px;
+}
+
+/* Indicador (El círculo) */
+QRadioButton::indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 12px;        /* 50% para que sea círculo */
+    border: 2px solid #666666;
+    background-color: transparent;
+}
+
+/* Pseudo-estado :hover */
+QRadioButton::indicator:hover {
+    border: 2px solid #00e5ff;
+}
+
+/* Pseudo-estado :checked (Simulación de punto interior) */
+QRadioButton::indicator:checked {
+    background-color: #00e5ff;
+    border: 5px solid #202020;  /* Borde grueso del color del fondo */
+    outline: 2px solid #00e5ff; /* Anillo exterior extra */
+}
+
+QComboBox {
+    background-color: #333333;
+    border: 2px solid #555555;
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 6em;
+}
+
+/* Pseudo-estado :hover */
+QComboBox:hover {
+    border: 2px solid #00e5ff;
+}
+
+/* Botón de la flecha */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 40px;
+    border-left: 1px solid #555555;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #404040;
+}
+
+QComboBox::drop-down:hover {
+    background-color: #505050;
+}
+
+/* Flecha (triángulo CSS) */
+QComboBox::down-arrow {
+    width: 0; 
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #e0e0e0;
+    margin-top: 2px;
+}
+
+/* Menú desplegable */
+QComboBox QAbstractItemView {
+    background-color: #333333;
+    border: 1px solid #555555;
+    selection-background-color: #00e5ff;
+    selection-color: black;
+    outline: none;
+}
+
+QPushButton {
+    background-color: #00e5ff;  /* Color principal brillante */
+    color: #000000;             /* Texto negro para contraste */
+    border: none;
+    border-radius: 25px;        /* Bordes muy redondeados (Píldora) */
+    padding: 15px 30px;         /* Padding generoso */
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* Pseudo-estado :hover */
+QPushButton:hover {
+    background-color: #80f3ff;  /* Más claro */
+    padding-bottom: 17px;       /* Efecto visual sutil */
+}
+
+/* Pseudo-estado :pressed */
+QPushButton:pressed {
+    background-color: #00b8cc;  /* Más oscuro */
+    padding-top: 18px;          /* Texto baja 3px */
+    padding-bottom: 12px;
+}
