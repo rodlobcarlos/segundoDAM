@@ -17,17 +17,17 @@ class project1(QMainWindow):
         self.setWindowTitle("Panel de mensajes")
 
         # --- Contenedor y layout ---
-        self.main_container = QWidget()
-        self.layoutt = QVBoxLayout()
+        self.main_container = QWidget() # Almacena todo label, botones y campos de texto
+        self.layout_v = QVBoxLayout() # Todo widget dentro del layout se pone encima del otro V(vertical)
         
         # --- QLabel ---
         self.central_widget = QLabel("Sistema en espera...")
-        self.font = self.central_widget.font()
-        self.font.setPointSize(20)
+        self.font = self.central_widget.font() # Fuente del widget 
+        self.font.setPointSize(20) # Tamaño de la fuente
         self.central_widget.setFont(self.font)
-        self.central_widget.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
+        self.central_widget.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter) # Centrado
 
-        self.layoutt.addWidget(self.central_widget)
+        self.layout_v.addWidget(self.central_widget) # Añade widget al layout
 
         # --- Menu ---
         self.menu_bar = self.menuBar()
@@ -36,13 +36,13 @@ class project1(QMainWindow):
         # Acciones del menu
         self.accion = QAction("Mostrar saludo", self)
         self.accion.setShortcut(QKeySequence("Ctrl+T"))
-        self.accion.triggered.connect(self.mostrar_saludo)
+        self.accion.triggered.connect(self.mostrar_saludo) # Conecta al slot
 
         self.menu.addAction(self.accion)
 
         # --- QToolBar ---
         self.tool_bar = self.addToolBar("Barra de herramientas")
-        self.tool_bar.addAction(self.accion)
+        self.tool_bar.addAction(self.accion) # Misma acción que el menu
 
         # --- Barra de estado ---
         self.status_bar = self.statusBar()
@@ -51,20 +51,22 @@ class project1(QMainWindow):
         # --- QPushButoon ---
         self.button = QPushButton("Mensaje")
         self.button.clicked.connect(self.mostrar_mesaje)
-        self.layoutt.addWidget(self.button)
 
-        self.main_container.setLayout(self.layoutt)
-        self.setCentralWidget(self.main_container)
+        self.layout_v.addWidget(self.button) # Añade widget al layout
+        self.main_container.setLayout(self.layout_v) # Añade QWidget() al layout
+
+        self.setCentralWidget(self.main_container) # Centraliza el QWidget()
 
     # --- Slots ---
     def mostrar_saludo(self):
-        self.central_widget.setText("Sistema operativo iniciado...")
+        self.central_widget.setText("Sistema operativo iniciado...") # Cambia el nombre del QLabel
         self.setWindowTitle("Sistema operativo iniciado")
         self.status_bar.showMessage("Saludo mostrado", 3000)
 
     def mostrar_mesaje(self):
         QMessageBox.information(self, "Información", "¡Hola! Esto es un mensaje.")
 
+# --- Bucle aplicación ---
 app = QApplication([])
 window = project1()
 window.show()
