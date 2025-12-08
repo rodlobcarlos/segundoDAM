@@ -1,6 +1,7 @@
 package proyectoMongoDB_model;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Usuario {
 
@@ -58,5 +59,21 @@ public class Usuario {
 	}
 	public Usuario() {
 		super();
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(email, ia, id, nombre_usuario, tareas);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Usuario other = (Usuario) obj;
+		return Objects.equals(email, other.email) && Objects.equals(ia, other.ia) && Objects.equals(id, other.id)
+				&& Objects.equals(nombre_usuario, other.nombre_usuario) && Objects.equals(tareas, other.tareas);
 	}
 }

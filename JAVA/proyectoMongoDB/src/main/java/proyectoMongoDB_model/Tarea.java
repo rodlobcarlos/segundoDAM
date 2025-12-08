@@ -1,5 +1,7 @@
 package proyectoMongoDB_model;
 
+import java.util.Objects;
+
 public class Tarea {
 
 	private String id_tarea;
@@ -54,4 +56,22 @@ public class Tarea {
 	public Tarea() {
 		super();
 	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(descripcion, estado, id_tarea, prioridad, titulo);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Tarea other = (Tarea) obj;
+		return Objects.equals(descripcion, other.descripcion) && estado == other.estado
+				&& Objects.equals(id_tarea, other.id_tarea) && prioridad == other.prioridad
+				&& Objects.equals(titulo, other.titulo);
+	}
+	
 }

@@ -1,13 +1,19 @@
 package proyectoMongoDB_service;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import proyectoMongoDB_model.Configuracion_IA;
 import proyectoMongoDB_model.ProyectoException;
 import proyectoMongoDB_model.Usuario;
 import proyectoMongoDB_repository.Usuario_repository;
 
 public class Usuario_service {
 
+	private static final Logger logger = LogManager.getLogger(Usuario_service.class);
 	private Usuario_repository repo;
 
 	public Usuario_repository getRepo() {
@@ -52,5 +58,21 @@ public class Usuario_service {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public Usuario filtradosPorId(String id) {
+		return repo.getUsuariosFiltradosPorId(id);		
+	}
+	
+	public List<Usuario> filtrarPorUsuariosVarios(String id, Configuracion_IA ia, String email) {
+		List<Usuario> usuarios = new ArrayList<Usuario>();
+		for (Usuario usuario : repo.getUsuario()) {
+			if (usuario.getId().equals(id) || usuario.getIa().getIdioma_preferido().equals(ia.getIdioma_preferido())
+					|| usuario.getEmail().equals(email)) {
+				logger.info("Usuario encontrado -> " + usuario.getNombre_usuario() + " " + usuario.getId());
+				usuarios.add(usuario);
+			}
+		}
+		return usuarios;
 	}
 }

@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 import com.mongodb.client.MongoDatabase;
 
 import mongoDBconfig.MongoDBConexion;
+import proyectoMongoDB_model.ProyectoException;
 import proyectoMongoDB_model.Usuario;
 import proyectoMongoDB_repository.Usuario_repository;
 import proyectoMongoDB_service.Usuario_service;
@@ -24,11 +25,15 @@ public class GestionaProyectoMongoDB {
 		Usuario_repository repository = new Usuario_repository(db);
 		Usuario_service service = new Usuario_service(repository);
 		
+		
 		List<Usuario> usuarios = service.read();
 		
-		for(Usuario usuario: usuarios) {
-			logger.debug(usuario);
-		}
+		logger.info(service.filtradosPorId("10005"));
+
+		
+//		for(Usuario usuario: usuarios) {
+//			logger.debug(usuario);
+//		}
 
 	}
 

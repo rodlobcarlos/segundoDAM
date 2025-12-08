@@ -11,6 +11,7 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
+import mongoDBmodel.Estudiante;
 import proyectoMongoDB_model.Configuracion_IA;
 import proyectoMongoDB_model.Estado;
 import proyectoMongoDB_model.ProyectoException;
@@ -50,12 +51,39 @@ public class Usuario_repository {
 		this.listaUsuario = this.read();
 	}
 
+	private Usuario fromUsuarioDocument2Java(Document doc) {
+		Usuario u = new Usuario();
+		u.setId(doc.getString("id"));
+		u.setEmail(doc.getString("email"));
+		u.setNombre_usuario(doc.getString("nombre_usuario"));
+
+		Document docIA = (Document) doc.get("configuracion_ia");
+		Configuracion_IA c = new Configuracion_IA();
+		c.setIdioma_preferido(docIA.getString("idioma_preferido"));
+		c.setNivel_creatividad(docIA.getInteger("nivel_creatividad"));
+		c.setPermitir_autocompletado(docIA.getBoolean("permitir_autocompletado"));
+		u.setIa(c);
+
+		List<Document> listaDocsTareas = doc.getList("tareas", Document.class);
+		List<Tarea> listaTareasJava = new ArrayList<>();
+		for (Document docTarea : listaDocsTareas) {
+			Tarea t = new Tarea();
+			t.setId_tarea(docTarea.getString("id_tarea"));
+			t.setTitulo(docTarea.getString("titulo"));
+			t.setDescripcion(docTarea.getString("descripcion"));
+			t.setPrioridad(docTarea.getInteger("prioridad"));
+			t.setEstado(Estado.valueOf(docTarea.getString("estado")));
+			listaTareasJava.add(t);
+		}
+		u.setTareas(listaTareasJava);
+		return u;
+	}
+
 	public void save(Usuario u) {
 		Configuracion_IA c = new Configuracion_IA();
 		Tarea t = new Tarea();
 		Document docUser = new Document("id", u.getId()).append("nombre_usuario", u.getNombre_usuario())
-				.append("email", u.getEmail()).append("configuracion", u.getIa())
-				.append("tareas", u.getTareas());
+				.append("email", u.getEmail()).append("configuracion", u.getIa()).append("tareas", u.getTareas());
 		coleccion.insertOne(docUser);
 
 		Document docIA = new Document("permitir_autocompletado", c.isPermitir_autocompletado())
@@ -72,7 +100,7 @@ public class Usuario_repository {
 	}
 
 	public List<Usuario> read() {
-		List<Usuario> estudiantes = new ArrayList<>();
+		List<Usuario> usuario = new ArrayList<>();
 		FindIterable<Document> documentos = coleccion.find();
 		for (Document doc : documentos) {
 			Usuario u = new Usuario();
@@ -99,26 +127,33 @@ public class Usuario_repository {
 				tareas.add(tarea);
 			}
 			u.setTareas(tareas);
-			estudiantes.add(u);
+			usuario.add(u);
 		}
-		return estudiantes;
+		return usuario;
 	}
-	
+
 	public void delete(Usuario u) throws ProyectoException {
-		if(listaUsuario.contains(u)) {
+		if (listaUsuario.contains(u)) {
 			listaUsuario.add(u);
 		} else {
 			throw new ProyectoException("Este usuario no existe.");
 		}
 	}
-	
+
 	public void update(Usuario u) throws ProyectoException {
 		Usuario usuario = new Usuario();
-		if(listaUsuario.contains(u)) {
+		if (listaUsuario.contains(u)) {
 			listaUsuario.remove(u);
 			listaUsuario.add(usuario);
 		} else {
 			throw new ProyectoException("El usuario no existe.");
 		}
+	}
+
+	public Usuario getUsuariosFiltradosPorId(String id) {
+		Document filtro = new Document("id", id); // Con el json del filtro
+		Document resultado = this.coleccion.find(filtro).first();
+		Usuario u = fromUsuarioDocument2Java(resultado);
+		return u;
 	}
 }
