@@ -1,8 +1,11 @@
 // Select the database to use.
 use('simulacro');
 
+// Primero limpiamos la colección para evitar duplicados si lo ejecutas varias veces
+db.hoteles.drop();
+
 // Insert a few documents into the sales collection.
-db.getCollection('hoteles').insertMany([
+db.hoteles.insertMany([
   {
     "idHotel": "h101",
     "nombre": "Grand Hotel Central",
@@ -16,9 +19,9 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 41.38, "lon": 2.17 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 250.5, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 120.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Individual", "precio": 85.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 250.5, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 120.0, "capacidad": 2, "disponible": false },
+      { "tipo": "INDIVIDUAL", "precio": 85.0, "capacidad": 1, "disponible": true }
     ]
   },
   {
@@ -34,9 +37,9 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 36.53, "lon": -6.29 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 210.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 105.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 70.0, "capacidad": 1, "disponible": false }
+      { "tipo": "SUITE_JUNIOR", "precio": 210.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 105.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 70.0, "capacidad": 1, "disponible": false }
     ]
   },
   {
@@ -52,9 +55,9 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 42.57, "lon": -0.55 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 300.0, "capacidad": 3, "disponible": false },
-      { "tipo": "Doble Estándar", "precio": 140.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 90.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 300.0, "capacidad": 3, "disponible": false },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 140.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 90.0, "capacidad": 1, "disponible": true }
     ]
   },
   {
@@ -70,9 +73,9 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 40.415, "lon": -3.707 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 180.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 95.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Individual", "precio": 60.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 180.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 95.0, "capacidad": 2, "disponible": false },
+      { "tipo": "INDIVIDUAL", "precio": 60.0, "capacidad": 1, "disponible": true }
     ]
   },
   {
@@ -88,9 +91,9 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 37.39, "lon": -5.99 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 230.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Doble Estándar", "precio": 110.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 75.0, "capacidad": 1, "disponible": false }
+      { "tipo": "SUITE_JUNIOR", "precio": 230.0, "capacidad": 2, "disponible": false },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 110.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 75.0, "capacidad": 1, "disponible": false }
     ]
   },
   {
@@ -106,12 +109,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 36.51, "lon": -4.88 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 280.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 130.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 90.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 280.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 130.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 90.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h107",
     "nombre": "City Hotel Norte",
@@ -125,12 +127,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 43.46, "lon": -3.8 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 160.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 85.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 55.0, "capacidad": 1, "disponible": false }
+      { "tipo": "SUITE_JUNIOR", "precio": 160.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 85.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 55.0, "capacidad": 1, "disponible": false }
     ]
   },
-
   {
     "idHotel": "h108",
     "nombre": "Laguna Verde Hotel",
@@ -144,12 +145,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 43.36, "lon": -5.85 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 220.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Doble Estándar", "precio": 115.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 80.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 220.0, "capacidad": 2, "disponible": false },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 115.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 80.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h109",
     "nombre": "Hotel Mediterráneo",
@@ -163,12 +163,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 37.25, "lon": -1.87 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 320.0, "capacidad": 3, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 150.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 95.0, "capacidad": 1, "disponible": false }
+      { "tipo": "SUITE_JUNIOR", "precio": 320.0, "capacidad": 3, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 150.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 95.0, "capacidad": 1, "disponible": false }
     ]
   },
-
   {
     "idHotel": "h110",
     "nombre": "Sierra Nevada Lodge",
@@ -182,12 +181,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 37.09, "lon": -3.39 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 260.0, "capacidad": 4, "disponible": false },
-      { "tipo": "Doble Estándar", "precio": 135.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 88.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 260.0, "capacidad": 4, "disponible": false },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 135.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 88.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h111",
     "nombre": "Hotel Puerta del Sol",
@@ -201,12 +199,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 40.416, "lon": -3.703 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 240.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 120.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Individual", "precio": 75.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 240.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 120.0, "capacidad": 2, "disponible": false },
+      { "tipo": "INDIVIDUAL", "precio": 75.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h112",
     "nombre": "Costa Dorada Palace",
@@ -220,12 +217,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 41.07, "lon": 1.15 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 330.0, "capacidad": 3, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 160.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 98.0, "capacidad": 1, "disponible": false }
+      { "tipo": "SUITE_JUNIOR", "precio": 330.0, "capacidad": 3, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 160.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 98.0, "capacidad": 1, "disponible": false }
     ]
   },
-
   {
     "idHotel": "h113",
     "nombre": "Hotel Jardines del Valle",
@@ -239,12 +235,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 36.66, "lon": -4.57 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 150.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 85.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Individual", "precio": 60.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 150.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 85.0, "capacidad": 2, "disponible": false },
+      { "tipo": "INDIVIDUAL", "precio": 60.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h114",
     "nombre": "Hotel Bosque Encantado",
@@ -258,12 +253,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 41.29, "lon": -3.92 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 215.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 110.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 70.0, "capacidad": 1, "disponible": false }
+      { "tipo": "SUITE_JUNIOR", "precio": 215.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 110.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 70.0, "capacidad": 1, "disponible": false }
     ]
   },
-
   {
     "idHotel": "h115",
     "nombre": "Mar Azul Resort",
@@ -277,12 +271,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 27.77, "lon": -15.57 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 350.0, "capacidad": 3, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 175.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 100.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 350.0, "capacidad": 3, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 175.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 100.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h116",
     "nombre": "Hotel Ronda Antigua",
@@ -296,12 +289,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 36.74, "lon": -5.17 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 170.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 90.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 55.0, "capacidad": 1, "disponible": false }
+      { "tipo": "SUITE_JUNIOR", "precio": 170.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 90.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 55.0, "capacidad": 1, "disponible": false }
     ]
   },
-
   {
     "idHotel": "h117",
     "nombre": "Monteverde Lodge",
@@ -315,12 +307,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 42.46, "lon": -6.06 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 200.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 115.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Individual", "precio": 75.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 200.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 115.0, "capacidad": 2, "disponible": false },
+      { "tipo": "INDIVIDUAL", "precio": 75.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h118",
     "nombre": "Hotel Bahía Serena",
@@ -334,12 +325,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 40.12, "lon": 0.07 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 240.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Doble Estándar", "precio": 130.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 80.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 240.0, "capacidad": 2, "disponible": false },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 130.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 80.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h119",
     "nombre": "Hotel Alameda Real",
@@ -353,12 +343,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 39.47, "lon": -0.38 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 310.0, "capacidad": 3, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 145.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Individual", "precio": 90.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 310.0, "capacidad": 3, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 145.0, "capacidad": 2, "disponible": false },
+      { "tipo": "INDIVIDUAL", "precio": 90.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h120",
     "nombre": "Hotel Mirador del Puerto",
@@ -372,9 +361,9 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 37.6, "lon": -0.98 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 155.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 80.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 50.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 155.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 80.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 50.0, "capacidad": 1, "disponible": true }
     ]
   },
   {
@@ -390,12 +379,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 43.4, "lon": -4.77 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 225.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 115.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Individual", "precio": 70.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 225.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 115.0, "capacidad": 2, "disponible": false },
+      { "tipo": "INDIVIDUAL", "precio": 70.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h122",
     "nombre": "Hotel Costa Blanca Mar",
@@ -409,12 +397,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 38.84, "lon": 0.11 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 345.0, "capacidad": 3, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 170.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 105.0, "capacidad": 1, "disponible": false }
+      { "tipo": "SUITE_JUNIOR", "precio": 345.0, "capacidad": 3, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 170.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 105.0, "capacidad": 1, "disponible": false }
     ]
   },
-
   {
     "idHotel": "h123",
     "nombre": "Hotel Valle Dorado",
@@ -428,12 +415,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 42.23, "lon": -2.03 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 145.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 75.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 50.0, "capacidad": 1, "disponible": false }
+      { "tipo": "SUITE_JUNIOR", "precio": 145.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 75.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 50.0, "capacidad": 1, "disponible": false }
     ]
   },
-
   {
     "idHotel": "h124",
     "nombre": "Hotel Horizonte Azul",
@@ -447,12 +433,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 43.37, "lon": -8.41 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 210.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 125.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 80.0, "capacidad": 1, "disponible": false }
+      { "tipo": "SUITE_JUNIOR", "precio": 210.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 125.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 80.0, "capacidad": 1, "disponible": false }
     ]
   },
-
   {
     "idHotel": "h125",
     "nombre": "Hotel Termas del Sur",
@@ -466,12 +451,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 38.12, "lon": -1.3 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 320.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 155.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 95.0, "capacidad": 1, "disponible": false }
+      { "tipo": "SUITE_JUNIOR", "precio": 320.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 155.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 95.0, "capacidad": 1, "disponible": false }
     ]
   },
-
   {
     "idHotel": "h126",
     "nombre": "Monte Claro Hotel",
@@ -485,12 +469,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 41.65, "lon": -0.89 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 160.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Doble Estándar", "precio": 95.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 60.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 160.0, "capacidad": 2, "disponible": false },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 95.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 60.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h127",
     "nombre": "Hotel Brisas del Norte",
@@ -504,12 +487,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 43.46, "lon": -3.81 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 220.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 130.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Individual", "precio": 85.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 220.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 130.0, "capacidad": 2, "disponible": false },
+      { "tipo": "INDIVIDUAL", "precio": 85.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h128",
     "nombre": "Hotel Dunas Doradas",
@@ -523,12 +505,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 28.73, "lon": -13.87 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 340.0, "capacidad": 3, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 165.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 100.0, "capacidad": 1, "disponible": false }
+      { "tipo": "SUITE_JUNIOR", "precio": 340.0, "capacidad": 3, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 165.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 100.0, "capacidad": 1, "disponible": false }
     ]
   },
-
   {
     "idHotel": "h129",
     "nombre": "Hotel Costa Tranquila",
@@ -542,12 +523,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 36.78, "lon": -4.1 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 150.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Doble Estándar", "precio": 85.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 55.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 150.0, "capacidad": 2, "disponible": false },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 85.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 55.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h130",
     "nombre": "Costa Serena Spa Hotel",
@@ -561,12 +541,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 39.49, "lon": 3.0 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 250.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 130.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 90.0, "capacidad": 1, "disponible": false }
+      { "tipo": "SUITE_JUNIOR", "precio": 250.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 130.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 90.0, "capacidad": 1, "disponible": false }
     ]
   },
-
   {
     "idHotel": "h131",
     "nombre": "Hotel Vista Montaña",
@@ -580,12 +559,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 42.59, "lon": 0.52 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 155.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 85.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Individual", "precio": 60.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 155.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 85.0, "capacidad": 2, "disponible": false },
+      { "tipo": "INDIVIDUAL", "precio": 60.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h132",
     "nombre": "Hotel Faro Marino",
@@ -599,12 +577,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 43.46, "lon": -3.8 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 260.0, "capacidad": 3, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 140.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 85.0, "capacidad": 1, "disponible": false }
+      { "tipo": "SUITE_JUNIOR", "precio": 260.0, "capacidad": 3, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 140.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 85.0, "capacidad": 1, "disponible": false }
     ]
   },
-
   {
     "idHotel": "h133",
     "nombre": "Hotel Lagos del Sur",
@@ -618,12 +595,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 43.48, "lon": -5.43 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 330.0, "capacidad": 3, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 170.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Individual", "precio": 105.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 330.0, "capacidad": 3, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 170.0, "capacidad": 2, "disponible": false },
+      { "tipo": "INDIVIDUAL", "precio": 105.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h134",
     "nombre": "Hotel Oasis Urbano",
@@ -637,12 +613,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 40.42, "lon": -3.7 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 165.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Doble Estándar", "precio": 95.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 65.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 165.0, "capacidad": 2, "disponible": false },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 95.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 65.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h135",
     "nombre": "Hotel Miradores del Cielo",
@@ -656,12 +631,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 36.75, "lon": -3.88 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 240.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 125.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Individual", "precio": 90.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 240.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 125.0, "capacidad": 2, "disponible": false },
+      { "tipo": "INDIVIDUAL", "precio": 90.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h136",
     "nombre": "Hotel Jardín del Mar",
@@ -675,12 +649,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 36.01, "lon": -5.6 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 350.0, "capacidad": 3, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 165.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Individual", "precio": 110.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 350.0, "capacidad": 3, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 165.0, "capacidad": 2, "disponible": false },
+      { "tipo": "INDIVIDUAL", "precio": 110.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h137",
     "nombre": "Hotel Camino Blanco",
@@ -694,12 +667,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 42.87, "lon": -8.55 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 145.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Doble Estándar", "precio": 75.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 55.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 145.0, "capacidad": 2, "disponible": false },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 75.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 55.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h138",
     "nombre": "Hotel Mareas Altas",
@@ -713,12 +685,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 43.43, "lon": -3.83 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 230.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 120.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Individual", "precio": 80.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 230.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 120.0, "capacidad": 2, "disponible": false },
+      { "tipo": "INDIVIDUAL", "precio": 80.0, "capacidad": 1, "disponible": true }
     ]
   },
-
   {
     "idHotel": "h139",
     "nombre": "Hotel Oasis del Desierto",
@@ -732,12 +703,11 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 36.76, "lon": -2.61 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 355.0, "capacidad": 3, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 180.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Individual", "precio": 110.0, "capacidad": 1, "disponible": false }
+      { "tipo": "SUITE_JUNIOR", "precio": 355.0, "capacidad": 3, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 180.0, "capacidad": 2, "disponible": true },
+      { "tipo": "INDIVIDUAL", "precio": 110.0, "capacidad": 1, "disponible": false }
     ]
   },
-
   {
     "idHotel": "h140",
     "nombre": "Hotel Sierra Blanca",
@@ -751,9 +721,9 @@ db.getCollection('hoteles').insertMany([
       "coordenadas": { "lat": 36.52, "lon": -4.88 }
     },
     "habitaciones": [
-      { "tipo": "Suite Junior", "precio": 245.0, "capacidad": 2, "disponible": true },
-      { "tipo": "Doble Estándar", "precio": 135.0, "capacidad": 2, "disponible": false },
-      { "tipo": "Individual", "precio": 85.0, "capacidad": 1, "disponible": true }
+      { "tipo": "SUITE_JUNIOR", "precio": 245.0, "capacidad": 2, "disponible": true },
+      { "tipo": "DOBLE_ESTANDAR", "precio": 135.0, "capacidad": 2, "disponible": false },
+      { "tipo": "INDIVIDUAL", "precio": 85.0, "capacidad": 1, "disponible": true }
     ]
   }
 ]);

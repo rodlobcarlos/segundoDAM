@@ -1,0 +1,6 @@
+2025-12-09 20:05:48.865 [main] ERROR mongoDBconfig.MongoDBConexion - src\main\resources\app.properties (El sistema no puede encontrar la ruta especificada)
+2025-12-09 20:09:36.389 [main] ERROR mongoDBconfig.MongoDBConexion - src\main\resources\app.properties (El sistema no puede encontrar la ruta especificada)
+2025-12-09 20:11:10.402 [main] ERROR mongoDBconfig.MongoDBConexion - src\main\resources\app.properties (El sistema no puede encontrar la ruta especificada)
+2025-12-09 20:12:06.230 [main] ERROR mongoDBconfig.MongoDBConexion - \resourcesapp.properties (El sistema no puede encontrar el archivo especificado)
+2025-12-09 20:12:21.607 [main] ERROR mongoDBconfig.MongoDBConexion - \resources\app.properties (El sistema no puede encontrar la ruta especificada)
+2025-12-09 20:12:31.902 [main] ERROR mongoDBconfig.MongoDBConexion - src\main\resources\app.properties (El sistema no puede encontrar la ruta especificada)

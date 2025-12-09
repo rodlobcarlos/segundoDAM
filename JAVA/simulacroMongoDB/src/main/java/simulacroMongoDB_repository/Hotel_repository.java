@@ -1,6 +1,7 @@
 package simulacroMongoDB_repository;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -10,11 +11,12 @@ import org.bson.Document;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.result.UpdateResult;
 
-import proyectoMongoDB_model.Usuario;
 import simulacroMongoDB_model.Coordenadas;
 import simulacroMongoDB_model.Habitacion;
 import simulacroMongoDB_model.Hotel;
+import simulacroMongoDB_model.SimulacionException;
 import simulacroMongoDB_model.Tipo;
 import simulacroMongoDB_model.Ubicacion;
 
@@ -117,6 +119,30 @@ public class Hotel_repository {
 		List<Hotel> usuario = new ArrayList<>();
 		FindIterable<Document> documentos = coleccion.find();
 		return hoteles;
-		
+	}
+	
+	public void delete(Hotel h) throws SimulacionException {
+		if (hoteles.contains(h)) {
+			Document user = fromHotelDocumentoJava(h);
+			coleccion.deleteOne(user);
+		} else {
+			throw new SimulacionException("Este hotel no existe.");
+		}
+	}
+
+	public void update(Hotel h, String id) throws SimulacionException {
+		Document filtro = new Document("id", id); // Con el json del filtro
+		Document usuarioHotel = fromHotelDocumentoJava(h);
+		UpdateResult resultado = coleccion.replaceOne(filtro, usuarioHotel);
+		if(resultado.getMatchedCount() == 0) {
+			throw new SimulacionException("No hay hotel por ese id.");
+		}
+	}
+	
+	public Hotel getHotelesFiltradosPorId(String id) {
+		Document filtro = new Document("id", id); // Con el json del filtro
+		Document resultado = this.coleccion.find(filtro).first();
+		Hotel u = fromDocumentoHotel2Java(resultado);
+		return u;
 	}
 }
