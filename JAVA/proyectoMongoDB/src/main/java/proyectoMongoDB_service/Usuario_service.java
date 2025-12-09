@@ -53,9 +53,9 @@ public class Usuario_service {
 		}
 	}
 
-	public void update(Usuario u) {
+	public void update(Usuario u, String id) {
 		try {
-			repo.update(u);
+			repo.update(u, null);
 		} catch (ProyectoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

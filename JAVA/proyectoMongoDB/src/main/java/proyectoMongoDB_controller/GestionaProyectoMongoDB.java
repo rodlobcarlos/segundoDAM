@@ -41,12 +41,12 @@ public class GestionaProyectoMongoDB {
 		
 		logger.info(service.ordenarUsuarioPorId());
 
-		/*
+		
 		// Lista de usuarios
-		for(Usuario usuario: usuarios) {
-			logger.debug(usuario);
-		}
-		*/
+//		for(Usuario usuario: usuarios) {
+//			logger.debug(usuario);
+//		}
+		
 	}
 
 }

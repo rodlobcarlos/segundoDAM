@@ -109,30 +109,7 @@ public class Usuario_repository {
 		List<Usuario> usuario = new ArrayList<>();
 		FindIterable<Document> documentos = coleccion.find();
 		for (Document doc : documentos) {
-			Usuario u = new Usuario();
-			u.setId(doc.getString("id"));
-			u.setNombre_usuario(doc.getString("nombre_usuario"));
-			u.setEmail(doc.getString("email"));
-
-			Document docIA = (Document) doc.get("configuracion_ia");
-			Configuracion_IA c = new Configuracion_IA();
-			c.setPermitir_autocompletado(docIA.getBoolean("permitir_autocompletado", false));
-			c.setNivel_creatividad(docIA.getInteger("nivel_creatividad", 0));
-			c.setIdioma_preferido(docIA.getString("idioma_preferido"));
-			u.setIa(c);
-
-			List<Document> docTask = (List<Document>) doc.get("tareas");
-			List<Tarea> tareas = new ArrayList<Tarea>();
-			for (Document document : docTask) {
-				Tarea tarea = new Tarea();
-				tarea.setId_tarea(document.getString("id_tarea"));
-				tarea.setTitulo(document.getString("titulo"));
-				tarea.setDescripcion(document.getString("descripcion"));
-				tarea.setEstado(Estado.valueOf(document.getString("estado")));
-				tarea.setPrioridad(document.getInteger("prioridad", 0));
-				tareas.add(tarea);
-			}
-			u.setTareas(tareas);
+			Usuario u = fromDocumentUsuario2Java(doc);
 			usuario.add(u);
 		}
 		return usuario;
