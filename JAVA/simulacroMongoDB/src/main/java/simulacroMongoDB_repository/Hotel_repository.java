@@ -7,9 +7,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.bson.Document;
 
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
+import proyectoMongoDB_model.Usuario;
 import simulacroMongoDB_model.Coordenadas;
 import simulacroMongoDB_model.Habitacion;
 import simulacroMongoDB_model.Hotel;
@@ -105,5 +107,16 @@ public class Hotel_repository {
 			habitaciones.add(docHotel);
 		}
 		return docHotel;
+	}
+	
+	public void save(Hotel h) {
+		coleccion.insertOne(fromHotelDocumentoJava(h));
+	}
+	
+	public List<Hotel> read(){
+		List<Hotel> usuario = new ArrayList<>();
+		FindIterable<Document> documentos = coleccion.find();
+		return hoteles;
+		
 	}
 }
