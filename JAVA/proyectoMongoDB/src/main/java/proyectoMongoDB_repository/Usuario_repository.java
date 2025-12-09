@@ -10,8 +10,8 @@ import org.bson.Document;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Sorts;
 
-import mongoDBmodel.Estudiante;
 import proyectoMongoDB_model.Configuracion_IA;
 import proyectoMongoDB_model.Estado;
 import proyectoMongoDB_model.ProyectoException;
@@ -51,7 +51,7 @@ public class Usuario_repository {
 		this.listaUsuario = this.read();
 	}
 
-	private Usuario fromUsuarioDocument2Java(Document doc) {
+	private Usuario fromDocumentUsuario2Java(Document doc) {
 		Usuario u = new Usuario();
 		u.setId(doc.getString("id"));
 		u.setEmail(doc.getString("email"));
@@ -153,7 +153,17 @@ public class Usuario_repository {
 	public Usuario getUsuariosFiltradosPorId(String id) {
 		Document filtro = new Document("id", id); // Con el json del filtro
 		Document resultado = this.coleccion.find(filtro).first();
-		Usuario u = fromUsuarioDocument2Java(resultado);
+		Usuario u = fromDocumentUsuario2Java(resultado);
 		return u;
+	}
+
+	public List<Usuario> ordenadoPorId() {
+		List<Usuario> list = new ArrayList<Usuario>();
+		FindIterable<Document> resultado = coleccion.find().sort(Sorts.descending("id"));		
+		for(Document document: resultado) {
+			Usuario usuario = fromDocumentUsuario2Java(document);
+			list.add(usuario);
+		}
+		return list;
 	}
 }

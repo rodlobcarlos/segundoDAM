@@ -1,6 +1,7 @@
 package proyectoMongoDB_service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -8,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 import proyectoMongoDB_model.Configuracion_IA;
 import proyectoMongoDB_model.ProyectoException;
+import proyectoMongoDB_model.Tarea;
 import proyectoMongoDB_model.Usuario;
 import proyectoMongoDB_repository.Usuario_repository;
 
@@ -33,15 +35,15 @@ public class Usuario_service {
 	public String toString() {
 		return "Usuario_service [repo=" + repo + "]";
 	}
-	
+
 	public void save(Usuario u) {
 		repo.save(u);
 	}
-	
+
 	public List<Usuario> read() {
 		return repo.read();
 	}
-	
+
 	public void delete(Usuario u) {
 		try {
 			repo.delete(u);
@@ -50,7 +52,7 @@ public class Usuario_service {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void update(Usuario u) {
 		try {
 			repo.update(u);
@@ -59,20 +61,29 @@ public class Usuario_service {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public Usuario filtradosPorId(String id) {
-		return repo.getUsuariosFiltradosPorId(id);		
+		return repo.getUsuariosFiltradosPorId(id);
 	}
-	
-	public List<Usuario> filtrarPorUsuariosVarios(String id, Configuracion_IA ia, String email) {
+
+	public List<Usuario> filtrarPorUsuariosVarios(String id, Configuracion_IA ia, Tarea nuevaTarea) {
 		List<Usuario> usuarios = new ArrayList<Usuario>();
 		for (Usuario usuario : repo.getUsuario()) {
 			if (usuario.getId().equals(id) || usuario.getIa().getIdioma_preferido().equals(ia.getIdioma_preferido())
-					|| usuario.getEmail().equals(email)) {
+					|| usuario.getEmail().equals(nuevaTarea)) {
 				logger.info("Usuario encontrado -> " + usuario.getNombre_usuario() + " " + usuario.getId());
 				usuarios.add(usuario);
 			}
 		}
 		return usuarios;
+	}
+
+	public List<Usuario> ordenarUsuarioPorId() {
+		Collections.sort(repo.getUsuario());
+		return repo.getUsuario();
+	}
+	
+	public List<Usuario> ordenarPorId() {
+		return repo.ordenadoPorId();
 	}
 }

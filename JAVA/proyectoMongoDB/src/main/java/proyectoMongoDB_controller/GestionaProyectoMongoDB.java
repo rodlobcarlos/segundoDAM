@@ -8,15 +8,17 @@ import org.apache.logging.log4j.Logger;
 import com.mongodb.client.MongoDatabase;
 
 import mongoDBconfig.MongoDBConexion;
+import proyectoMongoDB_model.Configuracion_IA;
+import proyectoMongoDB_model.Estado;
 import proyectoMongoDB_model.ProyectoException;
+import proyectoMongoDB_model.Tarea;
 import proyectoMongoDB_model.Usuario;
 import proyectoMongoDB_repository.Usuario_repository;
 import proyectoMongoDB_service.Usuario_service;
 
 public class GestionaProyectoMongoDB {
-	
-	private static final Logger logger = LogManager.getLogger(GestionaProyectoMongoDB.class);
 
+	private static final Logger logger = LogManager.getLogger(GestionaProyectoMongoDB.class);
 
 	public static void main(String[] args) {
 
@@ -24,17 +26,27 @@ public class GestionaProyectoMongoDB {
 		MongoDatabase db = conexion.getDb();
 		Usuario_repository repository = new Usuario_repository(db);
 		Usuario_service service = new Usuario_service(repository);
-		
-		
+
+		Configuracion_IA miConfiguracion = new Configuracion_IA(true, 8, "Español");
+
+		Tarea nuevaTarea = new Tarea("T-001", "Corregir bugs", "Arreglar el fallo en el login", Estado.PENDIENTE, 1);
+
 		List<Usuario> usuarios = service.read();
-		
+
 		logger.info(service.filtradosPorId("10005"));
 
+		logger.info(service.filtrarPorUsuariosVarios("10015", miConfiguracion, nuevaTarea));
 		
-//		for(Usuario usuario: usuarios) {
-//			logger.debug(usuario);
-//		}
+		logger.info(service.ordenarPorId());
+		
+		logger.info(service.ordenarUsuarioPorId());
 
+		/*
+		// Lista de usuarios
+		for(Usuario usuario: usuarios) {
+			logger.debug(usuario);
+		}
+		*/
 	}
 
 }

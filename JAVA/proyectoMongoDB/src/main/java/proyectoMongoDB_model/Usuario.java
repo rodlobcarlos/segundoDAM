@@ -3,7 +3,7 @@ package proyectoMongoDB_model;
 import java.util.List;
 import java.util.Objects;
 
-public class Usuario {
+public class Usuario implements Comparable<Usuario>{
 
 	private String id;
 	private String nombre_usuario;
@@ -75,5 +75,10 @@ public class Usuario {
 		Usuario other = (Usuario) obj;
 		return Objects.equals(email, other.email) && Objects.equals(ia, other.ia) && Objects.equals(id, other.id)
 				&& Objects.equals(nombre_usuario, other.nombre_usuario) && Objects.equals(tareas, other.tareas);
+	}
+	
+	@Override
+	public int compareTo(Usuario o) {
+		return this.id.compareTo(o.id);
 	}
 }
