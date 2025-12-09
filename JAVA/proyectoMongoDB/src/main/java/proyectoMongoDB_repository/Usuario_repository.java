@@ -11,6 +11,7 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Sorts;
+import com.mongodb.client.result.UpdateResult;
 
 import proyectoMongoDB_model.Configuracion_IA;
 import proyectoMongoDB_model.Estado;
@@ -79,12 +80,11 @@ public class Usuario_repository {
 		return u;
 	}
 
-	public void save(Usuario u) {
+	private Document fromUsuarioDocumentoJava(Usuario u) {
 		Configuracion_IA c = new Configuracion_IA();
 		Tarea t = new Tarea();
 		Document docUser = new Document("id", u.getId()).append("nombre_usuario", u.getNombre_usuario())
 				.append("email", u.getEmail()).append("configuracion", u.getIa()).append("tareas", u.getTareas());
-		coleccion.insertOne(docUser);
 
 		Document docIA = new Document("permitir_autocompletado", c.isPermitir_autocompletado())
 				.append("nivel_creatividad", c.getNivel_creatividad())
@@ -97,6 +97,11 @@ public class Usuario_repository {
 					.append("prioridad", t.getPrioridad());
 			tareas.add(docTask);
 		}
+		return docUser;
+	}
+
+	public void save(Usuario u) {
+		coleccion.insertOne(fromUsuarioDocumentoJava(u));
 	}
 
 	public List<Usuario> read() {
@@ -134,19 +139,19 @@ public class Usuario_repository {
 
 	public void delete(Usuario u) throws ProyectoException {
 		if (listaUsuario.contains(u)) {
-			listaUsuario.add(u);
+			Document user = fromUsuarioDocumentoJava(u);
+			coleccion.deleteOne(user);
 		} else {
 			throw new ProyectoException("Este usuario no existe.");
 		}
 	}
 
-	public void update(Usuario u) throws ProyectoException {
-		Usuario usuario = new Usuario();
-		if (listaUsuario.contains(u)) {
-			listaUsuario.remove(u);
-			listaUsuario.add(usuario);
-		} else {
-			throw new ProyectoException("El usuario no existe.");
+	public void update(Usuario u, String id) throws ProyectoException {
+		Document filtro = new Document("id", id); // Con el json del filtro
+		Document usuarioNuevo = fromUsuarioDocumentoJava(u);
+		UpdateResult resultado = coleccion.replaceOne(filtro, usuarioNuevo);
+		if(resultado.getMatchedCount() == 0) {
+			throw new ProyectoException("No hay usuario por ese id.");
 		}
 	}
 
@@ -159,8 +164,8 @@ public class Usuario_repository {
 
 	public List<Usuario> ordenadoPorId() {
 		List<Usuario> list = new ArrayList<Usuario>();
-		FindIterable<Document> resultado = coleccion.find().sort(Sorts.descending("id"));		
-		for(Document document: resultado) {
+		FindIterable<Document> resultado = coleccion.find().sort(Sorts.descending("id"));
+		for (Document document : resultado) {
 			Usuario usuario = fromDocumentUsuario2Java(document);
 			list.add(usuario);
 		}
