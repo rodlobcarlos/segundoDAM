@@ -1,0 +1,29 @@
+package analizadorTemperatura;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Scanner;
+
+public class AnalizadorTemperatura {
+
+	public int calculaDias(int umbral, String rutaFichero) throws FileNotFoundException {
+		int contador = 0;
+		Scanner in = null;
+		try {
+			FileReader fichero = new FileReader(rutaFichero);
+			in = new Scanner(fichero);
+			while (in.hasNext()) { 
+				String linea = in.nextLine();
+				int lineaNumero = Integer.parseInt(linea);
+				if(umbral > lineaNumero) {
+					
+				}
+			}
+		} finally {
+			if (in != null) {
+				in.close();
+			}
+		}
+		return contador;
+	}
+}

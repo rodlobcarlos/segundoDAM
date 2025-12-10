@@ -1,0 +1,8 @@
+package simulacroMongoDB_model;
+
+public class Coordenadas {
+
+	private double lat;
+	private double lon;
+	
+}

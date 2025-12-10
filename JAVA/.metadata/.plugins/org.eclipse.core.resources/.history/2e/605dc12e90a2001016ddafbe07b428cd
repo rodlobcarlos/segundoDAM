@@ -1,0 +1,14 @@
+package boletin1;
+
+public class Lanzador {
+	
+	private static final String diractorioGenerarClasses = "C:\\Users\\alumno\\Desktop\\segundoDAM\\JAVA\\simulacion_examen\\target";
+	private static final String rutaFicherosJava = "C:\\Users\\alumno\\Desktop\\segundoDAM\\JAVA\\simulacion_examen\\src\\main\\java";
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] comando = {"javac", "-d", diractorioGenerarClasses, rutaFicherosJava + "\\rutaFicherosJava"};
+		System.out.println("Entrando en el gestiona.");
+	}
+
+}

@@ -1,0 +1,17 @@
+package json;
+
+import java.io.FileReader;
+ogger;
+
+import tema1.DiffFolder;
+
+public class UtilidadesJsonPokemons {
+	
+	private static final Logger logger = LogManager.getLogger(DiffFolder.class);
+
+
+	public Pokemon leePokemon(String rutaFichero) {
+	    
+	}
+
+}

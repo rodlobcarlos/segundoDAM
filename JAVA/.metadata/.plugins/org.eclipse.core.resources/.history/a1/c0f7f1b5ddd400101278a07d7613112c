@@ -1,0 +1,165 @@
+package proyectoMongoDB_repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.bson.Document;
+
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Sorts;
+
+import mongoDBmodel.Estudiante;
+import proyectoMongoDB_model.Configuracion_IA;
+import proyectoMongoDB_model.Estado;
+import proyectoMongoDB_model.ProyectoException;
+import proyectoMongoDB_model.Tarea;
+import proyectoMongoDB_model.Usuario;
+
+public class Usuario_repository {
+
+	private static final String NOMBRE_COLECCION = "usuario";
+	private final MongoCollection<Document> coleccion;
+	private static final Logger logger = LogManager.getLogger(Usuario_repository.class);
+	private List<Usuario> listaUsuario;
+
+	public List<Usuario> getUsuario() {
+		return listaUsuario;
+	}
+
+	public void setUsuario(List<Usuario> usuario) {
+		this.listaUsuario = new ArrayList<Usuario>();
+	}
+
+	public static String getNombreColeccion() {
+		return NOMBRE_COLECCION;
+	}
+
+	public MongoCollection<Document> getColeccion() {
+		return coleccion;
+	}
+
+	public static Logger getLogger() {
+		return logger;
+	}
+
+	public Usuario_repository(MongoDatabase db) {
+		super();
+		this.coleccion = db.getCollection(NOMBRE_COLECCION);
+		this.listaUsuario = this.read();
+	}
+
+	private Usuario fromDocumentUsuario2Java(Document doc) {
+		Usuario u = new Usuario();
+		u.setId(doc.getString("id"));
+		u.setEmail(doc.getString("email"));
+		u.setNombre_usuario(doc.getString("nombre_usuario"));
+
+		Document docIA = (Document) doc.get("configuracion_ia");
+		Configuracion_IA c = new Configuracion_IA();
+		c.setIdioma_preferido(docIA.getString("idioma_preferido"));
+		c.setNivel_creatividad(docIA.getInteger("nivel_creatividad"));
+		c.setPermitir_autocompletado(docIA.getBoolean("permitir_autocompletado"));
+		u.setIa(c);
+
+		List<Document> listaDocsTareas = doc.getList("tareas", Document.class);
+		List<Tarea> listaTareasJava = new ArrayList<>();
+		for (Document docTarea : listaDocsTareas) {
+			Tarea t = new Tarea();
+			t.setId_tarea(docTarea.getString("id_tarea"));
+			t.setTitulo(docTarea.getString("titulo"));
+			t.setDescripcion(docTarea.getString("descripcion"));
+			t.setPrioridad(docTarea.getInteger("prioridad"));
+			t.setEstado(Estado.valueOf(docTarea.getString("estado")));
+			listaTareasJava.add(t);
+		}
+		u.setTareas(listaTareasJava);
+		return u;
+	}
+
+	public void save(Usuario u) {
+		Configuracion_IA c = new Configuracion_IA();
+		Tarea t = new Tarea();
+		Document docUser = new Document("id", u.getId()).append("nombre_usuario", u.getNombre_usuario())
+				.append("email", u.getEmail()).append("configuracion", u.getIa()).append("tareas", u.getTareas());
+		coleccion.insertOne(docUser);
+
+		Document docIA = new Document("permitir_autocompletado", c.isPermitir_autocompletado())
+				.append("nivel_creatividad", c.getNivel_creatividad())
+				.append("idioma_preferido", c.getIdioma_preferido());
+
+		List<Document> tareas = new ArrayList<Document>();
+		for (Tarea tarea : u.getTareas()) {
+			Document docTask = new Document("id_tarea", t.getId_tarea()).append("titulo", t.getTitulo())
+					.append("descripcion", t.getDescripcion()).append("estado", t.getEstado())
+					.append("prioridad", t.getPrioridad());
+			tareas.add(docTask);
+		}
+	}
+
+	public List<Usuario> read() {
+		List<Usuario> usuario = new ArrayList<>();
+		FindIterable<Document> documentos = coleccion.find();
+		for (Document doc : documentos) {
+			Usuario u = new Usuario();
+			u.setId(doc.getString("id"));
+			u.setNombre_usuario(doc.getString("nombre_usuario"));
+			u.setEmail(doc.getString("email"));
+
+			Document docIA = (Document) doc.get("configuracion_ia");
+			Configuracion_IA c = new Configuracion_IA();
+			c.setPermitir_autocompletado(docIA.getBoolean("permitir_autocompletado", false));
+			c.setNivel_creatividad(docIA.getInteger("nivel_creatividad", 0));
+			c.setIdioma_preferido(docIA.getString("idioma_preferido"));
+			u.setIa(c);
+
+			List<Document> docTask = (List<Document>) doc.get("tareas");
+			List<Tarea> tareas = new ArrayList<Tarea>();
+			for (Document document : docTask) {
+				Tarea tarea = new Tarea();
+				tarea.setId_tarea(document.getString("id_tarea"));
+				tarea.setTitulo(document.getString("titulo"));
+				tarea.setDescripcion(document.getString("descripcion"));
+				tarea.setEstado(Estado.valueOf(document.getString("estado")));
+				tarea.setPrioridad(document.getInteger("prioridad", 0));
+				tareas.add(tarea);
+			}
+			u.setTareas(tareas);
+			usuario.add(u);
+		}
+		return usuario;
+	}
+
+	public void delete(Usuario u) throws ProyectoException {
+		if (listaUsuario.contains(u)) {
+			listaUsuario.add(u);
+		} else {
+			throw new ProyectoException("Este usuario no existe.");
+		}
+	}
+
+	public void update(Usuario u) throws ProyectoException {
+		Usuario usuario = new Usuario();
+		if (listaUsuario.contains(u)) {
+			listaUsuario.remove(u);
+			listaUsuario.add(usuario);
+		} else {
+			throw new ProyectoException("El usuario no existe.");
+		}
+	}
+
+	public Usuario getUsuariosFiltradosPorId(String id) {
+		Document filtro = new Document("id", id); // Con el json del filtro
+		Document resultado = this.coleccion.find(filtro).first();
+		Usuario u = fromDocumentUsuario2Java(resultado);
+		return u;
+	}
+
+	public FindIterable<Document> ordenadoPorId(Usuario u) {
+		FindIterable<Document> resultado = coleccion.find().sort(Sorts.descending("id"));		
+		return resultado;
+	}
+}

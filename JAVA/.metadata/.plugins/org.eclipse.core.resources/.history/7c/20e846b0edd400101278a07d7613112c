@@ -1,0 +1,9 @@
+package simulacroMongoDB_model;
+
+public class Habitaciones {
+
+	private Tipo tipo;
+	private double precio;
+	private int capacidad;
+	private boolean diponible;
+}

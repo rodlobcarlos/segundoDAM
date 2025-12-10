@@ -1,0 +1,5 @@
+package exception.ServConversaciones;
+
+public class ConversacionException {
+
+}

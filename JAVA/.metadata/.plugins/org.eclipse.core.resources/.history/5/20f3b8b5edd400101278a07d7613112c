@@ -1,0 +1,48 @@
+package simulacroMongoDB_model;
+
+public class Habitaciones {
+
+	private Tipo tipo;
+	private double precio;
+	private int capacidad;
+	private boolean diponible;
+	
+	public Tipo getTipo() {
+		return tipo;
+	}
+	public void setTipo(Tipo tipo) {
+		this.tipo = tipo;
+	}
+	public double getPrecio() {
+		return precio;
+	}
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+	public int getCapacidad() {
+		return capacidad;
+	}
+	public void setCapacidad(int capacidad) {
+		this.capacidad = capacidad;
+	}
+	public boolean isDiponible() {
+		return diponible;
+	}
+	public void setDiponible(boolean diponible) {
+		this.diponible = diponible;
+	}
+	public Habitaciones(Tipo tipo, double precio, int capacidad, boolean diponible) {
+		super();
+		this.tipo = tipo;
+		this.precio = precio;
+		this.capacidad = capacidad;
+		this.diponible = diponible;
+	}
+	@Override
+	public String toString() {
+		return "Habitaciones [tipo=" + tipo + ", precio=" + precio + ", capacidad=" + capacidad + ", diponible="
+				+ diponible + "]";
+	}
+	
+	
+}

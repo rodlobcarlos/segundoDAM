@@ -1,0 +1,5 @@
+package model.ServConversaciones;
+
+public class Conversacion {
+
+}

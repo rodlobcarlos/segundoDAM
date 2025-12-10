@@ -1,0 +1,12 @@
+package simulacroMongoDB_model;
+
+public class Hotel {
+
+	private String idHotel;
+	private String nombre;
+	private int estrellas;
+	private boolean admiteMascotas;
+	private String fechaApertura;
+	private Ubicacion ubicacion;
+	private Coordenadas coordenadas;
+}

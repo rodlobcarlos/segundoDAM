@@ -1,0 +1,6 @@
+package simulacroMongoDB_model;
+
+public enum Tipo {
+
+	
+}

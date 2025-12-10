@@ -1,0 +1,40 @@
+package proyectoMongoDB_controller;
+
+import java.util.List;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.mongodb.client.MongoDatabase;
+
+import mongoDBconfig.MongoDBConexion;
+import proyectoMongoDB_model.ProyectoException;
+import proyectoMongoDB_model.Usuario;
+import proyectoMongoDB_repository.Usuario_repository;
+import proyectoMongoDB_service.Usuario_service;
+
+public class GestionaProyectoMongoDB {
+	
+	private static final Logger logger = LogManager.getLogger(GestionaProyectoMongoDB.class);
+
+
+	public static void main(String[] args) {
+
+		MongoDBConexion conexion = new MongoDBConexion();
+		MongoDatabase db = conexion.getDb();
+		Usuario_repository repository = new Usuario_repository(db);
+		Usuario_service service = new Usuario_service(repository);
+		
+		
+		List<Usuario> usuarios = service.read();
+		
+		logger.info(service.filtradosPorId("10005"));
+
+		
+//		for(Usuario usuario: usuarios) {
+//			logger.debug(usuario);
+//		}
+
+	}
+
+}

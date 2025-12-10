@@ -1,0 +1,43 @@
+package analizadorTemperatura;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class AnalizadorTemperatura {
+
+	public int calculaDias(int umbral, String rutaFichero) throws FileNotFoundException {
+		int contador = 0;
+		Scanner in = null;
+		try {
+			FileReader fichero = new FileReader(rutaFichero);
+			in = new Scanner(fichero);
+			while (in.hasNext()) { 
+				String linea = in.nextLine();
+				int lineaNumero = Integer.parseInt(linea);
+				if(lineaNumero > umbral) {
+					PrintWriter out = null;
+					try {
+						FileWriter ficheroSalida;
+						ficheroSalida = new FileWriter(rutaFichero); // abre el fichero de texto
+						out = new PrintWriter(ficheroSalida); // escribre el umbral superior a la temperatura
+						out.printf("Numero que supera la temperatua: " + umbral);
+					} catch (IOException e) {
+						System.out.println("IOException");
+					} finally {
+						if (out != null)
+							out.close();
+					}
+				}
+			}
+		} finally {
+			if (in != null) {
+				in.close();
+			}
+		}
+		return contador;
+	}
+}
