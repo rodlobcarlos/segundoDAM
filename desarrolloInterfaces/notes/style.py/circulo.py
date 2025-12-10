@@ -23,7 +23,7 @@ class CirculoRojo(QWidget):
         # Dibujamos una elipse que ocupa todo el área del widget.
         # Si el widget es cuadrado, la elipse será un círculo perfecto.
         painter.drawEllipse(self.rect())
-        
+
 class VentanaPrincipal(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -31,8 +31,13 @@ class VentanaPrincipal(QMainWindow):
         self.setWindowTitle("Ejemplo 1: Círculo Rojo")
         self.resize(300, 300)
 
-        self.setCentralWidget(CirculoRojo())
+        self.layout_v = QVBoxLayout()
+        self.main_container = QWidget()
 
+        self.layout_v.addWidget(CirculoRojo())
+
+        self.main_container.setLayout(self.layout_v)
+        self.setCentralWidget(self.main_container)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
