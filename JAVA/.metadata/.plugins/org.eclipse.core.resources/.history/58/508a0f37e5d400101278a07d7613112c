@@ -1,8 +1,0 @@
-package simulacroMongoDB_model;
-
-public class Ubicacion {
-
-	private String calle;
-	private int numero;
-	private String codigoPostal;
-}

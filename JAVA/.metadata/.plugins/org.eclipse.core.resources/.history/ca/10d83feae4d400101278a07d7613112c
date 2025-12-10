@@ -1,9 +1,0 @@
-package simulacroMongoDB_model;
-
-public class Hotel {
-
-	private String idHotel;
-	private String nombre;
-	private int estrellas;
-	
-}
