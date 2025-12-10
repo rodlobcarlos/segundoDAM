@@ -56,7 +56,7 @@ public class Hotel_repository {
 	private Hotel fromDocumentoHotel2Java(Document doc) {
 		Hotel h = new Hotel();
 		h.setIdHotel(doc.getString("idHotel"));
-		h.setNombre(doc.getString("Nombre"));
+		h.setNombre(doc.getString("nombre"));
 		h.setEstrellas(doc.getInteger("estrellas", 0));
 		h.setAdmiteMascotas(doc.getBoolean("admiteMascotas", false));
 		h.setFechaApertura(doc.getString("fechaApertura"));
@@ -133,17 +133,18 @@ public class Hotel_repository {
 		}
 	}
 
-	public void update(Hotel h, String id) throws SimulacionException {
-		Document filtro = new Document("id", id); // Con el json del filtro
+	public UpdateResult update(Hotel h, String id) throws SimulacionException {
+		Document filtro = new Document("idHotel", id); // Con el json del filtro
 		Document usuarioHotel = fromHotelDocumentoJava(h);
 		UpdateResult resultado = coleccion.replaceOne(filtro, usuarioHotel);
 		if (resultado.getMatchedCount() == 0) {
 			throw new SimulacionException("No hay hotel por ese id.");
 		}
+		return resultado;
 	}
 
 	public Hotel getHotelesFiltradosPorId(String id) {
-		Document filtro = new Document("id", id); // Con el json del filtro
+		Document filtro = new Document("idHotel", id); // Con el json del filtro
 		Document resultado = this.coleccion.find(filtro).first();
 		Hotel u = fromDocumentoHotel2Java(resultado);
 		return u;
