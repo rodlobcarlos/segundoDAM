@@ -1,7 +1,4 @@
-// Select the database to use.
-use('carlos_rodriguez');
-
-db.usuario.insertMany([
+[
   {
     "id": "usr001",
     "username": "User001",
@@ -1322,4 +1319,4 @@ db.usuario.insertMany([
       }
     ]
   }
-])
+]
