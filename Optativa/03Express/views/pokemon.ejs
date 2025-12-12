@@ -2,6 +2,8 @@
 <%- include("template/cabeceras", {subtitulo: 'Panel de Administración'}) %>
 
     <div class="container">
+        <h1>CRUD Mongo</h1>
+        <a class="btn btn-success btn-block my-4" href="/pokemon/crear">Crear nuevo pokemon</a>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -26,7 +28,7 @@
                     <% }) %>
                 <% } %>
             </tbody>
-
+            
         </table>
     </div>
 <%- include("template/footer") %>
