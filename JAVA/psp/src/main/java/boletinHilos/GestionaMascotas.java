@@ -13,12 +13,12 @@ public class GestionaMascotas {
 		for(int i = 1; i <= 10; i++) {
 			Thread cuidador = new Thread(mascota, "Cuidador" +i);
 			cuidadores.add(cuidador);
-			if(i %2 == 0) {
-				cuidador.setPriority(cuidador.MAX_PRIORITY);
-			}else {
-				cuidador.setPriority(cuidador.MIN_PRIORITY);
-			}
-			cuidador.setPriority(11-i);
+//			if(i %2 == 0) {
+//				cuidador.setPriority(cuidador.MAX_PRIORITY);
+//			}else {
+//				cuidador.setPriority(cuidador.MIN_PRIORITY);
+//			}
+//			cuidador.setPriority(11-i);
 			cuidador.start();
 
 		}
