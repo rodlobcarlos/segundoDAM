@@ -39,7 +39,7 @@ public class Mascota implements Runnable{
 		}
 	}
 	
-	public int comer() {
+	public synchronized int comer() {
 		this.numVecesAlimentado++;
 		System.out.println("La mascota " + this.getNombre() + " ha empezado a comer: " + Thread.currentThread().getName());
 		return this.numVecesAlimentado;
