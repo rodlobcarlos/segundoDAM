@@ -36,7 +36,7 @@ public class Coche implements Runnable{
 
 	@Override
 	public void run() {
-		taller.release(1);
-		System.out.println("He abandonado el taller -> " + getNombre());
+		System.out.println("He llegado al taller -> " + getNombre());
+		taller.release();
 	}
 }

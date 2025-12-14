@@ -2,15 +2,14 @@ package taller_model;
 
 import java.util.concurrent.Semaphore;
 
-public class Mecanico implements Runnable {
-
+public class MecanicoNuevo implements Runnable{
 	private String nombre;
 	private Semaphore reparar;
 	private int tiempoPorCoche;
 	private int tiempoAcumulado; 
 	private int cochesA_Reparar; 
 
-	public Mecanico(String nombre, Semaphore reparar, int tiempo, int totalCoches) {
+	public MecanicoNuevo(String nombre, Semaphore reparar, int tiempo, int totalCoches) {
 		super();
 		this.nombre = nombre;
 		this.reparar = reparar;
@@ -41,7 +40,7 @@ public class Mecanico implements Runnable {
 
 				System.out.println("He reparado un coche -> " + getNombre());
 
-				sumarTiempo(); 
+				sumarTiempo2(); 
 				cochesLlevo++;
 
 			} catch (InterruptedException e) {
@@ -50,7 +49,7 @@ public class Mecanico implements Runnable {
 		}
 	}
 
-	public void sumarTiempo() {
-		this.tiempoAcumulado += tiempoPorCoche;
+	public int sumarTiempo2() {
+		return this.tiempoAcumulado += tiempoPorCoche;
 	}
 }
