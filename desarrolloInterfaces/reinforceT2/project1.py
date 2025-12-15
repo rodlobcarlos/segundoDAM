@@ -64,7 +64,11 @@ class project1(QMainWindow):
         self.status_bar.showMessage("Saludo mostrado", 3000)
 
     def mostrar_mesaje(self):
-        QMessageBox.information(self, "Información", "¡Hola! Esto es un mensaje.")
+        QMessageBox.information(
+            self, 
+            "Información", 
+            "¡Hola! Esto es un mensaje."
+        )
 
 # --- Bucle aplicación ---
 app = QApplication([])
