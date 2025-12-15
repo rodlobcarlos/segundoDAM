@@ -36,7 +36,6 @@ class project5(QMainWindow):
         self.pila.addWidget(self.label2)
 
         # --- Pantalla 3 (Índice 2): El Formulario ---
-        # (Hemos borrado el label suelto que tenías antes aquí para corregir el índice)
         self.page3_widget = QWidget()
         self.page3_layout = QVBoxLayout() 
         
