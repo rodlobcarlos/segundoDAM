@@ -2,41 +2,46 @@ package taller_model;
 
 import java.util.concurrent.Semaphore;
 
-public class Coche implements Runnable{
+public class Coche implements Runnable {
 
 	private String nombre;
-	private Semaphore taller;
+	private Semaphore hayCoches;
+	private Semaphore hayTurno;
 	
-	public Semaphore getTaller() {
-		return taller;
-	}
 
-	public void setTaller(Semaphore taller) {
-		this.taller = taller;
-	}
 
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public Coche(String nombre, Semaphore taller) {
+	public Coche(String nombre, Semaphore hayCoches, Semaphore hayTurno) {
 		super();
 		this.nombre = nombre;
-		this.taller = taller;
+		this.hayCoches = hayCoches;
+		this.hayTurno = hayTurno;
 	}
 
-	@Override
-	public String toString() {
-		return "Coche [nombre=" + nombre + ", taller=" + taller + "]";
-	}
 
 	@Override
 	public void run() {
-		System.out.println("He llegado al taller -> " + getNombre());
-		taller.release();
+		turnoArreglar();
+		
+		}
+	
+
+	public void turnoArreglar() {
+	
+		try {
+			System.out.println("He llegado "+ nombre);
+			hayCoches.release();
+			hayTurno.acquire();
+			System.out.println("Estoy siendo arreglado..."+ nombre);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+			
+		} finally {
+			
+			System.out.println(nombre + " Me voy, ya he sido arreglado");
+			
+		
+		}
+		
 	}
 }
+

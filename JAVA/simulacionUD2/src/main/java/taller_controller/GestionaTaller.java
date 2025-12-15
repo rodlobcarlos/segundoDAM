@@ -1,49 +1,61 @@
 package taller_controller;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.Semaphore;
 
 import taller_model.Coche;
 import taller_model.Mecanico;
-import taller_model.MecanicoNuevo;
 
 public class GestionaTaller {
-
 	public static void main(String[] args) {
-
-		Semaphore s_reparar = new Semaphore(0);
-
-		List<Thread> hilos = new ArrayList<Thread>();
-		Mecanico mecanico = new Mecanico("Mecanico ", s_reparar, 5, 20);
-		Thread hilo1 = new Thread(mecanico);
-		hilos.add(hilo1);
-		hilo1.start();
 		
-//		MecanicoNuevo nuevo = new MecanicoNuevo("Mecanico nuevo", s_reparar, 8, 20);
-//		Thread hilo3 = new Thread(nuevo);
-//		hilos.add(hilo3);
-//		hilo3.start();
-
-		for (int i = 1; i < 21; i++) {
-			Coche coche = new Coche("Coche " + i, s_reparar);
-			Thread hilo2 = new Thread(coche);
-			hilos.add(hilo2);
-			hilo2.start();
-
+		final int numCoches=20;
+		//Un coche un mecanico
+		Semaphore hayCoches = new Semaphore(1);
+        Semaphore hayTurno = new Semaphore(1);
+        
+        
+        try {
+        	//Aqui inicio el turno en 0
+        	//Tanto de coches como de mecanico
+        	//Porque un mecanico no arregla hasta que no llega un coche
+			hayCoches.acquire();
+			hayTurno.acquire();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+        
+        //calcular cuanto tarda
+        System.out.println("--- INICIO DE LA JORNADA ---");
+        long inicio = System.currentTimeMillis();
+        
+        //Solo hay un mecanico
+        Mecanico mecanico = new Mecanico("Mecanico 1", hayCoches, hayTurno, numCoches);
+        //Me creo el hilo mecanico
+        Thread hiloMecanico = new Thread(mecanico);
+        //Lo inicio
+        hiloMecanico.start();
+        
+        //Coches
+        for (int i = 1; i <= numCoches; i++) {
+            Coche coche = new Coche("Coche " + i, hayCoches, hayTurno);
+            //Me creo hilo coches
+            Thread hiloCoches = new Thread(coche);
+            //Lo inicio
+           hiloCoches.start();
+        }
+        
 
-		for (Thread thread : hilos) {
-			try {
-				thread.join();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-
-		System.out.println("Ha tardado en raparar todos los coches... " + mecanico.getTiempoTotal() + " segundos");
-//		System.out.println("Ha tardado en raparar todos los coches... " + nuevo.sumarTiempo2() + " segundos");
+        // Esperamos a que termine el mecánico
+        try {
+            hiloMecanico.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
+        long fin = System.currentTimeMillis();
+        double tiempoTotal = (fin - inicio) / 1000.0;
+        System.out.printf("Tiempo total de reparación de %d coches: %.2f segundos\n", numCoches, tiempoTotal);
+       
 	}
-
-}
+ }
