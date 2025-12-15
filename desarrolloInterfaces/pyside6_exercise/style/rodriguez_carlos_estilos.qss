@@ -1,0 +1,19 @@
+/* Estilo general de los botones */
+QPushButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    bold;
+}
+/* Cambio de color al pasar el ratón por encima del botón */
+QPushButton:hover {
+    background-color: #2980b9;
+}
+/* Cambio de color cuando el botón está pulsado */
+QPushButton:pressed {
+    background-color: #1f5f8b;
+}
+
