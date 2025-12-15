@@ -1,4 +1,3 @@
-
 <%- include("template/cabeceras", {subtitulo: 'Panel de Administración'}) %>
 
     <div class="container">
@@ -23,7 +22,9 @@
                             <td><%= pokemon.nombre %></td>
                             <td><%= pokemon.tipo %></td>
                             <td><%= pokemon.descripcion %></td>
-                            <td>Aciones</td>
+                            <td>
+                                <a class="btn btn-warning btn-sm" href="pokemon/<%= pokemon.id %>">Editar/Eliminar</a>
+                            </td>
                         </tr>
                     <% }) %>
                 <% } %>
