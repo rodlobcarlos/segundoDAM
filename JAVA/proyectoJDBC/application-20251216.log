@@ -123,3 +123,8 @@
 2025-12-16 22:09:33.931 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 104
 2025-12-16 22:09:33.932 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 105
 2025-12-16 22:09:33.934 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 106
+2025-12-16 22:31:03.773 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 101
+2025-12-16 22:31:03.778 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 102
+2025-12-16 22:31:03.781 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 104
+2025-12-16 22:31:03.783 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 105
+2025-12-16 22:31:03.785 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 106

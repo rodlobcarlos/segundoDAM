@@ -98,7 +98,7 @@ public class RepositorioPartidas {
 				PreparedStatement stmt = mySqlConector.getConnect().prepareStatement(sql);
 		    	ResultSet rs = stmt.executeQuery();
 		    	
-		    	while (rs.next()) {
+		    	if (rs.next()) {
 		    		int count = rs.getInt(1); //coge los datos de la primera fila
 		    		
 		    		if (count < 5) {
@@ -189,7 +189,7 @@ public class RepositorioPartidas {
 	}
 
 	public void borrarPartida(int id) {
-		// La consulta SQL segura
+		// La consulta SQL 
 		String sql = "DELETE FROM RodriguezCarlosPartidas WHERE id = ?";
 
 		try {

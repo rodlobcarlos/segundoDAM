@@ -137,7 +137,7 @@ public class RepositorioJugadores {
 	}
 
 	public void borrarJugador(int id) {
-		// La consulta SQL segura
+		// La consulta SQL 
 		String sql = "DELETE FROM RodriguezCarlosJugadores WHERE id = ?";
 
 		try {
