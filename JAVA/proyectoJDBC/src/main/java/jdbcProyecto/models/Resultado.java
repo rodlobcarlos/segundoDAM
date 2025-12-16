@@ -2,5 +2,5 @@ package jdbcProyecto.models;
 
 public enum Resultado {
 
-	TODOS, NADIE, ALGUNOS
+	TODOS, NADIE, ALGUNOS, POCOS
 }

@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Partida {
 
 	private int id;
-	private String narrador;
+	private Jugador narrador;
 	private LocalDate fecha;
 	private Resultado resultado;
 	
@@ -14,7 +14,7 @@ public class Partida {
 		return "Partida [id=" + id + ", narrador=" + narrador + ", fecha=" + fecha + ", resultado=" + resultado + "]";
 	}
 
-	public Partida(int id, String narrador, LocalDate fecha, Resultado resultado) {
+	public Partida(int id, Jugador narrador, LocalDate fecha, Resultado resultado) {
 		super();
 		this.id = id;
 		this.narrador = narrador;
@@ -30,11 +30,11 @@ public class Partida {
 		this.id = id;
 	}
 
-	public String getNarrador() {
+	public Jugador getNarrador() {
 		return narrador;
 	}
 
-	public void setNarrador(String narrador) {
+	public void setNarrador(Jugador narrador) {
 		this.narrador = narrador;
 	}
 
