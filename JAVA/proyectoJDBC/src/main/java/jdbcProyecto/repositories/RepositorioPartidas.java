@@ -4,7 +4,10 @@ import java.sql.Connection;
 
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -29,11 +32,11 @@ public class RepositorioPartidas {
 				+ ", connection=" + connection + "]";
 	}
 
-	public RepositorioPartidas(List<Partida> listaPartidas, MySqlConector mySqlConector, TestConnection connection) {
+	public RepositorioPartidas() throws MiExcepcion {
 		super();
-		this.listaPartidas = listaPartidas;
-		this.mySqlConector = mySqlConector;
-		this.connection = connection;
+		this.listaPartidas = new ArrayList<Partida>();
+		this.mySqlConector = new MySqlConector();
+		this.connection = new TestConnection();
 	}
 
 	public List<Partida> getListaPartidas() {
@@ -63,40 +66,58 @@ public class RepositorioPartidas {
 	public static Logger getLogger() {
 		return logger;
 	}
+	
+	
 
-	public void nuevaPartida(Partida partida) throws MiExcepcion {
-		if (partida.getResultado() != null) {
-			listaPartidas.add(partida);
-		}
-		if (listaPartidas.size() > 5) {
-			throw new MiExcepcion("Ya hay 5 partidas, no puedes añadir más.");
-		}
+	public int nuevaPartida(Partida partida) { 
+		int filas = 0;
+	    String sql = "INSERT INTO RodriguezCarlosPartidas (id ,narrador_id, fecha, resultado) VALUES (?, ?, ?, ?)"; 
 
-		String url = "jdbc:mysql://localhost:3308/jdbcMySqlAcceso?serverTimezone=UTC";
-		String user = "usuario";
-		String password = "carlos";
-
-		try {
-			Connection conn = DriverManager.getConnection(url, user, password);
-			java.sql.Statement st = conn.createStatement();
-
-			// Construir la sentencia INSERT según los atributos de tu clase Partida
-			// Ajusta los nombres de columnas y atributos según tu tabla
-			String sql = "INSERT INTO partida (id, narrador, fecha, resultado) VALUES ('" + partida.getId() + "', "
-					+ partida.getNarrador() + ", '" + partida.getFecha() + ", '" + partida.getResultado() + "')";
-
-			st.executeUpdate(sql);
-			logger.info("Partida insertada correctamente: " + partida.getId());
-
-		} catch (SQLException e) {
-			logger.error("Error al insertar partida: " + e.getMessage());
-		}
+	    try {
+	    	PreparedStatement stmt = mySqlConector.getConnect().prepareStatement(sql); //conectamos con la bbdd
+	        	stmt.setInt(1, partida.getId()); 
+	        	stmt.setInt(2, partida.getNarrador().getId()); 
+		        stmt.setString(3, partida.getFecha().toString());
+		        stmt.setString(4, partida.getResultado().toString());
+		        filas = stmt.executeUpdate(); //devuelve las filas que han sido "modificadas"
+		        listaPartidas.add(partida);
+		        
+				logger.info("Partida insertada correctamente: " + partida.getId());
+	    }
+	    catch (SQLException e) {
+	    	logger.info(e.getMessage());
+	    }
+	    return filas;
+	}
+	
+	public int validaPartido (Partida partida) throws MiExcepcion { 
+	    String sql = "SELECT COUNT(*) FROM RodriguezCarlosPartidas"; 
+	    int filas = 0;
+	    			
+	    try {
+				PreparedStatement stmt = mySqlConector.getConnect().prepareStatement(sql);
+		    	ResultSet rs = stmt.executeQuery();
+		    	
+		    	while (rs.next()) {
+		    		int count = rs.getInt(1); //coge los datos de la primera fila
+		    		
+		    		if (count < 5) {
+		    			filas = nuevaPartida(partida);
+		    		}
+		    		else {
+		    			throw new MiExcepcion("No se pueden añadir más de 5 partidas");
+		    		}
+			} } catch (SQLException e) {
+				// TODO Auto-generated catch block
+    			logger.info(e.getMessage());
+			}
+			return filas;
 	}
 
 	public void actualizarPuntuacionNarrador(int id, Resultado resultado) {
 		try {
 
-			String query = "update partida set narrador.puntos_totales=? where resultado=? ";
+			String query = "update RodriguezCarlosPartidas set narrador.puntos_totales=? where resultado=? ";
 			Connection conn = mySqlConector.getConnect();
 			PreparedStatement st = conn.prepareStatement(query);
 			st.setInt(id, 3);
@@ -110,7 +131,7 @@ public class RepositorioPartidas {
 	public void actualizarPuntuacionNoAcertante(int id, Resultado resultado) {
 		try {
 
-			String query = "update partida set narrador.puntos_totales=? where resultado=? || resultado=?";
+			String query = "update RodriguezCarlosPartidas set narrador.puntos_totales=? where resultado=? || resultado=?";
 			Connection conn = mySqlConector.getConnect();
 			PreparedStatement st = conn.prepareStatement(query);
 			st.setInt(id, 2);
@@ -121,11 +142,11 @@ public class RepositorioPartidas {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void actualizarPuntuacionAcertante(int id, Resultado resultado) {
 		try {
 
-			String query = "update partida set narrador.puntos_totales=? where resultado=? || resultado=?"
+			String query = "update RodriguezCarlosPartidas set narrador.puntos_totales=? where resultado=? || resultado=?"
 					+ "and set narrador.puntos_totales=? where resultado=?";
 			Connection conn = mySqlConector.getConnect();
 			PreparedStatement st = conn.prepareStatement(query);
@@ -137,6 +158,54 @@ public class RepositorioPartidas {
 			logger.info("Actualización realizada correctamente.");
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}
+	}
+
+	public void listarPartidasOrdenadasPorFecha() throws MiExcepcion {
+		String sql = "SELECT * FROM RodriguezCarlosPartidas ORDER BY fecha ASC";
+
+		try {
+			Connection conn = mySqlConector.getConnect();
+			java.sql.PreparedStatement pst = conn.prepareStatement(sql);
+			java.sql.ResultSet rs = pst.executeQuery();
+
+			while (rs.next()) {
+				int id = rs.getInt("id");
+				String narrador = rs.getString("narrador_id");
+				LocalDate fecha = rs.getDate("fecha").toLocalDate();
+				String resultado = rs.getString("resultado");
+
+				logger.info(
+						"ID: " + id + " | Narrador: " + narrador + " | Fecha: " + fecha + " | Resultado: " + resultado);
+			}
+
+			rs.close();
+			pst.close();
+
+		} catch (SQLException e) {
+			logger.error("Error al listar partidas: " + e.getMessage());
+			throw new MiExcepcion("Error al consultar la base de datos: " + e.getMessage());
+		}
+	}
+
+	public void borrarPartida(int id) {
+		// La consulta SQL segura
+		String sql = "DELETE FROM RodriguezCarlosPartidas WHERE id = ?";
+
+		try {
+			Connection conn = mySqlConector.getConnect();
+			java.sql.PreparedStatement pst = conn.prepareStatement(sql);
+
+			// 1. Asignamos el ID al interrogante (?)
+			pst.setInt(1, id);
+
+			pst.executeUpdate();
+
+			pst.close();
+
+			logger.info("Partida eliminada correctamente: " + id);
+		} catch (SQLException e) {
+			logger.error("Error al borrar el partida: " + e.getMessage());
 		}
 	}
 }

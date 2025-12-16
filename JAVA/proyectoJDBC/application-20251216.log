@@ -1,0 +1,125 @@
+2025-12-16 20:15:50.306 [main] ERROR jdbcProyecto.repositories.RepositorioJugadores - Error al insertar jugador: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Miller, 'david.miller@email.com, '500')' at line 1
+2025-12-16 20:22:22.868 [main] ERROR jdbcProyecto.repositories.RepositorioJugadores - Error al insertar jugador: Table 'jdbcmysqlacceso.jugadores' doesn't exist
+2025-12-16 20:22:44.273 [main] ERROR jdbcProyecto.repositories.RepositorioJugadores - Error al insertar jugador: Unknown column 'puntos_totales' in 'field list'
+2025-12-16 20:23:06.519 [main] INFO  jdbcProyecto.repositories.RepositorioJugadores - Jugador insertado correctamente: 4
+2025-12-16 20:35:25.493 [main] ERROR jdbcProyecto.repositories.RepositorioJugadores - Error al insertar jugador: Duplicate entry '4' for key 'rodriguezcarlosjugadores.PRIMARY'
+2025-12-16 20:35:25.496 [main] ERROR jdbcProyecto.repositories.RepositorioJugadores - Error al borrar el jugador: Table 'jdbcmysqlacceso.jugadores' doesn't exist
+2025-12-16 20:38:17.373 [main] INFO  jdbcProyecto.repositories.RepositorioJugadores - Jugador eliminado correctamente: 4
+2025-12-16 20:49:53.784 [main] INFO  jdbcProyecto.repositories.RepositorioJugadores - Jugador insertado correctamente: 1
+2025-12-16 20:49:53.788 [main] INFO  jdbcProyecto.repositories.RepositorioJugadores - Jugador insertado correctamente: 2
+2025-12-16 20:49:53.789 [main] INFO  jdbcProyecto.repositories.RepositorioJugadores - Jugador insertado correctamente: 3
+2025-12-16 20:49:53.791 [main] INFO  jdbcProyecto.repositories.RepositorioJugadores - Jugador insertado correctamente: 4
+2025-12-16 20:53:18.327 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[id=1, nombre=Ana García, email=ana.garcia@email.com, puntos_totales=1200], '20' at line 1
+2025-12-16 20:53:18.329 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[id=2, nombre=Carlos Ruiz, email=carlos.ruiz@email.com, puntos_totales=850], '20' at line 1
+2025-12-16 20:53:18.330 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[id=1, nombre=Ana García, email=ana.garcia@email.com, puntos_totales=1200], '20' at line 1
+2025-12-16 20:53:18.331 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[id=4, nombre=David Miller, email=david.miller@email.com, puntos_totales=500], '' at line 1
+2025-12-16 20:53:18.332 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[id=3, nombre=Elena Bosque, email=elena.bosque@email.com, puntos_totales=2100], ' at line 1
+2025-12-16 20:58:09.885 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: Cannot convert class jdbcProyecto.models.Jugador to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+2025-12-16 20:58:09.888 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: Cannot convert class jdbcProyecto.models.Jugador to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+2025-12-16 20:58:09.888 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: Cannot convert class jdbcProyecto.models.Jugador to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+2025-12-16 20:58:09.889 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: Cannot convert class jdbcProyecto.models.Jugador to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+2025-12-16 20:58:09.890 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: Cannot convert class jdbcProyecto.models.Jugador to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+2025-12-16 20:58:56.161 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?, ?, ?, ?)' at line 1
+2025-12-16 20:58:56.164 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?, ?, ?, ?)' at line 1
+2025-12-16 20:58:56.165 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?, ?, ?, ?)' at line 1
+2025-12-16 20:58:56.166 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?, ?, ?, ?)' at line 1
+2025-12-16 20:58:56.166 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?, ?, ?, ?)' at line 1
+2025-12-16 21:02:04.408 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: Unknown column 'narrador' in 'field list'
+2025-12-16 21:02:04.410 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: Unknown column 'narrador' in 'field list'
+2025-12-16 21:02:04.411 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: Unknown column 'narrador' in 'field list'
+2025-12-16 21:02:04.412 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: Unknown column 'narrador' in 'field list'
+2025-12-16 21:02:04.413 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: Unknown column 'narrador' in 'field list'
+2025-12-16 21:04:01.412 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 101
+2025-12-16 21:04:01.422 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 102
+2025-12-16 21:04:01.430 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 104
+2025-12-16 21:04:01.434 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 105
+2025-12-16 21:04:01.436 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 106
+2025-12-16 21:09:14.084 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 101
+2025-12-16 21:09:14.089 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 102
+2025-12-16 21:09:14.090 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 103
+2025-12-16 21:09:14.092 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 104
+2025-12-16 21:09:14.093 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 105
+2025-12-16 21:09:14.095 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 106
+2025-12-16 21:10:17.136 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 101
+2025-12-16 21:10:17.140 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 102
+2025-12-16 21:10:17.142 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 104
+2025-12-16 21:10:17.143 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 105
+2025-12-16 21:10:17.145 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 106
+2025-12-16 21:10:34.522 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 101
+2025-12-16 21:10:34.526 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 102
+2025-12-16 21:10:34.527 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 103
+2025-12-16 21:10:34.529 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 104
+2025-12-16 21:10:34.531 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 105
+2025-12-16 21:10:34.532 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 106
+2025-12-16 21:12:18.464 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 101
+2025-12-16 21:12:18.468 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 102
+2025-12-16 21:12:18.470 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 104
+2025-12-16 21:12:18.471 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 105
+2025-12-16 21:12:18.473 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 106
+2025-12-16 21:12:39.344 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 101
+2025-12-16 21:12:39.348 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 102
+2025-12-16 21:12:39.348 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 103
+2025-12-16 21:12:39.350 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 104
+2025-12-16 21:12:39.351 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 105
+2025-12-16 21:12:39.353 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 106
+2025-12-16 21:18:19.449 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: Statement.executeQuery() cannot issue statements that do not produce result sets.
+2025-12-16 21:18:19.451 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: Statement.executeQuery() cannot issue statements that do not produce result sets.
+2025-12-16 21:18:19.452 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: Statement.executeQuery() cannot issue statements that do not produce result sets.
+2025-12-16 21:18:19.452 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: Statement.executeQuery() cannot issue statements that do not produce result sets.
+2025-12-16 21:18:19.452 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al insertar partida: Statement.executeQuery() cannot issue statements that do not produce result sets.
+2025-12-16 21:23:56.934 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 101
+2025-12-16 21:23:56.939 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 102
+2025-12-16 21:23:56.941 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 104
+2025-12-16 21:23:56.944 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 105
+2025-12-16 21:23:56.947 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 106
+2025-12-16 21:24:13.407 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 101
+2025-12-16 21:24:13.410 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 102
+2025-12-16 21:24:13.411 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 103
+2025-12-16 21:24:13.412 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 104
+2025-12-16 21:24:13.413 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 105
+2025-12-16 21:24:13.415 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 106
+2025-12-16 21:30:58.056 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 101
+2025-12-16 21:30:58.061 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 102
+2025-12-16 21:30:58.063 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 104
+2025-12-16 21:30:58.066 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 105
+2025-12-16 21:32:20.440 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 106
+2025-12-16 21:35:50.288 [main] ERROR jdbcProyecto.repositories.RepositorioJugadores - Error al obtener jugador con mayor puntuación: Unknown column 'puntuacion' in 'order clause'
+2025-12-16 21:36:26.389 [main] ERROR jdbcProyecto.repositories.RepositorioJugadores - Error al obtener jugador con mayor puntuación: Unknown column 'puntuacion' in 'order clause'
+2025-12-16 21:38:11.127 [main] ERROR jdbcProyecto.repositories.RepositorioJugadores - Error al obtener jugador con mayor puntuación: Column 'puntos_totales' not found.
+2025-12-16 21:38:16.427 [main] INFO  jdbcProyecto.repositories.RepositorioJugadores - Jugador con mayor puntuación: Elena Bosque
+2025-12-16 21:43:50.405 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al listar partidas: Table 'jdbcmysqlacceso.vista_partidas_ordenadas' doesn't exist
+2025-12-16 21:43:50.437 [main] INFO  jdbcProyecto.repositories.RepositorioJugadores - Jugador con mayor puntuación: Elena Bosque
+2025-12-16 21:46:04.380 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al listar partidas: Table 'jdbcmysqlacceso.vista_partidas_ordenadas' doesn't exist
+2025-12-16 21:46:04.411 [main] INFO  jdbcProyecto.repositories.RepositorioJugadores - Jugador con mayor puntuación: Elena Bosque
+2025-12-16 21:46:42.420 [main] ERROR jdbcProyecto.repositories.RepositorioPartidas - Error al listar partidas: Table 'jdbcmysqlacceso.vista_partidas_ordenadas' doesn't exist
+2025-12-16 21:46:42.449 [main] INFO  jdbcProyecto.repositories.RepositorioJugadores - Jugador con mayor puntuación: Elena Bosque
+2025-12-16 21:47:00.743 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - ID: 101 | Narrador: 1 | Fecha: 2023-10-15 | Resultado: ALGUNOS
+2025-12-16 21:47:00.746 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - ID: 102 | Narrador: 2 | Fecha: 2023-10-20 | Resultado: NADIE
+2025-12-16 21:47:00.747 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - ID: 104 | Narrador: 1 | Fecha: 2023-11-12 | Resultado: NADIE
+2025-12-16 21:47:00.747 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - ID: 105 | Narrador: 4 | Fecha: 2023-12-01 | Resultado: ALGUNOS
+2025-12-16 21:47:00.747 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - ID: 106 | Narrador: 3 | Fecha: 2023-12-10 | Resultado: TODOS
+2025-12-16 21:47:00.766 [main] INFO  jdbcProyecto.repositories.RepositorioJugadores - Jugador con mayor puntuación: Elena Bosque
+2025-12-16 22:01:36.199 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 101
+2025-12-16 22:01:36.203 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 102
+2025-12-16 22:01:36.205 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 103
+2025-12-16 22:01:36.206 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 104
+2025-12-16 22:01:36.208 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 105
+2025-12-16 22:01:36.209 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 106
+2025-12-16 22:03:24.364 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 106
+2025-12-16 22:09:00.746 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 101
+2025-12-16 22:09:00.749 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 102
+2025-12-16 22:09:00.750 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 103
+2025-12-16 22:09:00.752 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 104
+2025-12-16 22:09:00.753 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 105
+2025-12-16 22:09:00.755 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 106
+2025-12-16 22:09:13.374 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 101
+2025-12-16 22:09:13.378 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 102
+2025-12-16 22:09:13.380 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 104
+2025-12-16 22:09:13.383 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 105
+2025-12-16 22:09:13.386 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida insertada correctamente: 106
+2025-12-16 22:09:33.924 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 101
+2025-12-16 22:09:33.928 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 102
+2025-12-16 22:09:33.929 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 103
+2025-12-16 22:09:33.931 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 104
+2025-12-16 22:09:33.932 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 105
+2025-12-16 22:09:33.934 [main] INFO  jdbcProyecto.repositories.RepositorioPartidas - Partida eliminada correctamente: 106
