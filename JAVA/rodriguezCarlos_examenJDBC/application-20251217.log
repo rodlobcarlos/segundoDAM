@@ -1,0 +1,266 @@
+2025-12-17 12:09:38.158 [main] ERROR repositorio.RepositorioUsuario - Error al listar los usuarios: Cannot determine value type from string 'usr001'
+2025-12-17 12:10:51.140 [main] ERROR repositorio.RepositorioUsuario - Error al listar los usuarios: Column 'preferencias' not found.
+2025-12-17 12:11:45.560 [main] INFO  repositorio.RepositorioUsuario - ID: usr001 | Username: User001 | Email: user001@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android14
+2025-12-17 12:11:45.562 [main] INFO  repositorio.RepositorioUsuario - ID: usr002 | Username: User002 | Email: user002@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android11
+2025-12-17 12:11:45.562 [main] INFO  repositorio.RepositorioUsuario - ID: usr003 | Username: User003 | Email: user003@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android12
+2025-12-17 12:11:45.562 [main] INFO  repositorio.RepositorioUsuario - ID: usr004 | Username: User004 | Email: user004@fitdroid.com | Plan_activo: ANUAL | Dispositivo: iphone16
+2025-12-17 12:11:45.562 [main] INFO  repositorio.RepositorioUsuario - ID: usr005 | Username: User005 | Email: user005@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android14
+2025-12-17 12:11:45.563 [main] INFO  repositorio.RepositorioUsuario - ID: usr006 | Username: User006 | Email: user006@fitdroid.com | Plan_activo: FREE | Dispositivo: android13
+2025-12-17 12:11:45.563 [main] INFO  repositorio.RepositorioUsuario - ID: usr007 | Username: User007 | Email: user007@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android11
+2025-12-17 12:11:45.563 [main] INFO  repositorio.RepositorioUsuario - ID: usr008 | Username: User008 | Email: user008@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android11
+2025-12-17 12:11:45.563 [main] INFO  repositorio.RepositorioUsuario - ID: usr009 | Username: User009 | Email: user009@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android12
+2025-12-17 12:11:45.563 [main] INFO  repositorio.RepositorioUsuario - ID: usr010 | Username: User010 | Email: user010@fitdroid.com | Plan_activo: VIP | Dispositivo: android13
+2025-12-17 12:11:45.563 [main] INFO  repositorio.RepositorioUsuario - ID: usr011 | Username: User011 | Email: user011@fitdroid.com | Plan_activo: FREE | Dispositivo: android13
+2025-12-17 12:11:45.563 [main] INFO  repositorio.RepositorioUsuario - ID: usr012 | Username: User012 | Email: user012@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: iphone17
+2025-12-17 12:11:45.563 [main] INFO  repositorio.RepositorioUsuario - ID: usr013 | Username: User013 | Email: user013@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android12
+2025-12-17 12:11:45.563 [main] INFO  repositorio.RepositorioUsuario - ID: usr014 | Username: User014 | Email: user014@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android11
+2025-12-17 12:11:45.564 [main] INFO  repositorio.RepositorioUsuario - ID: usr015 | Username: User015 | Email: user015@fitdroid.com | Plan_activo: VIP | Dispositivo: android13
+2025-12-17 12:11:45.564 [main] INFO  repositorio.RepositorioUsuario - ID: usr016 | Username: User016 | Email: user016@fitdroid.com | Plan_activo: FREE | Dispositivo: iphone16
+2025-12-17 12:11:45.564 [main] INFO  repositorio.RepositorioUsuario - ID: usr017 | Username: User017 | Email: user017@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android13
+2025-12-17 12:11:45.564 [main] INFO  repositorio.RepositorioUsuario - ID: usr018 | Username: User018 | Email: user018@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: iphone16
+2025-12-17 12:11:45.564 [main] INFO  repositorio.RepositorioUsuario - ID: usr019 | Username: User019 | Email: user019@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android11
+2025-12-17 12:11:45.564 [main] INFO  repositorio.RepositorioUsuario - ID: usr020 | Username: User020 | Email: user020@fitdroid.com | Plan_activo: VIP | Dispositivo: iphone17
+2025-12-17 12:11:45.564 [main] INFO  repositorio.RepositorioUsuario - ID: usr021 | Username: User021 | Email: user021@fitdroid.com | Plan_activo: FREE | Dispositivo: android11
+2025-12-17 12:11:45.564 [main] INFO  repositorio.RepositorioUsuario - ID: usr022 | Username: User022 | Email: user022@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: iphone17
+2025-12-17 12:11:45.564 [main] INFO  repositorio.RepositorioUsuario - ID: usr023 | Username: User023 | Email: user023@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android14
+2025-12-17 12:11:45.565 [main] INFO  repositorio.RepositorioUsuario - ID: usr024 | Username: User024 | Email: user024@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android13
+2025-12-17 12:11:45.565 [main] INFO  repositorio.RepositorioUsuario - ID: usr025 | Username: User025 | Email: user025@fitdroid.com | Plan_activo: VIP | Dispositivo: iphone15
+2025-12-17 12:11:45.565 [main] INFO  repositorio.RepositorioUsuario - ID: usr026 | Username: User026 | Email: user026@fitdroid.com | Plan_activo: FREE | Dispositivo: iphone14
+2025-12-17 12:11:45.565 [main] INFO  repositorio.RepositorioUsuario - ID: usr027 | Username: User027 | Email: user027@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: iphone17
+2025-12-17 12:11:45.565 [main] INFO  repositorio.RepositorioUsuario - ID: usr028 | Username: User028 | Email: user028@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android13
+2025-12-17 12:11:45.565 [main] INFO  repositorio.RepositorioUsuario - ID: usr029 | Username: User029 | Email: user029@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android14
+2025-12-17 12:11:45.565 [main] INFO  repositorio.RepositorioUsuario - ID: usr030 | Username: User030 | Email: user030@fitdroid.com | Plan_activo: VIP | Dispositivo: android11
+2025-12-17 12:11:45.565 [main] INFO  repositorio.RepositorioUsuario - ID: usr031 | Username: User031 | Email: user031@fitdroid.com | Plan_activo: FREE | Dispositivo: iphone15
+2025-12-17 12:11:45.565 [main] INFO  repositorio.RepositorioUsuario - ID: usr032 | Username: User032 | Email: user032@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android12
+2025-12-17 12:11:45.566 [main] INFO  repositorio.RepositorioUsuario - ID: usr033 | Username: User033 | Email: user033@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android14
+2025-12-17 12:11:45.566 [main] INFO  repositorio.RepositorioUsuario - ID: usr034 | Username: User034 | Email: user034@fitdroid.com | Plan_activo: ANUAL | Dispositivo: iphone15
+2025-12-17 12:11:45.566 [main] INFO  repositorio.RepositorioUsuario - ID: usr035 | Username: User035 | Email: user035@fitdroid.com | Plan_activo: VIP | Dispositivo: iphone17
+2025-12-17 12:11:45.566 [main] INFO  repositorio.RepositorioUsuario - ID: usr036 | Username: User036 | Email: user036@fitdroid.com | Plan_activo: FREE | Dispositivo: android13
+2025-12-17 12:11:45.566 [main] INFO  repositorio.RepositorioUsuario - ID: usr037 | Username: User037 | Email: user037@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android13
+2025-12-17 12:11:45.566 [main] INFO  repositorio.RepositorioUsuario - ID: usr038 | Username: User038 | Email: user038@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: iphone14
+2025-12-17 12:11:45.566 [main] INFO  repositorio.RepositorioUsuario - ID: usr039 | Username: User039 | Email: user039@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android14
+2025-12-17 12:11:45.566 [main] INFO  repositorio.RepositorioUsuario - ID: usr040 | Username: User040 | Email: user040@fitdroid.com | Plan_activo: VIP | Dispositivo: android14
+2025-12-17 12:14:10.900 [main] ERROR repositorio.RepositorioUsuario - Error al listar los usuarios: Column 'preferencias' not found.
+2025-12-17 12:14:36.877 [main] INFO  repositorio.RepositorioUsuario - ID: usr001 | Username: User001 | Email: user001@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android14
+2025-12-17 12:14:36.880 [main] INFO  repositorio.RepositorioUsuario - ID: usr002 | Username: User002 | Email: user002@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android11
+2025-12-17 12:14:36.880 [main] INFO  repositorio.RepositorioUsuario - ID: usr003 | Username: User003 | Email: user003@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android12
+2025-12-17 12:14:36.880 [main] INFO  repositorio.RepositorioUsuario - ID: usr004 | Username: User004 | Email: user004@fitdroid.com | Plan_activo: ANUAL | Dispositivo: iphone16
+2025-12-17 12:14:36.880 [main] INFO  repositorio.RepositorioUsuario - ID: usr005 | Username: User005 | Email: user005@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android14
+2025-12-17 12:14:36.880 [main] INFO  repositorio.RepositorioUsuario - ID: usr006 | Username: User006 | Email: user006@fitdroid.com | Plan_activo: FREE | Dispositivo: android13
+2025-12-17 12:14:36.880 [main] INFO  repositorio.RepositorioUsuario - ID: usr007 | Username: User007 | Email: user007@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android11
+2025-12-17 12:14:36.880 [main] INFO  repositorio.RepositorioUsuario - ID: usr008 | Username: User008 | Email: user008@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android11
+2025-12-17 12:14:36.881 [main] INFO  repositorio.RepositorioUsuario - ID: usr009 | Username: User009 | Email: user009@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android12
+2025-12-17 12:14:36.881 [main] INFO  repositorio.RepositorioUsuario - ID: usr010 | Username: User010 | Email: user010@fitdroid.com | Plan_activo: VIP | Dispositivo: android13
+2025-12-17 12:14:36.881 [main] INFO  repositorio.RepositorioUsuario - ID: usr011 | Username: User011 | Email: user011@fitdroid.com | Plan_activo: FREE | Dispositivo: android13
+2025-12-17 12:14:36.881 [main] INFO  repositorio.RepositorioUsuario - ID: usr012 | Username: User012 | Email: user012@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: iphone17
+2025-12-17 12:14:36.881 [main] INFO  repositorio.RepositorioUsuario - ID: usr013 | Username: User013 | Email: user013@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android12
+2025-12-17 12:14:36.881 [main] INFO  repositorio.RepositorioUsuario - ID: usr014 | Username: User014 | Email: user014@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android11
+2025-12-17 12:14:36.881 [main] INFO  repositorio.RepositorioUsuario - ID: usr015 | Username: User015 | Email: user015@fitdroid.com | Plan_activo: VIP | Dispositivo: android13
+2025-12-17 12:14:36.881 [main] INFO  repositorio.RepositorioUsuario - ID: usr016 | Username: User016 | Email: user016@fitdroid.com | Plan_activo: FREE | Dispositivo: iphone16
+2025-12-17 12:14:36.882 [main] INFO  repositorio.RepositorioUsuario - ID: usr017 | Username: User017 | Email: user017@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android13
+2025-12-17 12:14:36.882 [main] INFO  repositorio.RepositorioUsuario - ID: usr018 | Username: User018 | Email: user018@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: iphone16
+2025-12-17 12:14:36.882 [main] INFO  repositorio.RepositorioUsuario - ID: usr019 | Username: User019 | Email: user019@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android11
+2025-12-17 12:14:36.882 [main] INFO  repositorio.RepositorioUsuario - ID: usr020 | Username: User020 | Email: user020@fitdroid.com | Plan_activo: VIP | Dispositivo: iphone17
+2025-12-17 12:14:36.882 [main] INFO  repositorio.RepositorioUsuario - ID: usr021 | Username: User021 | Email: user021@fitdroid.com | Plan_activo: FREE | Dispositivo: android11
+2025-12-17 12:14:36.882 [main] INFO  repositorio.RepositorioUsuario - ID: usr022 | Username: User022 | Email: user022@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: iphone17
+2025-12-17 12:14:36.882 [main] INFO  repositorio.RepositorioUsuario - ID: usr023 | Username: User023 | Email: user023@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android14
+2025-12-17 12:14:36.882 [main] INFO  repositorio.RepositorioUsuario - ID: usr024 | Username: User024 | Email: user024@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android13
+2025-12-17 12:14:36.882 [main] INFO  repositorio.RepositorioUsuario - ID: usr025 | Username: User025 | Email: user025@fitdroid.com | Plan_activo: VIP | Dispositivo: iphone15
+2025-12-17 12:14:36.882 [main] INFO  repositorio.RepositorioUsuario - ID: usr026 | Username: User026 | Email: user026@fitdroid.com | Plan_activo: FREE | Dispositivo: iphone14
+2025-12-17 12:14:36.882 [main] INFO  repositorio.RepositorioUsuario - ID: usr027 | Username: User027 | Email: user027@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: iphone17
+2025-12-17 12:14:36.883 [main] INFO  repositorio.RepositorioUsuario - ID: usr028 | Username: User028 | Email: user028@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android13
+2025-12-17 12:14:36.883 [main] INFO  repositorio.RepositorioUsuario - ID: usr029 | Username: User029 | Email: user029@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android14
+2025-12-17 12:14:36.883 [main] INFO  repositorio.RepositorioUsuario - ID: usr030 | Username: User030 | Email: user030@fitdroid.com | Plan_activo: VIP | Dispositivo: android11
+2025-12-17 12:14:36.883 [main] INFO  repositorio.RepositorioUsuario - ID: usr031 | Username: User031 | Email: user031@fitdroid.com | Plan_activo: FREE | Dispositivo: iphone15
+2025-12-17 12:14:36.883 [main] INFO  repositorio.RepositorioUsuario - ID: usr032 | Username: User032 | Email: user032@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android12
+2025-12-17 12:14:36.883 [main] INFO  repositorio.RepositorioUsuario - ID: usr033 | Username: User033 | Email: user033@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android14
+2025-12-17 12:14:36.883 [main] INFO  repositorio.RepositorioUsuario - ID: usr034 | Username: User034 | Email: user034@fitdroid.com | Plan_activo: ANUAL | Dispositivo: iphone15
+2025-12-17 12:14:36.883 [main] INFO  repositorio.RepositorioUsuario - ID: usr035 | Username: User035 | Email: user035@fitdroid.com | Plan_activo: VIP | Dispositivo: iphone17
+2025-12-17 12:14:36.884 [main] INFO  repositorio.RepositorioUsuario - ID: usr036 | Username: User036 | Email: user036@fitdroid.com | Plan_activo: FREE | Dispositivo: android13
+2025-12-17 12:14:36.884 [main] INFO  repositorio.RepositorioUsuario - ID: usr037 | Username: User037 | Email: user037@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android13
+2025-12-17 12:14:36.884 [main] INFO  repositorio.RepositorioUsuario - ID: usr038 | Username: User038 | Email: user038@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: iphone14
+2025-12-17 12:14:36.884 [main] INFO  repositorio.RepositorioUsuario - ID: usr039 | Username: User039 | Email: user039@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android14
+2025-12-17 12:14:36.884 [main] INFO  repositorio.RepositorioUsuario - ID: usr040 | Username: User040 | Email: user040@fitdroid.com | Plan_activo: VIP | Dispositivo: android14
+2025-12-17 12:16:26.393 [main] INFO  repositorio.RepositorioUsuario - ID: usr001 | Username: User001 | Email: user001@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android14
+2025-12-17 12:16:26.395 [main] INFO  repositorio.RepositorioUsuario - ID: usr002 | Username: User002 | Email: user002@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android11
+2025-12-17 12:16:26.395 [main] INFO  repositorio.RepositorioUsuario - ID: usr003 | Username: User003 | Email: user003@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android12
+2025-12-17 12:16:26.395 [main] INFO  repositorio.RepositorioUsuario - ID: usr004 | Username: User004 | Email: user004@fitdroid.com | Plan_activo: ANUAL | Dispositivo: iphone16
+2025-12-17 12:16:26.395 [main] INFO  repositorio.RepositorioUsuario - ID: usr005 | Username: User005 | Email: user005@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android14
+2025-12-17 12:16:26.395 [main] INFO  repositorio.RepositorioUsuario - ID: usr006 | Username: User006 | Email: user006@fitdroid.com | Plan_activo: FREE | Dispositivo: android13
+2025-12-17 12:16:26.396 [main] INFO  repositorio.RepositorioUsuario - ID: usr007 | Username: User007 | Email: user007@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android11
+2025-12-17 12:16:26.396 [main] INFO  repositorio.RepositorioUsuario - ID: usr008 | Username: User008 | Email: user008@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android11
+2025-12-17 12:16:26.396 [main] INFO  repositorio.RepositorioUsuario - ID: usr009 | Username: User009 | Email: user009@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android12
+2025-12-17 12:16:26.396 [main] INFO  repositorio.RepositorioUsuario - ID: usr010 | Username: User010 | Email: user010@fitdroid.com | Plan_activo: VIP | Dispositivo: android13
+2025-12-17 12:16:26.396 [main] INFO  repositorio.RepositorioUsuario - ID: usr011 | Username: User011 | Email: user011@fitdroid.com | Plan_activo: FREE | Dispositivo: android13
+2025-12-17 12:16:26.396 [main] INFO  repositorio.RepositorioUsuario - ID: usr012 | Username: User012 | Email: user012@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: iphone17
+2025-12-17 12:16:26.396 [main] INFO  repositorio.RepositorioUsuario - ID: usr013 | Username: User013 | Email: user013@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android12
+2025-12-17 12:16:26.396 [main] INFO  repositorio.RepositorioUsuario - ID: usr014 | Username: User014 | Email: user014@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android11
+2025-12-17 12:16:26.396 [main] INFO  repositorio.RepositorioUsuario - ID: usr015 | Username: User015 | Email: user015@fitdroid.com | Plan_activo: VIP | Dispositivo: android13
+2025-12-17 12:16:26.397 [main] INFO  repositorio.RepositorioUsuario - ID: usr016 | Username: User016 | Email: user016@fitdroid.com | Plan_activo: FREE | Dispositivo: iphone16
+2025-12-17 12:16:26.397 [main] INFO  repositorio.RepositorioUsuario - ID: usr017 | Username: User017 | Email: user017@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android13
+2025-12-17 12:16:26.397 [main] INFO  repositorio.RepositorioUsuario - ID: usr018 | Username: User018 | Email: user018@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: iphone16
+2025-12-17 12:16:26.397 [main] INFO  repositorio.RepositorioUsuario - ID: usr019 | Username: User019 | Email: user019@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android11
+2025-12-17 12:16:26.397 [main] INFO  repositorio.RepositorioUsuario - ID: usr020 | Username: User020 | Email: user020@fitdroid.com | Plan_activo: VIP | Dispositivo: iphone17
+2025-12-17 12:16:26.397 [main] INFO  repositorio.RepositorioUsuario - ID: usr021 | Username: User021 | Email: user021@fitdroid.com | Plan_activo: FREE | Dispositivo: android11
+2025-12-17 12:16:26.397 [main] INFO  repositorio.RepositorioUsuario - ID: usr022 | Username: User022 | Email: user022@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: iphone17
+2025-12-17 12:16:26.398 [main] INFO  repositorio.RepositorioUsuario - ID: usr023 | Username: User023 | Email: user023@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android14
+2025-12-17 12:16:26.398 [main] INFO  repositorio.RepositorioUsuario - ID: usr024 | Username: User024 | Email: user024@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android13
+2025-12-17 12:16:26.398 [main] INFO  repositorio.RepositorioUsuario - ID: usr025 | Username: User025 | Email: user025@fitdroid.com | Plan_activo: VIP | Dispositivo: iphone15
+2025-12-17 12:16:26.398 [main] INFO  repositorio.RepositorioUsuario - ID: usr026 | Username: User026 | Email: user026@fitdroid.com | Plan_activo: FREE | Dispositivo: iphone14
+2025-12-17 12:16:26.398 [main] INFO  repositorio.RepositorioUsuario - ID: usr027 | Username: User027 | Email: user027@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: iphone17
+2025-12-17 12:16:26.398 [main] INFO  repositorio.RepositorioUsuario - ID: usr028 | Username: User028 | Email: user028@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android13
+2025-12-17 12:16:26.398 [main] INFO  repositorio.RepositorioUsuario - ID: usr029 | Username: User029 | Email: user029@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android14
+2025-12-17 12:16:26.398 [main] INFO  repositorio.RepositorioUsuario - ID: usr030 | Username: User030 | Email: user030@fitdroid.com | Plan_activo: VIP | Dispositivo: android11
+2025-12-17 12:16:26.398 [main] INFO  repositorio.RepositorioUsuario - ID: usr031 | Username: User031 | Email: user031@fitdroid.com | Plan_activo: FREE | Dispositivo: iphone15
+2025-12-17 12:16:26.399 [main] INFO  repositorio.RepositorioUsuario - ID: usr032 | Username: User032 | Email: user032@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android12
+2025-12-17 12:16:26.399 [main] INFO  repositorio.RepositorioUsuario - ID: usr033 | Username: User033 | Email: user033@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android14
+2025-12-17 12:16:26.399 [main] INFO  repositorio.RepositorioUsuario - ID: usr034 | Username: User034 | Email: user034@fitdroid.com | Plan_activo: ANUAL | Dispositivo: iphone15
+2025-12-17 12:16:26.399 [main] INFO  repositorio.RepositorioUsuario - ID: usr035 | Username: User035 | Email: user035@fitdroid.com | Plan_activo: VIP | Dispositivo: iphone17
+2025-12-17 12:16:26.399 [main] INFO  repositorio.RepositorioUsuario - ID: usr036 | Username: User036 | Email: user036@fitdroid.com | Plan_activo: FREE | Dispositivo: android13
+2025-12-17 12:16:26.399 [main] INFO  repositorio.RepositorioUsuario - ID: usr037 | Username: User037 | Email: user037@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android13
+2025-12-17 12:16:26.399 [main] INFO  repositorio.RepositorioUsuario - ID: usr038 | Username: User038 | Email: user038@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: iphone14
+2025-12-17 12:16:26.399 [main] INFO  repositorio.RepositorioUsuario - ID: usr039 | Username: User039 | Email: user039@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android14
+2025-12-17 12:16:26.399 [main] INFO  repositorio.RepositorioUsuario - ID: usr040 | Username: User040 | Email: user040@fitdroid.com | Plan_activo: VIP | Dispositivo: android14
+2025-12-17 12:23:28.674 [main] ERROR repositorio.RepositorioUsuario - Error al mostrar jugadores: No value specified for parameter 1
+2025-12-17 12:25:03.628 [main] ERROR repositorio.RepositorioUsuario - Error al mostrar usuario: No value specified for parameter 1
+2025-12-17 12:27:31.767 [main] ERROR repositorio.RepositorioUsuario - Error al mostrar usuario: No value specified for parameter 1
+2025-12-17 12:30:50.071 [main] ERROR repositorio.RepositorioUsuario - Error al mostrar usuario: Parameter index out of range (2 > number of parameters, which is 1).
+2025-12-17 12:31:14.088 [main] ERROR repositorio.RepositorioUsuario - Error al mostrar usuario: Can not issue executeUpdate() or executeLargeUpdate() with statements that produce result sets
+2025-12-17 12:31:24.293 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 12:33:15.767 [main] INFO  repositorio.RepositorioUsuario - Usuario: Usuario [id=null, username=null, email=null, plan_activo=null, dispositivo=null, preferencias=null] | Preferencias: null
+2025-12-17 12:33:15.770 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 12:33:33.653 [main] INFO  repositorio.RepositorioUsuario - Usuario: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM usuarios WHERE='dispositivo' | Preferencias: null
+2025-12-17 12:33:33.655 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 12:38:29.372 [main] INFO  repositorio.RepositorioUsuario - Usuario: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT id, username, email, plan_activo, dispositivo, usuario_id, tema_oscuro, idioma, notificaciones_push, limite_datos_moviles FROM usuarios, preferencias WHERE usuarios.id ='dispositivo'; | Preferencias: null
+2025-12-17 12:38:29.374 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 12:38:50.178 [main] INFO  repositorio.RepositorioUsuario - Usuario: Usuario [id=null, username=null, email=null, plan_activo=null, dispositivo=null, preferencias=null] | Preferencias: null
+2025-12-17 12:38:50.180 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 12:43:14.994 [main] ERROR repositorio.RepositorioUsuario - Error al mostrar usuario: No value specified for parameter 1
+2025-12-17 12:47:06.060 [main] ERROR repositorio.RepositorioUsuario - Error al mostrar usuario: No value specified for parameter 1
+2025-12-17 12:47:44.395 [main] ERROR repositorio.RepositorioUsuario - Error al mostrar usuario: Parameter index out of range (2 > number of parameters, which is 1).
+2025-12-17 12:47:50.322 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 12:47:50.324 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 12:49:26.520 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002
+2025-12-17 12:49:26.522 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 12:51:27.894 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002
+2025-12-17 12:51:27.897 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 12:51:33.735 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 12:51:33.737 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 12:52:18.310 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 12:52:18.312 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 12:55:40.716 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 12:55:40.718 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 13:07:37.478 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 13:07:37.480 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 13:09:39.354 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 13:09:39.356 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 13:11:20.748 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 13:11:20.750 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 13:12:05.637 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 13:12:05.639 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 13:12:42.962 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 13:12:42.964 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 13:17:50.135 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 13:17:50.137 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 13:17:50.140 [main] ERROR repositorio.RepositorioUsuario - Error al insertar jugador: Parameter index out of range (5 > number of parameters, which is 4).
+2025-12-17 13:18:22.039 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 13:18:22.042 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 13:18:22.065 [main] ERROR repositorio.RepositorioUsuario - Error al insertar jugador: Unknown column 'dispositivo.preferencias' in 'field list'
+2025-12-17 13:18:34.353 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 13:18:34.355 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 13:18:34.379 [main] ERROR repositorio.RepositorioUsuario - Error al insertar jugador: Unknown column 'preferencias' in 'field list'
+2025-12-17 13:18:40.935 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 13:18:40.937 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 13:18:40.962 [main] ERROR repositorio.RepositorioUsuario - Error al insertar jugador: Column count doesn't match value count at row 1
+2025-12-17 13:22:50.978 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 13:22:50.980 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 13:22:51.004 [main] ERROR repositorio.RepositorioUsuario - Error al insertar usuario: Column count doesn't match value count at row 1
+2025-12-17 13:22:51.008 [main] ERROR repositorio.RepositorioUsuario - Error al borrar el usuario: Cannot delete or update a parent row: a foreign key constraint fails (`rodriguezcarlos`.`preferencias`, CONSTRAINT `preferencias_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`))
+2025-12-17 13:26:42.829 [main] INFO  repositorio.RepositorioUsuario - ID: usr001 | Username: User001 | Email: user001@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android14
+2025-12-17 13:26:42.831 [main] INFO  repositorio.RepositorioUsuario - ID: usr002 | Username: User002 | Email: user002@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android11
+2025-12-17 13:26:42.831 [main] INFO  repositorio.RepositorioUsuario - ID: usr003 | Username: User003 | Email: user003@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android12
+2025-12-17 13:26:42.831 [main] INFO  repositorio.RepositorioUsuario - ID: usr004 | Username: User004 | Email: user004@fitdroid.com | Plan_activo: ANUAL | Dispositivo: iphone16
+2025-12-17 13:26:42.832 [main] INFO  repositorio.RepositorioUsuario - ID: usr005 | Username: User005 | Email: user005@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android14
+2025-12-17 13:26:42.832 [main] INFO  repositorio.RepositorioUsuario - ID: usr006 | Username: User006 | Email: user006@fitdroid.com | Plan_activo: FREE | Dispositivo: android13
+2025-12-17 13:26:42.832 [main] INFO  repositorio.RepositorioUsuario - ID: usr007 | Username: User007 | Email: user007@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android11
+2025-12-17 13:26:42.832 [main] INFO  repositorio.RepositorioUsuario - ID: usr008 | Username: User008 | Email: user008@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android11
+2025-12-17 13:26:42.832 [main] INFO  repositorio.RepositorioUsuario - ID: usr009 | Username: User009 | Email: user009@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android12
+2025-12-17 13:26:42.832 [main] INFO  repositorio.RepositorioUsuario - ID: usr010 | Username: User010 | Email: user010@fitdroid.com | Plan_activo: VIP | Dispositivo: android13
+2025-12-17 13:26:42.832 [main] INFO  repositorio.RepositorioUsuario - ID: usr011 | Username: User011 | Email: user011@fitdroid.com | Plan_activo: FREE | Dispositivo: android13
+2025-12-17 13:26:42.832 [main] INFO  repositorio.RepositorioUsuario - ID: usr012 | Username: User012 | Email: user012@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: iphone17
+2025-12-17 13:26:42.832 [main] INFO  repositorio.RepositorioUsuario - ID: usr013 | Username: User013 | Email: user013@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android12
+2025-12-17 13:26:42.833 [main] INFO  repositorio.RepositorioUsuario - ID: usr014 | Username: User014 | Email: user014@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android11
+2025-12-17 13:26:42.833 [main] INFO  repositorio.RepositorioUsuario - ID: usr015 | Username: User015 | Email: user015@fitdroid.com | Plan_activo: VIP | Dispositivo: android13
+2025-12-17 13:26:42.833 [main] INFO  repositorio.RepositorioUsuario - ID: usr016 | Username: User016 | Email: user016@fitdroid.com | Plan_activo: FREE | Dispositivo: iphone16
+2025-12-17 13:26:42.833 [main] INFO  repositorio.RepositorioUsuario - ID: usr017 | Username: User017 | Email: user017@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android13
+2025-12-17 13:26:42.833 [main] INFO  repositorio.RepositorioUsuario - ID: usr018 | Username: User018 | Email: user018@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: iphone16
+2025-12-17 13:26:42.833 [main] INFO  repositorio.RepositorioUsuario - ID: usr019 | Username: User019 | Email: user019@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android11
+2025-12-17 13:26:42.833 [main] INFO  repositorio.RepositorioUsuario - ID: usr020 | Username: User020 | Email: user020@fitdroid.com | Plan_activo: VIP | Dispositivo: iphone17
+2025-12-17 13:26:42.833 [main] INFO  repositorio.RepositorioUsuario - ID: usr021 | Username: User021 | Email: user021@fitdroid.com | Plan_activo: FREE | Dispositivo: android11
+2025-12-17 13:26:42.834 [main] INFO  repositorio.RepositorioUsuario - ID: usr022 | Username: User022 | Email: user022@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: iphone17
+2025-12-17 13:26:42.834 [main] INFO  repositorio.RepositorioUsuario - ID: usr023 | Username: User023 | Email: user023@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android14
+2025-12-17 13:26:42.834 [main] INFO  repositorio.RepositorioUsuario - ID: usr024 | Username: User024 | Email: user024@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android13
+2025-12-17 13:26:42.834 [main] INFO  repositorio.RepositorioUsuario - ID: usr025 | Username: User025 | Email: user025@fitdroid.com | Plan_activo: VIP | Dispositivo: iphone15
+2025-12-17 13:26:42.834 [main] INFO  repositorio.RepositorioUsuario - ID: usr026 | Username: User026 | Email: user026@fitdroid.com | Plan_activo: FREE | Dispositivo: iphone14
+2025-12-17 13:26:42.834 [main] INFO  repositorio.RepositorioUsuario - ID: usr027 | Username: User027 | Email: user027@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: iphone17
+2025-12-17 13:26:42.834 [main] INFO  repositorio.RepositorioUsuario - ID: usr028 | Username: User028 | Email: user028@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android13
+2025-12-17 13:26:42.834 [main] INFO  repositorio.RepositorioUsuario - ID: usr029 | Username: User029 | Email: user029@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android14
+2025-12-17 13:26:42.834 [main] INFO  repositorio.RepositorioUsuario - ID: usr030 | Username: User030 | Email: user030@fitdroid.com | Plan_activo: VIP | Dispositivo: android11
+2025-12-17 13:26:42.834 [main] INFO  repositorio.RepositorioUsuario - ID: usr031 | Username: User031 | Email: user031@fitdroid.com | Plan_activo: FREE | Dispositivo: iphone15
+2025-12-17 13:26:42.835 [main] INFO  repositorio.RepositorioUsuario - ID: usr032 | Username: User032 | Email: user032@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android12
+2025-12-17 13:26:42.835 [main] INFO  repositorio.RepositorioUsuario - ID: usr033 | Username: User033 | Email: user033@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android14
+2025-12-17 13:26:42.835 [main] INFO  repositorio.RepositorioUsuario - ID: usr034 | Username: User034 | Email: user034@fitdroid.com | Plan_activo: ANUAL | Dispositivo: iphone15
+2025-12-17 13:26:42.835 [main] INFO  repositorio.RepositorioUsuario - ID: usr035 | Username: User035 | Email: user035@fitdroid.com | Plan_activo: VIP | Dispositivo: iphone17
+2025-12-17 13:26:42.835 [main] INFO  repositorio.RepositorioUsuario - ID: usr036 | Username: User036 | Email: user036@fitdroid.com | Plan_activo: FREE | Dispositivo: android13
+2025-12-17 13:26:42.835 [main] INFO  repositorio.RepositorioUsuario - ID: usr037 | Username: User037 | Email: user037@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android13
+2025-12-17 13:26:42.835 [main] INFO  repositorio.RepositorioUsuario - ID: usr038 | Username: User038 | Email: user038@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: iphone14
+2025-12-17 13:26:42.835 [main] INFO  repositorio.RepositorioUsuario - ID: usr039 | Username: User039 | Email: user039@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android14
+2025-12-17 13:26:42.835 [main] INFO  repositorio.RepositorioUsuario - ID: usr040 | Username: User040 | Email: user040@fitdroid.com | Plan_activo: VIP | Dispositivo: android14
+2025-12-17 13:26:42.836 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 13:26:42.837 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 13:26:42.861 [main] ERROR repositorio.RepositorioUsuario - Error al insertar usuario: Column count doesn't match value count at row 1
+2025-12-17 13:26:42.864 [main] ERROR repositorio.RepositorioUsuario - Error al borrar el usuario: Cannot delete or update a parent row: a foreign key constraint fails (`rodriguezcarlos`.`preferencias`, CONSTRAINT `preferencias_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`))
+2025-12-17 13:27:19.928 [main] INFO  repositorio.RepositorioUsuario - ID: usr001 | Username: User001 | Email: user001@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android14
+2025-12-17 13:27:19.930 [main] INFO  repositorio.RepositorioUsuario - ID: usr002 | Username: User002 | Email: user002@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android11
+2025-12-17 13:27:19.931 [main] INFO  repositorio.RepositorioUsuario - ID: usr003 | Username: User003 | Email: user003@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android12
+2025-12-17 13:27:19.931 [main] INFO  repositorio.RepositorioUsuario - ID: usr004 | Username: User004 | Email: user004@fitdroid.com | Plan_activo: ANUAL | Dispositivo: iphone16
+2025-12-17 13:27:19.931 [main] INFO  repositorio.RepositorioUsuario - ID: usr005 | Username: User005 | Email: user005@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android14
+2025-12-17 13:27:19.931 [main] INFO  repositorio.RepositorioUsuario - ID: usr006 | Username: User006 | Email: user006@fitdroid.com | Plan_activo: FREE | Dispositivo: android13
+2025-12-17 13:27:19.931 [main] INFO  repositorio.RepositorioUsuario - ID: usr007 | Username: User007 | Email: user007@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android11
+2025-12-17 13:27:19.931 [main] INFO  repositorio.RepositorioUsuario - ID: usr008 | Username: User008 | Email: user008@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android11
+2025-12-17 13:27:19.931 [main] INFO  repositorio.RepositorioUsuario - ID: usr009 | Username: User009 | Email: user009@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android12
+2025-12-17 13:27:19.931 [main] INFO  repositorio.RepositorioUsuario - ID: usr010 | Username: User010 | Email: user010@fitdroid.com | Plan_activo: VIP | Dispositivo: android13
+2025-12-17 13:27:19.932 [main] INFO  repositorio.RepositorioUsuario - ID: usr011 | Username: User011 | Email: user011@fitdroid.com | Plan_activo: FREE | Dispositivo: android13
+2025-12-17 13:27:19.932 [main] INFO  repositorio.RepositorioUsuario - ID: usr012 | Username: User012 | Email: user012@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: iphone17
+2025-12-17 13:27:19.932 [main] INFO  repositorio.RepositorioUsuario - ID: usr013 | Username: User013 | Email: user013@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android12
+2025-12-17 13:27:19.932 [main] INFO  repositorio.RepositorioUsuario - ID: usr014 | Username: User014 | Email: user014@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android11
+2025-12-17 13:27:19.932 [main] INFO  repositorio.RepositorioUsuario - ID: usr015 | Username: User015 | Email: user015@fitdroid.com | Plan_activo: VIP | Dispositivo: android13
+2025-12-17 13:27:19.932 [main] INFO  repositorio.RepositorioUsuario - ID: usr016 | Username: User016 | Email: user016@fitdroid.com | Plan_activo: FREE | Dispositivo: iphone16
+2025-12-17 13:27:19.932 [main] INFO  repositorio.RepositorioUsuario - ID: usr017 | Username: User017 | Email: user017@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android13
+2025-12-17 13:27:19.932 [main] INFO  repositorio.RepositorioUsuario - ID: usr018 | Username: User018 | Email: user018@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: iphone16
+2025-12-17 13:27:19.933 [main] INFO  repositorio.RepositorioUsuario - ID: usr019 | Username: User019 | Email: user019@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android11
+2025-12-17 13:27:19.933 [main] INFO  repositorio.RepositorioUsuario - ID: usr020 | Username: User020 | Email: user020@fitdroid.com | Plan_activo: VIP | Dispositivo: iphone17
+2025-12-17 13:27:19.933 [main] INFO  repositorio.RepositorioUsuario - ID: usr021 | Username: User021 | Email: user021@fitdroid.com | Plan_activo: FREE | Dispositivo: android11
+2025-12-17 13:27:19.933 [main] INFO  repositorio.RepositorioUsuario - ID: usr022 | Username: User022 | Email: user022@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: iphone17
+2025-12-17 13:27:19.933 [main] INFO  repositorio.RepositorioUsuario - ID: usr023 | Username: User023 | Email: user023@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android14
+2025-12-17 13:27:19.933 [main] INFO  repositorio.RepositorioUsuario - ID: usr024 | Username: User024 | Email: user024@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android13
+2025-12-17 13:27:19.933 [main] INFO  repositorio.RepositorioUsuario - ID: usr025 | Username: User025 | Email: user025@fitdroid.com | Plan_activo: VIP | Dispositivo: iphone15
+2025-12-17 13:27:19.934 [main] INFO  repositorio.RepositorioUsuario - ID: usr026 | Username: User026 | Email: user026@fitdroid.com | Plan_activo: FREE | Dispositivo: iphone14
+2025-12-17 13:27:19.934 [main] INFO  repositorio.RepositorioUsuario - ID: usr027 | Username: User027 | Email: user027@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: iphone17
+2025-12-17 13:27:19.934 [main] INFO  repositorio.RepositorioUsuario - ID: usr028 | Username: User028 | Email: user028@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android13
+2025-12-17 13:27:19.934 [main] INFO  repositorio.RepositorioUsuario - ID: usr029 | Username: User029 | Email: user029@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android14
+2025-12-17 13:27:19.934 [main] INFO  repositorio.RepositorioUsuario - ID: usr030 | Username: User030 | Email: user030@fitdroid.com | Plan_activo: VIP | Dispositivo: android11
+2025-12-17 13:27:19.934 [main] INFO  repositorio.RepositorioUsuario - ID: usr031 | Username: User031 | Email: user031@fitdroid.com | Plan_activo: FREE | Dispositivo: iphone15
+2025-12-17 13:27:19.934 [main] INFO  repositorio.RepositorioUsuario - ID: usr032 | Username: User032 | Email: user032@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android12
+2025-12-17 13:27:19.935 [main] INFO  repositorio.RepositorioUsuario - ID: usr033 | Username: User033 | Email: user033@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: android14
+2025-12-17 13:27:19.935 [main] INFO  repositorio.RepositorioUsuario - ID: usr034 | Username: User034 | Email: user034@fitdroid.com | Plan_activo: ANUAL | Dispositivo: iphone15
+2025-12-17 13:27:19.935 [main] INFO  repositorio.RepositorioUsuario - ID: usr035 | Username: User035 | Email: user035@fitdroid.com | Plan_activo: VIP | Dispositivo: iphone17
+2025-12-17 13:27:19.935 [main] INFO  repositorio.RepositorioUsuario - ID: usr036 | Username: User036 | Email: user036@fitdroid.com | Plan_activo: FREE | Dispositivo: android13
+2025-12-17 13:27:19.935 [main] INFO  repositorio.RepositorioUsuario - ID: usr037 | Username: User037 | Email: user037@fitdroid.com | Plan_activo: MENSUAL | Dispositivo: android13
+2025-12-17 13:27:19.935 [main] INFO  repositorio.RepositorioUsuario - ID: usr038 | Username: User038 | Email: user038@fitdroid.com | Plan_activo: TRIMESTRAL | Dispositivo: iphone14
+2025-12-17 13:27:19.935 [main] INFO  repositorio.RepositorioUsuario - ID: usr039 | Username: User039 | Email: user039@fitdroid.com | Plan_activo: ANUAL | Dispositivo: android14
+2025-12-17 13:27:19.935 [main] INFO  repositorio.RepositorioUsuario - ID: usr040 | Username: User040 | Email: user040@fitdroid.com | Plan_activo: VIP | Dispositivo: android14
+2025-12-17 13:27:19.937 [main] INFO  repositorio.RepositorioUsuario - Usuario: usr002 | Preferencias: Preferencias [tema_oscuro=false, idioma=null, notificaciones_push=false, limite_datos_moviles=false]
+2025-12-17 13:27:19.937 [main] INFO  repositorio.RepositorioUsuario - Usurio mostrado correctamente.
+2025-12-17 13:27:19.962 [main] ERROR repositorio.RepositorioUsuario - Error al insertar usuario: Column count doesn't match value count at row 1
+2025-12-17 13:27:19.965 [main] ERROR repositorio.RepositorioUsuario - Error al borrar el usuario: Cannot delete or update a parent row: a foreign key constraint fails (`rodriguezcarlos`.`preferencias`, CONSTRAINT `preferencias_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`))
