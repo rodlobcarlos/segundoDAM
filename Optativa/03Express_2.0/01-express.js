@@ -8,17 +8,9 @@ app.set('views', __dirname + '/views')
 
 app.use(express.static(__dirname + '/public'));
 
-//Vamos a recibir una petición realizada por el cliente mediante GET,
-//que como ya hemos visto y sabemos viene determinada por la URL
-app.get('/', (req, res) => {  //Usamos la función flecha (para evitar crear ninguna función)
-// Siempre, siempre, siempre tendremos un requerimiento (req) y una respuesta (res)
-// La barra, como sabemos, es para que busque en la raíz (localhost) 
- res.render("index", {titulo : "mi titulo dinámico!!"})
-})
-
-app.get('/contacto', (req, res) => {
-    res.render("contacto", {tituloContacto : "Estas en contactos de manera dinámica!!"})
-})
+// llamadas a las rutas
+app.use('/', require('./router/rutas'))
+app.use('/pokemon', require('./router/pokemon'))
 
 app.use((req, res) => {
     res.status(404).render("404", {
