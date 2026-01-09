@@ -1,0 +1,26 @@
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Mensaje</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (arrayEscuelas.length > 0) { %>
+                <% arrayEscuelas.forEach(escuela => { %>
+                    <tr>
+                        <th scope="row"><%= escuela.id %></th>
+                        <td><%= escuela.nombre %></td>
+                        <td><%= escuela.mensaje %></td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="5" class="text-center">No hay escuelas.</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,26 @@
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (arrayPeques.length > 0) { %>
+                <% arrayPeques.forEach(peque => { %>
+                    <tr>
+                        <th scope="row"><%= peque.id %></th>
+                        <td><%= peque.nombre %></td>
+                        <td><%= peque.edad %></td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="5" class="text-center">No hay peques.</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
