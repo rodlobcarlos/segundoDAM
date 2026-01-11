@@ -76,10 +76,10 @@ public class F1Service {
 
 	// JSON
 	public void escribePilots(List<Pilot> list, String ruta) { // Convertir el objeto a JSON
-		List<Pilot> productsList = new ArrayList<Pilot>();
+		List<Pilot> pilotsList = new ArrayList<Pilot>();
 		for (Pilot p : list) {
 			if (p.getPoints() > 4) {
-				productsList.add(p);
+				pilotsList.add(p);
 			}
 			Gson gson = new Gson();
 			String json = gson.toJson(productsList);
