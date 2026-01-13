@@ -1,13 +1,16 @@
 package simulacionBancoAlimentos_model;
 
+// --- Clase ---
 public class Trabajadores {
 
+	// --- Atributos --- 
 	private String nombre;
 	private String DNI;
 	private String fecha_nacimiento;
 	private Personal tipo;
 	private String idCentro;
 
+	// --- Getters y setters ---
 	public String getNombre() {
 		return nombre;
 	}
@@ -48,12 +51,14 @@ public class Trabajadores {
 		this.idCentro = idCentro;
 	}
 
+	// --- toString ---
 	@Override
 	public String toString() {
 		return "Trabajadores [nombre=" + nombre + ", DNI=" + DNI + ", fecha_nacimiento=" + fecha_nacimiento + ", tipo="
 				+ tipo + ", idCentro=" + idCentro + "]";
 	}
 
+	// --- Constructor ---
 	public Trabajadores(String nombre, String dNI, String fecha_nacimiento, Personal tipo, String idCentro) {
 		super();
 		this.nombre = nombre;
@@ -63,6 +68,7 @@ public class Trabajadores {
 		this.idCentro = idCentro;
 	}
 
+	// --- Constructor vacío ---
 	public Trabajadores() {
 		super();
 	}
