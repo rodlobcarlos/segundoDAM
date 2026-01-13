@@ -1,15 +1,19 @@
 package simulacionBancoAlimentos_model;
 
+// --- Imports ---
 import java.util.List;
 
+// --- Clase ---
 public class CentroLogistico {
 
+	// --- Atributos ---
 	private String id;
 	private String nombre;
 	private String ciudad;
 	private int comedores_abastecidos;
 	private List<Trabajadores> listaTrabajadores;
 
+	// --- Gettes y setters ---
 	public String getId() {
 		return id;
 	}
@@ -50,12 +54,14 @@ public class CentroLogistico {
 		this.listaTrabajadores = listaTrabajadores;
 	}
 
+	// --- toString ---
 	@Override
 	public String toString() {
 		return "CentroLogistico [id=" + id + ", nombre=" + nombre + ", ciudad=" + ciudad + ", comedores_abastecidos="
 				+ comedores_abastecidos + ", listaTrabajadores=" + listaTrabajadores + "]";
 	}
 
+	// --- Contructor --- 
 	public CentroLogistico(String id, String nombre, String ciudad, int comedores_abastecidos,
 			List<Trabajadores> listaTrabajadores) {
 		super();
@@ -66,6 +72,7 @@ public class CentroLogistico {
 		this.listaTrabajadores = listaTrabajadores;
 	}
 
+	// --- Constructor vacío ---
 	public CentroLogistico() {
 		super();
 	}
