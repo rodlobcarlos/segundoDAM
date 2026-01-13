@@ -66,6 +66,23 @@ public class XMLDomTrabajadores {
         return trabajadores;
     }
 
+	// --- Método de obtener un trabajadro desde un elemento ---
+	private Trabajadores getTrabajadorFromElement(Element elemento) {
+		Trabajadores t = new Trabajadores(); // crea objeto trabajador
+		// obtenemos las etiquetas de los trabajadores 
+		String nombre = elemento.getElementsByTagName("Nombre").item(0).getTextContent().trim();
+		String DNI = elemento.getElementsByTagName("DNI").item(0).getTextContent().trim();
+		String FechaNacimiento = elemento.getElementsByTagName("FechaNacimiento").item(0).getTextContent().trim();
+		Personal tipo = Enum.valueOf(Personal.class,
+				elemento.getElementsByTagName("Tipo").item(0).getTextContent().trim().toUpperCase());
+		// cambiamos los valores de nuestros atributos a los valores del xml con el 'set'
+		t.setNombre(nombre);
+		t.setDNI(DNI);
+		t.setFecha_nacimiento(FechaNacimiento);
+		t.setTipo(tipo);
+		return t;
+	}
+
 	// --- Método para obtener un documento de un xml ---
 	private Document getDocumentFromXML(String nombrefichero) {
 		File file = new File(resource + nombrefichero);
@@ -89,22 +106,4 @@ public class XMLDomTrabajadores {
 		// Usar tu método
 		return getTrabajadorFromElement(elementoProduct);
 	}
-
-	// --- Método de obtener un trabajadro desde un elemento ---
-	private Trabajadores getTrabajadorFromElement(Element elemento) {
-		Trabajadores t = new Trabajadores(); // crea objeto trabajador
-		// obtenemos las etiquetas de los trabajadores 
-		String nombre = elemento.getElementsByTagName("Nombre").item(0).getTextContent().trim();
-		String DNI = elemento.getElementsByTagName("DNI").item(0).getTextContent().trim();
-		String FechaNacimiento = elemento.getElementsByTagName("FechaNacimiento").item(0).getTextContent().trim();
-		Personal tipo = Enum.valueOf(Personal.class,
-				elemento.getElementsByTagName("Tipo").item(0).getTextContent().trim().toUpperCase());
-		// cambiamos los valores de nuestros atributos a los valores del xml con el 'set'
-		t.setNombre(nombre);
-		t.setDNI(DNI);
-		t.setFecha_nacimiento(FechaNacimiento);
-		t.setTipo(tipo);
-		return t;
-	}
-
 }
