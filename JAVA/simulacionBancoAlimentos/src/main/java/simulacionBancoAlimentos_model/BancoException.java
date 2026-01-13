@@ -1,5 +1,6 @@
 package simulacionBancoAlimentos_model;
 
+// --- Clase, extiende de Exception---
 public class BancoException extends Exception {
 
 	/**
