@@ -11,6 +11,6 @@ public class BancoException extends Exception {
 	// --- Contructor con mensaje ---
 	public BancoException(String mensaje) {
 		super(mensaje);
-	}s
+	}
 
 }
