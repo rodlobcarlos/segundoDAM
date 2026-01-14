@@ -25,7 +25,7 @@ public class XMLDomConciertos {
 	private static final Logger logger = LogManager.getLogger(XMLDomConciertos.class);
 	private static final String resource = "src\\main\\resources\\";
 	private XMLDomGrupo domGrupo;
-	
+
 	public XMLDomConciertos() {
 		super();
 		this.domGrupo = new XMLDomGrupo();
@@ -59,22 +59,26 @@ public class XMLDomConciertos {
 		String descripcion = elemento.getElementsByTagName("descripcion").item(0).getTextContent().trim();
 		Escenario tipo = Enum.valueOf(Escenario.class,
 				elemento.getElementsByTagName("escenario").item(0).getTextContent().trim().toUpperCase());
-		/**
-		String grupo = elemento.getElementsByTagName("grupo").item(0).getTextContent();
-		Grupo concierto = null;
-		try {
-			concierto = (Grupo) domGrupo.leerGrupoDesdeXML(resource);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		Element elementoGrupo = (Element) elemento.getElementsByTagName("grupo").item(0);
+
+		if (elementoGrupo != null) {
+			Grupo g = new Grupo();
+			String codigo = elementoGrupo.getElementsByTagName("codigo").item(0).getTextContent().trim();
+			String nombreGrupo = elementoGrupo.getElementsByTagName("nombre").item(0).getTextContent().trim();
+			int numIntegr = Integer.parseInt(elementoGrupo.getElementsByTagName("numIntegrantes").item(0).getTextContent());
+			String email = elementoGrupo.getElementsByTagName("email").item(0).getTextContent();
+			g.setCodigo(codigo);
+			g.setNombre(nombreGrupo);
+			g.setNumIntegrantes(numIntegr);
+			g.setEmail(email);
+			// Finalmente, guardamos el objeto Grupo dentro del Concierto
+			c.setGrupo(g);
 		}
-		**/
 		// cambiamos los valores de nuestros atributos a los valores del xml con el 'set'
 		c.setId(id);
 		c.setFecha(fecha);
 		c.setDescripcion(descripcion);
 		c.setEscenario(tipo);
-//		c.setGrupo(concierto);
 		return c;
 	}
 

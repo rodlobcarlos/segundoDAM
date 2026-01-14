@@ -34,7 +34,7 @@ public class GestionaConciertos {
 			e.printStackTrace();
 		}
 
-//		servicio.escribeConcierto(conciertos, rutaCSV);
+		servicio.escribeConcierto(conciertos, rutaCSV);
 		
 		logger.info(servicio.agregarGrupo(grupo)); 
 		
