@@ -94,7 +94,7 @@ public class Festival_servicio {
 			// abre el fichero de texto
 			ficheroSalida = new FileWriter(rutaFichero);
 			out = new PrintWriter(ficheroSalida);
-			List<Grupo> grupos = domGrupo.leerGrupoListaDesdeXML(resource);
+			List<Grupo> grupos = domGrupo.leerGrupoListaDesdeXML(rutaFichero);
 			for(Grupo g: grupos) {
 				String nombre = g.getNombre();
 				String email = g.getEmail();
