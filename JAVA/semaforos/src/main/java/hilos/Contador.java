@@ -12,7 +12,8 @@ public class Contador {
 		this.valor = valor;
 	}
 
-	public int incrementar() {
+	// Se sincroniza para que no haya concurrencia
+	public synchronized int incrementar() {
 		return valor++;
 	}
 
