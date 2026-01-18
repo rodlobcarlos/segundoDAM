@@ -1,5 +1,6 @@
 package ejercicio1_modelo;
 
+
 public class Servicio extends Thread {
 
 	@Override
