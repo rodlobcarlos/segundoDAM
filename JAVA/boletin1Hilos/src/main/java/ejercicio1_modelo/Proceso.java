@@ -1,18 +1,19 @@
 package ejercicio1_modelo;
 
 public class Proceso extends Thread {
-
 	@Override
 	public void run() {
-		while (true) {
-			System.out.println("Procesos");
+		while (!Thread.currentThread().isInterrupted()) {
 			try {
-				sleep(500); // Espera 500ms para salir otra vez
+				System.out.println("Proceso");
+				Thread.sleep(500); 
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				// Al dormir, si se interrumpe, salta aquí.
+				// Es vital volver a marcar la interrupción o salir del bucle.
+				Thread.currentThread().interrupt();
 			}
 		}
-
+		System.out.println("Hilo Proceso finalizado.");
 	}
+
 }
