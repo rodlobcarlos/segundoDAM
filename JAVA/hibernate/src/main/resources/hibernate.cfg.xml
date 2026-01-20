@@ -19,6 +19,7 @@
 		<mapping class="hibernate_model.Sala" />
 		<mapping class="hibernate_model.Empleado" />
 		<mapping class="hibernate_model.Departamento" />
+		<mapping class="hibernate_model.Acta" />
 
 	</session-factory>
 </hibernate-configuration>
