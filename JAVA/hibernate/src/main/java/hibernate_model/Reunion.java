@@ -7,7 +7,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
@@ -15,7 +14,7 @@ import jakarta.persistence.Table;
 @Table(name = "reunion")
 public class Reunion {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idReunion;
 	// Es obligatorio usar la notación @Column(name="nombreCampo")
 	// Si las columnas de la tablas se llaman diferentes que los atributos
@@ -28,16 +27,13 @@ public class Reunion {
 	@JoinColumn(name = "idSala")
 	private Sala sala;
 
+	@OneToOne(mappedBy = "reunion", optional = true)
+	@JoinColumn(name = "idActa")
+	private Acta acta;
+
 	// Generamos el constructor sin parámetros y los métodos get/set
 	public int getIdReunion() {
 		return idReunion;
-	}
-
-	public Reunion(LocalDateTime fecha, String asunto, Sala sala) {
-		super();
-		this.fecha = fecha;
-		this.asunto = asunto;
-		this.sala = sala;
 	}
 
 	public LocalDateTime getFecha() {
@@ -68,9 +64,25 @@ public class Reunion {
 		this.idReunion = idReunion;
 	}
 
+	public Acta getActa() {
+		return acta;
+	}
+
+	public void setActa(Acta acta) {
+		this.acta = acta;
+	}
+
 	@Override
 	public String toString() {
-		return "Reunion [idReunion=" + idReunion + ", fecha=" + fecha + ", asunto=" + asunto + "]";
+		return "Reunion [idReunion=" + idReunion + ", fecha=" + fecha + ", asunto=" + asunto + ", sala="
+				+ sala.getIdSala() + "]";
+	}
+
+	public Reunion(LocalDateTime fecha, String asunto, Sala sala) {
+		super();
+		this.fecha = fecha;
+		this.asunto = asunto;
+		this.sala = sala;
 	}
 
 	public Reunion() {
