@@ -94,7 +94,5 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("Pulsado", "Elemento pulsado: "+(Datos) parent.getItemAtPosition(position));
             }
         });
-
-
     }
 }
