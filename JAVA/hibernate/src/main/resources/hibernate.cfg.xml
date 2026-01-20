@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-   <session-factory>
-          <property name="hibernate.connection.driver_class">  com.mysql.cj.jdbc.Driver      </property>
-       <property name="hibernate.connection.url">
-           jdbc:mysql://localhost:3307/accesoDatosDAM?useSSL=false&amp;serverTimezone=UTC
-       </property>
-       <property name="hibernate.connection.username">usuario2</property>
-       <property name="hibernate.connection.password">usuario</property>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">
+			com.mysql.cj.jdbc.Driver </property>
+		<property name="hibernate.connection.url">
+			jdbc:mysql://localhost:3307/accesoDatosHibernate?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true
+		</property>
+		<property name="hibernate.connection.username">carlos</property>
+		<property name="hibernate.connection.password">clave</property>
 		<!-- Dialect -->
-       <property name="hibernate.dialect">  org.hibernate.dialect.MySQLDialect       </property>
-       <property name="hibernate.hbm2ddl.auto">update</property>
-       <property name="hibernate.show_sql">true</property>
-       <property name="hibernate.format_sql">true</property>
+		<property name="hibernate.dialect"> org.hibernate.dialect.MySQLDialect </property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
 		<!-- Entidades -->
-       <mapping class="modelo.hibernate.Reunion"/>
-   </session-factory>
+		<mapping class="hibernate_model.Reunion" />
+		<mapping class="hibernate_model.Sala" />
+		<mapping class="hibernate_model.Empleado" />
+		<mapping class="hibernate_model.Departamento" />
+
+	</session-factory>
 </hibernate-configuration>
