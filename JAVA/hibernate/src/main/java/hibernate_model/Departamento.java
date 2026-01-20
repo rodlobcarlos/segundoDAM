@@ -3,6 +3,7 @@ package hibernate_model;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,14 +18,13 @@ import jakarta.persistence.Table;
 public class Departamento {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idDepartamento;
 
 	@Column(name = "nombre")
 	private String nombre;
 
-	@OneToMany()
-	@JoinColumn(name = "idEmpleado")
+	@OneToMany(mappedBy = "departamento", cascade = CascadeType.ALL)
 	private List<Empleado> empleados;
 
 	public int getIdDepartamento() {
@@ -52,6 +52,10 @@ public class Departamento {
 	@Override
 	public String toString() {
 		return "Departamento [idDepartamento=" + idDepartamento + ", nombre=" + nombre + "]";
+	}
+
+	public Departamento() {
+		super();
 	}
 
 }
