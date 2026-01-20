@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -14,7 +15,7 @@ import jakarta.persistence.Table;
 public class Empleado {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idEmpleado;
 
 	@Column(name = "nombre")
@@ -23,7 +24,7 @@ public class Empleado {
 	@Column(name = "salario")
 	private double salario;
 
-	@OneToMany()
+	@OneToOne()
 	@JoinColumn(name = "idDepartamento")
 	private Departamento departamento;
 
@@ -69,6 +70,10 @@ public class Empleado {
 	public String toString() {
 		return "Empleado [idEmpleado=" + idEmpleado + ", nombre=" + nombre + ", salario=" + salario + ", departamento="
 				+ departamento + "]";
+	}
+
+	public Empleado() {
+		super();
 	}
 
 }
