@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 @Table(name = "sala")
 public class Sala {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idSala;
 
 	@Column(name = "nombre")
