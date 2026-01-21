@@ -1,13 +1,17 @@
 package hibernate_model;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -23,17 +27,25 @@ public class Reunion {
 	// @Column(name="asunto")
 	private String asunto;
 
-	@OneToOne()
+	@ManyToOne
 	@JoinColumn(name = "idSala")
 	private Sala sala;
 
-	@OneToOne(mappedBy = "reunion", optional = true)
-	@JoinColumn(name = "idActa")
-	private Acta acta;
+	@ManyToMany(cascade = CascadeType.ALL)
+	private Set<Empleado> empleados;
 
 	// Generamos el constructor sin parámetros y los métodos get/set
+
 	public int getIdReunion() {
 		return idReunion;
+	}
+
+	public Set<Empleado> getEmpleados() {
+		return empleados;
+	}
+
+	public void setEmpleados(Set<Empleado> empleados) {
+		this.empleados = empleados;
 	}
 
 	public LocalDateTime getFecha() {
@@ -64,18 +76,9 @@ public class Reunion {
 		this.idReunion = idReunion;
 	}
 
-	public Acta getActa() {
-		return acta;
-	}
-
-	public void setActa(Acta acta) {
-		this.acta = acta;
-	}
-
 	@Override
 	public String toString() {
-		return "Reunion [idReunion=" + idReunion + ", fecha=" + fecha + ", asunto=" + asunto + ", sala="
-				+ sala.getIdSala() + "]";
+		return "Reunion [idReunion=" + idReunion + ", fecha=" + fecha + ", asunto=" + asunto + "]";
 	}
 
 	public Reunion(LocalDateTime fecha, String asunto, Sala sala) {
@@ -83,10 +86,29 @@ public class Reunion {
 		this.fecha = fecha;
 		this.asunto = asunto;
 		this.sala = sala;
+		this.empleados = new HashSet<Empleado>();
 	}
 
 	public Reunion() {
 		super();
+	}
+
+	public void addEmpleado(Empleado empleado) {
+		this.empleados.add(empleado);
+		if (!empleado.getReuniones().contains(this)) {
+			empleado.getReuniones().add(this);
+		}
+	}
+
+	public void removeEmpleado(Empleado empleado) {
+		this.empleados.remove(empleado);
+		if (!empleado.getReuniones().contains(this)) {
+			empleado.getReuniones().remove(this);
+		}
+	}
+
+	public Set<Empleado> getEmpleado() {
+		return empleados;
 	}
 
 }
