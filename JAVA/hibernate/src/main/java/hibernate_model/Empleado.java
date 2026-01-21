@@ -1,12 +1,16 @@
 package hibernate_model;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
@@ -24,14 +28,18 @@ public class Empleado {
 	@Column(name = "salario")
 	private double salario;
 
-	@OneToOne()
-	@JoinColumn(name = "idDepartamento")
+	@ManyToMany
+	@JoinColumn(name = "idReunion")
+	private Set<Reunion> reuniones;
+
+	@OneToOne(cascade = CascadeType.ALL)
 	private Departamento departamento;
 
 	public Empleado(String nombre, double salario) {
 		super();
 		this.nombre = nombre;
 		this.salario = salario;
+		this.reuniones = new HashSet<Reunion>();
 	}
 
 	public int getIdEmpleado() {
@@ -66,6 +74,22 @@ public class Empleado {
 		this.departamento = departamento;
 	}
 
+	public Set<Reunion> getReuniones() {
+		return reuniones;
+	}
+
+	public void setReuniones(Set<Reunion> reuniones) {
+		this.reuniones = reuniones;
+	}
+
+	public Departamento getDepartamento() {
+		return departamento;
+	}
+
+	public void setDepartamento(Departamento departamento) {
+		this.departamento = departamento;
+	}
+
 	@Override
 	public String toString() {
 		return "Empleado [idEmpleado=" + idEmpleado + ", nombre=" + nombre + ", salario=" + salario + ", departamento="
@@ -74,6 +98,24 @@ public class Empleado {
 
 	public Empleado() {
 		super();
+	}
+
+	public void addReunion(Reunion reunion) {
+		this.reuniones.add(reunion);
+		if (!reunion.getEmpleados().contains(this)) {
+			reunion.getEmpleados().add(this);
+		}
+	}
+
+	public void removeReunion(Reunion reunion) {
+		this.reuniones.remove(reunion);
+		if (!reunion.getEmpleados().contains(this)) {
+			reunion.getEmpleados().remove(this);
+		}
+	}
+
+	public Set<Reunion> getReunion() {
+		return reuniones;
 	}
 
 }
