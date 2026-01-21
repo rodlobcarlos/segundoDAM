@@ -23,10 +23,9 @@ public class Sala {
 
 	@Column(name = "capacidad")
 	private int capacidad;
-	
-	@OneToMany(mappedBy = "sala", cascade = CascadeType.ALL)
-	   private List<Reunion> reuniones;
 
+	@OneToMany(mappedBy = "sala", cascade = CascadeType.ALL)
+	private List<Reunion> reuniones;
 
 	public Sala(String nombre) {
 		super();
@@ -60,8 +59,7 @@ public class Sala {
 
 	@Override
 	public String toString() {
-		return "Sala [idSala=" + idSala + ", nombre=" + nombre + ", capacidad=" + capacidad + ", reuniones=" + reuniones
-				+ "]";
+		return "Sala [idSala=" + idSala + ", nombre=" + nombre + ", capacidad=" + capacidad + "]";
 	}
 
 	public Sala() {
