@@ -57,7 +57,11 @@ public class Acta {
 	public Acta(String contenido, Reunion reunion) {
 		super();
 		this.contenido = contenido;
-		reunion.setActa(this);
+		this.reunion = reunion;
+	}
+
+	public Acta() {
+		super();
 	}
 
 }
