@@ -29,18 +29,22 @@ public class GestionaReunion {
 		}
 
 		Reunion reunion = new Reunion(LocalDateTime.now(), "Asunto", sala);
+		Reunion reunion2 = new Reunion(LocalDateTime.now(), "Asunto 3", sala);
+		Reunion reunion3 = new Reunion(LocalDateTime.now(), "Asunto Nuevo", sala);
 		ReunionDao dao = new ReunionDao();
 		dao.create(reunion);
+//		dao.create(reunion2);
+		dao.mergeaObjeto(reunion3);
 
 		List<Reunion> reuniones = dao.getAll();
 		for (Reunion r : reuniones) {
 			System.out.println(r);
 		}
-
-		Acta acta = new Acta("Acta reunion", reunion);
+		Acta acta1 = new Acta("Acta reunion", reunion2);
+//		Acta acta2 = new Acta("Acta reunion", reunion2);
 		ActaDao actaDao = new ActaDao();
-		reunion.setActa(acta);
-//		actaDao.create(acta);
+		actaDao.create(acta1);
+//		actaDao.create(acta2);
 
 		List<Acta> actas = actaDao.getAll();
 		for (Acta a : actas) {
@@ -60,6 +64,8 @@ public class GestionaReunion {
 		empleado.setDepartamentos(departamento);
 		EmpleadoDao empleadoDao = new EmpleadoDao();
 		empleadoDao.create(empleado);
+		empleado.addReunion(reunion3);
+		empleadoDao.update(empleado);
 
 		List<Empleado> empleados = empleadoDao.getAll();
 		for (Empleado e : empleados) {
