@@ -1,4 +1,4 @@
-package conexion;
+package ejemploConexion;
 
 import java.io.IOException;
 
