@@ -23,6 +23,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         TextView elemento = (TextView) findViewById(R.id.texto);
         registerForContextMenu(elemento);
 */
+        /*
         Datos[] datos = new Datos[]{
                 new Datos("Linea superior 1", "Linea inferior 1"),
                 new Datos("Linea superior 2", "Linea inferior 2"),
@@ -79,6 +82,12 @@ public class MainActivity extends AppCompatActivity {
                 new Datos("Linea superior 4", "Linea inferior 4"),
                 new Datos("Linea superior 5", "Linea inferior 5")
         };
+
+         */
+        ArrayList<Datos> datos = new ArrayList<Datos>();
+        datos.add(new Datos("Nota", "Alumno 1"));
+        datos.add(new Datos("Nota", "Alumno 2"));
+        datos.add(new Datos("Nota", "Alumno 3"));
 
         ListView listado = (ListView) findViewById(R.id.miLista);
         Adaptador miAdaptador = new Adaptador(this, datos);
@@ -90,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         listado.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.i("Pulsado", "Elemento pulsado: "+position);
+                Log.i("Pulsado", "Elemento pulsado: "+ position);
                 Log.i("Pulsado", "Elemento pulsado: "+(Datos) parent.getItemAtPosition(position));
             }
         });
