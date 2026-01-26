@@ -14,4 +14,11 @@ public class Datos {
         return texto2;
     }
 
+    @Override
+    public String toString() {
+        return "Datos{" +
+                "texto1='" + texto1 + '\'' +
+                ", texto2='" + texto2 + '\'' +
+                '}';
+    }
 }
