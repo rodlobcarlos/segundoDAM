@@ -16,7 +16,7 @@ public class Servidor {
 				System.out.println("Nuevo cliente conectado: " + socketCliente.getInetAddress());
 				// 2. Lanza un hilo nuevo para este cliente específico
 				// Esto permite que el bucle vuelva al accept() inmediatamente
-				new ManejadorHilosCliente(socketCliente).start();
+				new ServidorHilo(socketCliente).start();
 			}
 		} catch (IOException e) {
 			System.err.println("Error en el servidor: " + e.getMessage());
