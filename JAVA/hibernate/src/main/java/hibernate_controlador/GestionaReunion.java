@@ -45,7 +45,7 @@ public class GestionaReunion {
 		Reunion reunion1 = new Reunion(LocalDateTime.of(2026, 2, 1, 10, 0), "Planificación Sprint", sala1);
 		Reunion reunion2 = new Reunion(LocalDateTime.of(2026, 2, 2, 12, 30), "Revisión de Presupuesto", sala2);
 		Reunion reunion3 = new Reunion(LocalDateTime.of(2026, 2, 5, 20, 15), "Entrevistas de IT", sala3);
-		Reunion reunion4 = new Reunion(LocalDateTime.of(2026, 2, 10, 16, 0), "Presentación de Producto", sala4);
+		Reunion reunion4 = new Reunion(LocalDateTime.of(2026, 2, 10, 16, 0), "Presentación de Producto", sala2);
 
 		ReunionDao reunionDao = new ReunionDao();
 		reunionDao.create(reunion1);
@@ -143,6 +143,8 @@ public class GestionaReunion {
 			// System.out.println(" Reuniones: " + e.getReuniones().size());
 		}
 
+		System.out.println(reunionDao.getReunionesPasadas(LocalDateTime.of(2026, 2, 10, 16, 0)));
+		System.out.println(salaDao.getSalaConMasReuniones());
 		System.out.println("=== FIN DEL PROGRAMA CON ÉXITO ===");
 	}
 }
