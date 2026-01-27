@@ -16,7 +16,7 @@ public class Servidor {
 				Socket socketCliente = servidor.accept();
 				// Pasamos el contador y el tablero único al hilo
 				new ServidorHilo(numero, socketCliente).start();
-			}
+			}	
 		} catch (IOException e) {
 			System.err.println("Error en el servidor: " + e.getMessage());
 		}
