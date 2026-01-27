@@ -23,16 +23,15 @@ public class Servidor_hilo extends Thread {
 		// Usamos el socket que recibimos en el constructor
 		try (BufferedReader entrada = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 				PrintWriter salida = new PrintWriter(socket.getOutputStream(), true);) {
-
+			/*
 			String mensaje;
 			while ((mensaje = entrada.readLine()) != null) {
 				System.out.println("Cliente dice: " + mensaje); // Imprime en consola del servidor
 				salida.println("ECO " + mensaje); // Responde al cliente
 			}
+			*/
 			
-			// 3. SALUDO: Mensaje inicial al conectarse
-			salida.println("Conexión establecida. " + socket.getInetAddress() + LocalDateTime.now());
-			System.out.println("Conexión finalizada. " + socket.getInetAddress() + LocalDateTime.now());
+			System.out.println("Desconecta IP " + socket.getInetAddress() + ", Puerto remoto: " + socket.getPort());
 		} catch (IOException e) {
 			System.err.println("Error en la comunicación con el cliente: " + e.getMessage());
 		}
