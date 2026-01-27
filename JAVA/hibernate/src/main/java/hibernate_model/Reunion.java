@@ -27,9 +27,11 @@ public class Reunion {
 	// @Column(name="asunto")
 	private String asunto;
 
-	@ManyToOne
-	@JoinColumn(name = "idSala")
-	private Sala sala;
+	@ManyToOne 
+    // ¡IMPORTANTE! Quita (cascade = CascadeType.ALL) de aquí.
+    // Al quitarlo, Hibernate solo guardará la ID de la sala en la tabla reunion, sin intentar volver a crear la sala.
+    @JoinColumn(name = "idSala")
+    private Sala sala;
 
 	@ManyToMany(cascade = CascadeType.ALL)
 	private Set<Empleado> empleados;
