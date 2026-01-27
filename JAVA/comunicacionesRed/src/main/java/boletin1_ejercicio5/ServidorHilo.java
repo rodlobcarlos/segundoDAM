@@ -1,60 +1,54 @@
 package boletin1_ejercicio5;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
 
 public class ServidorHilo extends Thread {
-
-	private Numero numero;
+	private Numero numeroCompartido;
 	private Socket socket;
 
-	public Numero getNumero() {
-		return numero;
-	}
-
-	public void setNumero(Numero numero) {
-		this.numero = numero;
-	}
-
-	public Socket getSocket() {
-		return socket;
-	}
-
-	public void setSocket(Socket socket) {
-		this.socket = socket;
-	}
-
-	@Override
-	public String toString() {
-		return "ServidorHilo [numero=" + numero + ", socket=" + socket + "]";
-	}
-
 	public ServidorHilo(Numero numero, Socket socket) {
-		super();
-		this.numero = numero;
+		this.numeroCompartido = numero;
 		this.socket = socket;
 	}
 
 	@Override
 	public void run() {
-		System.out.println("Cliente conectado: " + socket.getInetAddress());
-		try {
-			BufferedReader entrada = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-			PrintWriter salida = new PrintWriter(socket.getOutputStream(), true);
+		try (BufferedReader entrada = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+				PrintWriter salida = new PrintWriter(socket.getOutputStream(), true)) {
 
-			while((entrada.readLine() != null) && numero.getNumero() >= 0 && numero.getNumero() <= 20) {
-				if(entrada.read() == numero.getNumero()) {
-					salida.println("Has acertado el número secreto!!!");
-				}else {
-					salida.println("Numero incorrecto, sigue intentandolo.");
+			String mensajeCliente;
+			while ((mensajeCliente = entrada.readLine()) != null) {
+				// 1. Comprobar si alguien ya ganó antes de procesar
+				if (numeroCompartido.isAcertado()) {
+					salida.println("SERVIDOR: El juego ha terminado, otro cliente acertó.");
+					break;
+				}
+
+				int intento = Integer.parseInt(mensajeCliente);
+				String prefijo;
+
+				if (intento % 2 == 0) {
+					prefijo = "SERVIDOR (PAR): ";
+				} else {
+					prefijo = "SERVIDOR (IMPAR): ";
+				}
+
+				// 2. Comparar número
+				if (intento == numeroCompartido.getNumero()) {
+					numeroCompartido.setAcertado(true);
+					salida.println("ACIERTO");
+					System.out.println(prefijo + "ACIERTO");
+				} else if (numeroCompartido.getNumero() > intento) {
+					salida.println("MAYOR");
+					System.out.println(prefijo + "MAYOR");
+				} else {
+					salida.println("MENOR");
+					System.out.println(prefijo + "MENOR");
 				}
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Finalizada conexión con cliente.");
 		}
 	}
 }
