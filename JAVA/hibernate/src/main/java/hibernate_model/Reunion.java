@@ -2,6 +2,7 @@ package hibernate_model;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import jakarta.persistence.CascadeType;
@@ -13,6 +14,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.TypedQuery;
 
 @Entity
 @Table(name = "reunion")
@@ -27,11 +29,12 @@ public class Reunion {
 	// @Column(name="asunto")
 	private String asunto;
 
-	@ManyToOne 
-    // ¡IMPORTANTE! Quita (cascade = CascadeType.ALL) de aquí.
-    // Al quitarlo, Hibernate solo guardará la ID de la sala en la tabla reunion, sin intentar volver a crear la sala.
-    @JoinColumn(name = "idSala")
-    private Sala sala;
+	@ManyToOne
+	// ¡IMPORTANTE! Quita (cascade = CascadeType.ALL) de aquí.
+	// Al quitarlo, Hibernate solo guardará la ID de la sala en la tabla reunion,
+	// sin intentar volver a crear la sala.
+	@JoinColumn(name = "idSala")
+	private Sala sala;
 
 	@ManyToMany(cascade = CascadeType.ALL)
 	private Set<Empleado> empleados;
