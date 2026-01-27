@@ -82,18 +82,22 @@ public abstract class AbstractDao<T> implements IDao<T> {
 
 	}
 
-	private void executeInsideTransaction(Session sesion, T objecto) {
-		// Registramos una transacción
-		Transaction tx = sesion.beginTransaction();
+	private void executeInsideTransaction(Session sesion, T objeto) {
+		Transaction tx = null;
 		try {
-			sesion.persist(objecto);
-			tx.commit();
+			tx = sesion.beginTransaction();
 
+			sesion.persist(objeto);
+
+			tx.commit();
 		} catch (RuntimeException e) {
-			tx.rollback();
+			if (tx != null)
+				tx.rollback();
 			throw e;
 		} finally {
-			if (sesion != null) {
+			// La sesión se cierra en el método que llama a este,
+			// o si la abriste aquí, asegúrate de cerrarla.
+			if (sesion != null && sesion.isOpen()) {
 				sesion.close();
 			}
 		}
