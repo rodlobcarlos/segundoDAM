@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import hibernate_model.Reunion;
 import jakarta.persistence.TypedQuery;
 
 public abstract class AbstractDao<T> implements IDao<T> {
@@ -120,4 +121,6 @@ public abstract class AbstractDao<T> implements IDao<T> {
 	public void setClase(Class<T> clase) {
 		this.clase = clase;
 	}
+	
+	
 }
