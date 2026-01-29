@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/ajustes"
+        android:title="ajustes"/>
+    <item android:id="@+id/suscripción"
+        android:title="suscripción"/>
+    <item android:id="@+id/about"
+        android:title="Sobre Nosotros">
+    <menu>
+        <item android:id="@+id/empresa"
+            android:title="Empresa" />
+        <item android:id="@+id/emprendimiento"
+            android:title="Emprendimiento" />
+    </menu>
+    </item>
+</menu>
