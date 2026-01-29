@@ -3,6 +3,7 @@ package com.example.livetasks;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,6 +22,12 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.mainmenu, menu);
+        return true;
+    }
+
+    @Override
     public void onCreateContextMenu(ContextMenu menu, View v,
                                     ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
@@ -36,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
         return super.onContextItemSelected(item);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Log.i("menus",item.toString());
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +61,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         ArrayList<Datos> datos = new ArrayList<Datos>();
-        datos.add(new Datos("Linea superior 1", "Linea inferior 1"));
-        datos.add(new Datos("Linea superior 2", "Linea inferior 2"));
-        datos.add(new Datos("Linea superior 3", "Linea inferior 3"));
+        datos.add(new Datos("Cosas importantes", "Ahorrar para una casa y coche, pagar cosas."));
+        datos.add(new Datos("Mandados", "Comprar el pan, limpiar la casa, ir de compras."));
+        datos.add(new Datos("Cosas a comprar en el futuro", "Mueble, tele nueva, móvil, renovar colchón."));
 
         ListView listado = (ListView) findViewById(R.id.miLista);
         Adaptador miAdaptador = new Adaptador(this, datos);
         listado.setAdapter(miAdaptador);
-
+        registerForContextMenu(listado);
     }
 }
