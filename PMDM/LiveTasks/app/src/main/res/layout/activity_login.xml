@@ -37,9 +37,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Introduce tu correo electrónico y una contraseña para registrarte en esta aplicación."
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:textColor="#2A2A2A"
+            android:textStyle="italic"
+            android:textColor="@color/black"
             android:layout_marginTop="7dp"
             android:textAlignment="center"/>
 
@@ -51,7 +50,6 @@
             android:hint="email@domain.com"
             android:paddingHorizontal="16dp"
             android:textColor="#000000"
-            android:textColorHint="#000000"
             android:inputType="textEmailAddress"
             app:cornerRadius="8dp"/>
 
@@ -63,7 +61,6 @@
             android:hint="contraseña"
             android:paddingHorizontal="16dp"
             android:textColor="#000000"
-            android:textColorHint="#000000"
             android:inputType="textPassword"/>
 
         <com.google.android.material.button.MaterialButton
