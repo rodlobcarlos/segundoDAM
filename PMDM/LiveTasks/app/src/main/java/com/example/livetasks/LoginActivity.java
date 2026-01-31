@@ -7,6 +7,9 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 public class LoginActivity extends AppCompatActivity {
     @Override
@@ -41,6 +44,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Tu lógica aquí
                 Toast.makeText(LoginActivity.this, "Iniciado con google", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LoginActivity.this, Tareas.class);
+                startActivity(intent);
             }
         });
     }
