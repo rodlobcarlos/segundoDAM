@@ -1,6 +1,5 @@
 package hibernate_model;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,7 +20,8 @@ public class Acta {
 	@Column(name = "contenido")
 	private String contenido;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
+	// ¡IMPORTANTE! Sin cascade.
 	@JoinColumn(name = "idReunion")
 	private Reunion reunion;
 

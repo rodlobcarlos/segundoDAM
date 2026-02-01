@@ -11,6 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
@@ -29,10 +30,10 @@ public class Empleado {
 	private double salario;
 
 	@ManyToMany
-	@JoinColumn(name = "idReunion")
 	private Set<Reunion> reuniones;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@ManyToOne
+	@JoinColumn(name = "idDepartamento")
 	private Departamento departamento;
 
 	public Empleado(String nombre, double salario) {

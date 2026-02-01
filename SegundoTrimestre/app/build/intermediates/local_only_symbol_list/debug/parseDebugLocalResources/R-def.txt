@@ -1,0 +1,33 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id about
+id contact
+id crear_pokemon
+id editar
+id eliminar
+id emprendimiento
+id empresa
+id home
+id info
+id listado_pokemon
+id main
+id miLista
+id miTexto1
+id miTexto2
+id opciones
+id pokemon
+layout activity_main
+layout elemento
+menu mainmenu
+menu menuelemento
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.SegundoTrimestre
+style Theme.SegundoTrimestre
+xml backup_rules
+xml data_extraction_rules
