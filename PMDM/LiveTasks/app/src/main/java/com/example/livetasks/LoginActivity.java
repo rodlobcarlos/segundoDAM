@@ -34,8 +34,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Tu lógica aquí
                 Toast.makeText(LoginActivity.this, "Iniciado como administrador", Toast.LENGTH_SHORT).show();
-                setContentView(R.layout.activity_login);
-            }
+                Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
+                startActivity(intent);            }
         });
 
         Button btnGoogle = findViewById(R.id.btn_google);
