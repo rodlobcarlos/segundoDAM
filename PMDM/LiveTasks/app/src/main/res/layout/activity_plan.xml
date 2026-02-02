@@ -9,10 +9,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:padding="24dp"
+        android:padding="32dp"
         android:background="@drawable/fondo_iluminado">
 
         <TextView
@@ -21,7 +21,7 @@
             android:text="Live&amp;Tasks"
             android:textSize="32sp"
             android:textStyle="bold"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:layout_marginTop="40dp"/>
 
         <TextView
@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:text="Elige tu plan"
             android:textStyle="bold"
+            android:textColor="@color/black"
             android:layout_marginTop="30dp"
             android:textSize="18sp"/>
 
@@ -36,7 +37,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Elige entre un plan Free o un plan Pro."
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -57,6 +60,7 @@
                     android:layout_height="wrap_content"
                     android:text="Plan Free"
                     android:textSize="20sp"
+                    android:textColor="@color/black"
                     android:textStyle="bold"/>
 
                 <TextView
@@ -70,12 +74,12 @@
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:text="Obtener Plan Free"
-                    android:backgroundTint="#000000"
-                    android:textColor="#FFFFFF"
-                    app:cornerRadius="12dp"
                     android:layout_marginTop="7dp"
-                    android:textAllCaps="false"/>
+                    android:backgroundTint="#000000"
+                    android:text="Obtener Plan Free"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="12dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -98,6 +102,7 @@
                     android:layout_height="wrap_content"
                     android:text="Plan Pro"
                     android:textSize="20sp"
+                    android:textColor="@color/black"
                     android:textStyle="bold"/>
 
                 <TextView
@@ -111,12 +116,12 @@
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:text="Obtener Plan Free"
-                    android:backgroundTint="#000000"
-                    android:textColor="#FFFFFF"
-                    app:cornerRadius="12dp"
                     android:layout_marginTop="7dp"
-                    android:textAllCaps="false"/>
+                    android:backgroundTint="#000000"
+                    android:text="Obtener Plan Free"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="12dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

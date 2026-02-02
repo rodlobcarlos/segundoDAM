@@ -12,11 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LiveTasks">
         <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Tareas"
+            android:exported="false" />
+        <activity
             android:name=".PlanActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Material3.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
