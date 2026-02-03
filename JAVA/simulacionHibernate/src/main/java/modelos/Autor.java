@@ -1,14 +1,13 @@
 package modelos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -16,7 +15,6 @@ import jakarta.persistence.Table;
 public class Autor {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String dni;
 
 	@Column(name = "nombre")
@@ -25,7 +23,7 @@ public class Autor {
 	@Column(name = "email")
 	private String email;
 
-	@OneToMany(mappedBy = "autores", cascade = CascadeType.ALL)
+	@ManyToMany(mappedBy = "autores", cascade = CascadeType.ALL)
 	private List<Articulo> articulos;
 
 	public String getDni() {
@@ -70,14 +68,15 @@ public class Autor {
 		this.dni = dni;
 		this.nombre = nombre;
 		this.email = email;
+		this.articulos = new ArrayList<Articulo>();
 	}
 
 	public Autor() {
 		super();
 	}
-	
+
 	public void addArticulo(Articulo articulo) {
-		if(!articulos.contains(articulo)) {
+		if (!articulos.contains(articulo)) {
 			articulos.add(articulo);
 		}
 	}

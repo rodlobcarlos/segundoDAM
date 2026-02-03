@@ -1,6 +1,7 @@
 package modelos;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -97,6 +98,7 @@ public class Revista {
 		this.numeroRevista = numeroRevista;
 		this.fecha = fecha;
 		this.unidadesImpresas = unidadesImpresas;
+		this.articulos = new ArrayList<Articulo>();
 	}
 
 	public Revista() {
