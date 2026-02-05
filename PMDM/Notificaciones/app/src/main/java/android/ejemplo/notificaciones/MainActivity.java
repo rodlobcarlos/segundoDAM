@@ -3,7 +3,9 @@ package android.ejemplo.notificaciones;
 import android.app.AlertDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -60,21 +62,40 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     private void lanzarNotificacion() {
-        // 2. Construir la notificación
+        // 1. Crear el Intent explícito para abrir la SecondActivity
+        Intent intent = new Intent(this, SecondActivity.class);
+
+        // Esto sirve para que al dar atrás, no vuelvas a la notificación, sino que se maneje la pila de apps
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+        // 2. Crear el PendingIntent
+        // IMPORTANTE: Desde Android 12 (API 31) es obligatorio especificar MUTABLE o IMMUTABLE
+        int flags = PendingIntent.FLAG_UPDATE_CURRENT;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            flags |= PendingIntent.FLAG_IMMUTABLE;
+        }
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, flags);
+
+        // 3. Construir la notificación con el .setContentIntent
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setSmallIcon(android.R.drawable.ic_dialog_info) // Icono del sistema (puedes usar el tuyo propio)
+                .setSmallIcon(android.R.drawable.ic_dialog_info)
                 .setContentTitle("¡Hola Mundo!")
-                .setContentText("Esta es tu primera notificación en Android.")
+                .setContentText("Tócame para ver el mensaje secreto.")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setAutoCancel(true); // Se cierra al tocarla
-        // 3. Mostrar la notificación
+                // AQUI conectamos el PendingIntent:
+                .setContentIntent(pendingIntent)
+                // AQUI decimos que la notificación desaparezca al tocarla:
+                .setAutoCancel(true);
+
+        // 4. Mostrar la notificación (esto sigue igual)
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-        // Chequeo de permisos para Android 13+ (necesario para evitar crashes en versiones nuevas)
+
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-            // Si no hay permiso, aquí deberíamos pedirlo.
-            // Para este ejemplo básico, simplemente retornamos.
             return;
         }
         notificationManager.notify(NOTIFICATION_ID, builder.build());
     }
 }
+
+
