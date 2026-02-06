@@ -22,7 +22,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Tu lógica aquí
-                Toast.makeText(LoginActivity.this, "Iniciado como cliente", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(LoginActivity.this, PlanActivity.class);
                 startActivity(intent);
             }
@@ -43,7 +42,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Tu lógica aquí
-                Toast.makeText(LoginActivity.this, "Iniciado con google", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(LoginActivity.this, Tareas.class);
                 startActivity(intent);
             }
