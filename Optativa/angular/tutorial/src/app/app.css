@@ -1,0 +1,11 @@
+.brand-home {
+    display: block; 
+    padding: 10px;
+    margin-bottom: 20px; 
+}
+
+.logo-brand {
+    height: 60px;
+    width: auto;
+    display: block; 
+}
