@@ -3,20 +3,23 @@
 <hibernate-configuration>
 	<session-factory>
 		<property name="hibernate.connection.driver_class">
-			com.mysql.cj.jdbc.Driver </property>
+			com.mysql.cj.jdbc.Driver
+		</property>
 		<property name="hibernate.connection.url">
-			jdbc:mysql://localhost:3307/simulacionHibernate?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true
+			jdbc:mysql://localhost:3307/simulacionHibernate1?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true
 		</property>
 		<property name="hibernate.connection.username">carlos</property>
 		<property name="hibernate.connection.password">clave</property>
 		<!-- Dialect -->
 		<property name="hibernate.dialect"> org.hibernate.dialect.MySQLDialect </property>
-		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
 		<!-- Entidades -->
 		<mapping class="modelos.Articulo" />
 		<mapping class="modelos.Autor" />
 		<mapping class="modelos.Revista" />
+
+
 	</session-factory>
 </hibernate-configuration>

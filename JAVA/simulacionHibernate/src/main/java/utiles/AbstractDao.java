@@ -86,7 +86,7 @@ public abstract class AbstractDao<T> implements IDao<T> {
 		// Registramos una transacción
 		Transaction tx = sesion.beginTransaction();
 		try {
-			sesion.merge(objecto);
+			sesion.persist(objecto);
 			tx.commit();
 
 		} catch (RuntimeException e) {

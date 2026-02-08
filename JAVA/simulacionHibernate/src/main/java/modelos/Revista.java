@@ -10,7 +10,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -18,55 +17,31 @@ import jakarta.persistence.Table;
 @Table(name = "revista")
 public class Revista {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idRevista;
-
-	@Column(name = "nombreRevista")
-	private String nombreRevista;
-
-	@Column(name = "numeroRevista")
-	private int numeroRevista;
+	@Column(name = "nombre")
+	private String nombre;
 
 	@Column(name = "fecha")
 	private LocalDate fecha;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int idRevista;
+
 	@Column(name = "unidadesImpresas")
 	private int unidadesImpresas;
+
+	@Column(name = "numeroRevista")
+	private int numeroRevista;
 
 	@OneToMany(mappedBy = "revista", cascade = CascadeType.ALL)
 	private List<Articulo> articulos;
 
-	public List<Articulo> getArticulos() {
-		return articulos;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setArticulos(List<Articulo> articulos) {
-		this.articulos = articulos;
-	}
-
-	public int getIdRevista() {
-		return idRevista;
-	}
-
-	public void setIdRevista(int idRevista) {
-		this.idRevista = idRevista;
-	}
-
-	public String getNombreRevista() {
-		return nombreRevista;
-	}
-
-	public void setNombreRevista(String nombreRevista) {
-		this.nombreRevista = nombreRevista;
-	}
-
-	public int getNumeroRevista() {
-		return numeroRevista;
-	}
-
-	public void setNumeroRevista(int numeroRevista) {
-		this.numeroRevista = numeroRevista;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 	public LocalDate getFecha() {
@@ -77,6 +52,14 @@ public class Revista {
 		this.fecha = fecha;
 	}
 
+	public int getIdRevista() {
+		return idRevista;
+	}
+
+	public void setIdRevista(int idRevista) {
+		this.idRevista = idRevista;
+	}
+
 	public int getUnidadesImpresas() {
 		return unidadesImpresas;
 	}
@@ -85,19 +68,34 @@ public class Revista {
 		this.unidadesImpresas = unidadesImpresas;
 	}
 
-	@Override
-	public String toString() {
-		return "Revista [idRevista=" + idRevista + ", nombreRevista=" + nombreRevista + ", numeroRevista="
-				+ numeroRevista + ", fecha=" + fecha + ", unidadesImpresas=" + unidadesImpresas + ", articulos="
-				+ articulos + "]";
+	public int getNumeroRevista() {
+		return numeroRevista;
 	}
 
-	public Revista(String nombreRevista, int numeroRevista, LocalDate fecha, int unidadesImpresas) {
-		super();
-		this.nombreRevista = nombreRevista;
+	public void setNumeroRevista(int numeroRevista) {
 		this.numeroRevista = numeroRevista;
+	}
+
+	public List<Articulo> getArticulos() {
+		return articulos;
+	}
+
+	public void setArticulos(List<Articulo> articulos) {
+		this.articulos = articulos;
+	}
+
+	@Override
+	public String toString() {
+		return "Revista [nombre=" + nombre + ", fecha=" + fecha + ", idRevista=" + idRevista + ", unidadesImpresas="
+				+ unidadesImpresas + ", numeroRevista=" + numeroRevista + "]";
+	}
+
+	public Revista(String nombre, LocalDate fecha, int unidadesImpresas, int numeroRevista) {
+		super();
+		this.nombre = nombre;
 		this.fecha = fecha;
 		this.unidadesImpresas = unidadesImpresas;
+		this.numeroRevista = numeroRevista;
 		this.articulos = new ArrayList<Articulo>();
 	}
 
@@ -106,7 +104,7 @@ public class Revista {
 	}
 
 	public void addArticulo(Articulo articulo) {
-		if (!articulos.contains(articulo)) {
+		if(!articulos.contains(articulo)) {
 			articulos.add(articulo);
 		}
 	}

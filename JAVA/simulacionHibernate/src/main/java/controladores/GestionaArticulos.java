@@ -34,7 +34,7 @@ public class GestionaArticulos {
 		ar2.addAutor(a1);
 		ar2.addAutor(a3);
 
-		Revista r = new Revista("Revista 1", 1, LocalDate.now(), 179);
+		Revista r = new Revista("Revista 1", LocalDate.now(), 1, 179);
 		revistaDao.create(r);
 		r.addArticulo(ar2);
 		r.addArticulo(ar1);
