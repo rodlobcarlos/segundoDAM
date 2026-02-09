@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="100dp">
+
+        <ImageView
+            android:id="@+id/logo_instituto"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ies_torre_de_los_guzmanes_logo"
+            android:contentDescription="Logo del IES Torre de los Guzmanes"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I.E.S Torro de los guzmanes"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="60dp"/>
+
+        <EditText
+            android:id="@+id/usuario"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="25dp"
+            android:background="#FFFFFF"
+            android:hint="Usuario"
+            android:paddingHorizontal="16dp"
+            android:textColor="#000000"
+            android:inputType="textEmailAddress"
+            app:cornerRadius="8dp"/>
+
+        <EditText
+            android:id="@+id/contraseña"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF"
+            android:hint="Contraseña"
+            android:paddingHorizontal="16dp"
+            android:textColor="#000000"
+            android:inputType="textPassword"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_acceso"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Acceso"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#000000"
+            android:layout_marginTop="16dp"
+            app:cornerRadius="8dp"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
