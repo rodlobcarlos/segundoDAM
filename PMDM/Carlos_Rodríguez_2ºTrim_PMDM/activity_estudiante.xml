@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Estudiante">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:padding="16dp">
+
+            <TextView
+            android:text="BBDD\n1ºDAM"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:padding="8dp"
+            android:textColor="#000000" />
+
+            <TextView
+                android:text="LDM\n1ºDAM"
+                android:textStyle="bold"
+                android:layout_columnWeight="1"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:text="PROG\n1ºDAM"
+                android:textStyle="bold"
+                android:layout_columnWeight="1"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:text="EED\n1ºDAM"
+                android:textStyle="bold"
+                android:layout_columnWeight="1"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:text="PMDM\n2ºDAM"
+                android:textStyle="bold"
+                android:layout_columnWeight="1"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+        </GridLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
