@@ -21,7 +21,7 @@ public class ArticuloDao extends AbstractDao<Articulo> {
 	    // Definimos la consulta HQL
 	    String hql = "SELECT a FROM Articulo a " +
 	                 "JOIN a.autores aut " +
-	                 "WHERE aut.nombre = :nombre " +
+	                 "WHERE aut.nombre = :nombre "+
 	                 "ORDER BY a.titulo ASC";
 	    
 	    // Creamos la query usando la sesión de Hibernate
