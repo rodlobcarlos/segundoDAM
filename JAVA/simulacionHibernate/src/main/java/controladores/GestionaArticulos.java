@@ -50,6 +50,22 @@ public class GestionaArticulos {
 			logger.debug(a);
 		}
 
+		List<Object[]> conteos = articuloDao.obtenerNumeroArticulosPorRevista();
+		System.out.println(articuloDao.buscarArticulosPorNombreAutor("Pepa Flores")); 
+		System.out.println(articuloDao.obtenerArticulosLargos());
+		System.out.println(articuloDao.obtenerArticulosLargosConRevistaYFecha());
+		for (Object[] fila : conteos) {
+		    System.out.println("Revista: " + fila[0] + " | Total Artículos: " + fila[1]);
+		}
+		
+		
+		LocalDate fechaFiltro = LocalDate.now().plusDays(3); 
+		List<Object[]> revistasFiltradas = articuloDao.obtenerRevistasAnterioresA(fechaFiltro);
+		if (revistasFiltradas != null) {
+		    for (Object[] fila : revistasFiltradas) {
+		        System.out.println("Nombre: " + fila[0] + " | Fecha: " + fila[1] + " | Nº: " + fila[2]);
+		    }
+		}
 	}
 
 }
