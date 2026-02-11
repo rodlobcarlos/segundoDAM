@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlanActivity"
+    android:background="@drawable/fondo_iluminado">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Live&amp;Tasks"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elige tu plan"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="100dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elige tu tarifa de suscripción Pro."
+            android:layout_marginBottom="20dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_mes"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="7dp"
+            android:backgroundTint="#000000"
+            android:text="Plan de 4,99€/mes "
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_año"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="7dp"
+            android:backgroundTint="#000000"
+            android:text="Plan de 49,99€/año "
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Te recordamos lo que contiene tu plan Pro "
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/karla"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/black" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="8dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plan Pro"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:text="• Gestión de tareas ilimitado.\n• Uso de IA ilimitado (autocompletado, resúmenes, cálculos).\n• Historial de notas ilimitado.\n•Colaboración con edición en tiempo real y asignación de tareas.\n• Archivos adjuntos, hasta 100MB por archivo.\n• Sincronización multidispositivo ilimitado."
+                    android:lineSpacingExtra="4dp"
+                    android:fontFamily="@font/karla"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

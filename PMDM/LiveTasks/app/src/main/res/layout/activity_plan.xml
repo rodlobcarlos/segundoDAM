@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".PlanActivity">
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
-        android:padding="32dp"
+        tools:context=".PlanActivity"
         android:background="@drawable/fondo_iluminado">
 
         <TextView
@@ -22,107 +14,123 @@
             android:textSize="32sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginTop="40dp"/>
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Elige tu plan"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginTop="30dp"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Elige entre un plan Free o un plan Pro."
-            android:layout_marginBottom="20dp"
-            android:textStyle="italic"
-            android:textColor="@color/black"/>
-
-        <androidx.cardview.widget.CardView
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="25dp"
-            app:cardElevation="8dp"
-            android:layout_margin="10dp">
+            android:id="@+id/main"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="32dp">
 
-            <LinearLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elige tu plan"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="100dp"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elige entre un plan Free o un plan Pro."
+                android:layout_marginBottom="20dp"
+                android:textStyle="italic"
+                android:textColor="@color/black"/>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="20dp"
-                android:gravity="center_horizontal">
+                app:cardCornerRadius="25dp"
+                app:cardElevation="8dp"
+                android:layout_margin="10dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Plan Free"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"/>
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="• Gestión de tareas (limitado).\n• Uso de IA (límite diario).\n• Historial de notas (30 días).\n• Colaboración (solo lectura).\n• Archivos adjuntos (5MB por archivo).\n• Sincronización (2 dispositivos)."
-                    android:textAlignment="center"
-                    android:lineSpacingExtra="4dp"/>
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:gravity="center_horizontal">
 
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_marginTop="7dp"
-                    android:backgroundTint="#000000"
-                    android:text="Obtener Plan Free"
-                    android:textAllCaps="false"
-                    android:textColor="#FFFFFF"
-                    app:cornerRadius="12dp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plan Free"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="25dp"
-            app:cardElevation="8dp"
-            android:layout_margin="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="• Gestión de tareas (limitado).\n• Uso de IA (límite diario).\n• Historial de notas (30 días).\n• Colaboración (solo lectura).\n• Archivos adjuntos (5MB por archivo).\n• Sincronización (2 dispositivos)."
+                        android:textAlignment="center"
+                        android:lineSpacingExtra="4dp"
+                        android:fontFamily="@font/karla"/>
 
-            <LinearLayout
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_free"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="7dp"
+                        android:backgroundTint="#000000"
+                        android:text="Obtener Plan Free"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        app:cornerRadius="12dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="20dp"
-                android:gravity="center_horizontal">
+                app:cardCornerRadius="25dp"
+                app:cardElevation="8dp"
+                android:layout_margin="10dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Plan Pro"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"/>
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:textAlignment="center"
-                    android:text="• Gestión de tareas ilimitado.\n• Uso de IA ilimitado (autocompletado, resúmenes, cálculos).\n• Historial de notas ilimitado.\n•Colaboración con edición en tiempo real y asignación de tareas.\n• Archivos adjuntos, hasta 100MB por archivo.\n• Sincronización multidispositivo ilimitado."
-                    android:lineSpacingExtra="4dp"/>
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:gravity="center_horizontal">
 
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_marginTop="7dp"
-                    android:backgroundTint="#000000"
-                    android:text="Obtener Plan Free"
-                    android:textAllCaps="false"
-                    android:textColor="#FFFFFF"
-                    app:cornerRadius="12dp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plan Pro"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"
+                        android:text="• Gestión de tareas ilimitado.\n• Uso de IA ilimitado (autocompletado, resúmenes, cálculos).\n• Historial de notas ilimitado.\n•Colaboración con edición en tiempo real y asignación de tareas.\n• Archivos adjuntos, hasta 100MB por archivo.\n• Sincronización multidispositivo ilimitado."
+                        android:lineSpacingExtra="4dp"
+                        android:fontFamily="@font/karla"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_pro"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="7dp"
+                        android:backgroundTint="#000000"
+                        android:text="Obtener Plan Pro"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        app:cornerRadius="12dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,9 +7,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class LoginActivity extends AppCompatActivity {
     @Override
@@ -21,7 +18,6 @@ public class LoginActivity extends AppCompatActivity {
         btnCliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tu lógica aquí
                 Intent intent = new Intent(LoginActivity.this, PlanActivity.class);
                 startActivity(intent);
             }
@@ -31,7 +27,6 @@ public class LoginActivity extends AppCompatActivity {
         btnAdmin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                // Tu lógica aquí
                 Toast.makeText(LoginActivity.this, "Iniciado como administrador", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
                 startActivity(intent);            }
@@ -41,8 +36,8 @@ public class LoginActivity extends AppCompatActivity {
         btnGoogle.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                // Tu lógica aquí
-                Intent intent = new Intent(LoginActivity.this, Tareas.class);
+                Toast.makeText(LoginActivity.this, "Iniciado con Google", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LoginActivity.this, TareasActivity.class);
                 startActivity(intent);
             }
         });

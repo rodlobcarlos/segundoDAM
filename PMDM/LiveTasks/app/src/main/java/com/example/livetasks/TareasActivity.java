@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Tareas extends AppCompatActivity {
+public class TareasActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
