@@ -9,3 +9,13 @@ def test_factorial_one():
 
 def test_factorial_five():
     assert factorial(5) == 120
+
+def test_factorial_negative():
+    with pytest.raises(ValueError):
+        factorial(-1)
+
+def test_factorial_not_integer():
+    with pytest.raises(TypeError):
+        factorial(1.5)
+    with pytest.raises(TypeError):  
+        factorial("5")
