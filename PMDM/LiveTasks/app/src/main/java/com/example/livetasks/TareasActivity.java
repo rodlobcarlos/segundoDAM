@@ -1,9 +1,12 @@
 package com.example.livetasks;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +23,15 @@ public class TareasActivity extends AppCompatActivity {
 
         // 2. Le decimos a la App que esta es la "ActionBar" oficial
         setSupportActionBar(toolbar);
+
+        Button btnCalendario = findViewById(R.id.btn_calendario);
+        btnCalendario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TareasActivity.this, CalendarioActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
