@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LiveTasks">
         <activity
+            android:name=".CalendarioActivity"
+            android:exported="false" />
+        <activity
             android:name=".PlanAnualActivity"
             android:exported="false" />
         <activity
