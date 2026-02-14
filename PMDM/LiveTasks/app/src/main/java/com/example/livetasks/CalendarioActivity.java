@@ -1,6 +1,9 @@
 package com.example.livetasks;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CalendarView;
 
 import androidx.activity.EdgeToEdge;
@@ -25,6 +28,15 @@ public class CalendarioActivity extends AppCompatActivity {
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 // El mes (month) empieza en 0 (Enero es 0, Diciembre es 11)
                 String fechaSeleccionada = dayOfMonth + "/" + (month + 1) + "/" + year;
+            }
+        });
+
+        Button btnTarea = findViewById(R.id.btn_tareas);
+        btnTarea.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CalendarioActivity.this, TareasActivity.class);
+                startActivity(intent);
             }
         });
     }

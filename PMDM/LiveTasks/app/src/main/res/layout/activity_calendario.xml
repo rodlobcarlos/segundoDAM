@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo_iluminado2"
     tools:context=".TareasActivity">
 
     <LinearLayout
+        android:id="@+id/container_superior"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/fondo_iluminado2"
+        android:layout_height="0dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="32dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:padding="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardMenuInferior"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_tareas"
-            android:layout_width="380dp"
+            android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:title="Live&amp;Tasks"
             app:titleTextColor="@color/black" />
@@ -42,16 +44,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="16dp">
 
                 <CalendarView
                     android:id="@+id/calendarView"
                     android:layout_width="match_parent"
-                    android:layout_height="294dp"/>
+                    android:layout_height="wrap_content" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="45dp"
                     android:layout_marginTop="10dp"
                     app:cardBackgroundColor="#E0E0E0"
                     app:cardCornerRadius="25dp">
@@ -59,77 +61,91 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:gravity="center"
                         android:text="Sugerencia IA"
-                        android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardMenuInferior"
-            android:layout_width="345dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="122dp"
-            app:cardCornerRadius="30dp"
-            app:cardElevation="8dp"
-            app:cardBackgroundColor="#EDE5E5"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_tareas"
-                    android:layout_width="77dp"
-                    android:layout_height="wrap_content"
-                    app:icon="@drawable/task"
-                    app:iconSize="30dp"
-                    app:backgroundTint="@color/black"
-                    app:cornerRadius="20dp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_calendario"
-                    android:layout_width="77dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    app:icon="@drawable/calendar"
-                    app:iconSize="33dp"
-                    app:iconTint="@color/black"
-                    app:iconGravity="textStart"
-                    android:padding="0dp"
-                    app:backgroundTint="@color/white"/>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_monitoreo"
-                    android:layout_width="77dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    app:icon="@drawable/stadistics"
-                    app:iconSize="24dp"
-                    app:iconTint="@color/black"
-                    app:iconGravity="textStart"
-                    android:padding="0dp"
-                    app:backgroundTint="@color/white"/>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_notas"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    app:icon="@drawable/note"
-                    app:iconSize="24dp"
-                    app:iconTint="@color/black"
-                    app:backgroundTint="@color/white"/>
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
     </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMenuInferior"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="#EDE5E5"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tareas"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/blacktasks"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="24dp"
+                app:iconTint="@color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_calendario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                app:backgroundTint="@color/black"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/whitecalendar"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="24dp"
+                app:iconTint="@color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_monitoreo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/blackgraphic"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="24dp"
+                app:iconTint="@color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_notas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/blacknotes"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="24dp"
+                app:iconTint="@color/black" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
