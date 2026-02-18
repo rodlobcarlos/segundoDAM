@@ -32,6 +32,24 @@ public class TareasActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btnMonitoreo = findViewById(R.id.btn_monitoreo);
+        btnMonitoreo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TareasActivity.this, MonitoreoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnNotas = findViewById(R.id.btn_notas);
+        btnNotas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TareasActivity.this, MonitoreoActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

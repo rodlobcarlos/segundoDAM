@@ -8,6 +8,13 @@
     android:background="@drawable/fondo_iluminado2"
     tools:context=".TareasActivity">
 
+    <ScrollView
+        android:id="@+id/scroll_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cardMenuInferior">
+
         <LinearLayout
             android:id="@+id/container_superior"
             android:layout_width="match_parent"
@@ -233,6 +240,7 @@
                 app:cardCornerRadius="25dp"
                 app:cardElevation="8dp"/>
         </LinearLayout>
+    </ScrollView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMenuInferior"

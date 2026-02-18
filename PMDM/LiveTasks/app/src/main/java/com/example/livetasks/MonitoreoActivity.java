@@ -4,47 +4,44 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CalendarView;
+import android.widget.ProgressBar;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class CalendarioActivity extends AppCompatActivity {
+public class MonitoreoActivity extends AppCompatActivity {
+
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_calendario);
+        setContentView(R.layout.activity_monitoreo);
 
-        CalendarView calendarView = findViewById(R.id.calendarView);
+        // 1. Vincular con el XML
+        progressBar = findViewById(R.id.barraProgreso);
 
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                // El mes (month) empieza en 0 (Enero es 0, Diciembre es 11)
-                String fechaSeleccionada = dayOfMonth + "/" + (month + 1) + "/" + year;
-            }
-        });
-
+        // 2. Cambiar el valor manualmente
+        progressBar.setProgress(50);
+        
         Button btnTarea = findViewById(R.id.btn_tareas);
         btnTarea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CalendarioActivity.this, TareasActivity.class);
+                Intent intent = new Intent(MonitoreoActivity.this, TareasActivity.class);
                 startActivity(intent);
             }
         });
 
-        Button btnMonitoreo = findViewById(R.id.btn_monitoreo);
-        btnMonitoreo.setOnClickListener(new View.OnClickListener() {
+        Button btnCalendario = findViewById(R.id.btn_calendario);
+        btnCalendario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CalendarioActivity.this, MonitoreoActivity.class);
+                Intent intent = new Intent(MonitoreoActivity.this, CalendarioActivity.class);
                 startActivity(intent);
             }
         });
@@ -53,10 +50,9 @@ public class CalendarioActivity extends AppCompatActivity {
         btnNotas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CalendarioActivity.this, MonitoreoActivity.class);
+                Intent intent = new Intent(MonitoreoActivity.this, NotasActivity.class);
                 startActivity(intent);
             }
         });
-
     }
 }
