@@ -24,5 +24,14 @@ public class PlanProActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btnAnual = findViewById(R.id.btn_año);
+        btnAnual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PlanProActivity.this, PlanAnualActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
