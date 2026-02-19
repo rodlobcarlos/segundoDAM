@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dale cuerpo a tus ideas y organizalas con ayuda de IA."
+            android:text="Ten al día tu actividad de tareas."
             android:textColor="@color/black"
             android:textStyle="italic" />
 
@@ -277,13 +277,13 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMenuInferior"
         android:layout_width="0dp"
-        android:layout_height="65dp"
+        android:layout_height="55dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         app:cardBackgroundColor="#EDE5E5"
         app:cardCornerRadius="30dp"
-        app:cardElevation="10dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -292,8 +292,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingHorizontal="8dp">
+            android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_tareas"
@@ -301,25 +300,25 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="4dp"
-                app:backgroundTint="@color/black"
+                app:backgroundTint="@color/white"
                 app:cornerRadius="20dp"
-                app:icon="@drawable/whitetasks"
+                app:icon="@drawable/blacktasks"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
                 app:iconSize="24dp"
-                app:iconTint="@color/white"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"/>
+                app:iconTint="@color/black" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_calendario"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="4dp"
                 android:layout_weight="1"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
+                android:layout_marginHorizontal="4dp"
                 app:backgroundTint="@color/white"
                 app:cornerRadius="20dp"
-                app:icon="@drawable/blackcalendar"
+                app:icon="@drawable/whitecalendar"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
                 app:iconSize="24dp"
                 app:iconTint="@color/black" />
 
@@ -329,13 +328,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="4dp"
-                app:backgroundTint="@color/white"
+                app:backgroundTint="@color/black"
                 app:cornerRadius="20dp"
                 app:icon="@drawable/blackgraphic"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
                 app:iconSize="24dp"
-                app:iconTint="@color/black"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"/>
+                app:iconTint="@color/white" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_notas"
@@ -346,10 +345,10 @@
                 app:backgroundTint="@color/white"
                 app:cornerRadius="20dp"
                 app:icon="@drawable/blacknotes"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
                 app:iconSize="24dp"
-                app:iconTint="@color/black"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"/>
+                app:iconTint="@color/black" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
