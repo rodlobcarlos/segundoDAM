@@ -8,20 +8,14 @@
     android:background="@drawable/fondo_iluminado2"
     tools:context=".TareasActivity">
 
-    <ScrollView
-        android:id="@+id/scroll_content"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/cardMenuInferior">
-
         <LinearLayout
             android:id="@+id/container_superior"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="24dp">
+            android:padding="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardMenuInferior">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar_tareas"
@@ -39,7 +33,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_add"
-                android:layout_width="45dp"
+                android:layout_width="38dp"
                 android:layout_height="45dp"
                 android:layout_gravity="end"
                 android:layout_marginTop="10dp"
@@ -240,18 +234,17 @@
                 app:cardCornerRadius="25dp"
                 app:cardElevation="8dp"/>
         </LinearLayout>
-    </ScrollView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMenuInferior"
         android:layout_width="0dp"
-        android:layout_height="65dp"
+        android:layout_height="55dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         app:cardBackgroundColor="#EDE5E5"
         app:cardCornerRadius="30dp"
-        app:cardElevation="10dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -260,8 +253,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingHorizontal="8dp">
+            android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_tareas"
@@ -271,11 +263,11 @@
                 android:layout_marginHorizontal="4dp"
                 app:backgroundTint="@color/black"
                 app:cornerRadius="20dp"
-                app:icon="@drawable/whitetasks"
+                app:icon="@drawable/blacktasks"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
                 app:iconSize="24dp"
-                app:iconTint="@color/white"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"/>
+                app:iconTint="@color/white" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_calendario"
@@ -285,11 +277,11 @@
                 android:layout_marginHorizontal="4dp"
                 app:backgroundTint="@color/white"
                 app:cornerRadius="20dp"
-                app:icon="@drawable/blackcalendar"
+                app:icon="@drawable/whitecalendar"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
                 app:iconSize="24dp"
-                app:iconTint="@color/black"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"/>
+                app:iconTint="@color/black" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_monitoreo"
@@ -300,10 +292,10 @@
                 app:backgroundTint="@color/white"
                 app:cornerRadius="20dp"
                 app:icon="@drawable/blackgraphic"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
                 app:iconSize="24dp"
-                app:iconTint="@color/black"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"/>
+                app:iconTint="@color/black" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_notas"
@@ -314,10 +306,10 @@
                 app:backgroundTint="@color/white"
                 app:cornerRadius="20dp"
                 app:icon="@drawable/blacknotes"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
                 app:iconSize="24dp"
-                app:iconTint="@color/black"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"/>
+                app:iconTint="@color/black" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
