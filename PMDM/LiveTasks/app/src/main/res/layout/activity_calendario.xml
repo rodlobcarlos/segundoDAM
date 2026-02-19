@@ -36,7 +36,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dale cuerpo a tus ideas y organizalas con ayuda de IA."
+            android:text="Gestiona tu día a día en tu calendario inteligente."
             android:textColor="@color/black"
             android:textStyle="italic" />
 
