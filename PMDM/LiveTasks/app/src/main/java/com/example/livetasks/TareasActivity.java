@@ -7,17 +7,25 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ScrollView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class TareasActivity extends AppCompatActivity {
 
+    private ScrollView scrollContent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_tareas);
+
+        scrollContent = findViewById(R.id.scroll_tareas);
+
+        scrollContent.post(() -> scrollContent.fullScroll(ScrollView.FOCUS_UP));
+
         // 1. Buscamos la barra que pusimos en el XML
         androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar_tareas);
 
@@ -46,7 +54,7 @@ public class TareasActivity extends AppCompatActivity {
         btnNotas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TareasActivity.this, MonitoreoActivity.class);
+                Intent intent = new Intent(TareasActivity.this, NotasActivity.class);
                 startActivity(intent);
             }
         });
