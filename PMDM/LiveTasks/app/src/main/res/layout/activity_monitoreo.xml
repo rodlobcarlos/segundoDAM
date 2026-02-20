@@ -265,12 +265,13 @@
             android:id="@+id/btn_ia"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/black"
-            android:text="IA"
-            android:textColor="@color/white"
             android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#EBEBEB"
+            android:text="IA"
+            android:textColor="@color/black"
             app:cardCornerRadius="25dp"
-            app:cardElevation="8dp"/>
+            app:cardElevation="8dp" />
 
         </LinearLayout>
     </ScrollView>
