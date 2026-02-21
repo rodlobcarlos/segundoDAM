@@ -72,6 +72,14 @@ public class MonitoreoActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Log.i("menus",item.toString());
+        int id = item.getItemId();
+
+        if (id == R.id.acount) {
+            // Aquí es donde conectas la acción
+            Intent intent = new Intent(MonitoreoActivity.this, CuentaActivity.class);
+            startActivity(intent);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 }
