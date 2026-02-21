@@ -40,7 +40,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Estadísticas"
+                    android:text="Estadísticas de la aplicación"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -79,29 +79,142 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Feedback"
+                    android:text="Feedback usuarios"
                     android:textColor="@color/black"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp" />
 
-                <androidx.cardview.widget.CardView
+                <ScrollView
+                    android:id="@+id/scroll_admin"
                     android:layout_width="match_parent"
-                    android:layout_height="280dp"
-                    android:layout_marginTop="10dp"
-                    app:cardBackgroundColor="#E0E0E0"
-                    app:cardCornerRadius="25dp">
+                    android:layout_height="350dp"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="false">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Reseñas de usuarios"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
-                </androidx.cardview.widget.CardView>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="55dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="start|center_vertical"
+                            android:backgroundTint="#FFFFFF"
+                            android:text="Sara: Buena aplicación, muy intuitiva y práctica. "
+                            android:textAllCaps="false"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/karla"
+                            app:cornerRadius="8dp"
+                            app:strokeColor="#CECECE"
+                            app:strokeWidth="1dp"
+                            app:icon="@drawable/avataraccount"
+                            app:iconGravity="start"
+                            app:iconPadding="4dp"
+                            app:iconTint="@null" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="55dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="start|center_vertical"
+                            android:backgroundTint="#FFFFFF"
+                            android:text="Manuel: En las notas me gustaría que se puedieran insertar archivos de cualquier tipo."
+                            android:textAllCaps="false"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/karla"
+                            app:cornerRadius="8dp"
+                            app:strokeColor="#CECECE"
+                            app:strokeWidth="1dp"
+                            app:icon="@drawable/avataraccount"
+                            app:iconGravity="start"
+                            app:iconPadding="4dp"
+                            app:iconTint="@null" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="55dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="start|center_vertical"
+                            android:backgroundTint="#FFFFFF"
+                            android:text="Carlos: Muy buena aplicación, las sugerencias de la IA son muy buenas. "
+                            android:textAllCaps="false"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/karla"
+                            app:cornerRadius="8dp"
+                            app:strokeColor="#CECECE"
+                            app:strokeWidth="1dp"
+                            app:icon="@drawable/avataraccount"
+                            app:iconGravity="start"
+                            app:iconPadding="4dp"
+                            app:iconTint="@null" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="55dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="start|center_vertical"
+                            android:backgroundTint="#FFFFFF"
+                            android:text="Antonio: Una aplicación fantastica, pero hay varios puntos en los que se pueden mejorar...  "
+                            android:textAllCaps="false"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/karla"
+                            app:cornerRadius="8dp"
+                            app:strokeColor="#CECECE"
+                            app:strokeWidth="1dp"
+                            app:icon="@drawable/avataraccount"
+                            app:iconGravity="start"
+                            app:iconPadding="4dp"
+                            app:iconTint="@null" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="55dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="start|center_vertical"
+                            android:backgroundTint="#FFFFFF"
+                            android:text="Marina: La interfaz me gusta mucho, limpia y sin mucha carga de notificaciones. "
+                            android:textAllCaps="false"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/karla"
+                            app:cornerRadius="8dp"
+                            app:strokeColor="#CECECE"
+                            app:strokeWidth="1dp"
+                            app:icon="@drawable/avataraccount"
+                            app:iconGravity="start"
+                            app:iconPadding="4dp"
+                            app:iconTint="@null" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="55dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="start|center_vertical"
+                            android:backgroundTint="#FFFFFF"
+                            android:text="Eva: Me gusta la aplicación, insertar archivos a las tareas y las notas podría ser una mejora muy buena. "
+                            android:textAllCaps="false"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/karla"
+                            app:cornerRadius="8dp"
+                            app:strokeColor="#CECECE"
+                            app:strokeWidth="1dp"
+                            app:icon="@drawable/avataraccount"
+                            app:iconGravity="start"
+                            app:iconPadding="4dp"
+                            app:iconTint="@null" />
+
+                    </LinearLayout>
+                </ScrollView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
