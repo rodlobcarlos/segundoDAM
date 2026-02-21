@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_iluminado2"
-    tools:context=".TareasActivity">
+    tools:context=".NotasActivity">
 
   <LinearLayout
       android:id="@+id/container_superior"
