@@ -1,5 +1,6 @@
 package com.example.livetasks;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -58,6 +59,7 @@ public class TareasActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 
     @Override
@@ -68,6 +70,15 @@ public class TareasActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Log.i("menus",item.toString());
+
+        int id = item.getItemId();
+
+        if (id == R.id.acount) {
+            // Aquí es donde conectas la acción
+            Intent intent = new Intent(TareasActivity.this, CuentaActivity.class);
+            startActivity(intent);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 }
