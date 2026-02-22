@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+/* Aqua Marine CSS Linear Gradient Background */
+body {
+  background: #1A2980;
+  background: linear-gradient(
+    to right,
+    #1A2980,#26D0CE
+  );
+}
