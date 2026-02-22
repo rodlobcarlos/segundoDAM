@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "ba45cc2c-e12d-4828-8a47-303bad1bf5ef"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -25,8 +26,14 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
+          "scripts": [
+            "node_modules/jquery/dist/jquery.min.js",
+            "node_modules/popper.js/dist/popper.min.js",
+            "node_modules/bootstrap/dist/js/bootstrap.min.js"
+          ],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
