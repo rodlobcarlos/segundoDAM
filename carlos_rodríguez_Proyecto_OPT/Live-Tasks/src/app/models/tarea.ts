@@ -1,7 +1,6 @@
 export class Tarea {
+    id: number = 0;
     titulo!: string;
-    tipo!: string;
-    estado!: 'propuesto' | 'en curso' | 'hecho';    
     descripcion!: string;
-    fechaVencimiento!: Date;
+    estado!: string;
 }

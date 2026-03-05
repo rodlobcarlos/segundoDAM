@@ -1,0 +1,40 @@
+<nav class="navbar navbar-dark bg-warning">
+  <a class="navbar-brand" href="/">CRUD Usuarios</a>
+  <ul class="navbar-nav ms-auto flex-row gap-3">
+    <li class="nav-item"><a class="nav-link text-white" routerLink="/tareas">Tareas</a></li>
+    <li class="nav-item"><a class="nav-link text-white" routerLink="/usuarios">Usuarios</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mt-4">
+      <ul class="list-group">
+        <li
+          *ngFor="let usuario of usuarios"
+          class="list-group-item list-group-item-action"
+          (click)="abrirParaEditar(usuario)"
+        >
+          <span class="badge bg-warning text-dark">{{usuario.id}}</span>
+          {{usuario.nombre}} - {{usuario.email}} - {{usuario.rol}}
+        </li>
+      </ul>
+      <div class="card mt-4">
+        <div class="card-body">
+          <div class="card-title">Insertar nuevo Usuario</div>
+          <div class="form-group">
+            <input type="text" [(ngModel)]="usuarioSeleccionado.nombre" placeholder="Introduce un nombre" class="form-control">
+          </div>
+          <div class="form-group mt-2">
+            <input type="text" [(ngModel)]="usuarioSeleccionado.email" placeholder="Introduce un email" class="form-control">
+          </div>
+          <div class="form-group mt-2">
+            <input type="text" [(ngModel)]="usuarioSeleccionado.rol" placeholder="Introduce un rol" class="form-control">
+          </div>
+          <button (click)="agregarOEditar()" class="btn btn-warning">Guardar</button>
+          <button (click)="eliminar()" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
