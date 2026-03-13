@@ -1,0 +1,190 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.livetasks"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="36" />
+10
+11    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+11-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:5:5-77
+11-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:5:22-74
+12
+13    <permission
+13-->[androidx.core:core:1.16.0] C:\Users\alumno\.gradle\caches\8.13\transforms\2a28f9fe7553e0069360a2ae9cfff29e\transformed\core-1.16.0\AndroidManifest.xml:22:5-24:47
+14        android:name="com.example.livetasks.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.16.0] C:\Users\alumno\.gradle\caches\8.13\transforms\2a28f9fe7553e0069360a2ae9cfff29e\transformed\core-1.16.0\AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.16.0] C:\Users\alumno\.gradle\caches\8.13\transforms\2a28f9fe7553e0069360a2ae9cfff29e\transformed\core-1.16.0\AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="com.example.livetasks.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.16.0] C:\Users\alumno\.gradle\caches\8.13\transforms\2a28f9fe7553e0069360a2ae9cfff29e\transformed\core-1.16.0\AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.16.0] C:\Users\alumno\.gradle\caches\8.13\transforms\2a28f9fe7553e0069360a2ae9cfff29e\transformed\core-1.16.0\AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:7:5-53:19
+20        android:allowBackup="true"
+20-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:8:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.16.0] C:\Users\alumno\.gradle\caches\8.13\transforms\2a28f9fe7553e0069360a2ae9cfff29e\transformed\core-1.16.0\AndroidManifest.xml:28:18-86
+22        android:dataExtractionRules="@xml/data_extraction_rules"
+22-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:9:9-65
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:fullBackupContent="@xml/backup_rules"
+25-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:10:9-54
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:11:9-43
+27        android:label="@string/app_name"
+27-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:12:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:13:9-54
+29        android:supportsRtl="true"
+29-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:14:9-35
+30        android:testOnly="true"
+31        android:theme="@style/Theme.LiveTasks" >
+31-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:15:9-47
+32        <activity
+32-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:16:9-18:40
+33            android:name="com.example.livetasks.NotasActivity"
+33-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:17:13-42
+34            android:exported="false" />
+34-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:18:13-37
+35        <activity
+35-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:19:9-21:40
+36            android:name="com.example.livetasks.MonitoreoActivity"
+36-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:20:13-46
+37            android:exported="false" />
+37-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:21:13-37
+38        <activity
+38-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:22:9-24:40
+39            android:name="com.example.livetasks.CalendarioActivity"
+39-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:23:13-47
+40            android:exported="false" />
+40-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:24:13-37
+41        <activity
+41-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:25:9-27:40
+42            android:name="com.example.livetasks.PlanAnualActivity"
+42-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:26:13-46
+43            android:exported="false" />
+43-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:27:13-37
+44        <activity
+44-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:28:9-30:40
+45            android:name="com.example.livetasks.PlanMesActivity"
+45-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:29:13-44
+46            android:exported="false" />
+46-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:30:13-37
+47        <activity
+47-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:31:9-33:40
+48            android:name="com.example.livetasks.PlanProActivity"
+48-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:32:13-44
+49            android:exported="false" />
+49-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:33:13-37
+50        <activity
+50-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:34:9-36:40
+51            android:name="com.example.livetasks.AdminActivity"
+51-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:35:13-42
+52            android:exported="false" />
+52-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:36:13-37
+53        <activity
+53-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:37:9-39:40
+54            android:name="com.example.livetasks.TareasActivity"
+54-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:38:13-43
+55            android:exported="false" />
+55-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:39:13-37
+56        <activity
+56-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:40:9-42:40
+57            android:name="com.example.livetasks.PlanActivity"
+57-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:41:13-41
+58            android:exported="false" />
+58-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:42:13-37
+59        <activity
+59-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:43:9-52:20
+60            android:name="com.example.livetasks.LoginActivity"
+60-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:44:13-42
+61            android:exported="true"
+61-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:45:13-36
+62            android:theme="@style/Theme.Material3.DayNight.NoActionBar" >
+62-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:46:13-72
+63            <intent-filter>
+63-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:47:13-51:29
+64                <action android:name="android.intent.action.MAIN" />
+64-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:48:17-69
+64-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:48:25-66
+65
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:50:17-77
+66-->C:\Users\alumno\Desktop\segundoDAM\PMDM\LiveTasks\app\src\main\AndroidManifest.xml:50:27-74
+67            </intent-filter>
+68        </activity>
+69
+70        <provider
+70-->[androidx.emoji2:emoji2:1.3.0] C:\Users\alumno\.gradle\caches\8.13\transforms\f58f9c39c8f68c88716f9462b09325ca\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+71            android:name="androidx.startup.InitializationProvider"
+71-->[androidx.emoji2:emoji2:1.3.0] C:\Users\alumno\.gradle\caches\8.13\transforms\f58f9c39c8f68c88716f9462b09325ca\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+72            android:authorities="com.example.livetasks.androidx-startup"
+72-->[androidx.emoji2:emoji2:1.3.0] C:\Users\alumno\.gradle\caches\8.13\transforms\f58f9c39c8f68c88716f9462b09325ca\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+73            android:exported="false" >
+73-->[androidx.emoji2:emoji2:1.3.0] C:\Users\alumno\.gradle\caches\8.13\transforms\f58f9c39c8f68c88716f9462b09325ca\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+74            <meta-data
+74-->[androidx.emoji2:emoji2:1.3.0] C:\Users\alumno\.gradle\caches\8.13\transforms\f58f9c39c8f68c88716f9462b09325ca\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+75                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+75-->[androidx.emoji2:emoji2:1.3.0] C:\Users\alumno\.gradle\caches\8.13\transforms\f58f9c39c8f68c88716f9462b09325ca\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+76                android:value="androidx.startup" />
+76-->[androidx.emoji2:emoji2:1.3.0] C:\Users\alumno\.gradle\caches\8.13\transforms\f58f9c39c8f68c88716f9462b09325ca\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+77            <meta-data
+77-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\alumno\.gradle\caches\8.13\transforms\b2d7c4f050ed5b6e9de969a844ca4ccd\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+78                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+78-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\alumno\.gradle\caches\8.13\transforms\b2d7c4f050ed5b6e9de969a844ca4ccd\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+79                android:value="androidx.startup" />
+79-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\alumno\.gradle\caches\8.13\transforms\b2d7c4f050ed5b6e9de969a844ca4ccd\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+80            <meta-data
+80-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+81                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+81-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+82                android:value="androidx.startup" />
+82-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+83        </provider>
+84
+85        <receiver
+85-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+86            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+86-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+87            android:directBootAware="false"
+87-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+88            android:enabled="true"
+88-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+89            android:exported="true"
+89-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+90            android:permission="android.permission.DUMP" >
+90-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+91            <intent-filter>
+91-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+92                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+92-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+92-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+93            </intent-filter>
+94            <intent-filter>
+94-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+95                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+95-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+95-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+96            </intent-filter>
+97            <intent-filter>
+97-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+98                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+98-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+98-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+99            </intent-filter>
+100            <intent-filter>
+100-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+101                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\alumno\.gradle\caches\8.13\transforms\fdad34dda70f3c6ce757ca1d4d603da8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+102            </intent-filter>
+103        </receiver>
+104    </application>
+105
+106</manifest>
